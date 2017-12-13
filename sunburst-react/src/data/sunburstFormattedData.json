@@ -1,0 +1,3457 @@
+{
+  "name": "FY17 Q3 Contract Awards",
+  "children": [
+    {
+      "name": "Department of Defense (DOD)",
+      "children": [
+        {
+          "name": "DEPT OF THE NAVY",
+          "children": [
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "6678381001.92" },
+            {
+              "name": "HUNTINGTON INGALLS INCORPORATED",
+              "size": "2263454868.26"
+            },
+            { "name": "RAYTHEON COMPANY", "size": "1602048408.43" },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "1059882799.39"
+            },
+            { "name": "Other", "size": "916158641.2" },
+            { "name": "ELECTRIC BOAT CORPORATION", "size": "695262312.16" },
+            { "name": "AUSTAL USA, LLC", "size": "490653660.3" },
+            {
+              "name": "UNITED TECHNOLOGIES CORPORATION",
+              "size": "485314496.12"
+            },
+            { "name": "BOEING COMPANY, THE", "size": "452534858.21" },
+            {
+              "name":
+                "BAE SYSTEMS INFORMATION AND ELECTRONIC SYSTEMS INTEGRATION INC.",
+              "size": "288671019.26"
+            },
+            { "name": "SIKORSKY AIRCRAFT CORPORATION", "size": "259472765.29" },
+            {
+              "name": "BECHTEL MARINE PROPULSION CORPORATION",
+              "size": "257189318.71"
+            },
+            {
+              "name": "BELL BOEING JOINT PROJECT OFFICE",
+              "size": "251744195.46"
+            },
+            {
+              "name": "NATIONAL STEEL AND SHIPBUILDING COMPANY",
+              "size": "250711108.49"
+            },
+            { "name": "GENERAL ELECTRIC COMPANY", "size": "180364524.42" },
+            { "name": "INSIGHT PUBLIC SECTOR, INC.", "size": "161922790.63" },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "155783092.62"
+            },
+            { "name": "THE BOEING COMPANY", "size": "155569567.08" },
+            { "name": "BECHTEL PLANT MACHINERY, INC.", "size": "109735673" },
+            { "name": "URS FEDERAL SERVICES, INC.", "size": "108513196.44" },
+            {
+              "name": "BAE SYSTEMS SAN DIEGO SHIP REPAIR INC.",
+              "size": "108430472.71"
+            },
+            { "name": "ROLLS-ROYCE CORPORATION", "size": "105527979.87" },
+            {
+              "name": "BAE SYSTEMS TECHNOLOGY SOLUTIONS & SERVICES INC.",
+              "size": "99725771.96"
+            },
+            { "name": "TIMKEN GEARS & SERVICES INC.", "size": "98825365.42" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "95877933.87" },
+            { "name": "HONEYWELL INTERNATIONAL INC.", "size": "95180267.88" },
+            { "name": "SANDIA CORP", "size": "94386296.19" },
+            { "name": "CSRA LLC", "size": "89250100.06" },
+            { "name": "LEAR SIEGLER SERVICES, INC.", "size": "86463661.64" },
+            { "name": "BATH IRON WORKS CORPORATION", "size": "83986710.85" },
+            {
+              "name": "RAM-SYSTEM GESELLSCHAFT MIT BESCHRANKTER HAFTUNG",
+              "size": "82283501"
+            },
+            { "name": "ERAPSCO", "size": "77602413.82" },
+            {
+              "name":
+                "JOHNS HOPKINS UNIVERSITY APPLIED PHYSICS LABORATORY LLC, THE",
+              "size": "77569196.99"
+            },
+            { "name": "DRS LAUREL TECHNOLOGIES", "size": "75383794.57" },
+            { "name": "ENTERPRISE SERVICES LLC", "size": "74001407.65" },
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "70169464.24"
+            },
+            { "name": "HASKELL COMPANY, THE", "size": "69915945" },
+            {
+              "name": "L-3 COMMUNICATIONS VERTEX AEROSPACE LLC",
+              "size": "66314082.17"
+            },
+            { "name": "HARRIS CORPORATION", "size": "63860250.28" },
+            { "name": "ALION - IPS CORPORATION", "size": "63028198.32" },
+            { "name": "DLT SOLUTIONS, LLC", "size": "62957900.01" },
+            { "name": "L-3 COMMUNICATIONS CORPORATION", "size": "62462874.9" },
+            {
+              "name": "NATIONAL STEEL & SHIPBUILDING COMPANY",
+              "size": "60279350"
+            },
+            { "name": "ROCKWELL COLLINS, INC.", "size": "57902592.1" },
+            { "name": "BOOZ ALLEN HAMILTON INC", "size": "56629183.54" },
+            {
+              "name": "WHITING-TURNER CONTRACTING COMPANY, THE",
+              "size": "56258542"
+            },
+            {
+              "name": "MARINE HYDRAULICS INTERNATIONAL, INC.",
+              "size": "55905934"
+            },
+            { "name": "SERCO INC.", "size": "54917032.51" },
+            { "name": "LEIDOS, INC.", "size": "53212370.87" },
+            { "name": "ENERGY, UNITED STATES DEPT OF", "size": "52320038" },
+            { "name": "DZSP 21 LLC", "size": "52215709.88" },
+            { "name": "KAY AND ASSOCIATES, INC.", "size": "48409478.2" },
+            { "name": "J. WALTER THOMPSON COMPANY", "size": "48238563.48" },
+            {
+              "name": "BAE SYSTEMS LAND & ARMAMENTS L.P.",
+              "size": "48141442.58"
+            },
+            { "name": "DYNCORP INTERNATIONAL LLC", "size": "46718199.67" },
+            {
+              "name": "DRS NETWORK & IMAGING SYSTEMS, LLC",
+              "size": "44076997.89"
+            },
+            { "name": "AMSEC LLC", "size": "43345096.87" },
+            {
+              "name": "GENERAL DYNAMICS ADVANCED INFORMATION SYSTEMS, INC.",
+              "size": "42640178.92"
+            },
+            {
+              "name": "CONTINENTAL MARITIME OF SAN DIEGO, INC.",
+              "size": "42396058.56"
+            },
+            {
+              "name": "CHARLES STARK DRAPER LABORATORY, INC., THE",
+              "size": "42312365"
+            },
+            { "name": "SMARTRONIX, INC.", "size": "42213037.55" },
+            { "name": "INSITU, INC.", "size": "41652625.88" },
+            {
+              "name": "GENERAL DYNAMICS ARMAMENT AND TECHNICAL PRODUCTS, INC.",
+              "size": "41143666.94"
+            },
+            {
+              "name": "PENNSYLVANIA STATE UNIVERSITY, THE",
+              "size": "40081272.19"
+            },
+            { "name": "JACOBS TECHNOLOGY INC.", "size": "37713825.11" },
+            { "name": "HENSEL PHELPS CONSTRUCTION CO", "size": "37339952" },
+            { "name": "COMPOSITE ENGINEERING INC", "size": "37089888.43" },
+            { "name": "OSHKOSH DEFENSE, LLC", "size": "37040176.04" },
+            {
+              "name": "RAYTHEON TECHNICAL SERVICES COMPANY LLC",
+              "size": "36912762.69"
+            },
+            { "name": "DATA LINK SOLUTIONS L.L.C.", "size": "36470050.85" },
+            { "name": "DAYLIGHT DEFENSE, LLC", "size": "35440332.31" },
+            { "name": "J. F. TAYLOR, INC.", "size": "35053834.36" },
+            {
+              "name": "ROCKWELL COLLINS SIMULATION & TRAINING SOLUTIONS LLC",
+              "size": "35024867"
+            },
+            { "name": "VIGOR MARINE LLC", "size": "33317170.78" },
+            { "name": "HP ENTERPRISE SERVICES, LLC", "size": "33194981.1" },
+            {
+              "name": "CADDELL CONSTRUCTION CO. (DE), LLC",
+              "size": "33050487"
+            },
+            { "name": "CISCO SYSTEMS INC.", "size": "32853391.4" },
+            { "name": "SUNRISE BEACH CORPORATION", "size": "32412303.73" },
+            {
+              "name": "MANTECH ADVANCED SYSTEMS INTERNATIONAL, INC.",
+              "size": "31767243.72"
+            },
+            { "name": "QED SYSTEMS, INC.", "size": "31608036.08" },
+            { "name": "VIASAT, INC.", "size": "30321950.12" },
+            {
+              "name": "GENERAL DYNAMICS MISSION SYSTEMS, INC",
+              "size": "29874623.21"
+            },
+            {
+              "name": "SCIENTIFIC RESEARCH CORPORATION",
+              "size": "29375737.13"
+            },
+            { "name": "GENERAL ATOMICS", "size": "29327099.6" },
+            { "name": "BELL HELICOPTER TEXTRON INC.", "size": "28989199.19" },
+            { "name": "KBR DIEGO GARCIA, LLC", "size": "28915963.64" },
+            { "name": "PAE APPLIED TECHNOLOGIES LLC", "size": "28819919.3" },
+            { "name": "CH2M HILL CONSTRUCTORS, INC.", "size": "27856358.13" },
+            { "name": "DRS TECHNICAL SERVICES, INC.", "size": "27813328.13" },
+            { "name": "SWIFTSHIPS SHIPBUILDERS, L.L.C.", "size": "27405871" },
+            { "name": "DAVIS DEFENSE GROUP, INC.", "size": "27241244.32" },
+            { "name": "VSE CORPORATION", "size": "27239949.47" },
+            {
+              "name": "KBRWYLE TECHNOLOGY SOLUTIONS, LLC",
+              "size": "27237975.89"
+            },
+            {
+              "name": "BLACK CONSTRUCTION/MACE INTER NATIONAL JOINT VENTURE",
+              "size": "26714106.28"
+            },
+            { "name": "CACI TECHNOLOGIES, INC", "size": "26222463.61" },
+            { "name": "PATRIOT CONTRACT SERVICES, LLC", "size": "25852889.18" },
+            { "name": "EDO LLC", "size": "25542578.7" },
+            { "name": "FLUOR FEDERAL SOLUTIONS, LLC", "size": "25515018.21" },
+            { "name": "GENTEX CORPORATION", "size": "25090025.65" },
+            { "name": "CLIENT SOLUTION ARCHITECTS LLC", "size": "24844417.06" },
+            { "name": "AMERICAN OVERSEAS MARINE CORP", "size": "24801040.7" },
+            { "name": "AT&T CORP.", "size": "24674244.04" },
+            { "name": "M. A. MORTENSON COMPANY", "size": "24472171" },
+            { "name": "MCKEAN DEFENSE GROUP, LLC", "size": "24469843.43" },
+            { "name": "TOTE SERVICES, INC", "size": "24468733.26" },
+            {
+              "name": "BAE SYSTEMS NORFOLK SHIP REPAIR INC.",
+              "size": "24232571.42"
+            },
+            {
+              "name": "GOODWILL INDUSTRIES OF SOUTHEASTERN WISCONSIN, INC.",
+              "size": "23997857.3"
+            },
+            {
+              "name": "DRS ENVIRONMENTAL SYSTEMS, INC.",
+              "size": "23498412.24"
+            },
+            { "name": "CIANBRO CORPORATION", "size": "23273546" },
+            { "name": "YOUNG & RUBICAM INC.", "size": "23266016.65" },
+            { "name": "ARMTEC COUNTERMEASURES COMPANY", "size": "23047318.88" },
+            { "name": "CACI INC FEDERAL", "size": "23043513.65" },
+            { "name": "POLE/ZERO ACQUISITION, INC.", "size": "22645119.06" },
+            {
+              "name": "CARAHSOFT TECHNOLOGY CORPORATION",
+              "size": "22278479.96"
+            },
+            { "name": "FRONTIER TECHNOLOGY INC.", "size": "21474186.59" },
+            { "name": "MEGGITT (ROCKMART), INC.", "size": "20914035.85" },
+            {
+              "name": "CANADIAN COMMERCIAL CORPORATION",
+              "size": "20816568.84"
+            },
+            { "name": "MOOG INC.", "size": "20407201.81" },
+            {
+              "name": "NORTHROP GRUMMAN SPACE & MISSION SYSTEMS CORP.",
+              "size": "20406570.61"
+            },
+            {
+              "name": "NTT DATA SERVICES FEDERAL GOVERNMENT, INC.",
+              "size": "20198638"
+            },
+            { "name": "EDO CORPORATION", "size": "19611735.72" },
+            { "name": "FOUR LLC", "size": "19497165.56" },
+            { "name": "JOHN C. GRIMBERG CO., INC.", "size": "19457827" },
+            { "name": "GE AVIATION SYSTEMS LLC", "size": "19366558.71" },
+            {
+              "name": "CROWLEY TECHNICAL MANAGEMENT, INC.",
+              "size": "18818480.22"
+            },
+            {
+              "name": "MLS-MULTINATIONAL LOGISTIC SERVICES LIMITED",
+              "size": "18812083.92"
+            },
+            { "name": "M.C. DEAN, INC.", "size": "18701619.22" },
+            { "name": "HAWAII PACIFIC JV LLC", "size": "18362607.86" },
+            { "name": "EMR, INC.", "size": "18320397.7" },
+            { "name": "REYES CONSTRUCTION, INC.", "size": "18151484.3" },
+            { "name": "SABRE SYSTEMS, INC.", "size": "17729241.98" },
+            { "name": "RQ-DPR JV", "size": "17514183" },
+            { "name": "TASC, INC.", "size": "17483356.48" },
+            { "name": "ENGILITY CORPORATION", "size": "17430969.84" },
+            { "name": "MANU KAI, LLC", "size": "17235003.03" },
+            { "name": "3 PHOENIX, INC.", "size": "17059832" },
+            {
+              "name": "L.S. BLACK CONSTRUCTORS-LOEFFEL CONSTRUCTION",
+              "size": "17051875.14"
+            },
+            {
+              "name": "GULFSTREAM AEROSPACE CORPORATION (GEORGIA)",
+              "size": "17039455.27"
+            },
+            { "name": "DCS CORPORATION", "size": "17037077.21" },
+            { "name": "CNA CORPORATION, THE", "size": "16978386" },
+            { "name": "BALDI BROS. INCORPORATED", "size": "16575603.98" },
+            { "name": "PACIFIC-GULF MARINE, INC.", "size": "15922018.08" },
+            { "name": "WORLD WIDE TECHNOLOGY, INC.", "size": "15792274.19" },
+            { "name": "PATRIOT SHIPPING LLC", "size": "15669759.62" },
+            {
+              "name": "LOYAL SOURCE GOVERNMENT SERVICES LLC",
+              "size": "15669123.78"
+            },
+            { "name": "GSI PACIFIC INC.", "size": "15647265.15" },
+            {
+              "name": "BOWHEAD PROFESSIONAL SOLUTIONS, LLC",
+              "size": "15313280.3"
+            },
+            {
+              "name": "TELECOMMUNICATION SYSTEMS, INC.",
+              "size": "14973581.79"
+            },
+            { "name": "GENERAL DYNAMICS-OTS, INC.", "size": "14880732.71" },
+            { "name": "DETYENS SHIPYARDS, INC", "size": "14687533.08" },
+            { "name": "CAMBER CORPORATION", "size": "14615648.73" },
+            { "name": "THE MIL CORPORATION", "size": "14527795.29" },
+            { "name": "CUBIC SIMULATION SYSTEMS, INC.", "size": "13814456" },
+            {
+              "name": "SYSTEMS APPLICATION & TECHNOLOGIES, INC.",
+              "size": "13626198.82"
+            },
+            {
+              "name": "SOUTHEASTERN COMPUTER CONSULTANTS, INC.",
+              "size": "13610405.38"
+            },
+            {
+              "name": "SUMITOMO HEAVY INDUSTRIES, LTD.",
+              "size": "13606108.93"
+            },
+            { "name": "WYLE LABORATORIES, INC.", "size": "13423392.34" },
+            {
+              "name": "EPSILON SYSTEMS SOLUTIONS, INC.",
+              "size": "13390347.16"
+            },
+            { "name": "FALCONWOOD, INC.", "size": "13386638.5" },
+            { "name": "MERCOM, INCORPORATED", "size": "13303777.23" },
+            { "name": "M1 SUPPORT SERVICES, L.P.", "size": "13279162.88" },
+            { "name": "NOVA R M F", "size": "13209437.4" },
+            { "name": "OWL INTERNATIONAL INC.", "size": "13025643" },
+            { "name": "CB&I FEDERAL SERVICES LLC", "size": "13001521.75" },
+            { "name": "IAP WORLDWIDE SERVICES, INC.", "size": "12843642.33" },
+            { "name": "IAP-ECC, LLC", "size": "12809731.91" },
+            { "name": "PRECISE SYSTEMS INC", "size": "12405761.1" },
+            { "name": "DEFENSE SUPPORT SERVICES LLC", "size": "12401000" },
+            { "name": "MAERSK LINE, LIMITED", "size": "12400635.59" },
+            {
+              "name": "MARINE HYDRAULICS INTERNATIONAL, LLC",
+              "size": "12391754"
+            },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "12342295.28" },
+            {
+              "name": "RESEARCH AND ENGINEERING DEVELOPMENT INCORPORATED",
+              "size": "12340196.52"
+            },
+            { "name": "CSC APPLIED TECHNOLOGIES LLC", "size": "12324861.42" },
+            {
+              "name": "DELPHINUS ENGINEERING INCORPORATED",
+              "size": "12260540.9"
+            },
+            { "name": "CREEK TECHNOLOGIES COMPANY", "size": "12258641.11" },
+            {
+              "name": "AIRBORNE TACTICAL ADVANTAGE COMPANY, LLC",
+              "size": "12242219.2"
+            },
+            { "name": "L-3 UNIDYNE, INC.", "size": "12198951.86" },
+            {
+              "name": "AFFORDABLE ENGINEERING SERVICES, INC.",
+              "size": "12155132.79"
+            },
+            { "name": "AAI CORPORATION", "size": "12062942.15" },
+            { "name": "CAE USA INC.", "size": "12024301" },
+            { "name": "PHYSICAL OPTICS CORPORATION", "size": "12015569.8" },
+            { "name": "METRO MACHINE CORP", "size": "11875320.02" },
+            { "name": "IAP WORLD SERVICES INC", "size": "11851573.19" },
+            { "name": "ICI SERVICES CORPORATION", "size": "11838194.34" },
+            { "name": "NEW TECH SOLUTIONS, INC.", "size": "11606605.38" },
+            { "name": "ARETE ASSOCIATES", "size": "11555991.42" },
+            { "name": "GRYPHON TECHNOLOGIES, L.C.", "size": "11494025.22" },
+            {
+              "name": "CHUGACH FEDERAL SOLUTIONS, INC.",
+              "size": "11493671.81"
+            },
+            { "name": "SEYER INDUSTRIES, INC.", "size": "11365850" },
+            {
+              "name": "GE ENERGY POWER CONVERSION USA INC.",
+              "size": "11347088.33"
+            },
+            {
+              "name": "ALLIANT TECHSYSTEMS OPERATIONS LLC",
+              "size": "11336194.09"
+            },
+            {
+              "name": "COMMUNICATIONS & POWER INDUSTRIES LLC",
+              "size": "11329282"
+            },
+            { "name": "BAE SYSTEMS HAWAII SHIPYARDS INC.", "size": "11293914" },
+            { "name": "CH2M HILL, INC.", "size": "11241347.87" },
+            {
+              "name": "MTU MAINTENANCE BERLIN-BRANDENBURG GMBH",
+              "size": "11218359"
+            },
+            { "name": "WARTSILA DEFENSE, INC.", "size": "11154563.38" },
+            { "name": "SAUER INCORPORATED", "size": "11101782" },
+            { "name": "ORACLE AMERICA, INC.", "size": "11096724.87" },
+            {
+              "name": "INTERSTATE ELECTRONICS CORPORATION",
+              "size": "11017540.28"
+            },
+            { "name": "EUROMIDS", "size": "10862436.68" },
+            { "name": "MERCURY DEFENSE SYSTEMS, INC.", "size": "10774367.79" },
+            {
+              "name": "CUBIC WORLDWIDE TECHNICAL SERVICES, INC",
+              "size": "10761179.17"
+            },
+            { "name": "DONJON MARINE CO., INC.", "size": "10666941" },
+            { "name": "ASTURIAN GROUP, INC.", "size": "10656288.94" },
+            { "name": "TSO ARMOR AND TRAINING, INC.", "size": "10627665.99" },
+            {
+              "name": "LEVEL 3 COMMUNICATIONS LIMITED LIABILITY COMPANY",
+              "size": "10610167.19"
+            },
+            { "name": "DATAPATH, INC.", "size": "10536274.71" },
+            {
+              "name": "NAVMAR APPLIED SCIENCES CORPORATION",
+              "size": "10535882.91"
+            },
+            { "name": "PROGENY SYSTEMS CORPORATION", "size": "10407658.11" },
+            { "name": "EFW INC.", "size": "10232610.1" },
+            { "name": "GIBBS & COX, INC.", "size": "10177762.54" },
+            { "name": "VESA HEALTH & TECHNOLOGY, INC.", "size": "10078547.22" },
+            { "name": "TELEPHONICS CORPORATION", "size": "10055699.49" }
+          ]
+        },
+        {
+          "name": "DEPT OF THE ARMY",
+          "children": [
+            {
+              "name": "SIKORSKY AIRCRAFT CORPORATION",
+              "size": "1314257820.39"
+            },
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "887112669.36" },
+            { "name": "BOEING COMPANY, THE", "size": "790095555.82" },
+            { "name": "Other", "size": "625750377.6" },
+            { "name": "THE BOEING COMPANY", "size": "581603017.01" },
+            { "name": "OSHKOSH DEFENSE, LLC", "size": "477715051.03" },
+            { "name": "RAYTHEON COMPANY", "size": "387933415.17" },
+            {
+              "name":
+                "RAYTHEON TECHNICAL SERVICES COMPANY LIMITED LIABILITY COMPANY (5772)",
+              "size": "317583957.33"
+            },
+            {
+              "name": "GENERAL ATOMICS AERONAUTICAL SYSTEMS, INC.",
+              "size": "289568620.07"
+            },
+            {
+              "name": "FLUOR INTERCONTINENTAL INCORPORATED",
+              "size": "271313718.27"
+            },
+            { "name": "EXELIS SYSTEMS CORPORATION", "size": "206492357.28" },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "187837623.23"
+            },
+            {
+              "name": "GENERAL DYNAMICS LAND SYSTEMS INC.",
+              "size": "174976620.47"
+            },
+            { "name": "HONEYWELL INTERNATIONAL INC.", "size": "161082085.57" },
+            {
+              "name": "GENERAL DYNAMICS C4 SYSTEMS, INC.",
+              "size": "159634923.66"
+            },
+            {
+              "name": "BECHTEL PARSONS BLUE GRASS, A JOINT VENTURE",
+              "size": "152618280"
+            },
+            {
+              "name": "ALLIANT TECHSYSTEMS OPERATIONS LLC",
+              "size": "147517354.45"
+            },
+            { "name": "PAE GOVERNMENT SERVICES, INC.", "size": "142061874" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "117564420.44" },
+            { "name": "BECHTEL NATIONAL, INC.", "size": "117231520" },
+            { "name": "UNIT-ASRC CONSTRUCTION, LLC", "size": "112949720" },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "110330920.26"
+            },
+            {
+              "name": "RAYTHEON SOUTHEAST ASIA SYSTEMS COMPANY",
+              "size": "105321937.24"
+            },
+            {
+              "name": "L-3 COMMUNICATIONS CORPORATION",
+              "size": "102421636.49"
+            },
+            {
+              "name": "BUNDESAMT F¿R BAUWESEN UND RAUMORDNUNG",
+              "size": "101852282.12"
+            },
+            { "name": "HARRIS CORPORATION", "size": "100295707.56" },
+            { "name": "GENERAL ELECTRIC COMPANY", "size": "99164505.33" },
+            { "name": "AM GENERAL LLC", "size": "92838430.17" },
+            { "name": "LEIDOS, INC.", "size": "91117175.45" },
+            {
+              "name": "BAE SYSTEMS LAND & ARMAMENTS L.P.",
+              "size": "86212818.41"
+            },
+            {
+              "name": "CARAHSOFT TECHNOLOGY CORPORATION",
+              "size": "84945143.08"
+            },
+            { "name": "MAERSK LINE, LIMITED", "size": "81638909.47" },
+            { "name": "VSE CORPORATION", "size": "80659094.42" },
+            {
+              "name": "GENERAL DYNAMICS MISSION SYSTEMS, INC",
+              "size": "79477486.66"
+            },
+            {
+              "name": "ADAMS COMMUNICATION & ENGINEERING TECHNOLOGY, INC.",
+              "size": "78339540.18"
+            },
+            {
+              "name": "DRS NETWORK & IMAGING SYSTEMS, LLC",
+              "size": "77372961.43"
+            },
+            { "name": "AAI CORPORATION", "size": "75965632.85" },
+            { "name": "CACI INC FEDERAL", "size": "75494742.57" },
+            {
+              "name": "GENERAL DYNAMICS ORDNANCE AND TACTICAL SYSTEMS, INC.",
+              "size": "75272245.58"
+            },
+            {
+              "name": "MCI COMMUNICATIONS SERVICES INCORPORATED",
+              "size": "75154866.67"
+            },
+            {
+              "name": "B.L. HARBERT INTERNATIONAL, L.L.C.",
+              "size": "74439830"
+            },
+            {
+              "name": "KELLOGG BROWN AND ROOT SERVICES INCORPORATED (1250)",
+              "size": "74412999.87"
+            },
+            { "name": "HARPER CONSTRUCTION COMPANY, INC.", "size": "69094674" },
+            { "name": "CACI TECHNOLOGIES, INC", "size": "64731730.48" },
+            { "name": "URS FEDERAL SERVICES, INC.", "size": "62922739.44" },
+            { "name": "DYNCORP INTERNATIONAL LLC", "size": "62356747.89" },
+            {
+              "name": "BAE SYSTEMS INFORMATION SOLUTIONS, INC.",
+              "size": "60916754.97"
+            },
+            { "name": "AMERICAN PRESIDENT LINES, LTD.", "size": "59323226.74" },
+            {
+              "name": "DYNCORP INTERNATIONAL LIMITED LIABILITY COMPANY (7126)",
+              "size": "58533462.54"
+            },
+            { "name": "MW BUILDERS, INC.", "size": "58146927" },
+            {
+              "name": "AMERICAN PRESIDENT LINES LTD INC",
+              "size": "58042609.68"
+            },
+            { "name": "Y-TECH SERVICES, INC.", "size": "57791364.8" },
+            { "name": "REDSTONE DEFENSE SYSTEMS", "size": "57099556.67" },
+            { "name": "SRA INTERNATIONAL, INC.", "size": "54847914.96" },
+            {
+              "name":
+                "BAE SYSTEMS INFORMATION AND ELECTRONIC SYSTEMS INTEGRATION INC.",
+              "size": "53270119.59"
+            },
+            { "name": "TORCH TECHNOLOGIES INC", "size": "52798406.25" },
+            { "name": "CACI TECHNOLOGIES, INC.", "size": "52339642.97" },
+            { "name": "CSRA LLC", "size": "50961800.96" },
+            { "name": "NES ASSOCIATES, LLC", "size": "48722934.59" },
+            {
+              "name": "AMERICAN ROLL-ON ROLL-OFF CARRIER, LLC",
+              "size": "48308833.79"
+            },
+            {
+              "name": "NORTHROP GRUMMAN SPACE & MISSION SYSTEMS CORP.",
+              "size": "48289068.82"
+            },
+            { "name": "IAP WORLDWIDE SERVICES, INC.", "size": "47749622.99" },
+            {
+              "name": "INTUITIVE RESEARCH AND TECHNOLOGY CORPORATION",
+              "size": "46006634.11"
+            },
+            {
+              "name": "VALERO MARKETING AND SUPPLY COMPANY",
+              "size": "45585705"
+            },
+            {
+              "name": "FOREIGN UTILITY CONSOLIDATED REPORTING",
+              "size": "45493146.54"
+            },
+            {
+              "name": "MISSION ESSENTIAL PERSONNEL, LLC",
+              "size": "44742309.63"
+            },
+            { "name": "LIBERTY GLOBAL LOGISTICS LLC", "size": "42980785.27" },
+            { "name": "TRAX INTERNATIONAL CORPORATION", "size": "42802912.91" },
+            { "name": "VINNELL ARABIA", "size": "41554126" },
+            {
+              "name": "NORTHROP GRUMMAN TECHNICAL SERVICES, INC.",
+              "size": "41270913.19"
+            },
+            {
+              "name": "CANADIAN COMMERCIAL CORPORATION",
+              "size": "41148446.29"
+            },
+            {
+              "name": "CHEMRING MILITARY PRODUCTS, INC.",
+              "size": "40906037.34"
+            },
+            { "name": "MD HELICOPTERS, INC.", "size": "39779158.66" },
+            {
+              "name": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+              "size": "39375789.01"
+            },
+            { "name": "ARMY FLEET SUPPORT LLC", "size": "38252734" },
+            { "name": "DATAPATH, INC.", "size": "37882241.44" },
+            { "name": "KWAJALEIN RANGE SERVICES, LLC", "size": "37318603.86" },
+            { "name": "BETHEL FEDERAL-UNIT JV", "size": "37260400" },
+            { "name": "TIYA SUPPORT SERVICES, L.L.C.", "size": "36882864.55" },
+            {
+              "name":
+                "GENERAL DYNAMICS ORDNANCE AND TACTICAL SYSTEMS - SIMUNITION OPERATIONS, INC.",
+              "size": "36744566.29"
+            },
+            {
+              "name": "SCIENCE AND ENGINEERING SERVICES, LLC",
+              "size": "36716444.88"
+            },
+            { "name": "SAUER INCORPORATED", "size": "36467955" },
+            {
+              "name": "IDS INTERNATIONAL GOVERNMENT SERVICES LLC",
+              "size": "35438017.97"
+            },
+            {
+              "name": "DOYON UTILITES LIMITED LIABILITY COMPANY",
+              "size": "35425440.68"
+            },
+            { "name": "PRIDE INDUSTRIES", "size": "33496351.06" },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "33446424.07" },
+            {
+              "name": "ADVANCED TURBINE ENGINE COMPANY, LLC",
+              "size": "33146664"
+            },
+            { "name": "UNIT COMPANY", "size": "33122500" },
+            { "name": "JACOBS TECHNOLOGY INC.", "size": "32473687.52" },
+            { "name": "CGI FEDERAL INC.", "size": "32158974.38" },
+            { "name": "CACI NSS, INC.", "size": "31303653.72" },
+            { "name": "ALLIANT SB CTA, LLC", "size": "31300268.01" },
+            {
+              "name": "AUTOMOTIVE MANAGEMENT SERVICES FZE",
+              "size": "31242176.83"
+            },
+            { "name": "BATTELLE MEMORIAL INSTITUTE", "size": "30580695.03" },
+            {
+              "name": "ARMED FORCES SERVICES CORPORATION",
+              "size": "30044211.54"
+            },
+            { "name": "DARI CONCEPTS, LLC", "size": "29658845.24" },
+            {
+              "name": "ABSOLUTE BUSINESS SOLUTIONS, INC.",
+              "size": "29435409.87"
+            },
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "28473413.95"
+            },
+            { "name": "AFFIGENT, LLC", "size": "28449977.7" },
+            {
+              "name": "LOCKHEED MARTIN INTEGRATED SYSTEMS, INC.",
+              "size": "27551117.33"
+            },
+            {
+              "name": "AFGHAN INTEGRATED SUPPORT SER VICES JV",
+              "size": "27397639.71"
+            },
+            { "name": "TRAX INTERNATIONAL, LLC", "size": "27356354.25" },
+            {
+              "name": "ASSIST CONSULTANTS INCORPORAT ED",
+              "size": "27297822.12"
+            },
+            { "name": "SIERRA NEVADA CORPORATION", "size": "27210756.2" },
+            { "name": "COLUMBIA HELICOPTERS, INC.", "size": "27015955" },
+            { "name": "BELL HELICOPTER TEXTRON INC.", "size": "26890419.4" },
+            { "name": "OPTICS 1, INC.", "size": "26282304.5" },
+            {
+              "name": "GREAT LAKES DREDGE & DOCK COMPANY, LLC",
+              "size": "25776773.18"
+            },
+            {
+              "name": "SIX3 INTELLIGENCE SOLUTIONS, INC.",
+              "size": "25667559.03"
+            },
+            { "name": "CWU, INC", "size": "25608621.57" },
+            { "name": "CUMMINS INC.", "size": "25067686" },
+            { "name": "CATERPILLAR INC.", "size": "24758574.25" },
+            {
+              "name": "ENGINEERING RESEARCH AND CONSULTING, INC.",
+              "size": "24557873.5"
+            },
+            {
+              "name": "PECKHAM VOCATIONAL INDUSTRIES, INC.",
+              "size": "24423912.16"
+            },
+            {
+              "name": "FEDERAL RESOURCES SUPPLY COMPANY",
+              "size": "23924256.12"
+            },
+            { "name": "AASKI TECHNOLOGY INC", "size": "23706861.05" },
+            { "name": "RAPISCAN SYSTEMS, INC.", "size": "23464978.54" },
+            { "name": "NCI INFORMATION SYSTEMS, INC.", "size": "23337502.41" },
+            { "name": "STRUCTURAL ASSOCIATES, INC.", "size": "23282956" },
+            { "name": "CAYO, LLC", "size": "22974426.5" },
+            {
+              "name": "AIRBORNE SYSTEMS NORTH AMERICA OF NJ INC.",
+              "size": "22847438.79"
+            },
+            { "name": "FARRELL LINES INCORPORATED", "size": "22678114.7" },
+            { "name": "WALSH FEDERAL/ALBERICI JV", "size": "22276000" },
+            {
+              "name": "FIDELITY TECHNOLOGIES CORPORATION",
+              "size": "22242494.21"
+            },
+            {
+              "name": "STS INTERNATIONAL, INCORPORATED",
+              "size": "22046431.51"
+            },
+            { "name": "NAVISTAR DEFENSE LLC", "size": "21218472.17" },
+            {
+              "name": "KGL TRANSPORTATION COMPANY KS CC",
+              "size": "20676143.2"
+            },
+            { "name": "INVERNESS TECHNOLOGIES, INC.", "size": "20344555.14" },
+            {
+              "name": "AMERICAN SCIENCE AND ENGINEERING, INC.",
+              "size": "20307805.8"
+            },
+            { "name": "ROCKWELL COLLINS, INC.", "size": "19828714.28" },
+            {
+              "name": "AJ SERVICES JOINT VENTURE I, LLP",
+              "size": "19585262.05"
+            },
+            { "name": "ENGILITY CORPORATION", "size": "19553795.32" },
+            { "name": "COMPUTER SCIENCES CORPORATION", "size": "19439891.58" },
+            {
+              "name": "BRAVURA INFORMATION TECHNOLOGY SYSTEMS INC.",
+              "size": "19410635.91"
+            },
+            { "name": "QUANTITECH INC", "size": "19352152.93" },
+            { "name": "J & J MAINTENANCE, INC.", "size": "19315013.5" },
+            { "name": "SRC, INC.", "size": "19215160.66" },
+            { "name": "COLSA CORPORATION", "size": "19098769.08" },
+            { "name": "DATA SYSTEMS ANALYSTS, INC.", "size": "18942543.06" },
+            { "name": "AT&T CORP.", "size": "18665664.38" },
+            {
+              "name": "MICROSOFT CORPORATION SITZ IN REDMOND CORPORATION",
+              "size": "18605631.41"
+            },
+            { "name": "EXP FEDERAL INC.", "size": "18359986.5" },
+            { "name": "RAPTOR TRAINING SERVICES, LLC", "size": "17995820.96" },
+            {
+              "name": "SILVER MOUNTAIN CONSTRUCTION, LLC",
+              "size": "17961011.04"
+            },
+            { "name": "GOODRICH CORPORATION", "size": "17886583.52" },
+            { "name": "OT TRAINING SOLUTIONS, LLC", "size": "17726534.61" },
+            { "name": "EOIR TECHNOLOGIES, INC.", "size": "17659123.89" },
+            { "name": "MEDICO INDUSTRIES, INC.", "size": "17572766.86" },
+            { "name": "PD SYSTEMS, INC.", "size": "17549224.59" },
+            { "name": "IRON BOW TECHNOLOGIES, LLC", "size": "17476509.02" },
+            { "name": "POND SECURITY SERVICE GMBH", "size": "17373892.96" },
+            { "name": "APC CONSTRUCTION, LLC", "size": "17283824.64" },
+            { "name": "CDW GOVERNMENT LLC", "size": "17241425.28" },
+            { "name": "KAIYUH SERVICES, LLC", "size": "17204059.24" },
+            { "name": "ABM GOVERNMENT SERVICES, LLC", "size": "17124424.72" },
+            {
+              "name": "WHITING-TURNER CONTRACTING COMPANY, THE",
+              "size": "17080133.92"
+            },
+            { "name": "ROCKWELL COLLINS INCORPORATED", "size": "16811740" },
+            {
+              "name": "ASSURED INFORMATION SECURITY, INC.",
+              "size": "16803852"
+            },
+            { "name": "T&H SERVICES LLC", "size": "16801180.2" },
+            { "name": "HARRIS IT SERVICES CORPORATION", "size": "16775570.33" },
+            {
+              "name": "NORTHROP GRUMMAN GUIDANCE AND ELECTRONICS COMPANY, INC.",
+              "size": "16767258"
+            },
+            { "name": "UNIVERSITY OF SOUTHERN CALIFORNIA", "size": "16666268" },
+            { "name": "CENTRAL GULF LINES, INC.", "size": "16661614.24" },
+            { "name": "STG, INC.", "size": "16517472.38" },
+            { "name": "BENAKA INC.", "size": "16507646.7" },
+            {
+              "name":
+                "SEILER INSTRUMENT AND MANUFACTURING COMPANY, INCORPORATED",
+              "size": "16493496.83"
+            },
+            { "name": "MANUFACTURING TECHNIQUES, INC.", "size": "16394404.15" },
+            { "name": "GLOBAL LINGUIST SOLUTIONS LLC", "size": "16280744.02" },
+            {
+              "name": "JOHNSON CONTROLS BUILDING AUTOMATION SYSTEMS LLC",
+              "size": "16198570.62"
+            },
+            { "name": "MCCANN WORLD GROUP INC", "size": "16165835.56" },
+            { "name": "DMD", "size": "16075924.37" },
+            {
+              "name": "TIMKEN AEROSPACE TRANSMISSIONS, LLC",
+              "size": "15895760"
+            },
+            { "name": "VS2, LLC", "size": "15615617.98" },
+            { "name": "CHOCTAW DEFENSE MANUFACTURING LLC", "size": "15599094" },
+            { "name": "VIASAT, INC.", "size": "15501104.6" },
+            { "name": "DLT SOLUTIONS, LLC", "size": "15487511.75" },
+            { "name": "ACCENTURE LLP", "size": "15024374.66" },
+            { "name": "SOS INTERNATIONAL LLC", "size": "14996884.74" },
+            {
+              "name": "UPSTATE CONSTRUCTION SERVICES, INC",
+              "size": "14807079"
+            },
+            { "name": "TRANSOURCE SERVICES CORP", "size": "14805924.62" },
+            {
+              "name": "TECHNICAL AND PROJECT ENGINEERING, LLC",
+              "size": "14702435.05"
+            },
+            {
+              "name":
+                "BUNDESMINISTERIUM FUR UMWELT, NATURSCHUTZ UND REAKTORSICHERHEIT",
+              "size": "14689626.14"
+            },
+            { "name": "BREEZE-EASTERN CORPORATION", "size": "14584526.2" },
+            { "name": "FITT SCIENTIFIC, LLC", "size": "14553456.84" },
+            {
+              "name": "RAYTHEON/LOCKHEED MARTIN JAVELIN JOINT VENTURE",
+              "size": "14536818.04"
+            },
+            { "name": "JAMAL AL AALEM CO", "size": "14472901.64" },
+            { "name": "UNISYS CORPORATION", "size": "14402500" },
+            {
+              "name": "PAE AVIATION AND TECHNICAL SERVICES LLC",
+              "size": "14349534.73"
+            },
+            { "name": "CAROTHERS CONSTRUCTION, INC.", "size": "14277739.71" },
+            { "name": "AAR AIRLIFT GROUP, INC.", "size": "14020174.19" },
+            {
+              "name": "PEREGRINE TECHNICAL SOLUTIONS, LLC",
+              "size": "13931881.9"
+            },
+            { "name": "TEYA SERVICES LLC", "size": "13655669.88" },
+            { "name": "LOGICORE CORPORATION", "size": "13613328.82" },
+            { "name": "SKOOKUM EDUCATIONAL PROGRAMS", "size": "13605386.26" },
+            {
+              "name": "ENGINEERING SOLUTIONS & PRODUCTS LLC",
+              "size": "13510004.94"
+            },
+            { "name": "L3 TECHNOLOGIES, INC.", "size": "13503161.21" },
+            {
+              "name": "JOHNSON CONTROLS GOVERNMENT SYSTEMS LLC",
+              "size": "13340872.5"
+            },
+            {
+              "name": "CRITICAL SOLUTIONS INTERNATIONAL, INC.",
+              "size": "13321838.82"
+            },
+            { "name": "YORKTOWN SYSTEMS GROUP, INC.", "size": "13202783.31" },
+            {
+              "name": "MILLER BROS. CONSTRUCTION, INC.",
+              "size": "13017975.95"
+            },
+            {
+              "name": "DYNPORT VACCINE COMPANY LIMITED LIABILITY COMPANY",
+              "size": "12984589.75"
+            },
+            { "name": "DRS SUSTAINMENT SYSTEMS, INC.", "size": "12956999.45" },
+            { "name": "INUTEQ, LLC", "size": "12791588.3" },
+            { "name": "ICF INCORPORATED, L.L.C.", "size": "12733632.47" },
+            {
+              "name": "WOLF CREEK FEDERAL SERVICES, INC.",
+              "size": "12672869.4"
+            },
+            { "name": "NIPPO CORPORATION", "size": "12666682.4" },
+            { "name": "CAELUM RESEARCH CORPORATION", "size": "12640007.36" },
+            {
+              "name": "KONGSBERG DEFENCE & AEROSPACE AS",
+              "size": "12617202.72"
+            },
+            {
+              "name": "CAPROCK GOVERNMENT SOLUTIONS, INC.",
+              "size": "12560419.54"
+            },
+            { "name": "GLOBAL TECHNICAL SERVICES, LLC", "size": "12521181.55" },
+            {
+              "name": "SOUTHWIND CONSTRUCTION SERVICES, LLC",
+              "size": "12439400"
+            },
+            { "name": "IRONMOUNTAIN SOLUTIONS, INC.", "size": "12274453.6" },
+            { "name": "KEENAN FT DETRICK ENERGY LLC", "size": "12233042.06" },
+            { "name": "DHPC TECHNOLOGIES, INC.", "size": "12178557.56" },
+            { "name": "GROVE U.S. L.L.C", "size": "12032008.48" },
+            { "name": "CISCO SYSTEMS INC.", "size": "11940298.51" },
+            { "name": "SALIENT FEDERAL SOLUTIONS, INC.", "size": "11850000" },
+            { "name": "RADIANCE TECHNOLOGIES, INC.", "size": "11829252.92" },
+            {
+              "name": "PROFESSIONAL CONTRACT SERVICES, INC.",
+              "size": "11446398.32"
+            },
+            {
+              "name": "COLE ENGINEERING SERVICES, INC.",
+              "size": "11301500.69"
+            },
+            {
+              "name": "OKLAHOMA DEPARTMENT OF REHABILITATION SERVICES",
+              "size": "11161809.49"
+            },
+            {
+              "name": "JACOBS FIELD SERVICES NORTH AMERICA, INC.",
+              "size": "11083678.05"
+            },
+            { "name": "VAREC NV", "size": "11007258" },
+            { "name": "COLT DEFENSE LLC", "size": "11003072.1" },
+            { "name": "RADIANCE TECHNOLOGIES INC", "size": "10975955.49" },
+            { "name": "PCX AEROSTRUCTURES, LLC", "size": "10841215" },
+            { "name": "FENS ASSOCIATES, LLC", "size": "10824125.29" },
+            { "name": "GLOBAL TECHNOLOGY", "size": "10809496.72" },
+            { "name": "WESTON SOLUTIONS, INC.", "size": "10772726.81" },
+            {
+              "name": "AMERICAN WATER OPERATIONS AND MAINTENANCE INC",
+              "size": "10738161.63"
+            },
+            { "name": "JANUS RESEARCH GROUP, INC.", "size": "10669577.91" },
+            {
+              "name": "HAMILTON SUNDSTRAND CORPORATION",
+              "size": "10541306.78"
+            },
+            { "name": "INTER COASTAL ELECTRONICS INC", "size": "10505428.82" },
+            { "name": "HAPAG-LLOYD USA, LLC", "size": "10493085.68" },
+            { "name": "CSRA INFORMATION SYSTEMS LLC", "size": "10422994.55" },
+            { "name": "AKIMA GLOBAL SERVICES, LLC", "size": "10416954" },
+            { "name": "B H DEFENSE, LLC", "size": "10411243.12" },
+            { "name": "ITC DEFENSE CORP", "size": "10381145.97" },
+            {
+              "name": "DELL FEDERAL SYSTEMS LIMITED PARTNERSHIP",
+              "size": "10373333.78"
+            },
+            {
+              "name": "SOUTHEASTERN KENTUCKY REHABILITATION INDUSTRIES, INC.",
+              "size": "10345538.48"
+            },
+            { "name": "WORLD WIDE TECHNOLOGY, INC.", "size": "10252307.95" },
+            { "name": "LINC GOVERNMENT SERVICES, LLC", "size": "10218789.04" },
+            { "name": "CHUGACH INDUSTRIES, INC.", "size": "10183400.48" },
+            { "name": "METOVA FEDERAL, LLC", "size": "10059781.21" },
+            { "name": "GD ARABIA LTD", "size": "10035953" },
+            { "name": "SYSTEM STUDIES & SIMULATION INC", "size": "10015658.82" }
+          ]
+        },
+        {
+          "name": "DEFENSE HEALTH AGENCY (DHA)",
+          "children": [
+            {
+              "name": "HUMANA MILITARY HEALTHCARE SERVICES, INC.",
+              "size": "1295610791.01"
+            },
+            {
+              "name": "UNITEDHEALTH MILITARY & VETERANS SERVICES, LLC",
+              "size": "1155198519.87"
+            },
+            {
+              "name": "HEALTH NET FEDERAL SERVICES, LLC",
+              "size": "1056274077.83"
+            },
+            { "name": "EXPRESS SCRIPTS, INC.", "size": "144712421.63" },
+            {
+              "name": "JOHNS HOPKINS MEDICAL SERVICES CORP",
+              "size": "129900000"
+            },
+            {
+              "name": "UNITED CONCORDIA COMPANIES, INC.",
+              "size": "118375066.3"
+            },
+            { "name": "MARTIN'S POINT HEALTH CARE, INC.", "size": "116500000" },
+            { "name": "LEIDOS, INC.", "size": "88973578.08" },
+            { "name": "PACMED CLINICS", "size": "49200000" },
+            {
+              "name": "BRIGHTON MARINE HEALTH CENTER, INC",
+              "size": "46800000"
+            },
+            { "name": "CHRISTUS HEALTH", "size": "44500000" },
+            {
+              "name": "SAINT VINCENTS CATHOLIC MEDICAL CENTERS OF NEW YORK",
+              "size": "34300000"
+            },
+            {
+              "name": "INTERNATIONAL SOS GOVERNMENT SERVICES, INC.",
+              "size": "29322855.38"
+            },
+            {
+              "name": "SPECTRUM HEALTHCARE RESOURCES, INC.",
+              "size": "25302866.5"
+            },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "23225182.14" },
+            {
+              "name": "ARMED FORCES SERVICES CORPORATION",
+              "size": "16699219.06"
+            },
+            { "name": "DELOITTE CONSULTING LLP", "size": "15177797.92" },
+            { "name": "NCS TECHNOLOGIES, INC.", "size": "12885646.15" },
+            {
+              "name": "INTELLIDYNE LIMITED LIABILITY COMPANY",
+              "size": "11996906.06"
+            },
+            { "name": "PLANNED SYSTEMS INTERNATIONAL,", "size": "10080575.62" }
+          ]
+        },
+        {
+          "name": "DEPT OF THE AIR FORCE",
+          "children": [
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "1188990457.99" },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "818803377.71"
+            },
+            { "name": "BOEING COMPANY, THE", "size": "753946495.67" },
+            {
+              "name": "GENERAL ATOMICS AERONAUTICAL SYSTEMS, INC.",
+              "size": "613714339"
+            },
+            { "name": "RAYTHEON COMPANY", "size": "596246191.17" },
+            { "name": "UNITED LAUNCH SERVICES, LLC", "size": "500511886.38" },
+            { "name": "Other", "size": "470917497.67" },
+            {
+              "name": "L-3 COMMUNICATIONS CORPORATION",
+              "size": "307659330.78"
+            },
+            {
+              "name": "MASSACHUSETTS INSTITUTE OF TECHNOLOGY",
+              "size": "250959556.56"
+            },
+            {
+              "name": "UNITED TECHNOLOGIES CORPORATION",
+              "size": "206967490.76"
+            },
+            {
+              "name":
+                "BAE SYSTEMS INFORMATION AND ELECTRONIC SYSTEMS INTEGRATION INC.",
+              "size": "152299688.81"
+            },
+            { "name": "SIERRA NEVADA CORPORATION", "size": "151492314.86" },
+            { "name": "HARRIS CORPORATION", "size": "141256347.49" },
+            { "name": "THE AEROSPACE CORPORATION", "size": "114684862.29" },
+            { "name": "PATRIOT TEAM", "size": "106069265.46" },
+            { "name": "SALLYPORT GLOBAL HOLDINGS INC.", "size": "105458402" },
+            { "name": "NORTHROP GRUMMAN SYSTEMS CORPO", "size": "92049651.42" },
+            { "name": "FEDERAL EXPRESS CORPORATION", "size": "91252317.48" },
+            { "name": "THE BOEING COMPANY", "size": "91221714.32" },
+            { "name": "DYNCORP INTERNATIONAL LLC", "size": "82011410.95" },
+            {
+              "name": "BAE SYSTEMS TECHNOLOGY SOLUTIONS & SERVICES INC.",
+              "size": "80267993.29"
+            },
+            {
+              "name": "NATIONAL AEROSPACE SOLUTIONS, LLC",
+              "size": "76123473.2"
+            },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "73854275.57"
+            },
+            { "name": "SIKORSKY AIRCRAFT CORPORATION", "size": "66407722.3" },
+            { "name": "LINQUEST CORPORATION", "size": "65637968.72" },
+            {
+              "name": "NORTHROP GRUMMAN TECHNICAL SERVICES, INC.",
+              "size": "64662135.51"
+            },
+            { "name": "LEIDOS, INC.", "size": "59001169.36" },
+            { "name": "ROCKWELL COLLINS, INC.", "size": "57377181.12" },
+            { "name": "THE MITRE CORPORATION", "size": "54453549.74" },
+            {
+              "name": "BEECHCRAFT DEFENSE COMPANY, LLC",
+              "size": "54348264.81"
+            },
+            { "name": "URS FEDERAL SERVICES, INC.", "size": "53560884.26" },
+            {
+              "name": "L-3 COMMUNICATIONS VERTEX AEROSPACE LLC",
+              "size": "51853519.99"
+            },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "49241872.46" },
+            {
+              "name": "ODYSSEY SYSTEMS CONSULTING GROUP, LTD.",
+              "size": "46280864.08"
+            },
+            { "name": "GENERAL ELECTRIC COMPANY", "size": "46037608.6" },
+            { "name": "RANGE GENERATION NEXT LLC", "size": "43863392.87" },
+            { "name": "CARNEGIE MELLON UNIVERSITY", "size": "43449498.11" },
+            { "name": "ROLLS-ROYCE CORPORATION", "size": "41926555.46" },
+            {
+              "name": "NORTHROP GRUMMAN SPACE & MISSION SYSTEMS CORP.",
+              "size": "39687490.7"
+            },
+            { "name": "M1 SUPPORT SERVICES, L.P.", "size": "39330643.79" },
+            { "name": "CISCO SYSTEMS INC.", "size": "38356647" },
+            { "name": "VIASAT, INC.", "size": "36420885.49" },
+            {
+              "name": "RELIANCE TEST & TECHNOLOGY, LLC",
+              "size": "36180288.67"
+            },
+            { "name": "BOOZ ALLEN HAMILTON INC", "size": "35805745.23" },
+            {
+              "name": "FLIGHTSAFETY SERVICES CORPORATION",
+              "size": "35165608.58"
+            },
+            { "name": "WORLD WIDE TECHNOLOGY, INC.", "size": "34678960.61" },
+            { "name": "ORBITAL SCIENCES CORPORATION", "size": "31923310.95" },
+            {
+              "name": "DATA COMPUTER CORPORATION OF AMERICA",
+              "size": "31763668"
+            },
+            { "name": "ATLANTIC DIVING SUPPLY, INC.", "size": "30170658.85" },
+            { "name": "AMHERST SYSTEMS, INC.", "size": "28965544.41" },
+            { "name": "STERLING COMPUTERS CORPORATION", "size": "28361503.28" },
+            { "name": "AMEC EARTH & ENVIRONMENTAL, INC.", "size": "26616323" },
+            { "name": "ACCENTURE FEDERAL SERVICES LLC", "size": "26594649.94" },
+            {
+              "name": "BOEING AEROSPACE OPERATIONS, INC.",
+              "size": "26355911.72"
+            },
+            { "name": "ABACUS TECHNOLOGY CORPORATION", "size": "26240829.27" },
+            { "name": "GOODRICH CORPORATION", "size": "25259680.5" },
+            { "name": "AAR PARTS TRADING, INC.", "size": "23273506" },
+            {
+              "name": "CANADIAN COMMERCIAL CORPORATION",
+              "size": "23184383.51"
+            },
+            { "name": "TECHNOLOGY SERVICE CORPORATION", "size": "22933624.3" },
+            {
+              "name": "AL RAHA GROUP FOR TECHNICAL S ERVICES",
+              "size": "22783288.37"
+            },
+            {
+              "name": "READINESS MANAGEMENT SUPPORT, L.C.",
+              "size": "22529687.32"
+            },
+            { "name": "DRS SUSTAINMENT SYSTEMS, INC.", "size": "22523586.12" },
+            { "name": "RED RIVER COMPUTER CO., INC.", "size": "22491693.64" },
+            {
+              "name": "PRICEWATERHOUSECOOPERS PUBLIC SECTOR LLP",
+              "size": "22419518.34"
+            },
+            { "name": "JACOBS TECHNOLOGY INC.", "size": "21011418.02" },
+            { "name": "CDW GOVERNMENT LLC", "size": "20538193.36" },
+            { "name": "SAWDEY SOLUTION SERVICES, INC.", "size": "20287319.67" },
+            { "name": "AT&T CORP.", "size": "20188525.03" },
+            {
+              "name": "CHROMALLOY COMPONENT SERVICES, INC.",
+              "size": "19864182.88"
+            },
+            { "name": "HARRIS IT SERVICES CORPORATION", "size": "19654756.15" },
+            { "name": "L3 TECHNOLOGIES, INC.", "size": "19532842.8" },
+            { "name": "LOCKHEED MISSILES & SPACE COMP", "size": "19420443" },
+            {
+              "name": "STANDARD AERO (SAN ANTONIO) INC.",
+              "size": "19419365.08"
+            },
+            { "name": "KEARNEY & COMPANY, P.C.", "size": "19271175.55" },
+            {
+              "name": "CHENEGA INTEGRATED MISSION SUPPORT, LLC",
+              "size": "19265499.85"
+            },
+            { "name": "RIVERSIDE RESEARCH INSTITUTE", "size": "19257248.95" },
+            { "name": "HONEYWELL INTERNATIONAL INC.", "size": "18951851.64" },
+            {
+              "name": "CAPROCK GOVERNMENT SOLUTIONS, INC.",
+              "size": "18944610.88"
+            },
+            {
+              "name": "ISRAEL AEROSPACE INDUSTRIES LTD. LAHAV DIVISION",
+              "size": "18854672.27"
+            },
+            { "name": "OASIS SYSTEMS, LLC", "size": "18047725.27" },
+            { "name": "DELL FEDERAL SYSTEMS L.P.", "size": "17938400.87" },
+            { "name": "CDO TECHNOLOGIES, INC.", "size": "17926991.36" },
+            { "name": "WORK SERVICES CORPORATION", "size": "17800163.85" },
+            {
+              "name": "AMERICAN ENGINEERING CORPORATION",
+              "size": "17776506.75"
+            },
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "17468409.1"
+            },
+            { "name": "ALLIANT TECHSYSTEMS INC.", "size": "17466150.67" },
+            { "name": "CAE USA INC.", "size": "17355286.31" },
+            {
+              "name": "L-3 NATIONAL SECURITY SOLUTIONS, INC.",
+              "size": "17215862.37"
+            },
+            { "name": "MYTHICS, INC", "size": "16816247.78" },
+            { "name": "UNIVERSITY OF DAYTON", "size": "16548666.24" },
+            { "name": "TASC, INC.", "size": "16302348.75" },
+            { "name": "COLSA CORPORATION", "size": "16134096.68" },
+            {
+              "name": "MICROSOFT CORPORATION SITZ IN REDMOND CORPORATION",
+              "size": "15554694.86"
+            },
+            { "name": "TECHNICA CORPORATION", "size": "15519047.25" },
+            { "name": "REMOTELY PILOTED SOLUTIONS LLC", "size": "15461571" },
+            { "name": "DYNETICS, INC.", "size": "15272066.35" },
+            { "name": "HONEYWELL INTERNATIONAL INC", "size": "15269307.49" },
+            { "name": "CYMSTAR SERVICES LLC", "size": "15143387.84" },
+            {
+              "name": "LOCKHEED MARTIN CORPORATION (3632)",
+              "size": "14818171.77"
+            },
+            { "name": "CFM INTERNATIONAL, INC.", "size": "14812514.65" },
+            {
+              "name": "GENERAL DYNAMICS MISSION SYSTEMS, INC",
+              "size": "14689889.87"
+            },
+            { "name": "PINNACLE SOLUTIONS, INC.", "size": "14676407.87" },
+            {
+              "name": "DELAWARE RESOURCE GROUP OF OKLAHOMA, LLC",
+              "size": "14644062.64"
+            },
+            { "name": "PRIDE INDUSTRIES", "size": "14641052.8" },
+            { "name": "MERCOM, INCORPORATED", "size": "14579428.87" },
+            {
+              "name": "ARRAY INFORMATION TECHNOLOGY, INC.",
+              "size": "14557999.26"
+            },
+            { "name": "AGEISS INC.", "size": "14482942" },
+            {
+              "name": "AVIATION TRAINING CONSULTING, LLC",
+              "size": "14173063.03"
+            },
+            { "name": "CACI NSS, INC.", "size": "14046292.51" },
+            { "name": "NATIONAL AIR CARGO GROUP, INC.", "size": "13983295.72" },
+            {
+              "name": "STRATEGIC TECHNOLOGY INSTITUTE INC",
+              "size": "13950649.06"
+            },
+            {
+              "name": "AMEC FOSTER WHEELER PROGRAMS, INC.",
+              "size": "13777968"
+            },
+            { "name": "CAMBER CORPORATION", "size": "13686994.63" },
+            { "name": "ATK LAUNCH SYSTEMS INC.", "size": "13679002" },
+            {
+              "name": "NORTHROP GRUMMAN GUIDANCE AND ELECTRONICS COMPANY, INC.",
+              "size": "13479516.17"
+            },
+            {
+              "name": "DOYON UTILITES LIMITED LIABILITY COMPANY",
+              "size": "13375352.7"
+            },
+            { "name": "AAI CORPORATION", "size": "13174812" },
+            { "name": "IRON BOW TECHNOLOGIES, LLC", "size": "13152446.16" },
+            { "name": "XATOR CORPORATION", "size": "12866835.97" },
+            { "name": "MESSIER-BUGATTI-DOWTY", "size": "12769152" },
+            { "name": "HP ENTERPRISE SERVICES, LLC", "size": "12753541.88" },
+            { "name": "HX5,, LLC", "size": "12652431.21" },
+            { "name": "BTAS INC", "size": "12622297.72" },
+            { "name": "KOREAN AIR LINES CO., LTD.", "size": "12399733.45" },
+            { "name": "LEEBCOR SERVICES, LLC", "size": "12383350" },
+            { "name": "FORD MOTOR COMPANY", "size": "12239679" },
+            { "name": "ADVANCED ELECTRONICS COMPANY LTD", "size": "12016080" },
+            {
+              "name": "GENERAL DYNAMICS MISSION SYSTEMS, INC.",
+              "size": "11974138"
+            },
+            { "name": "SUMARIA SYSTEMS, INC.", "size": "11953509.69" },
+            {
+              "name": "CREDENCE MANAGEMENT SOLUTIONS LIMITED LIABILITY COMPANY",
+              "size": "11923666.08"
+            },
+            { "name": "BLUE TECH INC.", "size": "11767989.59" },
+            { "name": "ENGILITY CORPORATION", "size": "11739271.62" },
+            {
+              "name": "SCIENTIFIC RESEARCH CORPORATION",
+              "size": "11574940.48"
+            },
+            { "name": "NORTHTIDE GROUP, LLC", "size": "11312528.43" },
+            { "name": "HX5, LLC", "size": "11247957" },
+            { "name": "SPEEGLE CONSTRUCTION, INC.", "size": "11114940" },
+            { "name": "PRO-ACTIVE TECHNOLOGIES, INC.", "size": "11044972.28" },
+            {
+              "name": "ATLANTIC CONTRACTING & MATERIAL CO., INC.",
+              "size": "10984800"
+            },
+            { "name": "PELATRON TECHNOLOGIES LLC", "size": "10817687.35" },
+            { "name": "LONGBOW LLC", "size": "10775366.04" },
+            { "name": "GATR TECHNOLOGIES, INC.", "size": "10758670.38" },
+            {
+              "name": "JONES LANG LASALLE AMERICAS, INC.",
+              "size": "10744453.1"
+            },
+            { "name": "GE AVIATION SYSTEMS LLC", "size": "10703110.43" },
+            { "name": "P E SYSTEMS, INC.", "size": "10688383.88" },
+            { "name": "AECOM TECHNICAL SERVICES, INC.", "size": "10654896.41" },
+            { "name": "MESA VERDE ENTERPRISES, INC.", "size": "10632333.75" },
+            {
+              "name": "HAMILTON SUNDSTRAND CORPORATION",
+              "size": "10584560.71"
+            },
+            { "name": "WALSH FEDERAL, LLC", "size": "10542000" },
+            { "name": "SRC, INC.", "size": "10504832.78" },
+            { "name": "MISCELLANEOUS FOREIGN AWARDEES", "size": "10451961.67" },
+            {
+              "name": "KI HO MILITARY ACQUISITION CONSULTING, INC.",
+              "size": "10373732.39"
+            },
+            { "name": "INFINITE TECHNOLOGIES, INC.", "size": "10199414" },
+            {
+              "name": "CORPORATION OF MERCER UNIVERSITY, THE",
+              "size": "10172736.56"
+            },
+            { "name": "DATA LINK SOLUTIONS L.L.C.", "size": "10058494" },
+            { "name": "EXCELLUS SOLUTIONS, LLC", "size": "10011529.76" }
+          ]
+        },
+        {
+          "name": "DEFENSE LOGISTICS AGENCY",
+          "children": [
+            { "name": "MCKESSON CORPORATION", "size": "749352066.51" },
+            { "name": "Other", "size": "711333812.82" },
+            {
+              "name": "AMERISOURCEBERGEN DRUG CORPORATION",
+              "size": "558638226.58"
+            },
+            { "name": "ATLANTIC DIVING SUPPLY, INC.", "size": "275451647.85" },
+            {
+              "name": "BP PRODUCTS NORTH AMERICA INC.",
+              "size": "245546269.93"
+            },
+            { "name": "EQUILON ENTERPRISES LLC", "size": "164274554" },
+            { "name": "ANHAM FZCO", "size": "147452866.81" },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "130329596.3"
+            },
+            { "name": "CARDINAL HEALTH 200, LLC", "size": "122932720.08" },
+            { "name": "BOEING COMPANY, THE", "size": "118193246.7" },
+            {
+              "name": "TESORO REFINING & MARKETING COMPANY LLC",
+              "size": "92025745.46"
+            },
+            { "name": "ADNOC DISTRIBUTION", "size": "81331244.9" },
+            { "name": "PHILLIPS 66 COMPANY", "size": "68575020.57" },
+            { "name": "SUPPLYCORE INC.", "size": "66231868.57" },
+            { "name": "EXXON MOBIL CORPORATION", "size": "62854093.01" },
+            { "name": "US FOODS, INC.", "size": "56732503.98" },
+            {
+              "name": "MOTOR OIL (HELLAS) CORINTH REFINERIES S.A.",
+              "size": "54476694.57"
+            },
+            {
+              "name": "VALERO MARKETING AND SUPPLY COMPANY",
+              "size": "50821182.04"
+            },
+            {
+              "name": "OWENS & MINOR DISTRIBUTION, INC.",
+              "size": "46481296.57"
+            },
+            {
+              "name": "COMPANIA ESPANOLA DE PETROLEOS SAU",
+              "size": "44937399.89"
+            },
+            {
+              "name": "FEDERAL RESOURCES SUPPLY COMPANY",
+              "size": "42403799.26"
+            },
+            { "name": "PETROMAX REFINING COMPANY LLC", "size": "41910510.6" },
+            {
+              "name":
+                "DEFENSE GOVERNMENT CONTRACTING INTERNATIONAL CORPORATION",
+              "size": "39224159.1"
+            },
+            { "name": "KUWAIT PETROLEUM CORPORATION", "size": "38457764.68" },
+            { "name": "S-OIL CORPORATION", "size": "36414199.92" },
+            { "name": "PARKER-HANNIFIN CORPORATION", "size": "33544246.36" },
+            { "name": "NOBLE SALES CO., INC.", "size": "32149798.33" },
+            {
+              "name":
+                "ACCENTURE NATIONAL SECURITY SERVICES LIMITED LIABILITY COMPANY",
+              "size": "31985122.14"
+            },
+            { "name": "RED STAR ENTERPRISES LIMITED", "size": "31158727.19" },
+            { "name": "CFM INTERNATIONAL, INC.", "size": "30689789.7" },
+            { "name": "GENERAL ELECTRIC COMPANY", "size": "29465434.03" },
+            { "name": "KPMG LLP", "size": "29405880.07" },
+            { "name": "WESTERN REFINING COMPANY, L.P.", "size": "28966595.8" },
+            { "name": "CATERPILLAR INC.", "size": "27638063.88" },
+            { "name": "H SQUARED, INC.", "size": "27571462.77" },
+            { "name": "COSMO OIL COMPANY,LIMITED", "size": "26939000.64" },
+            {
+              "name": "CANADIAN COMMERCIAL CORPORATION",
+              "size": "26404586.18"
+            },
+            { "name": "NATIONAL FUEL INC", "size": "25732577.58" },
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "25699780.52" },
+            {
+              "name": "MISCELLANEOUS FOREIGN CONTRACTORS",
+              "size": "25569785.4"
+            },
+            { "name": "AMERICAN APPAREL, INC.", "size": "25489075.7" },
+            { "name": "DMS PHARMACEUTICAL GROUP INC.", "size": "24208498.78" },
+            { "name": "PETROMAX, LLC", "size": "24184525.04" },
+            { "name": "HONEYWELL INTERNATIONAL INC.", "size": "22707179.65" },
+            {
+              "name": "UNITED CAPITAL INVESTMENT GROUP, INC.",
+              "size": "22646151.88"
+            },
+            { "name": "SERCO INC.", "size": "21866189.84" },
+            { "name": "U S OIL & REFINING CO", "size": "21794745.9" },
+            { "name": "PETRO STAR INC.", "size": "21698826.86" },
+            { "name": "KAMPI COMPONENTS CO., INC.", "size": "20704912.19" },
+            { "name": "AMERIQUAL GROUP, LLC", "size": "20424311.61" },
+            { "name": "LAZARUS ENERGY HOLDINGS LLC", "size": "20279708.75" },
+            { "name": "CB&I FEDERAL SERVICES LLC", "size": "20023998.42" },
+            { "name": "AAR SUPPLY CHAIN, INC.", "size": "19182970.66" },
+            {
+              "name": "BLUEWATER DEFENSE INC. (F/K/A DJ MANUFACTURING CORP)",
+              "size": "19061620"
+            },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "18558609.53"
+            },
+            { "name": "FEDERAL PRISON INDUSTRIES INC", "size": "18513224.66" },
+            { "name": "WORNICK COMPANY, THE", "size": "18474980.79" },
+            { "name": "BELL HELICOPTER TEXTRON INC.", "size": "18322784.23" },
+            { "name": "JAMAICA BEARINGS CO INC", "size": "18187079.41" },
+            { "name": "ADVANTAGED SOLUTIONS, INC.", "size": "18076554.7" },
+            { "name": "SK ENERGY CORPORATION", "size": "18050472.59" },
+            { "name": "CACI ENTERPRISE SOLUTIONS, INC", "size": "17733070.31" },
+            { "name": "TRANSMONTAIGNE PARTNERS L.P.", "size": "17694558.86" },
+            { "name": "PLACID REFINING COMPANY LLC", "size": "17624738.66" },
+            { "name": "TRIMAN INDUSTRIES INC", "size": "17339126.11" },
+            {
+              "name": "PECKHAM VOCATIONAL INDUSTRIES, INC.",
+              "size": "17254764.05"
+            },
+            { "name": "SEVEN SEAS SHIPCHANDLERS L L C", "size": "17214753.7" },
+            {
+              "name": "OCEAN FAIR INTERNATIONAL SHIP CHANDLEING (L.L.C)",
+              "size": "17158610.51"
+            },
+            { "name": "SIKORSKY AIRCRAFT CORPORATION", "size": "17031708.98" },
+            { "name": "EPIC AVIATION, LLC", "size": "16499969.76" },
+            { "name": "HUNT REFINING COMPANY", "size": "16428030.48" },
+            {
+              "name": "HUSKY MARKETING AND SUPPLY COMPANY",
+              "size": "16398789.12"
+            },
+            { "name": "CARDINAL HEALTH, INC.", "size": "16317828.14" },
+            { "name": "OSHKOSH DEFENSE, LLC", "size": "16101802.94" },
+            { "name": "URS FEDERAL SERVICES, INC.", "size": "16060579.57" },
+            { "name": "WYNNEWOOD ENERGY COMPANY, LLC", "size": "15876083.71" },
+            { "name": "TRANSAERO, INC.", "size": "15829729.19" },
+            { "name": "ST. MICHAEL'S INC.", "size": "15790383.96" },
+            {
+              "name": "UNITED TECHNOLOGIES CORPORATION",
+              "size": "14356754.97"
+            },
+            {
+              "name": "BELL BOEING JOINT PROJECT OFFICE",
+              "size": "14298249.29"
+            },
+            {
+              "name": "HAMILTON SUNDSTRAND CORPORATION",
+              "size": "14244802.55"
+            },
+            { "name": "CHEVRON U.S.A. INC.", "size": "14221551.56" },
+            { "name": "HERMES CONSOLIDATED, LLC", "size": "14028564.83" },
+            {
+              "name": "NATIONAL INDUSTRIES FOR THE BLIND",
+              "size": "13962283.86"
+            },
+            { "name": "POND CONSTRUCTORS, INC", "size": "13758532.05" },
+            { "name": "ALON USA, LP", "size": "13705710.71" },
+            { "name": "SYSCO HAMPTON ROADS, INC.", "size": "13552317.13" },
+            { "name": "CHEVRON AL KHALIJ", "size": "13283243.19" },
+            { "name": "MYTHICS, INC", "size": "13144253.79" },
+            { "name": "CAPE-BURNS & MCDONNELL JV", "size": "13046435.01" },
+            { "name": "CALUMET SHREVEPORT FUELS, LLC.", "size": "12836290.16" },
+            { "name": "MAXCOM PETROLI SPA", "size": "12523127.61" },
+            { "name": "ECI DEFENSE GROUP, INC.", "size": "12486102.21" },
+            { "name": "REINHART FOODSERVICE, L.L.C.", "size": "12360140.91" },
+            { "name": "SNC MANUFACTURING, L.L.C.", "size": "12140280" },
+            { "name": "BURLINGTON INDUSTRIES LLC", "size": "12047175" },
+            { "name": "INTERCELL USA, INC.", "size": "12024100" },
+            {
+              "name": "SIEMENS MEDICAL SOLUTIONS USA, INC.",
+              "size": "11990325.62"
+            },
+            { "name": "W. S. DARLEY & CO.", "size": "11967273.63" },
+            { "name": "ENERSYS ENERGY PRODUCTS INC.", "size": "11656924.09" },
+            { "name": "EXIDE TECHNOLOGIES", "size": "11634844.9" },
+            {
+              "name": "LABATT INSTITUTIONAL SUPPLY COMPANY",
+              "size": "11594293.88"
+            },
+            {
+              "name": "NOVA GLOBAL SUPPLY AND SERVICES LLC",
+              "size": "11477720.09"
+            },
+            {
+              "name": "TACTICAL & SURVIVAL SPECIALTIES, INC.",
+              "size": "11457578.21"
+            },
+            { "name": "ZOLL MEDICAL CORPORATION", "size": "10998167.96" },
+            { "name": "INTUITIVE SURGICAL, INC.", "size": "10685980" },
+            { "name": "HYUNDAI OILBANK CO., LTD.", "size": "10439595.73" },
+            { "name": "L B & B ASSOCIATES INC.", "size": "10384981.68" },
+            {
+              "name": "ADVANTAGED SOLUTIONS INCORPORATED",
+              "size": "10280619.75"
+            },
+            { "name": "BSH MANAGEMENT SERVICES LLC", "size": "10051895.4" }
+          ]
+        },
+        {
+          "name": "DEPT OF DEFENSE",
+          "children": [
+            {
+              "name":
+                "NATIONAL TECHNOLOGY & ENGINEERING SOLUTIONS OF SANDIA, LLC",
+              "size": "622217432.17"
+            },
+            {
+              "name": "ALION SCIENCE AND TECHNOLOGY CORPORATION",
+              "size": "142587791.86"
+            },
+            { "name": "GILBANE FEDERAL", "size": "133471473" },
+            { "name": "MAGELLAN HEALTHCARE, INC", "size": "114800000" },
+            { "name": "MHN GOVERNMENT SERVICES, INC.", "size": "103200000" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "77455866.78" },
+            { "name": "WYLE LABORATORIES, INC.", "size": "72882790.75" },
+            {
+              "name":
+                "LAWRENCE LIVERMORE NATIONAL SECURITY LIMITED LIABILITY COMPANY",
+              "size": "54001521.22"
+            },
+            { "name": "THE MITRE CORPORATION", "size": "47712330.01" },
+            {
+              "name": "GEORGIA TECH APPLIED RESEARCH CORPORATION",
+              "size": "47421763.51"
+            },
+            { "name": "Other", "size": "35727833.9" },
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "29164536.34"
+            },
+            { "name": "FEDERAL EXPRESS CORPORATION", "size": "28673951.53" },
+            { "name": "INSTITUTE FOR DEFENSE ANALYSES", "size": "28251677.46" },
+            { "name": "RAYTHEON COMPANY", "size": "26217463.38" },
+            { "name": "BATTELLE MEMORIAL INSTITUTE", "size": "24976881.6" },
+            {
+              "name": "CLARK MCCARTHY HEALTHCARE PARTNERS II",
+              "size": "24533313"
+            },
+            { "name": "NETCENTRICS CORPORATION", "size": "23694903.79" },
+            { "name": "J & J MAINTENANCE, INC.", "size": "22562466.67" },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "21790076.88"
+            },
+            { "name": "RAND CORPORATION, THE", "size": "19494230" },
+            { "name": "LEIDOS, INC.", "size": "19270370.16" },
+            { "name": "UNITED PARCEL SERVICE CO.", "size": "16531355.61" },
+            { "name": "AT&T CORP.", "size": "16292962.14" },
+            {
+              "name": "PRICEWATERHOUSECOOPERS PUBLIC SECTOR LLP",
+              "size": "16086143.69"
+            },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "15930128.91"
+            },
+            {
+              "name": "XPO LOGISTICS WORLDWIDE GOVERNMENT SERVICES, LLC",
+              "size": "14904561.36"
+            },
+            { "name": "MANTECH TSG-2 JOINT VENTURE", "size": "14514855" },
+            {
+              "name": "NORTHROP GRUMMAN TECHNICAL SERVICES, INC.",
+              "size": "11386700"
+            },
+            {
+              "name": "CAPROCK GOVERNMENT SOLUTIONS, INC.",
+              "size": "11104439.14"
+            },
+            { "name": "GRANT THORNTON LLP", "size": "10409674.35" },
+            { "name": "ENGILITY CORPORATION", "size": "10350343.06" },
+            { "name": "QWEST SERVICES CORPORATION", "size": "10030626.97" }
+          ]
+        },
+        {
+          "name": "MISSILE DEFENSE AGENCY (MDA)",
+          "children": [
+            { "name": "RAYTHEON COMPANY", "size": "580910657.36" },
+            { "name": "BOEING COMPANY", "size": "283455969.03" },
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "260954046.85" },
+            {
+              "name": "NORTHROP GRUMMAN SPACE & MISSION SYSTEMS CORP.",
+              "size": "120861652.69"
+            },
+            {
+              "name": "PARSONS GOVERNMENT SERVICES INC.",
+              "size": "92075642.07"
+            },
+            { "name": "Other", "size": "29803503.32" },
+            { "name": "THE BOEING COMPANY", "size": "29694915.12" },
+            {
+              "name":
+                "JOHNS HOPKINS UNIVERSITY APPLIED PHYSICS LABORATORY LLC, THE",
+              "size": "25985820.87"
+            },
+            {
+              "name": "MILLENNIUM ENGINEERING AND INTEGRATION CO.",
+              "size": "19530739.02"
+            },
+            {
+              "name": "TELEDYNE BROWN ENGINEERING, INC.",
+              "size": "16377884.8"
+            },
+            { "name": "ORBITAL SCIENCES CORPORATION", "size": "15186276.24" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "11317433.38" },
+            { "name": "COLSA CORPORATION", "size": "10901222.79" },
+            { "name": "BOEING COMPANY, THE", "size": "10889796" }
+          ]
+        },
+        {
+          "name": "U.S. ARMY CORPS OF ENGINEERS - CIVIL PROGRAM FINANCING ONLY",
+          "children": [
+            { "name": "Other", "size": "130321148.34" },
+            {
+              "name": "WASHINGTON GROUP/ALBERICI JOINT VENTURE",
+              "size": "45000000"
+            },
+            { "name": "THALLE CONSTRUCTION CO., INC.", "size": "42580483.38" },
+            {
+              "name": "GREAT LAKES DREDGE & DOCK COMPANY, LLC",
+              "size": "40876202.22"
+            },
+            { "name": "MANSON CONSTRUCTION CO.", "size": "31695274.68" },
+            {
+              "name": "JOHNSON BROS. CORPORATION, A SOUTHLAND COMPANY",
+              "size": "27421677"
+            },
+            { "name": "J. E. MCAMIS, INC.", "size": "20042272.05" },
+            {
+              "name": "PINE BLUFF SAND AND GRAVEL COMPANY",
+              "size": "18670342.95"
+            },
+            { "name": "VOITH HYDRO, INC.", "size": "15847031.23" },
+            { "name": "BENCOR GLOBAL, INC.", "size": "13153300" },
+            { "name": "CABRERA SERVICES INC.", "size": "11900000" }
+          ]
+        },
+        {
+          "name": "U.S. SPECIAL OPERATIONS COMMAND (USSOCOM)",
+          "children": [
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "98299964.43" },
+            { "name": "INSITU, INC.", "size": "74452681.32" },
+            {
+              "name": "DRS GLOBAL ENTERPRISE SOLUTIONS, INC.",
+              "size": "54896443.15"
+            },
+            { "name": "ARMA GLOBAL CORPORATION", "size": "50127881.98" },
+            { "name": "Other", "size": "48927980.24" },
+            { "name": "UDC USA, INC.", "size": "42331770.52" },
+            { "name": "GLOBAL ORDNANCE LLC", "size": "37271931.72" },
+            {
+              "name": "BOEING SIKORSKY AIRCRAFT SUPPORT",
+              "size": "29774276.86"
+            },
+            {
+              "name": "L-3 NATIONAL SECURITY SOLUTIONS, INC.",
+              "size": "21428051.02"
+            },
+            { "name": "CYBERSPACE SOLUTIONS, LLC", "size": "20378947" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "19750781.69" },
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "19229142.11"
+            },
+            { "name": "VIGOR WORKS LLC", "size": "16183568.25" },
+            { "name": "EXELIS INC.", "size": "15326826.09" },
+            { "name": "IGOV TECHNOLOGIES, INC.", "size": "14639949.24" },
+            { "name": "AAI CORPORATION", "size": "14343405.7" },
+            { "name": "JACOBS TECHNOLOGY INC.", "size": "13842204.08" },
+            { "name": "BLUE TECH INC.", "size": "12546303.48" },
+            { "name": "THE BOEING COMPANY", "size": "12020754.91" },
+            { "name": "LENCO INDUSTRIES, INC.", "size": "10901016" },
+            { "name": "SIERRA FOUR INDUSTRIES CORP.", "size": "10889592" },
+            {
+              "name": "GENERAL DYNAMICS ORDNANCE AND TACTICAL SYSTEMS, INC.",
+              "size": "10300260.32"
+            },
+            {
+              "name": "PAE NATIONAL SECURITY SOLUTIONS LLC",
+              "size": "10284688.38"
+            }
+          ]
+        },
+        {
+          "name": "DEPT OF DEFENSE EDUCATION ACTIVITY (DODEA)",
+          "children": [
+            {
+              "name": "VALUEOPTIONS FEDERAL SERVICES, INC.",
+              "size": "61207988.07"
+            },
+            { "name": "Other", "size": "20271923.56" },
+            { "name": "LINCOLN, TOWN OF", "size": "14858342" }
+          ]
+        },
+        {
+          "name": "DEFENSE INFORMATION SYSTEMS AGENCY (DISA)",
+          "children": [
+            { "name": "VERIZON DEUTSCHLAND GMBH", "size": "56460400" },
+            { "name": "KNIGHT POINT SYSTEMS, LLC", "size": "39193186.2" },
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "31818753.71" },
+            { "name": "Other", "size": "31589283.03" },
+            { "name": "LEVEL 3 COMMUNICATIONS, LLC", "size": "22030460.92" },
+            {
+              "name": "MICROSOFT CORPORATION SITZ IN REDMOND CORPORATION",
+              "size": "17584313.24"
+            },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "15705254.28" },
+            {
+              "name": "BY LIGHT, PROFESSIONAL IT SERVICES, INC.",
+              "size": "14860890.23"
+            },
+            {
+              "name": "VERIZON BUSINESS NETWORK SERVICES INC.",
+              "size": "14514855.83"
+            },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "14356782.33" },
+            {
+              "name": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+              "size": "13634869.79"
+            },
+            { "name": "SPRINT FEDERAL OPERATIONS LLC", "size": "13165655.99" },
+            { "name": "CISCO SYSTEMS INC.", "size": "10906392.09" }
+          ]
+        },
+        {
+          "name": "DEFENSE ADVANCED RESEARCH PROJECTS AGENCY  (DARPA)",
+          "children": [
+            { "name": "Other", "size": "51791621.68" },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "27697991"
+            },
+            {
+              "name":
+                "BAE SYSTEMS INFORMATION AND ELECTRONIC SYSTEMS INTEGRATION INC.",
+              "size": "18397508"
+            },
+            { "name": "AGILE DEFENSE, INC.", "size": "14822643.66" },
+            { "name": "RAYTHEON COMPANY", "size": "14749397" },
+            { "name": "SRI INTERNATIONAL", "size": "12630691.72" },
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "11794695.02" },
+            { "name": "BOOZ ALLEN HAMILTON", "size": "10113732.12" },
+            { "name": "RAYTHEON BBN TECHNOLOGIES CORP.", "size": "10029674" }
+          ]
+        },
+        {
+          "name": "DEFENSE HUMAN RESOURCES ACTIVITY",
+          "children": [
+            { "name": "LAKEVIEW CENTER, INC.", "size": "23702235.87" },
+            { "name": "ENTERPRISE SERVICES LLC", "size": "19719071.85" },
+            { "name": "Other", "size": "11197136.07" }
+          ]
+        },
+        {
+          "name": "DEFENSE COMMISSARY AGENCY  (DECA)",
+          "children": [
+            { "name": "Other", "size": "23594250.46" },
+            { "name": "TRACE, INC.", "size": "10498900.39" }
+          ]
+        },
+        {
+          "name": "DEFENSE THREAT REDUCTION AGENCY (DTRA)",
+          "children": [
+            { "name": "Other", "size": "21698570.72" },
+            {
+              "name": "APPLIED RESEARCH ASSOCIATES, INC.",
+              "size": "21427221.87"
+            },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "21242512.39" },
+            {
+              "name": "URS FEDERAL SERVICES INTERNATIONAL, INC",
+              "size": "17697004.79"
+            },
+            {
+              "name": "LOS ALAMOS NATIONAL SECURITY LIMITED LIABILITY COMPANY",
+              "size": "11762926.18"
+            },
+            { "name": "LEIDOS, INC.", "size": "11758678.48" }
+          ]
+        },
+        {
+          "name": "WASHINGTON HEADQUARTERS SERVICES (WHS)",
+          "children": [
+            { "name": "TROWBRIDGE & TROWBRIDGE, LLC", "size": "16465811.69" },
+            { "name": "Other", "size": "14585346.83" },
+            { "name": "SERVICE SOURCE, INC", "size": "13246826.72" },
+            { "name": "AMAR HEALTH IT, LLC", "size": "13238142.16" }
+          ]
+        },
+        {
+          "name": "DEFENSE SECURITY COOPERATION AGENCY",
+          "children": [{ "name": "Other", "size": "10741967.25" }]
+        }
+      ]
+    },
+    {
+      "name": "Department of Energy (DOE)",
+      "children": [
+        {
+          "name": "ENERGY, DEPARTMENT OF",
+          "children": [
+            {
+              "name":
+                "NATIONAL TECHNOLOGY & ENGINEERING SOLUTIONS OF SANDIA, LLC",
+              "size": "1728155416.88"
+            },
+            {
+              "name": "CONSOLIDATED NUCLEAR SECURITY LLC",
+              "size": "1092195945"
+            },
+            {
+              "name": "LOS ALAMOS NATIONAL SECURITY LIMITED LIABILITY COMPANY",
+              "size": "927148857.91"
+            },
+            {
+              "name":
+                "LAWRENCE LIVERMORE NATIONAL SECURITY LIMITED LIABILITY COMPANY",
+              "size": "679261887.15"
+            },
+            {
+              "name": "BECHTEL MARINE PROPULSION CORPORATION",
+              "size": "550672600.5"
+            },
+            {
+              "name": "SAVANNAH RIVER NUCLEAR SOLUTIONS, LLC",
+              "size": "281674293.39"
+            },
+            {
+              "name":
+                "NATIONAL SECURITY TECHNOLOGIES LIMITED LIABILITY COMPANY",
+              "size": "223417496.45"
+            },
+            {
+              "name": "UT BATTELLE LIMITED LIABILITY COMPANY",
+              "size": "217998351.53"
+            },
+            { "name": "HONEYWELL INTERNATIONAL INC.", "size": "204597180.77" },
+            {
+              "name": "FLUOR FEDERAL PETROLEUM OPERATIONS, LLC",
+              "size": "204091739.41"
+            },
+            { "name": "BATTELLE MEMORIAL INSTITUTE", "size": "183486778.82" },
+            {
+              "name": "BATTELLE ENERGY ALLIANCE LIMITED LIABILITY COMPANY",
+              "size": "153440381.42"
+            },
+            {
+              "name": "THE REGENTS OF THE UNIVERSITY OF CALIFORNIA (1741)",
+              "size": "147899996.2"
+            },
+            { "name": "UCHICAGO ARGONNE, LLC", "size": "140800022.94" },
+            { "name": "BECHTEL NATIONAL, INC", "size": "122100000" },
+            { "name": "SAVANNAH RIVER REMEDIATION LLC", "size": "106174973" },
+            { "name": "STANFORD UNIVERSITY", "size": "105267858.83" },
+            {
+              "name": "CH2M HILL PLATEAU REMEDIATION COMPANY",
+              "size": "103777035.45"
+            },
+            {
+              "name": "BROOKHAVEN SCIENCE ASSOCIATES, LLC",
+              "size": "102688829.3"
+            },
+            {
+              "name": "WASHINGTON RIVER PROTECTION SOLUTIONS LLC",
+              "size": "100195458.84"
+            },
+            { "name": "FLUOR-B&W PORTSMOUTH LLC", "size": "73604775" },
+            {
+              "name": "FERMI RESEARCH ALLIANCE LIMITED LIABILITY COMPANY",
+              "size": "69858396.98"
+            },
+            { "name": "FLUOR IDAHO, LLC", "size": "69047477.27" },
+            { "name": "URS", "size": "67687340" },
+            {
+              "name": "OAK RIDGE ASSOCIATED UNIVERSITIES, INCORPORATED",
+              "size": "66087869.89"
+            },
+            {
+              "name": "REGENTS OF THE UNIVERSITY OF CALIFORNIA THE (7788)",
+              "size": "64744858"
+            },
+            { "name": "MISSION SUPPORT ALLIANCE, LLC", "size": "60904771.01" },
+            {
+              "name":
+                "REGENTS OF THE UNIVERSITY OF CALIFORNIA LOS ALAMOS NATIONAL LABORATORY",
+              "size": "53397028"
+            },
+            {
+              "name": "ALLIANCE FOR SUSTAINABLE ENERGY, LLC",
+              "size": "52165373.36"
+            },
+            { "name": "ACTIONET, INC.", "size": "45028431.12" },
+            { "name": "FLUOR FEDERAL SERVICES, INC.", "size": "42100000" },
+            { "name": "NUCLEAR WASTE PARTNERSHIP LLC", "size": "36759120.28" },
+            { "name": "CENTERRA GROUP, LLC", "size": "35603463.54" },
+            {
+              "name":
+                "JEFFERSON SCIENCE ASSOCIATES LIMITED LIABILITY COMPANY A SURA/CSC COMPANY",
+              "size": "29987056"
+            },
+            { "name": "LOS ALAMOS NATIONAL SECURITY, LLC", "size": "18900000" },
+            { "name": "AECOM ENERGY & CONSTRUCTION, INC.", "size": "15200288" },
+            { "name": "CH2M HILL B&W WEST VALLEY, LLC", "size": "12876743" },
+            {
+              "name": "ALLEGHENY SCIENCE & TECHNOLOGY CORPORATION",
+              "size": "12794868.74"
+            },
+            {
+              "name": "MID-AMERICA CONVERSION SERVICES, LLC",
+              "size": "11800000"
+            },
+            { "name": "PARSONS INFRA & TECH GROUP INC", "size": "10575575" },
+            { "name": "EAGLE RESEARCH GROUP, INC.", "size": "10500000" },
+            {
+              "name": "TRUSTEES OF PRINCETON UNIVERSITY, THE",
+              "size": "10268867.01"
+            },
+            {
+              "name": "NAVARRO RESEARCH AND ENGINEERING, INC.",
+              "size": "10186970"
+            },
+            { "name": "TECHSOURCE, INC.", "size": "10036149.33" }
+          ]
+        },
+        {
+          "name": "FEDERAL ENERGY REGULATORY COMMISSION",
+          "children": [
+            { "name": "SRA INTERNATIONAL, INC.", "size": "18253167.09" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Veterans Affairs (VA)",
+      "children": [
+        {
+          "name": "VETERANS AFFAIRS, DEPARTMENT OF",
+          "children": [
+            { "name": "MCKESSON CORPORATION", "size": "1636073794.43" },
+            {
+              "name": "TRIWEST HEALTHCARE ALLIANCE CORP.",
+              "size": "589671605.85"
+            },
+            { "name": "Other", "size": "491542265.78" },
+            {
+              "name": "HEALTH NET FEDERAL SERVICES, LLC",
+              "size": "283491499.2"
+            },
+            { "name": "QTC MEDICAL SERVICES, INC.", "size": "125711595.6" },
+            {
+              "name": "VENDOR RESOURCE MANAGEMENT, INC.",
+              "size": "105542644.62"
+            },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "74161689.41" },
+            { "name": "PHONAK L L C", "size": "64930747.69" },
+            {
+              "name": "VETERANS EVALUATION SERVICES, INC.",
+              "size": "64525000"
+            },
+            { "name": "ABLEVETS LLC", "size": "55276632.15" },
+            {
+              "name": "BY LIGHT, PROFESSIONAL IT SERVICES, INC.",
+              "size": "54527883.84"
+            },
+            { "name": "SYSTEMS MADE SIMPLE, INC.", "size": "51979293.62" },
+            { "name": "EMERGENT, LLC", "size": "51378396.48" },
+            { "name": "US FOODS, INC.", "size": "47429459.58" },
+            { "name": "ASM RESEARCH, INC.", "size": "46249795.02" },
+            { "name": "FAVOR TECHCONSULTING, LLC", "size": "40308224.82" },
+            { "name": "KREISERS, INC.", "size": "34763741.71" },
+            {
+              "name": "AMERICAN PURCHASING SERVICES, LLC",
+              "size": "33651635.57"
+            },
+            { "name": "INTELLIGENT WAVES LLC", "size": "29840951.92" },
+            { "name": "AT&T CORP.", "size": "29797268.98" },
+            {
+              "name": "CHRISTIAN CARE CENTER OF JOHNSON CITY, INC.",
+              "size": "28508348.58"
+            },
+            { "name": "FOUR POINTS TECHNOLOGY, L.L.C.", "size": "27404652.1" },
+            { "name": "MEDLINE INDUSTRIES, INC.", "size": "26907451.15" },
+            { "name": "STARKEY LABORATORIES, INC.", "size": "24863988.81" },
+            { "name": "GN HEARING CARE CORPORATION", "size": "24767196.67" },
+            { "name": "MEDTRONIC USA, INC.", "size": "22520042.91" },
+            { "name": "EPOCH CONCEPTS, LLC", "size": "22332791.32" },
+            { "name": "LIBERTY IT SOLUTIONS, LLC", "size": "19493875.48" },
+            { "name": "CALIBRE SYSTEMS, INC.", "size": "17614673.59" },
+            { "name": "OTICON, INC.", "size": "17454404.72" },
+            { "name": "FIRST NATION GROUP, LLC", "size": "17446204.1" },
+            { "name": "THE MITRE CORPORATION", "size": "17404355.08" },
+            { "name": "D SQUARE CONSTRUCTION, LLC", "size": "16858034.23" },
+            { "name": "DLH SOLUTIONS, INC", "size": "16746879.29" },
+            { "name": "CARDINAL HEALTH 200, LLC", "size": "16635784.43" },
+            { "name": "MARTEK GLOBAL SERVICES, INC.", "size": "16326970.98" },
+            { "name": "TRILLAMED, LLC", "size": "16160364.18" },
+            { "name": "G&C FAB-CON LLC", "size": "15820484.16" },
+            { "name": "OLYMPUS AMERICA INC.", "size": "15507363.03" },
+            {
+              "name": "WILLIAMS BUILDING COMPANY, INC.",
+              "size": "14706387.94"
+            },
+            { "name": "I3 FEDERAL, LLC", "size": "14496063.79" },
+            { "name": "PRO-SPHERE TEK, INC.", "size": "14267758.55" },
+            { "name": "LOGISTICS HEALTH, INC.", "size": "14000000" },
+            { "name": "AD HOC LLC", "size": "13507822.1" },
+            {
+              "name": "VETERANS HEALTHCARE SUPPLY SOLUTIONS, INC.",
+              "size": "13014836.43"
+            },
+            { "name": "ST. JUDE MEDICAL S.C., INC.", "size": "12908021.32" },
+            {
+              "name": "VETERANS DEVELOPMENT CORPORATION, INC.",
+              "size": "12799005.74"
+            },
+            {
+              "name": "PHILIPS HEALTHCARE, A DIVISION OF PENAC",
+              "size": "12765106.97"
+            },
+            { "name": "ALLIANT ENTERPRISES, LLC", "size": "12753495.95" },
+            { "name": "THUNDERCAT TECHNOLOGY, LLC", "size": "12325145.83" },
+            { "name": "CONCENTRIC GROUP, LLC", "size": "12285968.75" },
+            { "name": "TECHNATOMY CORPORATION", "size": "12035451.32" },
+            {
+              "name": "BUSINESS INFORMATION TECHNOLOGY SOLUTIONS LLC",
+              "size": "11961823.96"
+            },
+            {
+              "name": "MEDICAL SUPPORT LOS ANGELES, A MEDICAL CORPORATION",
+              "size": "11353946.4"
+            },
+            { "name": "DEPUY SYNTHES SALES INC", "size": "10505399.39" },
+            { "name": "BOSTON SCIENTIFIC CORPORATION", "size": "10384065.96" },
+            { "name": "SIVANTOS, INC.", "size": "10337079.85" },
+            { "name": "ALVAREZ LLC", "size": "10273239.99" },
+            { "name": "ERA HEALTH, LLC", "size": "10012351.74" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "National Aeronautics and Space Administration (NASA)",
+      "children": [
+        {
+          "name": "NATIONAL AERONAUTICS AND SPACE ADMINISTRATION",
+          "children": [
+            {
+              "name": "CALIFORNIA INSTITUTE OF TECHNOLOGY",
+              "size": "926265884.04"
+            },
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "403873513" },
+            { "name": "THE BOEING COMPANY", "size": "315880000" },
+            { "name": "Other", "size": "180375050.07" },
+            { "name": "BOEING COMPANY", "size": "171700719.13" },
+            { "name": "JACOBS TECHNOLOGY INC.", "size": "119635589.32" },
+            { "name": "AEROJET ROCKETDYNE OF DE, INC", "size": "105000000" },
+            { "name": "ATK LAUNCH SYSTEMS INCORPORATED", "size": "97323301" },
+            {
+              "name": "S. J. AMOROSO CONSTRUCTION CO., INC.",
+              "size": "76428000"
+            },
+            {
+              "name": "NORTHROP GRUMMAN SPACE AND MISSION SYSTEMS CORPORATION",
+              "size": "60365515"
+            },
+            { "name": "RAYTHEON COMPANY", "size": "59233939" },
+            { "name": "SGT, INC.", "size": "51507273.37" },
+            { "name": "UNITED LAUNCH SERVICES, LLC", "size": "45279864.82" },
+            { "name": "ORBITAL SCIENCES CORPORATION", "size": "44028783.43" },
+            { "name": "HARRIS CORPORATION", "size": "43196874.38" },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "42494409.84" },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "41970931.45"
+            },
+            { "name": "SYNCOM SPACE SERVICES LLC", "size": "40576514.19" },
+            { "name": "BOEING COMPANY, THE", "size": "38516596.24" },
+            { "name": "Russia Space Agency", "size": "37143610" },
+            {
+              "name": "HAMILTON SUNDSTRAND SPACE SYSTEMS INTERNATIONAL INC",
+              "size": "36517918.82"
+            },
+            { "name": "URS FEDERAL SERVICES, INC.", "size": "33566835.07" },
+            {
+              "name": "GENERAL DYNAMICS MISSION SYSTEMS, INC",
+              "size": "30500056.8"
+            },
+            { "name": "AS AND D, INC.", "size": "27397712.98" },
+            { "name": "SOUTHWEST RESEARCH INSTITUTE", "size": "27349841.6" },
+            {
+              "name": "BALL AEROSPACE & TECHNOLOGIES CORP.",
+              "size": "26242418"
+            },
+            {
+              "name": "ARCTIC SLOPE TECHNICAL SERVICES, INC.",
+              "size": "21655314.85"
+            },
+            { "name": "INUTEQ, LLC", "size": "21332039.14" },
+            { "name": "ASSOC UNIV RESEARCH ASTRONOMY", "size": "20835477" },
+            { "name": "HP ENTERPRISE SERVICES, LLC", "size": "20130259.24" },
+            { "name": "TELEDYNE BROWN ENGINEERING, INC.", "size": "19666761" },
+            {
+              "name": "SCIENCE SYSTEMS AND APPLICATIONS, INC.",
+              "size": "18809341.22"
+            },
+            { "name": "JOHNS HOPKINS UNIVERSITY (5111)", "size": "18569994" },
+            {
+              "name": "LOS ALAMOS NATIONAL SECURITY LIMITED LIABILITY COMPANY",
+              "size": "17277715.83"
+            },
+            { "name": "BARRIOS TECHNOLOGY, LTD.", "size": "16389400.42" },
+            { "name": "PAE APPLIED TECHNOLOGIES LLC", "size": "16106259.74" },
+            { "name": "SIERRA LOBO, INC.", "size": "16000000" },
+            {
+              "name": "UT BATTELLE LIMITED LIABILITY COMPANY",
+              "size": "14728716.79"
+            },
+            {
+              "name": "MILLENNIUM ENGINEERING AND INTEGRATION SERVICES LLC",
+              "size": "13770628.97"
+            },
+            {
+              "name": "UNIVERSITIES SPACE RESEARCH ASSOCIATION",
+              "size": "13595815.02"
+            },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "13422750.96"
+            },
+            { "name": "TRAX INTERNATIONAL CORPORATION", "size": "13083843.56" },
+            {
+              "name": "MANUFACTURING TECHNICAL SOLUTIONS INCORPORATED",
+              "size": "12903194"
+            },
+            { "name": "THE AEROSPACE CORPORATION", "size": "12491726.05" },
+            { "name": "COLSA CORPORATION", "size": "12091128" },
+            { "name": "BASTION TECHNOLOGIES, INC.", "size": "11523408.09" },
+            { "name": "VANTAGE PARTNERS, LLC", "size": "11015791.42" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Agency for International Development (USAID)",
+      "children": [
+        {
+          "name": "AGENCY FOR INTERNATIONAL DEVELOPMENT",
+          "children": [
+            { "name": "CHEMONICS INTERNATIONAL, INC", "size": "564913048.24" },
+            { "name": "KENYA MEDICAL SUPPLIES AUTHOR ITY", "size": "77249090" },
+            { "name": "DEVELOPMENT ALTERNATIVES, INC.", "size": "59231120.41" },
+            { "name": "ARD, INC.", "size": "38637681.22" },
+            {
+              "name": "CREATIVE ASSOCIATES INTERNATIONAL, INC.",
+              "size": "33018719.78"
+            },
+            { "name": "Other", "size": "25546000.58" },
+            {
+              "name": "MANAGEMENT SYSTEMS INTERNATIONAL, INC.",
+              "size": "25073445.83"
+            },
+            {
+              "name": "AECOM INTERNATIONAL DEVELOPMENT, INC.",
+              "size": "20270085"
+            },
+            {
+              "name": "DOMESTIC AWARDEES (UNDISCLOSED)",
+              "size": "18060697.34"
+            },
+            { "name": "DAI GLOBAL, LLC", "size": "17242354.18" },
+            { "name": "CNFA", "size": "15500000" },
+            { "name": "FINTRAC, INC.", "size": "15340306.01" },
+            { "name": "ACDI/VOCA", "size": "12133756.64" },
+            {
+              "name": "CARDNO EMERGING MARKETS USA, LTD.",
+              "size": "11951878.85"
+            },
+            { "name": "RESEARCH TRIANGLE INSTITUTE", "size": "11663468.14" },
+            {
+              "name": "SOCIAL SOLUTIONS INTERNATIONAL, INC.",
+              "size": "11262148"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of State (DOS)",
+      "children": [
+        {
+          "name": "STATE, DEPARTMENT OF",
+          "children": [
+            {
+              "name": "B.L. HARBERT INTERNATIONAL, L.L.C.",
+              "size": "436298223.3"
+            },
+            { "name": "PAE GOVERNMENT SERVICES, INC.", "size": "128480993.02" },
+            {
+              "name": "MISCELLANEOUS FOREIGN AWARDEES",
+              "size": "116869893.74"
+            },
+            { "name": "AEGIS DEFENSE SERVICES, LLC", "size": "65817798.28" },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "64037570.82"
+            },
+            { "name": "DYNCORP INTERNATIONAL LLC", "size": "49241840.58" },
+            { "name": "Other", "size": "48386522.13" },
+            { "name": "CGI FEDERAL INC.", "size": "47061064" },
+            { "name": "COMPUTER SCIENCES CORPORATION", "size": "36276651.81" },
+            { "name": "TRIPLE CANOPY INC", "size": "33073493.74" },
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "31666353.12"
+            },
+            {
+              "name": "INTER-CON SECURITY SYSTEMS, INC.",
+              "size": "29412510.48"
+            },
+            { "name": "OLGOONIK GLOBAL SECURITY , LLC", "size": "28296579.31" },
+            { "name": "JANUS GLOBAL OPERATIONS LLC", "size": "25717697.77" },
+            { "name": "ACTIONET, INC.", "size": "23754741.78" },
+            { "name": "CHS MIDDLE EAST, LLC", "size": "22559168.11" },
+            { "name": "STANLEY ASSOCIATES, INC.", "size": "22243769.53" },
+            {
+              "name": "INTERNATIONAL DEVELOPMENT SOLUTIONS LLC",
+              "size": "19331286.89"
+            },
+            { "name": "FCI FEDERAL, INC", "size": "17895000" },
+            { "name": "DELOITTE CONSULTING LLP", "size": "17764671.08" },
+            { "name": "TRIPLE CANOPY, INC.", "size": "17127951.63" },
+            {
+              "name": "MANTECH ADVANCED SYSTEMS INTERNATIONAL, INC.",
+              "size": "16267721.08"
+            },
+            { "name": "GLOBAL PRECISION SYSTEMS, LLC", "size": "15694292.55" },
+            { "name": "SRA INTERNATIONAL, INC.", "size": "14814587.3" },
+            { "name": "ACUITY, INC.", "size": "14764239.26" },
+            {
+              "name": "TRANS DIGITAL TECHNOLOGIES LIMITED LIABILITY COMPANY",
+              "size": "14282372.76"
+            },
+            {
+              "name":
+                "ACCENTURE NATIONAL SECURITY SERVICES LIMITED LIABILITY COMPANY",
+              "size": "13685188.13"
+            },
+            { "name": "HERITAGE HOME GROUP, LLC", "size": "13425662.18" },
+            { "name": "TSYMMETRY, INC.", "size": "12600191" },
+            { "name": "BL HARBERT INTERNATIONAL LLC", "size": "11916944.69" },
+            { "name": "STG INC", "size": "10632071.07" },
+            { "name": "GILFORD CONSTRUCTION CORPORATION", "size": "10627146" },
+            { "name": "G4S SECURE INTEGRATION LLC", "size": "10455746.71" },
+            { "name": "BUCHANAN & EDWARDS, INC.", "size": "10306449.35" },
+            { "name": "KENJYA-TRUSANT GROUP, LLC, THE", "size": "10159607.99" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Health and Human Services (HHS)",
+      "children": [
+        {
+          "name": "CENTERS FOR DISEASE CONTROL AND PREVENTION",
+          "children": [
+            { "name": "MERCK SHARP & DOHME CORP.", "size": "327844117.88" },
+            { "name": "GLAXOSMITHKLINE LLC", "size": "211436895.98" },
+            { "name": "PFIZER INC.", "size": "191025243.91" },
+            { "name": "SANOFI PASTEUR INC.", "size": "114946210.61" },
+            { "name": "PLOWSHARE GROUP, INC", "size": "65114510" },
+            { "name": "RAFA LABORATORIES LTD.", "size": "27948400" },
+            {
+              "name": "DELL SERVICES FEDERAL GOVERNMENT, INC.",
+              "size": "22687824.43"
+            },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "17318195.39"
+            },
+            { "name": "BAXTER HEALTHCARE CORPORATION", "size": "17030950.52" },
+            { "name": "HOSPIRA WORLDWIDE, INC.", "size": "15918138" },
+            {
+              "name": "ICAHN SCHOOL OF MEDICINE AT MOUNT SINAI",
+              "size": "14822636.5"
+            },
+            { "name": "KARNA LLC", "size": "14369974.05" },
+            { "name": "SAGENT PHARMACEUTICALS, INC.", "size": "13146933.6" },
+            { "name": "WESTAT, INC.", "size": "11905171" },
+            { "name": "SEQIRUS USA INC.", "size": "11656935.6" },
+            { "name": "METRO LOGICS, INC.", "size": "11233121.24" },
+            {
+              "name": "NEW YORK CITY HEALTH AND HOSPITALS CORPORATION",
+              "size": "10698505"
+            },
+            { "name": "CAREFUSION 203, INC.", "size": "10289160" },
+            { "name": "DELOITTE CONSULTING LLP", "size": "10266274.3" }
+          ]
+        },
+        {
+          "name": "CENTERS FOR MEDICARE AND MEDICAID SERVICES",
+          "children": [
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "174687798.45"
+            },
+            { "name": "SERCO INC.", "size": "142407411" },
+            { "name": "HP ENTERPRISE SERVICES, LLC", "size": "80400098.25" },
+            {
+              "name": "NATIONAL GOVERNMENT SERVICES, INC.",
+              "size": "75140168.05"
+            },
+            { "name": "SRA INTERNATIONAL, INC.", "size": "65651173.49" },
+            { "name": "HIGHMARK MEDICARE SERVICES INC.", "size": "55707122" },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "41904211.35" },
+            { "name": "PALMETTO GBA, LLC", "size": "40241072" },
+            { "name": "NEWWAVE-GDIT, LLC", "size": "33674989" },
+            { "name": "ACCENTURE FEDERAL SERVICES LLC", "size": "30558923.7" },
+            { "name": "C2C SOLUTIONS INC", "size": "29005841.12" },
+            { "name": "THE MITRE CORPORATION", "size": "28418978" },
+            {
+              "name": "MATHEMATICA POLICY RESEARCH, INC.",
+              "size": "27296544.92"
+            },
+            {
+              "name": "FIRST COAST SERVICE OPTIONS, INC.",
+              "size": "23508911.97"
+            },
+            {
+              "name": "COMPUTER SCIENCES CORPORATION (3126)",
+              "size": "23064420"
+            },
+            { "name": "ELECTRONIC DATA SYSTEMS, LLC", "size": "22491393.8" },
+            {
+              "name": "CAHABA GOVERNMENT BENEFIT ADMINISTRATORS, LLC",
+              "size": "22408128"
+            },
+            { "name": "AD HOC LLC", "size": "22231563.92" },
+            { "name": "Other", "size": "21388845.59" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "20309443.03" },
+            { "name": "LOGISTICS MANAGEMENT INSTITUTE", "size": "19282503.64" },
+            { "name": "COMPANION DATA SERVICES, LLC", "size": "19228475.53" },
+            {
+              "name": "WISCONSIN PHYSICIANS SERVICE INSURANCE CORPORATION",
+              "size": "18269720"
+            },
+            {
+              "name": "QUALITY SOFTWARE SERVICES, INC.",
+              "size": "18040290.62"
+            },
+            { "name": "TANTUS TECHNOLOGIES, INC.", "size": "17609737.64" },
+            { "name": "FEI.COM, INC.", "size": "15914243.64" },
+            { "name": "ACUMEN, LLC", "size": "15860493.47" },
+            { "name": "SOLUTIONS BY DESIGN II, LLC", "size": "15326389.26" },
+            { "name": "EDAPTIVE SYSTEMS, LLC", "size": "15319019.78" },
+            { "name": "CGS ADMINISTRATORS, LLC", "size": "14528136" },
+            { "name": "SPARKSOFT CORPORATION", "size": "14424646" },
+            {
+              "name": "TURNING POINT GLOBAL SOLUTIONS, L.L.C.",
+              "size": "13588390.03"
+            },
+            { "name": "ACTIONET, INC.", "size": "12974082.53" },
+            {
+              "name": "NEWWAVE TELECOM AND TECHNOLOGIES, INC.",
+              "size": "12954612.91"
+            },
+            { "name": "BELLESE TECHNOLOGIES, LLC", "size": "12819694.66" },
+            { "name": "FU ASSOCIATES LIMITED", "size": "10549686" },
+            {
+              "name": "BUCCANEER COMPUTER SYSTEMS & SERVICE, INC.",
+              "size": "10219183"
+            }
+          ]
+        },
+        {
+          "name": "FOOD AND DRUG ADMINISTRATION",
+          "children": [
+            { "name": "TRUE NORTH COMMUNICATIONS INC.", "size": "124969987" },
+            { "name": "Other", "size": "49249372.89" },
+            { "name": "DELOITTE CONSULTING LLP", "size": "17188542.99" },
+            { "name": "BZ-JV LLC", "size": "12063718.45" }
+          ]
+        },
+        {
+          "name": "NATIONAL INSTITUTES OF HEALTH",
+          "children": [
+            { "name": "Other", "size": "116423185.53" },
+            { "name": "SAIC-FREDERICK, INC.", "size": "79135216.9" },
+            { "name": "SRA INTERNATIONAL, INC.", "size": "42085442.86" },
+            {
+              "name": "MEDICAL SCIENCE & COMPUTING, LLC",
+              "size": "25150068.9"
+            },
+            { "name": "WESTAT, INC.", "size": "17576315.09" },
+            { "name": "TECHNICAL RESOURCES INC", "size": "16828893" },
+            { "name": "EMERGENT, LLC", "size": "15506847.95" },
+            {
+              "name": "AMERICAN TYPE CULTURE COLLECTION",
+              "size": "14160993.22"
+            },
+            { "name": "NET ESOLUTIONS CORPORATION", "size": "13575243.96" },
+            { "name": "FISHER BIOSERVICES, INC.", "size": "13060956.32" },
+            { "name": "CDW GOVERNMENT LLC", "size": "12224136.54" },
+            { "name": "EMMES CORPORATION, THE", "size": "11656213.3" },
+            {
+              "name": "SOCIAL & SCIENTIFIC SYSTEMS, INC.",
+              "size": "11069802.2"
+            },
+            { "name": "DELOITTE CONSULTING LLP", "size": "11051594.16" },
+            { "name": "LEIDOS, INC.", "size": "10867597.59" },
+            { "name": "BATTELLE MEMORIAL INSTITUTE", "size": "10437726.82" },
+            { "name": "ILLUMINA, INC.", "size": "10342246.77" }
+          ]
+        },
+        {
+          "name": "INDIAN HEALTH SERVICE",
+          "children": [
+            { "name": "Other", "size": "76486668.42" },
+            { "name": "MCKESSON CORPORATION", "size": "59362589.25" },
+            { "name": "AB STAFFING SOLUTIONS, LLC", "size": "17512221.73" },
+            { "name": "TIGUA FACILITY SERVICES, INC", "size": "12612641" }
+          ]
+        },
+        {
+          "name": "OFFICE OF ASSISTANT SECRETARY FOR PREPAREDNESS AND RESPONSE",
+          "children": [
+            {
+              "name": "BASILEA PHARMACEUTICA INTERNATIONAL AG",
+              "size": "54805689"
+            },
+            { "name": "CERUS CORPORATION", "size": "46595860" },
+            { "name": "SANOFI PASTEUR INC.", "size": "35354943" },
+            { "name": "CRUCELL HOLLAND B.V.", "size": "20996549" },
+            { "name": "SEQIRUS, INC.", "size": "19207770" },
+            { "name": "GLAXOSMITHKLINE LLC", "size": "18144758.6" },
+            { "name": "CYTORI THERAPEUTICS, INC.", "size": "13358679" },
+            { "name": "TAKEDA VACCINES, INC.", "size": "12039780" }
+          ]
+        },
+        {
+          "name": "OFFICE OF THE ASSISTANT SECRETARY FOR ADMINISTRATION (ASA)",
+          "children": [
+            { "name": "Other", "size": "44118403.8" },
+            { "name": "DANYA INTERNATIONAL INC.", "size": "39494006" },
+            { "name": "ICF INCORPORATED, L.L.C.", "size": "22530812.66" },
+            { "name": "STG INTERNATIONAL, INC.", "size": "10020151.36" }
+          ]
+        },
+        {
+          "name": "SUBSTANCE ABUSE AND MENTAL HEALTH SERVICES ADMINISTRATION",
+          "children": [
+            { "name": "EAGLE TECHNOLOGIES INCORPORATED", "size": "26831096" },
+            { "name": "RESEARCH TRIANGLE INSTITUTE", "size": "11078154" }
+          ]
+        },
+        {
+          "name": "AGENCY FOR HEALTHCARE RESEARCH AND QUALITY",
+          "children": [{ "name": "WESTAT, INC.", "size": "22310212" }]
+        },
+        {
+          "name": "HEALTH RESOURCES AND SERVICES ADMINISTRATION",
+          "children": [
+            {
+              "name": "SAPIENT GOVERNMENT SERVICES, INC.",
+              "size": "21358054.49"
+            },
+            { "name": "SRA INTERNATIONAL, INC.", "size": "12960777" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Homeland Security (DHS)",
+      "children": [
+        {
+          "name": "U.S. COAST GUARD",
+          "children": [
+            {
+              "name": "BOLLINGER SHIPYARDS LOCKPORT, L.L.C.",
+              "size": "293513225.4"
+            },
+            { "name": "Other", "size": "149671255.76" },
+            {
+              "name": "GENERAL DYNAMICS MISSION SYSTEMS, INC",
+              "size": "41493588"
+            },
+            { "name": "LEONARDO SPA", "size": "39287073.46" },
+            { "name": "MARINETTE MARINE CORPORATION", "size": "18090781" },
+            { "name": "DELL FEDERAL SYSTEMS L.P.", "size": "16264324.65" },
+            { "name": "ACE INFO SOLUTIONS, INC.", "size": "15970440" },
+            { "name": "AIRBUS HELICOPTERS, INC.", "size": "13436676.54" },
+            { "name": "DIGITAL MANAGEMENT INC.", "size": "10186160" }
+          ]
+        },
+        {
+          "name": "TRANSPORTATION SECURITY ADMINISTRATION",
+          "children": [
+            { "name": "CSRA LLC", "size": "55066246.3" },
+            { "name": "LEIDOS, INC.", "size": "52017964.8" },
+            { "name": "COVENANT AVIATION SECURITY LLC", "size": "37793235.25" },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "37232240.51" },
+            { "name": "MORPHO DETECTION, LLC", "size": "30623059" },
+            { "name": "DELOITTE CONSULTING LLP", "size": "30321569.34" },
+            { "name": "Other", "size": "26619284.48" },
+            { "name": "INFOZEN, INC.", "size": "25484499.55" },
+            { "name": "ACCENTURE FEDERAL SERVICES LLC", "size": "23600327.77" },
+            { "name": "VF IMAGEWEAR, INC.", "size": "23258021.08" },
+            { "name": "DELL FEDERAL SYSTEMS L.P.", "size": "15502603.56" },
+            { "name": "L-3 COMMUNICATIONS CORPORATION", "size": "12437229.58" },
+            { "name": "RAYTHEON COMPANY", "size": "10531686.26" },
+            { "name": "GENERAL DYNAMICS ONE SOURCE LLC", "size": "10268885.9" }
+          ]
+        },
+        {
+          "name": "NATIONAL PROTECTION AND PROGRAMS DIRECTORATE",
+          "children": [
+            { "name": "CSRA LLC", "size": "50311509.4" },
+            { "name": "PARAGON SYSTEMS, INC", "size": "38283646.66" }
+          ]
+        },
+        {
+          "name": "U.S. CUSTOMS AND BORDER PROTECTION",
+          "children": [
+            { "name": "Other", "size": "40718604.1" },
+            { "name": "ESCGOV", "size": "31718150.31" },
+            { "name": "DELOITTE CONSULTING LLP", "size": "28658830.53" },
+            { "name": "SIERRA NEVADA CORPORATION", "size": "21641524" },
+            { "name": "UNISYS CORPORATION", "size": "19448017.91" },
+            { "name": "DELL FEDERAL SYSTEMS L.P.", "size": "16667527.1" },
+            { "name": "HARRIS CORPORATION", "size": "16580569.54" },
+            { "name": "HP ENTERPRISE SERVICES, LLC", "size": "14820397.45" },
+            { "name": "SMITHS DETECTION, INC.", "size": "13560254.74" },
+            { "name": "RAPISCAN SYSTEMS, INC.", "size": "12775352.52" },
+            {
+              "name": "AMERICAN SCIENCE AND ENGINEERING, INC.",
+              "size": "12524528.2"
+            },
+            {
+              "name": "CHENEGA TECHNICAL INNOVATIONS, LLC",
+              "size": "11889678.08"
+            },
+            {
+              "name": "CAMBRIDGE INTERNATIONAL SYSTEMS INC.",
+              "size": "10361134.16"
+            }
+          ]
+        },
+        {
+          "name": "FEDERAL EMERGENCY MANAGEMENT AGENCY",
+          "children": [
+            { "name": "Other", "size": "35536398.47" },
+            { "name": "AECOM RECOVERY", "size": "27106465.48" },
+            { "name": "THE CHRISTMAN COMPANY", "size": "22000000" },
+            { "name": "STARR II, A JOINT VENTURE", "size": "18222888.3" },
+            {
+              "name": "CH2M HILL - CDM PA-TAC RECOVERY SERVICES",
+              "size": "13106454.43"
+            },
+            { "name": "NISTAC E", "size": "13067618.18" },
+            { "name": "FLUOR ENTERPRISES, INC", "size": "12247989.47" },
+            {
+              "name": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+              "size": "12139814.16"
+            },
+            { "name": "COMPASS PTS JV, THE", "size": "11862256.66" },
+            { "name": "CB&I FEDERAL SERVICES LLC", "size": "10423202.46" }
+          ]
+        },
+        {
+          "name": "U.S. IMMIGRATION AND CUSTOMS ENFORCEMENT",
+          "children": [
+            { "name": "Other", "size": "31684382.36" },
+            {
+              "name": "QBASE-MCNEIL INTEGRATED SOLUTIONS",
+              "size": "20304851.31"
+            },
+            {
+              "name": "CORRECTIONS CORPORATION OF AMERICA",
+              "size": "17269375.44"
+            },
+            { "name": "CSI AVIATION SERVICES, INC.", "size": "17228466" },
+            { "name": "INGENESIS INCORPORATED", "size": "16800000" },
+            { "name": "GEO GROUP INC., THE", "size": "13415090.45" },
+            { "name": "AKIMA GLOBAL SERVICES, LLC", "size": "13244234.33" },
+            { "name": "PALANTIR TECHNOLOGIES INC.", "size": "12220413.72" },
+            { "name": "DEV TECHNOLOGY GROUP, INC.", "size": "11768710.38" }
+          ]
+        },
+        {
+          "name": "OFFICE OF THE CHIEF INFORMATION OFFICER",
+          "children": [
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "28950468"
+            },
+            { "name": "HP ENTERPRISE SERVICES, LLC", "size": "24172674.73" },
+            { "name": "CSRA LLC", "size": "14379567.29" },
+            { "name": "DELL FEDERAL SYSTEMS L.P.", "size": "12527685.32" }
+          ]
+        },
+        {
+          "name": "U.S. SECRET SERVICE",
+          "children": [
+            { "name": "Other", "size": "22273902.14" },
+            { "name": "GENERAL MOTORS LLC", "size": "10058337.63" }
+          ]
+        },
+        {
+          "name": "OFFICE OF THE CHIEF PROCUREMENT OFFICER",
+          "children": [
+            {
+              "name": "VERIZON BUSINESS NETWORK SERVICES INC.",
+              "size": "20408052.06"
+            }
+          ]
+        },
+        {
+          "name": "SCIENCE AND TECHNOLOGY",
+          "children": [
+            { "name": "Other", "size": "19687965.95" },
+            { "name": "LOCH HARBOUR GROUP, INC.", "size": "10199538.29" }
+          ]
+        },
+        {
+          "name": "OFFICE OF THE CHIEF READINESS SUPPORT OFFICER",
+          "children": [
+            { "name": "GENERAL DYNAMICS ONE SOURCE LLC", "size": "16800971" }
+          ]
+        },
+        {
+          "name": "U.S. CITIZENSHIP AND IMMIGRATION SERVICES",
+          "children": [
+            { "name": "COMPUTER WORLD SERVICES CORP.", "size": "15579830" },
+            { "name": "SEVATEC INC.", "size": "14968399.42" },
+            { "name": "HP ENTERPRISE SERVICES, LLC", "size": "14201564.75" }
+          ]
+        },
+        {
+          "name": "OFFICE OF HEALTH AFFAIRS",
+          "children": [
+            {
+              "name": "HASSETT & WILLIS ASSOCIATES, LLC",
+              "size": "14914192.9"
+            },
+            { "name": "ASTRIX SOFTWARE TECHNOLOGY, INC", "size": "11154229.48" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Agriculture (USDA)",
+      "children": [
+        {
+          "name": "FOREST SERVICE",
+          "children": [
+            { "name": "Other", "size": "211892172.47" },
+            {
+              "name": "NEPTUNE AVIATION SERVICES, INC.",
+              "size": "18921513.12"
+            },
+            {
+              "name":
+                "MANAGEMENT AND ENGINEERING TECHNOLOGIES INTERNATIONAL, INC.",
+              "size": "12295093.61"
+            },
+            { "name": "AERO FLITE INC", "size": "11471609.32" }
+          ]
+        },
+        {
+          "name": "FOOD AND NUTRITION SERVICE",
+          "children": [
+            { "name": "TYSON FOODS, INC.", "size": "37860458.31" },
+            { "name": "Other", "size": "33569915.49" },
+            { "name": "JENNIE-O TURKEY STORE, INC.", "size": "33303899" },
+            { "name": "DEL MONTE FOODS, INC.", "size": "22281804.02" },
+            { "name": "PILGRIM'S PRIDE CORPORATION", "size": "18406346.4" },
+            {
+              "name": "CARGILL MEAT SOLUTIONS CORPORATION",
+              "size": "15779197.18"
+            },
+            {
+              "name": "LEPRINO FOODS DAIRY PRODUCTS COMPANY",
+              "size": "15612077.39"
+            },
+            { "name": "CRIDER, INC.", "size": "15013856.08" },
+            { "name": "BONGARDS' CREAMERIES", "size": "13583392.7" },
+            { "name": "CAVINESS BEEF PACKERS, LTD.", "size": "12991294.41" },
+            { "name": "CHERRY MEAT PACKERS, INC.", "size": "11203197.61" },
+            { "name": "ASSOCIATED MILK PRODUCERS, INC.", "size": "10343244" }
+          ]
+        },
+        {
+          "name": "AGRICULTURAL MARKETING SERVICE",
+          "children": [
+            { "name": "INN FOODS, INC.", "size": "30562876.7" },
+            { "name": "DEL MONTE FOODS, INC.", "size": "24484981.38" },
+            { "name": "SUNRISE GROWERS, INC.", "size": "21391646.18" },
+            { "name": "SENECA FOODS CORPORATION", "size": "14255808.21" },
+            { "name": "Other", "size": "13750642.32" },
+            { "name": "LION RAISINS, INC.", "size": "13708183.44" },
+            { "name": "WAWONA FROZEN FOODS INC.", "size": "12382835.41" },
+            { "name": "MCCAIN FOODS USA, INC.", "size": "10937783.07" }
+          ]
+        },
+        {
+          "name": "AGRICULTURAL RESEARCH SERVICE",
+          "children": [{ "name": "Other", "size": "28780173.19" }]
+        },
+        {
+          "name": "FARM SERVICE AGENCY",
+          "children": [
+            { "name": "CARGILL, INCORPORATED", "size": "28628756.6" },
+            { "name": "Other", "size": "17334790.42" },
+            { "name": "CHS INC.", "size": "12235278" },
+            { "name": "ARCHER-DANIELS-MIDLAND COMPANY", "size": "10928249.42" }
+          ]
+        },
+        {
+          "name": "USDA, OFFICE OF THE CHIEF FINANCIAL OFFICER",
+          "children": [
+            { "name": "CGI FEDERAL INC.", "size": "24968137.04" },
+            { "name": "DELOITTE CONSULTING LLP", "size": "16693336.88" }
+          ]
+        },
+        {
+          "name": "ANIMAL AND PLANT HEALTH INSPECTION SERVICE",
+          "children": [{ "name": "Other", "size": "21317621.64" }]
+        },
+        {
+          "name": "USDA, OFFICE OF THE CHIEF INFORMATION OFFICER",
+          "children": [
+            { "name": "Other", "size": "15126612.19" },
+            { "name": "DELL MARKETING L.P.", "size": "13619059.61" },
+            { "name": "CREATIVE SYSTEMS AND CONSULTING", "size": "10184202.73" }
+          ]
+        },
+        {
+          "name": "NATURAL RESOURCES CONSERVATION SERVICE",
+          "children": [{ "name": "Other", "size": "12550255.03" }]
+        },
+        {
+          "name": "RURAL HOUSING SERVICE",
+          "children": [
+            { "name": "PROCTOR FINANCIAL, INC.", "size": "11554000" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "General Services Administration (GSA)",
+      "children": [
+        {
+          "name": "FEDERAL ACQUISITION SERVICE",
+          "children": [
+            { "name": "FORD MOTOR COMPANY", "size": "144472921" },
+            { "name": "GENERAL MOTORS LLC", "size": "77936034" },
+            { "name": "FCA US LLC", "size": "56543375" },
+            { "name": "BRASADA FORD, LTD.", "size": "35596037" },
+            { "name": "BLUE BIRD BODY COMPANY", "size": "24991332" },
+            { "name": "SRA INTERNATIONAL, INC.", "size": "17387990.18" },
+            { "name": "FORD-WERKE GMBH", "size": "16313019" },
+            { "name": "NAVISTAR, INC.", "size": "11079419" },
+            { "name": "W W GRAINGER, INC", "size": "10256703.07" }
+          ]
+        },
+        {
+          "name": "PUBLIC BUILDINGS SERVICE",
+          "children": [
+            { "name": "CLARK CONSTRUCTION GROUP, LLC", "size": "135634872.23" },
+            { "name": "Other", "size": "116203720.04" },
+            { "name": "NORTHLAND/CIANBRO A JOINT VENTURE", "size": "90875000" },
+            { "name": "GRUNLEY CONSTRUCTION CO., INC.", "size": "65896007.73" },
+            { "name": "MESSER CONSTRUCTION CO.", "size": "27267000" },
+            { "name": "INTECH CONSTRUCTION, LLC", "size": "15593091" },
+            { "name": "FEI-WINMAR JOINT VENTURE", "size": "15151840" },
+            { "name": "GALLIERA, INC.", "size": "11021589" },
+            {
+              "name": "VENCORE SERVICES AND SOLUTIONS, INC",
+              "size": "10001368.81"
+            }
+          ]
+        },
+        {
+          "name": "OFFICE OF THE CHIEF INFORMATION OFFICER",
+          "children": [
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "20845720.47" },
+            { "name": "ALLIANT SOLUTIONS PARTNER, LLC", "size": "10002083" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Housing and Urban Development (HUD)",
+      "children": [
+        {
+          "name": "HOUSING AND URBAN DEVELOPMENT, DEPARTMENT OF",
+          "children": [
+            { "name": "BLM COMPANIES LLC", "size": "112973401.8" },
+            { "name": "SAGE ACQUISITIONS LLC", "size": "50411974.38" },
+            { "name": "P.K. MANAGEMENT GROUP, INC.", "size": "50349616.58" },
+            { "name": "BLB RESOURCES, INC.", "size": "47640918.68" },
+            { "name": "PURDY ENTERPRISE, LLC", "size": "36355928" },
+            {
+              "name": "STRATEGIC ALLIANCE MANAGEMENT JV, LLC",
+              "size": "30088608"
+            },
+            { "name": "ALPINE COMPANIES, INC.", "size": "25534620" },
+            { "name": "CHRONOS SOLUTIONS, LLC", "size": "24341768.38" },
+            { "name": "BAPM TEXAS, INC.", "size": "21644632" },
+            {
+              "name": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+              "size": "20265519"
+            },
+            { "name": "DGG RE INVESTMENTS LLC", "size": "20066168" },
+            { "name": "INNOTION ENTERPRISES, INC.", "size": "17734200" },
+            { "name": "ERNST & YOUNG LLP", "size": "17166031.35" },
+            { "name": "Other", "size": "16395074.54" },
+            { "name": "CWIS LLC", "size": "12169059" },
+            { "name": "KM MINEMIER & ASSOCIATES, LLC", "size": "10060000" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Social Security Administration (SSA)",
+      "children": [
+        {
+          "name": "SOCIAL SECURITY ADMINISTRATION",
+          "children": [
+            { "name": "Other", "size": "110935944.23" },
+            {
+              "name": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+              "size": "45513062"
+            },
+            { "name": "RED RIVER COMPUTER CO., INC.", "size": "19381315.58" },
+            { "name": "COMPUTER ASSOCIATES INTERNATIO", "size": "17828875.5" },
+            { "name": "AVAYA FEDERAL SOLUTIONS, INC.", "size": "15270089.19" },
+            {
+              "name": "KONIAG TECHNOLOGY SOLUTIONS, INC",
+              "size": "13895619.59"
+            },
+            { "name": "ACS FEDERAL SOLUTIONS LLC", "size": "10168835.76" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Commerce (DOC)",
+      "children": [
+        {
+          "name": "US PATENT AND TRADEMARK OFFICE",
+          "children": [
+            {
+              "name": "REED TECHNOLOGY AND INFORMATION SERVICES INC.",
+              "size": "100859696.52"
+            },
+            {
+              "name": "INFORMATION INTERNATIONAL ASSOCIATES, INC.",
+              "size": "22284844.66"
+            },
+            { "name": "CSP ENTERPRISES LLC", "size": "15872477" },
+            { "name": "Other", "size": "15055917.99" },
+            {
+              "name": "ASRC MANAGEMENT SERVICES INCORPORATED",
+              "size": "11514739.78"
+            }
+          ]
+        },
+        {
+          "name": "NATIONAL OCEANIC AND ATMOSPHERIC ADMINISTRATION",
+          "children": [
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "100000000" },
+            { "name": "Other", "size": "85188424.74" },
+            { "name": "HARRIS CORPORATION", "size": "76936923" },
+            { "name": "RAYTHEON COMPANY", "size": "37226170.27" },
+            {
+              "name": "LOCKHEED MARTIN CORPORATION (3632)",
+              "size": "17900000"
+            },
+            {
+              "name": "BALL AEROSPACE & TECHNOLOGIES CORP.",
+              "size": "14590269"
+            },
+            { "name": "CSC APPLIED TECHNOLOGIES, LLC", "size": "12140934.33" },
+            { "name": "I.M. SYSTEMS GROUP, INC.", "size": "11293524.83" },
+            {
+              "name": "EARTH RESOURCES TECHNOLOGY, INC.",
+              "size": "10988093.34"
+            }
+          ]
+        },
+        {
+          "name": "US CENSUS BUREAU",
+          "children": [
+            { "name": "T-REX CONSULTING CORPORATION", "size": "37672128.42" },
+            { "name": "Other", "size": "16633091.81" },
+            {
+              "name": "GENERAL DYNAMICS INFORMATION TECHNOLOGY, INC.",
+              "size": "14960947"
+            }
+          ]
+        },
+        {
+          "name": "NATIONAL INSTITUTE OF STANDARDS AND TECHNOLOGY",
+          "children": [{ "name": "Other", "size": "29756342.92" }]
+        },
+        {
+          "name": "OFFICE OF THE SECRETARY",
+          "children": [{ "name": "Other", "size": "10089904.46" }]
+        }
+      ]
+    },
+    {
+      "name": "Department of Transportation (DOT)",
+      "children": [
+        {
+          "name": "FEDERAL AVIATION ADMINISTRATION",
+          "children": [
+            { "name": "Other", "size": "100260766.18" },
+            { "name": "LOCKHEED MARTIN CORPORATION", "size": "80855676.84" },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "80475315.99" },
+            { "name": "HARRIS CORPORATION", "size": "65064913.75" },
+            {
+              "name": "PARSONS GOVERNMENT SERVICES INC.",
+              "size": "44010952.24"
+            },
+            { "name": "ITT CORPORATION", "size": "39603940.76" },
+            { "name": "RAYTHEON COMPANY", "size": "31323167.23" },
+            { "name": "THE MITRE CORPORATION", "size": "28130293" },
+            { "name": "LS TECHNOLOGIES, LLC", "size": "27301003.85" },
+            { "name": "NOBLIS, INC.", "size": "27077187.39" },
+            { "name": "DELL MARKETING L.P.", "size": "18329552.55" },
+            {
+              "name": "ARCTIC SLOPE TECHNICAL SERVICES, INC.",
+              "size": "13025650.55"
+            }
+          ]
+        },
+        {
+          "name": "FEDERAL HIGHWAY ADMINISTRATION",
+          "children": [
+            { "name": "H-K CONTRACTORS, INC.", "size": "39397519.58" },
+            { "name": "Other", "size": "33426722.61" },
+            { "name": "MERCER, FRASER COMPANY", "size": "31485214.41" },
+            { "name": "APAC-ATLANTIC, INC.", "size": "24983940" },
+            { "name": "STORMWATER PLANS, LLC", "size": "15259545.88" },
+            { "name": "GRANITE CONSTRUCTION COMPANY", "size": "12046188.09" },
+            {
+              "name": "L.B. CIVIL CONSTRUCTION, INCORPORATED",
+              "size": "10974208.5"
+            }
+          ]
+        },
+        {
+          "name": "NATIONAL HIGHWAY TRAFFIC SAFETY ADMINISTRATION",
+          "children": [
+            { "name": "CHARLES TOMBRAS ADVERTISING, INC.", "size": "23900000" }
+          ]
+        },
+        {
+          "name": "IMMEDIATE OFFICE OF THE SECRETARY OF TRANSPORTATION",
+          "children": [
+            { "name": "ENGILITY CORPORATION", "size": "20938867.03" },
+            { "name": "Other", "size": "17182963.92" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Justice (DOJ)",
+      "children": [
+        {
+          "name": "FEDERAL PRISON SYSTEM / BUREAU OF PRISONS",
+          "children": [
+            { "name": "Other", "size": "83312223.78" },
+            { "name": "NAPHCARE, INC.", "size": "26237419.1" },
+            { "name": "REEVES, COUNTY OF", "size": "24636678.72" },
+            {
+              "name": "MANAGEMENT AND TRAINING CORPORATION",
+              "size": "23090836.5"
+            },
+            { "name": "MCKESSON CORPORATION", "size": "19871644.01" },
+            { "name": "FORD MOTOR COMPANY", "size": "12769014.4" },
+            { "name": "SEVEN CORNERS, INC", "size": "12568180.45" },
+            { "name": "UNIVERSITY OF MASSACHUSETTS", "size": "11926102.74" }
+          ]
+        },
+        {
+          "name": "OFFICES, BOARDS AND DIVISIONS",
+          "children": [
+            { "name": "CDW GOVERNMENT, INC.", "size": "64693774.42" },
+            { "name": "CACI, INC. - COMMERCIAL", "size": "46681305.44" },
+            { "name": "Other", "size": "40448409.01" },
+            {
+              "name": "PAE LABAT-ANDERSON INCORPORATED",
+              "size": "18367619.77"
+            },
+            {
+              "name": "MICROSOFT CORPORATION SITZ IN REDMOND CORPORATION",
+              "size": "11556295.5"
+            }
+          ]
+        },
+        {
+          "name": "FEDERAL BUREAU OF INVESTIGATION",
+          "children": [
+            { "name": "Other", "size": "59081679.01" },
+            { "name": "THE MITRE CORPORATION", "size": "30607384" },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "18860783.48" },
+            {
+              "name": "MANTECH ADVANCED SYSTEMS INTERNATIONAL, INC.",
+              "size": "17169804.36"
+            },
+            { "name": "BISCAYNE CONTRACTORS, INC.", "size": "13712990.77" },
+            { "name": "SOTERA DEFENSE SOLUTIONS, INC.", "size": "13247056.3" }
+          ]
+        },
+        {
+          "name": "U.S. MARSHALS SERVICE",
+          "children": [
+            { "name": "GEO GROUP, INC., THE", "size": "37249506.08" },
+            {
+              "name": "CORRECTIONS CORPORATION OF AMERICA",
+              "size": "36365059"
+            },
+            {
+              "name": "HERITAGE HEALTH SOLUTIONS LIMITED PARTNERSHIP",
+              "size": "28079000"
+            },
+            { "name": "THE GEO GROUP INCORPORATED", "size": "22010309" },
+            { "name": "CORECIVIC, INC.", "size": "16433334.3" },
+            { "name": "Other", "size": "13616813.42" }
+          ]
+        },
+        {
+          "name": "DRUG ENFORCEMENT ADMINISTRATION",
+          "children": [
+            { "name": "Other", "size": "28400844.44" },
+            { "name": "BENNETT AEROSPACE, INC.", "size": "19300491" },
+            {
+              "name": "L-3 COMMUNICATIONS VERTEX AEROSPACE LLC",
+              "size": "14777398.13"
+            },
+            {
+              "name": "METROPOLITAN INTERPRETERS & TRANSLATORS, INC.",
+              "size": "11421466.06"
+            }
+          ]
+        },
+        {
+          "name": "FEDERAL PRISON INDUSTRIES / UNICOR",
+          "children": [{ "name": "Other", "size": "23026374.42" }]
+        },
+        {
+          "name": "ATF ACQUISITION AND PROPERTY MGMT DIV",
+          "children": [
+            { "name": "Other", "size": "22364223.3" },
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "11307252.7" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of the Interior (DOI)",
+      "children": [
+        {
+          "name": "NATIONAL PARK SERVICE",
+          "children": [{ "name": "Other", "size": "81251148.46" }]
+        },
+        {
+          "name": "BUREAU OF LAND MANAGEMENT",
+          "children": [{ "name": "Other", "size": "54055372.2" }]
+        },
+        {
+          "name": "U.S. FISH AND WILDLIFE SERVICE",
+          "children": [{ "name": "Other", "size": "37069826.51" }]
+        },
+        {
+          "name": "US GEOLOGICAL SURVEY",
+          "children": [
+            { "name": "Other", "size": "35497642.06" },
+            { "name": "SGT, INC.", "size": "16709412.18" }
+          ]
+        },
+        {
+          "name": "BUREAU OF RECLAMATION",
+          "children": [{ "name": "Other", "size": "33841454.71" }]
+        },
+        {
+          "name": "BUREAU OF INDIAN AFFAIRS AND BUREAU OF INDIAN EDUCATION",
+          "children": [{ "name": "Other", "size": "26631446.96" }]
+        },
+        {
+          "name": "DEPARTMENTAL OFFICES",
+          "children": [{ "name": "Other", "size": "18862380.28" }]
+        }
+      ]
+    },
+    {
+      "name": "Department of the Treasury (TREAS)",
+      "children": [
+        {
+          "name": "UNITED STATES MINT",
+          "children": [
+            { "name": "SUNSHINE MINTING, INC.", "size": "62720995.03" },
+            { "name": "PRECIOUS A-MARK METALS INC", "size": "55431022.27" },
+            { "name": "COINS 'N THINGS, INC.", "size": "54502297.02" },
+            { "name": "GBC METALS, LLC", "size": "31652211.85" },
+            { "name": "PMX INDUSTRIES, INC.", "size": "29782841.82" },
+            { "name": "JARDEN ZINC PRODUCTS, LLC", "size": "21200353.9" },
+            { "name": "LEACHGARNER, INC.", "size": "20264003.32" },
+            {
+              "name": "PRIORITY FULFILLMENT SERVICES, INC.",
+              "size": "13775900.97"
+            }
+          ]
+        },
+        {
+          "name": "INTERNAL REVENUE SERVICE",
+          "children": [
+            { "name": "DELOITTE CONSULTING LLP", "size": "62389108.41" },
+            { "name": "Other", "size": "52009095.78" },
+            {
+              "name": "INTERNATIONAL BUSINESS MACHINES CORPORATION",
+              "size": "23377368.43"
+            },
+            { "name": "INSYSCO, INC.", "size": "22781934.04" },
+            { "name": "ACCENTURE FEDERAL SERVICES LLC", "size": "21966538.54" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "19767021.6" },
+            { "name": "THE MITRE CORPORATION", "size": "15894603.61" },
+            {
+              "name": "LOCKHEED MARTIN MANAGEMENT SYSTEMS DESIGNERS, INC.",
+              "size": "14745962.83"
+            },
+            {
+              "name": "NORTHROP GRUMMAN SYSTEMS CORPORATION",
+              "size": "14096376.04"
+            },
+            {
+              "name": "VERIZON BUSINESS NETWORK SERVICES INC.",
+              "size": "12751679.61"
+            },
+            { "name": "INFORELIANCE CORPORATION", "size": "11028508.74" },
+            { "name": "UNISYS CORPORATION", "size": "10936258.14" }
+          ]
+        },
+        {
+          "name": "BUREAU OF ENGRAVING AND PRINTING",
+          "children": [
+            { "name": "CRANE & CO., INC.", "size": "43296130.8" },
+            { "name": "DELOITTE CONSULTING LLP", "size": "12157853.96" }
+          ]
+        },
+        {
+          "name": "DEPARTMENTAL OFFICES",
+          "children": [
+            { "name": "AT&T CORP.", "size": "28880474.79" },
+            { "name": "URS FEDERAL SERVICES, INC.", "size": "20293991.16" }
+          ]
+        },
+        {
+          "name": "BUREAU OF THE FISCAL SERVICE",
+          "children": [
+            { "name": "FOUR", "size": "16037985.88" },
+            { "name": "Other", "size": "14209261.13" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Labor (DOL)",
+      "children": [
+        {
+          "name": "OFFICE OF JOB CORPS",
+          "children": [
+            { "name": "4K GLOBAL-ACC JV LLC", "size": "59714676" },
+            { "name": "MANAGEMENT & TRAINING CORPORATION", "size": "38817252" },
+            { "name": "ODLE MANAGEMENT GROUP, L.L.C.", "size": "29898372" },
+            {
+              "name": "N2GRATE GOVERNMENT TECHNOLOGY SOLUTIONS, LLC",
+              "size": "24261982.94"
+            },
+            { "name": "ADAMS AND ASSOCIATES, INC.", "size": "22163199" },
+            { "name": "MINACT INC", "size": "19110140" },
+            {
+              "name": "CAREER SYSTEMS DEVELOPMENT CORPORATION",
+              "size": "13059622"
+            },
+            { "name": "RES-CARE, INC.", "size": "11996653" },
+            { "name": "Other", "size": "11953486.12" }
+          ]
+        },
+        {
+          "name": "OFFICE OF CHIEF FINANCIAL OFFICER",
+          "children": [
+            { "name": "BOOZ ALLEN HAMILTON INC", "size": "15804931.1" }
+          ]
+        },
+        {
+          "name":
+            "OFFICE OF THE ASSISTANT SECRETARY FOR ADMINISTRATION AND MANAGEMENT",
+          "children": [
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "13462140.52" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Environmental Protection Agency (EPA)",
+      "children": [
+        {
+          "name": "ENVIRONMENTAL PROTECTION AGENCY",
+          "children": [
+            { "name": "Other", "size": "56260064.68" },
+            {
+              "name": "CASHMAN DREDGING AND MARINE CONTRACTING, CO., LLC",
+              "size": "14915983.55"
+            },
+            { "name": "ICF INCORPORATED, L.L.C.", "size": "13339904.33" },
+            { "name": "CGI FEDERAL INC.", "size": "11159681.53" },
+            {
+              "name": "SCIENCE APPLICATIONS INTERNATIONAL CORPORATION",
+              "size": "10172546.58"
+            },
+            { "name": "COUNTERTRADE PRODUCTS, INC.", "size": "10084024.38" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Department of Education (ED)",
+      "children": [
+        {
+          "name": "EDUCATION, DEPARTMENT OF",
+          "children": [
+            {
+              "name": "HIGHER EDUCATION ASSISTANCE AGENCY, PA",
+              "size": "54099015.05"
+            },
+            {
+              "name": "GREAT LAKES EDUCATIONAL LOAN SERVICES, INC.",
+              "size": "51203890.33"
+            },
+            { "name": "MAXIMUS FEDERAL SERVICES, INC.", "size": "45999000" },
+            { "name": "NAVIENT CORPORATION", "size": "37443599.84" },
+            { "name": "NELNET SERVICING, LLC", "size": "29791930.19" },
+            { "name": "ACCOUNT CONTROL TECHNOLOGY INC.", "size": "28000000" },
+            { "name": "Other", "size": "24493514.67" },
+            {
+              "name": "CONTINENTAL SERVICE GROUP INCORPORATED",
+              "size": "19000000"
+            },
+            { "name": "WESTAT, INC.", "size": "18420401" },
+            { "name": "COAST PROFESSIONAL, INC.", "size": "15000000" },
+            { "name": "FINANCIAL MANAGEMENT SYSTEMS,", "size": "15000000" },
+            {
+              "name": "MISSOURI HIGHER EDUCATION LOAN AUTHORITY",
+              "size": "14337553.33"
+            },
+            { "name": "GC SERVICES LIMITED PARTNERSHI", "size": "14000000" },
+            { "name": "RESEARCH TRIANGLE INSTITUTE", "size": "13406893.29" },
+            {
+              "name": "DELL SERVICES FEDERAL GOVERNMENT, INC.",
+              "size": "12065728.35"
+            },
+            { "name": "IMMEDIATE CREDIT RECOVERY, INC", "size": "12000000" },
+            { "name": "WINDHAM PROFESSIONALS, INC", "size": "12000000" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Office of Personnel Management (OPM)",
+      "children": [
+        {
+          "name": "OFFICE OF PERSONNEL MANAGEMENT",
+          "children": [
+            {
+              "name": "KEYPOINT GOVERNMENT SOLUTIONS, INC.",
+              "size": "43000000"
+            },
+            { "name": "CACI PREMIER TECHNOLOGY INC", "size": "17500000" },
+            { "name": "Other", "size": "15937544.77" },
+            { "name": "SEVATEC INC.", "size": "10654317" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "The Judicial Branch (JUD BRANCH)",
+      "children": [
+        {
+          "name": "ADMINISTRATIVE OFFICE OF THE U.S. COURTS",
+          "children": [
+            {
+              "name": "METROPOLITAN SECURITY SERVICES, INC.",
+              "size": "41957389.77"
+            },
+            {
+              "name": "INTER-CON SECURITY SYSTEMS, INC.",
+              "size": "31461243.65"
+            },
+            { "name": "AKAL SECURITY, INC.", "size": "24053152.66" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "National Science Foundation (NSF)",
+      "children": [
+        {
+          "name": "NATIONAL SCIENCE FOUNDATION",
+          "children": [
+            { "name": "LEIDOS INNOVATIONS CORPORATION", "size": "40205198" },
+            { "name": "BOOZ ALLEN HAMILTON INC.", "size": "23277435" },
+            { "name": "Other", "size": "19115910.82" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Smithsonian Institution (SI)",
+      "children": [
+        {
+          "name": "SMITHSONIAN INSTITUTION",
+          "children": [
+            { "name": "HENSEL PHELPS CONSTRUCTION CO", "size": "33607000" },
+            { "name": "Other", "size": "18958997.75" },
+            { "name": "ALLIEDBARTON SECURITY SERVICES LLC", "size": "16000000" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Peace Corps (EOP)",
+      "children": [
+        {
+          "name": "PEACE CORPS",
+          "children": [
+            { "name": "FOREIGN AWARDEES (UNDISCLOSED)", "size": "26355067.55" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Securities and Exchange Commission (SEC)",
+      "children": [
+        {
+          "name": "SECURITIES AND EXCHANGE COMMISSION",
+          "children": [{ "name": "Other", "size": "23365597.59" }]
+        }
+      ]
+    },
+    {
+      "name": "Pension Benefit Guaranty Corporation (DOL)",
+      "children": [
+        {
+          "name": "PENSION BENEFIT GUARANTY CORPORATION",
+          "children": [{ "name": "Other", "size": "22335738.44" }]
+        }
+      ]
+    },
+    {
+      "name": "Nuclear Regulatory Commission (NRC)",
+      "children": [
+        {
+          "name": "NUCLEAR REGULATORY COMMISSION",
+          "children": [
+            { "name": "Other", "size": "18586813.58" },
+            {
+              "name": "DELL SERVICES FEDERAL GOVERNMENT, INC.",
+              "size": "12103542.71"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Consumer Financial Protection Bureau (CFPB)",
+      "children": [
+        {
+          "name": "CONSUMER FINANCIAL PROTECTION BUREAU",
+          "children": [
+            { "name": "GMMB INC.", "size": "15049799.11" },
+            { "name": "Other", "size": "10353881.01" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Broadcasting Board of Governors (BBG)",
+      "children": [
+        {
+          "name": "BROADCASTING BOARD OF GOVERNORS",
+          "children": [{ "name": "Other", "size": "13035294.66" }]
+        }
+      ]
+    },
+    {
+      "name": "Small Business Administration (SBA)",
+      "children": [
+        {
+          "name": "SMALL BUSINESS ADMINISTRATION",
+          "children": [{ "name": "Other", "size": "12515841.52" }]
+        }
+      ]
+    },
+    {
+      "name": "National Archives and Records Administration (NARA)",
+      "children": [
+        {
+          "name": "NATIONAL ARCHIVES AND RECORDS ADMINISTRATION",
+          "children": [{ "name": "ATTAIN, LLC", "size": "12210263.64" }]
+        }
+      ]
+    },
+    {
+      "name": "Millenium Challenge Corporation (MCC)",
+      "children": [
+        {
+          "name": "MILLENNIUM CHALLENGE CORPORATION",
+          "children": [{ "name": "Other", "size": "11175467.92" }]
+        }
+      ]
+    },
+    {
+      "name": "Equal Employment Opportunity Commission (EEOC)",
+      "children": [
+        {
+          "name": "EQUAL EMPLOYMENT OPPORTUNITY COMMISSION",
+          "children": [{ "name": "Other", "size": "11065043.34" }]
+        }
+      ]
+    },
+    {
+      "name": "Federal Communications Commission (FCC)",
+      "children": [
+        {
+          "name": "FEDERAL COMMUNICATIONS COMMISSION",
+          "children": [{ "name": "Other", "size": "10341858.59" }]
+        }
+      ]
+    }
+  ]
+}

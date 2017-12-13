@@ -1,0 +1,338 @@
+[
+ {
+   "name": "Department of Defense (DOD)",
+   "color": "#702550"
+ },
+ {
+   "name": "Department of Energy (DOE)",
+   "color": "#553A50"
+ },
+ {
+   "name": "Department of Veterans Affairs (VA)",
+   "color": "#4E4861"
+ },
+ {
+   "name": "Department of Health and Human Services (HHS)",
+   "color": "#3F566E"
+ },
+ {
+   "name": "National Aeronautics and Space Administration (NASA)",
+   "color": "#2C6473"
+ },
+ {
+   "name": "Department of Homeland Security (DHS)",
+   "color": "#1D7170"
+ },
+ {
+   "name": "Department of State (DOS)",
+   "color": "#277D67"
+ },
+ {
+   "name": "Department of Agriculture (USDA)",
+   "color": "#438659"
+ },
+ {
+   "name": "Department of Justice (DOJ)",
+   "color": "#648D4A"
+ },
+ {
+   "name": "General Services Administration (GSA)",
+   "color": "#88923E"
+ },
+ {
+   "name": "Department of Transportation (DOT)",
+   "color": "#AE933C"
+ },
+ {
+   "name": "Agency for International Development (USAID)",
+   "color": "#D39248"
+ },
+ {
+   "name": "Department of Commerce (DOC)",
+   "color": "#D7924A"
+ },
+ {
+   "name": "Department of the Treasury (TREAS)",
+   "color": "#DA914C"
+ },
+ {
+   "name": "Department of Housing and Urban Development (HUD)",
+   "color": "#DE914E"
+ },
+ {
+   "name": "Department of the Interior (DOI)",
+   "color": "#E19151"
+ },
+ {
+   "name": "Department of Labor (DOL)",
+   "color": "#E49153"
+ },
+ {
+   "name": "Department of Education (ED)",
+   "color": "#E89056"
+ },
+ {
+   "name": "Social Security Administration (SSA)",
+   "color": "#EB9058"
+ },
+ {
+   "name": "Environmental Protection Agency (EPA)",
+   "color": "#EE905B"
+ },
+ {
+   "name": "Office of Personnel Management (OPM)",
+   "color": "#F1905E"
+ },
+ {
+   "name": "The Judicial Branch (JUD BRANCH)",
+   "color": "#F48F61"
+ },
+ {
+   "name": "National Science Foundation (NSF)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Securities and Exchange Commission (SEC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Pension Benefit Guaranty Corporation (DOL)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Smithsonian Institution (SI)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Consumer Financial Protection Bureau (CFPB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Nuclear Regulatory Commission (NRC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Archives and Records Administration (NARA)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Peace Corps (EOP)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Broadcasting Board of Governors (BBG)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Communications Commission (FCC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Millenium Challenge Corporation (MCC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Small Business Administration (SBA)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Government Accountability Office (GAO)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Trade Commission (FTC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Executive Office of the President (EOP)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Equal Employment Opportunity Commission (EEOC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Corporation for National and Community Service (CNCS)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Commodity Futures Trading Commission (CFTC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Railroad Retirement Board (RRB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Export-Import Bank of the United States (EXIM)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "U.S. Trade and Development Agency (EOP)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Court Services and Offender Supervision Agency (CSOSA)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Consumer Product Safety Commission (CPSC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Labor Relations Board (NLRB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Gallery of Art (SI)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Overseas Private Investment Corporation (OPIC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "International Trade Commission (USITC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "U.S. Postal Service (USPS)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Transportation Safety Board (NTSB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Denali Commission (DENALI)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Election Commission (FEC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Endowment for the Arts (NEA)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Mine Safety and Health Review Commission (FMSHRC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Endowment for the Humanities (NEH)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Housing Finance Agency (FHFA)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Selective Service System (SSS)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Merit Systems Protection Board (MSPB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Inter-American Foundation (EOP)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "United States Chemical Safety Board (CSB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Mediation and Conciliation Service (FMCS)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Labor Relations Authority (FLRA)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "The Council of the Inspectors General on Integrity and Efficiency (CIGIE)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Morris K. Udall and Stewart L. Udall Foundation (UDALL)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Committee for Purchase from People Who Are Blind or Severely Disabled (ABILITYONE)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Federal Maritime Commission (FMC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Election Assistance Commission (EAC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Mediation Board (NMB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "NATIONAL INSTITUTES OF HEALTH",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Office of Special Counsel (OSC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Surface Transportation Board (STB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Access Board (USAB)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "National Capital Planning Commission (NCPC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Occupational Safety and Health Review Commission (OSHRC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Office of Government Ethics (OGE)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "THE INSTITUE OF MUSEUM AND LIBRARY SERVICES",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Administrative Conference of the U.S. (ACUS)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Library of Congress (LOC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Gulf Coast Ecosystem Restoration Council (GCERC)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Advisory Council on Historic Preservation (ACHP)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "The Legislative Branch (LEG BRANCH)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Armed Forces Retirement Home (AFRH)",
+   "color": "#F78F64"
+ },
+ {
+   "name": "Defense Nuclear Facilities Safety Board (DNFSB)",
+   "color": "#F78F64"
+ }
+]
