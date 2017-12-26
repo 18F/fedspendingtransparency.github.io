@@ -59,9 +59,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       d3.selectAll('svg').remove()
                       d3.select('p2_map_svg').remove()
                       d3.select('#p2_right').remove()
-											d3.select('#p2_left').remove()
-											d3.select('#p2_legend').remove()
-											d3.select('#p2_legend_title').remove()
+                      d3.select('#p2_left').remove()
+                      d3.select('#p2_legend').remove()
+                      d3.select('#p2_legend_title').remove()
                       GenMap()
                       GenPanelTwo()
                       //GenScatter();
@@ -69,13 +69,13 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     } else if (selectedValue === 'Table') {
                       d3.selectAll('#viz_container').remove()
                       d3.selectAll('#legend').remove()
-											d3.selectAll('#legend_title').remove()
+                      d3.selectAll('#legend_title').remove()
                       d3.selectAll('svg').remove()
                       d3.select('p2_map_svg').remove()
-											d3.select('#p2_right').remove()
-											d3.select('#p2_left').remove()
-											d3.select('#p2_legend').remove()
-											d3.select('#p2_legend_title').remove()
+                      d3.select('#p2_right').remove()
+                      d3.select('#p2_left').remove()
+                      d3.select('#p2_legend').remove()
+                      d3.select('#p2_legend_title').remove()
                       GenTable()
                       GenPanelTwo()
                       //GenScatter()
@@ -84,7 +84,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 })
 
                 // **************************************************************
-								var zoom = d3.behavior.zoom();
+                var zoom = d3.behavior.zoom();
 
                 function getColor(d) {
                   for (var i = 0; i < data.length; i++) {
@@ -185,9 +185,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr("class", "homeless-analysis d3-tip")
                     .offset([-10, -10])
                     .html(function(d) {
-                      return "<b>" + d.properties.COCNAME + "</b>" + "<br>"
-                      + "Continuum of Care Number: " + d.properties.coc_number + "<br>"
-                      + "Total Homeless: " + d.properties.pop;
+                      return "<b>" + d.properties.COCNAME + "</b>" + "<br>" +
+                        "Continuum of Care Number: " + d.properties.coc_number + "<br>" +
+                        "Total Homeless: " + d.properties.pop;
                     });
 
                   map_svg.call(tip)
@@ -263,7 +263,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr("d", path)
                     .on("mouseover", tip.show)
                     .on("mouseout", tip.hide)
-                    .on("click",clicked)
+                    /*.call(d3.behavior.zoom().on("zoom", function () {
+									    map_svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+									  }))*/
+                    .on("click", clicked)
                     .style("fill", getColor);
 
                   function clicked(d) {
@@ -999,15 +1002,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       return d.properties.name;
                     })
                     .attr("d", p2_path)
-                    .on("click", p2_clicked)
-                    .style("fill", p2_getColor)
-                    .on("mouseover", function(d) {
-                      //console.log("d: ", d)
-                      p2_tip.show(d);
-                      BarChart(d);
+                    .on("click", function(d){
+											BarChart(d);
                       createCoCTable(d);
-											createCFDATableHover(d);
-                    })
+                      createCFDATableHover(d);
+										})
+                    .style("fill", p2_getColor)
+										.on("dblclick",p2_clicked)
+                    .on("mouseover",p2_tip.show)
                     .on("mouseout", p2_tip.hide);
 
                   function createCoCTable(d) {
@@ -1035,12 +1037,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   console.log("initial_bar: ", initial_bar);
                   console.log("bar_chart: ", bar_chrt);
 
-									info_panel.append("div")
-										.attr("id", "cfda_info_header")
-										.attr("height", info_height + margin.top + margin.bottom)
-										.attr("width", info_width + margin.left + margin.right+60)
-										.html("<table class ='icon'>" + "<th class='head_val'>CFDA</th>" +
-										"<th class='head_name'>Program Title</th>"+"</table>")
+                  info_panel.append("div")
+                    .attr("id", "cfda_info_header")
+                    .attr("height", info_height + margin.top + margin.bottom)
+                    .attr("width", info_width + margin.left + margin.right + 60)
+                    .html("<table class ='icon'>" + "<th class='head_val'>CFDA</th>" +
+                      "<th class='head_name'>Program Title</th>" + "</table>")
 
                   function createCFDATable(d) {
                     //$("#panel_info").empty();
@@ -1048,120 +1050,120 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     info_panel.append("div")
                       .attr("id", "cfda_info")
                       .attr("height", info_height + margin.top + margin.bottom)
-                      .attr("width", info_width + margin.left + margin.right+60)
+                      .attr("width", info_width + margin.left + margin.right + 60)
                       .style("margin-bottom", "2px")
-                      .html("<table class ='icon'>"  + "<td class='val'>" + d.cfda_number + "</td>" +
-												"<td class='name'>" +"<a href=" + d.program_website + ">" +
-												d.program_title + "</a>" + "</td>" + "</tr>" + "</table>")
+                      .html("<table class ='icon'>" + "<td class='val'>" + d.cfda_number + "</td>" +
+                        "<td class='name'>" + "<a href=" + d.program_website + ">" +
+                        d.program_title + "</a>" + "</td>" + "</tr>" + "</table>")
                   }
 
-									for(var i=0; i<initial_bar.length;i++){
-											createCFDATable(initial_bar[i]);
-									}
+                  for (var i = 0; i < initial_bar.length; i++) {
+                    createCFDATable(initial_bar[i]);
+                  }
 
-									function createCFDATableHover(d) {
+                  function createCFDATableHover(d) {
                     $("#panel_info").empty();
 
-										var coc = d.properties.coc_number;
-										//console.log("coc: ",coc)
-										function filter_cocNum(bar_chrt) {
-	                    return bar_chrt.coc_number == coc;
-	                  }
+                    var coc = d.properties.coc_number;
+                    //console.log("coc: ",coc)
+                    function filter_cocNum(bar_chrt) {
+                      return bar_chrt.coc_number == coc;
+                    }
 
-	                  var initial = bar_chrt.filter(filter_cocNum);
-										var initial_coc_poss = initial.filter(filter_cfdaAmount)
-										//console.log("initial: ",initial);
+                    var initial = bar_chrt.filter(filter_cocNum);
+                    var initial_coc_poss = initial.filter(filter_cfdaAmount)
+                    //console.log("initial: ",initial);
 
-										info_panel.append("div")
+                    info_panel.append("div")
                       .attr("id", "cfda_info_header")
                       .attr("height", info_height + margin.top + margin.bottom)
-                      .attr("width", info_width + margin.left + margin.right+60)
+                      .attr("width", info_width + margin.left + margin.right + 60)
                       .html("<table class ='icon'>" + "<th class='head_val'>CFDA</th>" +
-											"<th class='head_name'>Program Title</th>"+"</table>")
+                        "<th class='head_name'>Program Title</th>" + "</table>")
 
-										for(var i=0; i < initial_coc_poss.length; i++){
-											info_panel.append("div")
-	                      .attr("id", "cfda_info")
-	                      //.attr("height", info_height + margin.top + margin.bottom)
-	                      //.attr("width", info_width + margin.left + margin.right+60)
-	                      .style("margin-bottom", "2px")
-	                      .html("<table class ='icon'>" +
-	                        "<tr>" + "<td class='val'>" + initial_coc_poss[i].cfda_number + "</td>" +
-	                        "<td class='name'>" +"<a href=" + initial_coc_poss[i].program_website + ">" +
-													initial_coc_poss[i].program_title + "</a>" + "</td>" + "</tr>" + "</table>")
-                  	}
-									}
+                    for (var i = 0; i < initial_coc_poss.length; i++) {
+                      info_panel.append("div")
+                        .attr("id", "cfda_info")
+                        //.attr("height", info_height + margin.top + margin.bottom)
+                        //.attr("width", info_width + margin.left + margin.right+60)
+                        .style("margin-bottom", "2px")
+                        .html("<table class ='icon'>" +
+                          "<tr>" + "<td class='val'>" + initial_coc_poss[i].cfda_number + "</td>" +
+                          "<td class='name'>" + "<a href=" + initial_coc_poss[i].program_website + ">" +
+                          initial_coc_poss[i].program_title + "</a>" + "</td>" + "</tr>" + "</table>")
+                    }
+                  }
 
-									function p2_clicked(d) {
-										var x, y, k;
+                  function p2_clicked(d) {
+                    var x, y, k;
 
-										//console.log("Panel 2 clicked, d: ",d);
+                    //console.log("Panel 2 clicked, d: ",d);
 
-										for (var i = 0; i < states.length; i++) {
-											if (d.properties.STUSAB == states[i].Abbrv) {
-												for (var h = 0; h < json.features.length; h++) {
-													if (states[i].State == json.features[h].properties.NAME) {
-														var n = json.features[h]
-														//console.log("clicked n: ",n);
-														if (n && centered !== n) {
-															var centroid = p2_path.centroid(n)
-															x = centroid[0]
-															y = centroid[1]
+                    for (var i = 0; i < states.length; i++) {
+                      if (d.properties.STUSAB == states[i].Abbrv) {
+                        for (var h = 0; h < json.features.length; h++) {
+                          if (states[i].State == json.features[h].properties.NAME) {
+                            var n = json.features[h]
+                            //console.log("clicked n: ",n);
+                            if (n && centered !== n) {
+                              var centroid = p2_path.centroid(n)
+                              x = centroid[0]
+                              y = centroid[1]
 
-															//console.log("d: ",n.properties.NAME);
-															if (n.properties.NAME === "Florida") {
-																k = 5.0
-															} else if (n.properties.NAME === "Michigan") {
-																k = 5.5
-															} else if (n.properties.NAME === "Idaho") {
-																k = 3.25
-															} else if (n.properties.NAME === "Alaska") {
-																k = 5.0
-															} else if (n.properties.NAME === "Hawaii") {
-																k = 7.0
-															} else if (n.properties.CENSUSAREA <= 15000) {
-																k = 11.0
-															} else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
-																k = 9.0
-															} else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
-																k = 8.0
-															} else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
-																k = 6.5
-															} else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-																k = 6.0
-															} else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-																k = 5.0
-															} else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
-																k = 4.0
-															} else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
-																k = 3.5
-															} else {
-																k = 2.75
-															};
-															centered = n;
+                              //console.log("d: ",n.properties.NAME);
+                              if (n.properties.NAME === "Florida") {
+                                k = 5.0
+                              } else if (n.properties.NAME === "Michigan") {
+                                k = 5.5
+                              } else if (n.properties.NAME === "Idaho") {
+                                k = 3.25
+                              } else if (n.properties.NAME === "Alaska") {
+                                k = 5.0
+                              } else if (n.properties.NAME === "Hawaii") {
+                                k = 7.0
+                              } else if (n.properties.CENSUSAREA <= 15000) {
+                                k = 11.0
+                              } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
+                                k = 9.0
+                              } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
+                                k = 8.0
+                              } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
+                                k = 6.5
+                              } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
+                                k = 6.0
+                              } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
+                                k = 5.0
+                              } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
+                                k = 4.0
+                              } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
+                                k = 3.5
+                              } else {
+                                k = 2.75
+                              };
+                              centered = n;
 
-														} else {
-															x = map_width / 1.35;
-															y = map_height / 1.1;
-															k = 1;
-															centered = null;
+                            } else {
+                              x = map_width / 1.35;
+                              y = map_height / 1.1;
+                              k = 1;
+                              centered = null;
 
-														}
+                            }
 
-														m.selectAll("p2_path")
-															.classed("active", centered && function(d) {
-																return d === centered;
-															});
+                            m.selectAll("p2_path")
+                              .classed("active", centered && function(d) {
+                                return d === centered;
+                              });
 
-														m.transition()
-															.duration(750)
-															.attr("transform", "translate(" + map_width / 1.35 + "," + map_height / 1.1 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-															.style("stroke-width", .15 / k + "px");
-													}
-												}
-											}
-										}
-									}
+                            m.transition()
+                              .duration(750)
+                              .attr("transform", "translate(" + map_width / 1.35 + "," + map_height / 1.1 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
+                              .style("stroke-width", .15 / k + "px");
+                          }
+                        }
+                      }
+                    }
+                  }
 
                   function p2_getColor(d) {
                     for (var i = 0; i < map_data.length; i++) {
@@ -1333,57 +1335,57 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .text("Homeless CFDA Programs");
                   }
 
-									d3.select("#container2").append("div").attr("id", "p2_legend_title")
-									d3.select("#container2").append("div").attr("id", "p2_legend")
+                  d3.select("#container2").append("div").attr("id", "p2_legend_title")
+                  d3.select("#container2").append("div").attr("id", "p2_legend")
 
-									var cfda_legend_title = d3.select("#p2_legend_title")
-										.append("div")
-										.attr("class", "p2_legend_title")
-										.attr("width", map_width + margin.left + margin.right)
-										.html("<h5>CFDA Program Category</h5>")
-										.style("text-anchor", "center");
+                  var cfda_legend_title = d3.select("#p2_legend_title")
+                    .append("div")
+                    .attr("class", "p2_legend_title")
+                    .attr("width", map_width + margin.left + margin.right)
+                    .html("<h5>CFDA Program Category</h5>")
+                    .style("text-anchor", "center");
 
-									var cfda_legend = d3.select("#p2_legend")
-										.append("div")
-										.attr("width", map_width + margin.left + margin.right)
-										.attr("padding", "50px 0 0 50px");
+                  var cfda_legend = d3.select("#p2_legend")
+                    .append("div")
+                    .attr("width", map_width + margin.left + margin.right)
+                    .attr("padding", "50px 0 0 50px");
 
-									var cfda_color = ["#7B4C66","#C98845","#CC5500","#297B84","#4A8D5B","#759043",
-										"#A08E39","#4A6C87","#A9B2C3","#006A4E"
-										]
+                  var cfda_color = ["#7B4C66", "#C98845", "#CC5500", "#297B84", "#4A8D5B", "#759043",
+                    "#A08E39", "#4A6C87", "#A9B2C3", "#006A4E"
+                  ]
 
-									var cfda_legend_key_values = ["Housing","Housing & Education","Services","Health",
-										"Support Services","Housing & Services","Health & Housing","Education & Services",
-										"Housing & Research","Employment"
-										];
+                  var cfda_legend_key_values = ["Housing", "Housing & Education", "Services", "Health",
+                    "Support Services", "Housing & Services", "Health & Housing", "Education & Services",
+                    "Housing & Research", "Employment"
+                  ];
 
-									for (var i = 0; i < 10; i++) {
+                  for (var i = 0; i < 10; i++) {
 
-										var l = cfda_legend.append("div")
-											.attr("id", "p2_legend_key");
+                    var l = cfda_legend.append("div")
+                      .attr("id", "p2_legend_key");
 
-										var cfda_key = l.append("div")
-											.attr("id", "p2_key")
-											.style("position", "relative")
-											.append("svg")
-											.attr("height", "40px")
-											.attr("width", "53px")
-											.append("rect")
-											.attr("x", 10)
-											.attr("y", 10)
-											.attr("height", 30)
-											.attr("width", 30)
-											.style("fill", function(d) {
-												return cfda_color[i];
-											});
+                    var cfda_key = l.append("div")
+                      .attr("id", "p2_key")
+                      .style("position", "relative")
+                      .append("svg")
+                      .attr("height", "40px")
+                      .attr("width", "53px")
+                      .append("rect")
+                      .attr("x", 10)
+                      .attr("y", 10)
+                      .attr("height", 30)
+                      .attr("width", 30)
+                      .style("fill", function(d) {
+                        return cfda_color[i];
+                      });
 
 
-										l.append("div")
-											.attr("id", "p2_key_value")
-											.style("position", "relative")
-											.style("color", "blue")
-											.html("<p>" + cfda_legend_key_values[i] + "</p>");
-									}
+                    l.append("div")
+                      .attr("id", "p2_key_value")
+                      .style("position", "relative")
+                      .style("color", "blue")
+                      .html("<p>" + cfda_legend_key_values[i] + "</p>");
+                  }
 
                 } // end of GenPanelTwo
               })
