@@ -25,10 +25,13 @@ var spinner_panel2 = new Spinner(opts).spin(target_panel2);
 
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.json('/data-lab-data/us-states.json', function(json) {
-    d3.csv('/data-lab-data/coc-pop.csv', function(d) {
+    d3.csv('/data-lab-data/coc-pop-type.csv', function(d) {
       return {
         coc_number: d.coc_number,
-        pop: +d.pop
+        total_homeless: +d.total_homeless,
+        unsheltered: +d.unsheltered_homeless,
+        sheltered: +d.sheltered_homeless,
+        vets: +d.homeless_veterans
       }
     }, function(data) {
       d3.csv('/data-lab-data/State_crosswalk.csv', function(states) {
@@ -133,7 +136,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function getValue(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
-                      return formatNumber2(data[i].pop);
+                      return Otherformat2(data[i].total_homeless);
                     }
                   }
                 }
