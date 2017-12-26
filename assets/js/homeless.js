@@ -25,15 +25,7 @@ var spinner_panel2 = new Spinner(opts).spin(target_panel2);
 
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.json('/data-lab-data/us-states.json', function(json) {
-    d3.json('/data-lab-data/coc-pop-type.json', function(d) {
-      return {
-        coc_number: d.coc_number,
-        total_homeless: +d.total_homeless,
-        unsheltered: +d.unsheltered_homeless,
-        sheltered: +d.sheltered_homeless,
-        vets: +d.homeless_veterans
-      }
-    }, function(data) {
+    d3.json('/data-lab-data/coc-pop-type.json', function(data) {
       d3.csv('/data-lab-data/State_crosswalk.csv', function(states) {
         d3.csv('/data-lab-data/CFDACOCAward.csv', function(bar_chrt) {
           d3.csv('/data-lab-data/pop-award.csv', function(d) {
@@ -47,6 +39,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 ////console.log("bar_chrt: ", bar_chrt)
 
+								data.forEach(function(d) {
+									d.total_homeless= +d.total_homeless
+									d.unsheltered= +d.unsheltered_homeless
+									d.sheltered= +d.sheltered_homeless
+									d.vets= +d.homeless_veterans
+								});
                 // Initialize visualization
                 GenMap()
                 GenPanelTwo()
