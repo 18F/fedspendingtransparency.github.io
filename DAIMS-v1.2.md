@@ -22,7 +22,7 @@ DAIMS gives an overall view of the hundreds of distinct data elements used to te
 
 ## Overview and Architecture
 
-The [DAIMS Overview]({{site.baseurl}}/assets/docs/DAIMS_Overview.pdf){:target="_blank"} describes the scope and value of the data standard. The [DAIMS Architecture]({{site.baseurl}}/assets/docs/DAIMS_Architecture.pdf) details the data standard conceptual model, specifications, and schema management. The DAIMS architecture is designed to meet the needs of the business users and technical systems. It serves as the foundation for the DAIMS data standard. It is extensible through domain, component, element, and metadata. Additional descriptive content on the DAIMS architecture will be released as necessary. Please submit any questions or feedback to [Community](https://usaspending-help.zendesk.com/hc/en-us/community/topics){:target="_blank"}.
+The [DAIMS Overview]({{site.baseurl}}/assets/docs/DAIMS_Overview.pdf) describes the scope and value of the data standard. The [DAIMS Architecture]({{site.baseurl}}/assets/docs/DAIMS_Architecture.pdf) details the data standard conceptual model, specifications, and schema management. The DAIMS architecture is designed to meet the needs of the business users and technical systems. It serves as the foundation for the DAIMS data standard. It is extensible through domain, component, element, and metadata. Additional descriptive content on the DAIMS architecture will be released as necessary. Please submit any questions or feedback to [Community](https://usaspending-help.zendesk.com/hc/en-us/community/topics).
 
 ## Information Flow
 
@@ -34,7 +34,7 @@ The Information Flow provides an overview of the sources of the data included in
 
 The RSS provides details on what data needs to be submitted by an agency. The RSS contains prescriptive guidance to report appropriations account, object class, program activity, and award financial data from an agency's financial system(s). The award financial data contains instructions to link the data between the financial systems and the award systems using the award identification number. In addition, the RSS now contains the details of the Financial Assistance Broker Submission (FABS) file. The File FABS contains the information for an agency’s submission of its financial assistance award and awardee data. The RSS also includes information about optional/required data, field length, and other metadata to ensure data quality. The RSS documents contain the specific instructions a federal agency will need to submit data.
 
-The RSS includes three files that the agencies will submit to Treasury’s Broker:
+The RSS includes four files that the agencies will submit to Treasury’s Broker:
 - File A – Appropriations Account Detail
 - File B – Object Class and Program Activity Detail
 - File C – Award Financial Detail
@@ -56,7 +56,7 @@ Download the [IDD v1.2]({{site.baseurl}}/assets/docs/DAIMS_IDD_v1.2.xlsx)
 
 ## Online Data Dictionary
 
-The [Data Dictionary v1.2]({{ site.baseurl }}/dictionary-v1.2/){:target="_blank"} is a comprehensive list of data elements with definitions and some associated metadata.
+The [Data Dictionary v1.2]({{ site.baseurl }}/dictionary-v1.2/) is a comprehensive list of data elements with definitions and some associated metadata.
 
 ## XBRL Schema and Data Files
 
@@ -66,4 +66,4 @@ A data standard contains both a human-readable version of the standard and a mac
 
 ## Data Definition Standards
 
-The Federal Funding Accountability and Transparency Act (FFATA) and DATA Act outline the required information for federal spending transparency reporting. These requirements were translated into core data definition standards that were standardized with feedback from the federal community and external stakeholders. The finalized definitions and background information for these elements are available on the [Data Elements Page]({{ site.baseurl }}/data-elements/){:target="_blank"}.
+The Federal Funding Accountability and Transparency Act (FFATA) and DATA Act outline the required information for federal spending transparency reporting. These requirements were translated into core data definition standards that were standardized with feedback from the federal community and external stakeholders. The finalized definitions and background information for these elements are available on the [Data Elements Page]({{ site.baseurl }}/data-elements/).
