@@ -187,7 +187,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .html(function(d) {
                       return "<b>" + d.properties.COCNAME + "</b>" + "<br>" +
                         "Continuum of Care Number: " + d.properties.coc_number + "<br>" +
-                        "Total Homeless: " + d.properties.pop;
+                        "Total Homeless: " + getValue;
                     });
 
                   map_svg.call(tip)
