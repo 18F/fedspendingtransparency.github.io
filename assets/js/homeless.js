@@ -92,7 +92,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function getColor(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
-                      if (data[i].pop <= 100) {
+                      if (data[i].total_homeless <= 100) {
                         return ("#E6F4EC");
                       } else if (data[i].pop <= 200) {
                         return ("#C2F2DF");
