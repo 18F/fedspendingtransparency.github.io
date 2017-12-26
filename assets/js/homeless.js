@@ -94,37 +94,37 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     if (d.properties.coc_number === data[i].coc_number) {
                       if (data[i].total_homeless <= 100) {
                         return ("#E6F4EC");
-                      } else if (data[i].pop <= 200) {
+                      } else if (data[i].total_homeless <= 200) {
                         return ("#C2F2DF");
-                      } else if (data[i].pop <= 300) {
+                      } else if (data[i].total_homeless <= 300) {
                         return ("#8FEFCA");
-                      } else if (data[i].pop <= 500) {
+                      } else if (data[i].total_homeless <= 500) {
                         return ("#80DCC9");
-                      } else if (data[i].pop <= 700) {
+                      } else if (data[i].total_homeless <= 700) {
                         return ("#84D1B9");
-                      } else if (data[i].pop <= 1000) {
+                      } else if (data[i].total_homeless <= 1000) {
                         return ("#78CEC2");
-                      } else if (data[i].pop <= 1500) {
+                      } else if (data[i].total_homeless <= 1500) {
                         return ("#6DB5B4");
-                      } else if (data[i].pop <= 2000) {
+                      } else if (data[i].total_homeless <= 2000) {
                         return ("#59B2AA");
-                      } else if (data[i].pop <= 2500) {
+                      } else if (data[i].total_homeless <= 2500) {
                         return ("#2F8E8E");
-                      } else if (data[i].pop <= 3000) {
+                      } else if (data[i].total_homeless <= 3000) {
                         return ("#226B6B");
-                      } else if (data[i].pop <= 3500) {
+                      } else if (data[i].total_homeless <= 3500) {
                         return ("#175F6B");
-                      } else if (data[i].pop <= 4000) {
+                      } else if (data[i].total_homeless <= 4000) {
                         return ("#0E4B59");
-                      } else if (data[i].pop <= 5000) {
+                      } else if (data[i].total_homeless <= 5000) {
                         return ("#375A5E");
-                      } else if (data[i].pop <= 6000) {
+                      } else if (data[i].total_homeless <= 6000) {
                         return ("#2D4E51");
-                      } else if (data[i].pop <= 7000) {
+                      } else if (data[i].total_homeless <= 7000) {
                         return ("#0F3F4C");
-                      } else if (data[i].pop <= 8000) {
+                      } else if (data[i].total_homeless <= 8000) {
                         return ("#274349");
-                      } else if (data[i].pop <= 12000) {
+                      } else if (data[i].total_homeless <= 12000) {
                         return ("#21323D");
                       } else {
                         return ("#141D23")
