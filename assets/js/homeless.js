@@ -90,41 +90,41 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
                       if (data[i].pop <= 100) {
-                        return ("#fffdc0");
+                        return ("#E6F4EC");
                       } else if (data[i].pop <= 200) {
-                        return ("#fffc8d");
+                        return ("#C2F2DF");
                       } else if (data[i].pop <= 300) {
-                        return ("#fffa5a");
+                        return ("#8FEFCA");
                       } else if (data[i].pop <= 500) {
-                        return ("#f3ec00");
+                        return ("#80DCC9");
                       } else if (data[i].pop <= 700) {
-                        return ("#ffda24");
+                        return ("#84D1B9");
                       } else if (data[i].pop <= 1000) {
-                        return ("#f2d500");
+                        return ("#78CEC2");
                       } else if (data[i].pop <= 1500) {
-                        return ("#efc100");
+                        return ("#6DB5B4");
                       } else if (data[i].pop <= 2000) {
-                        return ("#ffbb22");
+                        return ("#59B2AA");
                       } else if (data[i].pop <= 2500) {
-                        return ("#edaf00");
+                        return ("#2F8E8E");
                       } else if (data[i].pop <= 3000) {
-                        return ("#ff9e1f");
+                        return ("#226B6B");
                       } else if (data[i].pop <= 3500) {
-                        return ("#ea9000");
+                        return ("#175F6B");
                       } else if (data[i].pop <= 4000) {
-                        return ("#e87900");
+                        return ("#0E4B59");
                       } else if (data[i].pop <= 5000) {
-                        return ("#ff7c1d");
+                        return ("#375A5E");
                       } else if (data[i].pop <= 6000) {
-                        return ("#e96200");
+                        return ("#2D4E51");
                       } else if (data[i].pop <= 7000) {
-                        return ("#b64c00");
+                        return ("#0F3F4C");
                       } else if (data[i].pop <= 8000) {
-                        return ("#833700");
+                        return ("#274349");
                       } else if (data[i].pop <= 12000) {
-                        return ("#502200");
+                        return ("#21323D");
                       } else {
-                        return ("#2e1300")
+                        return ("#141D23")
                       }
                     }
                   }
@@ -187,7 +187,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .html(function(d) {
                       return "<b>" + d.properties.COCNAME + "</b>" + "<br>" +
                         "Continuum of Care Number: " + d.properties.coc_number + "<br>" +
-                        "Total Homeless: " + "getValue(d)";
+                        "Total Homeless: " + d.properties.getValue(d);
                     });
 
                   map_svg.call(tip)
