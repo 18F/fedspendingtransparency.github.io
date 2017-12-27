@@ -37,7 +37,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-                ////console.log("bar_chrt: ", bar_chrt)
+                console.log("us: ", us);
+								console.log("us-states: ",json);
 
 								data.forEach(function(d) {
 									d.total_homeless= +d.total_homeless
@@ -45,10 +46,23 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 									d.sheltered= +d.sheltered_homeless
 									d.vets= +d.homeless_veterans
 								});
+
+								bar_chrt.forEach(function(d) {
+									d.fed_funding = +d.fed_funding;
+								});
+
+								map_data.forEach(function(d) {
+									d.fed_funding = +d.fed_funding;
+								});
+
+								bar_chrt = bar_chrt.sort(function(x, y) {
+									return d3.descending(x.fed_funding, y.fed_funding);
+								});
+
                 // Initialize visualization
                 GenMap()
                 GenPanelTwo()
-                //**GenScatter()**//
+                //GenScatter()
 
                 // Radio button control Panel 1
                 $(document).ready(function() {
@@ -828,7 +842,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var p2_matrix_svg = d3.select("#panel_matrix").append("svg")
                     /*.attr("width", matrix_width + margin.left + margin.right)
                     .attr("height", matrix_height + margin.top + margin.bottom)*/
-                    .attr("width", map_width + margin.left + margin.right)
+                    .attr("width", map_width + margin.left + margin.right+50)
                     .attr("height", map_height + margin.top + margin.bottom + 40)
                     .style("margin-left", -margin.left / 2.5 + "px")
                     .attr("transform", "translate(" + 40 + "," + 10 + ")");
@@ -842,134 +856,23 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   p2_map_svg.call(p2_tip)
 
-                  bar_chrt.forEach(function(d) {
-                    d.fed_funding = +d.fed_funding;
-                  });
-
-                  map_data.forEach(function(d) {
-                    d.fed_funding = +d.fed_funding;
-                  });
-
-                  bar_chrt = bar_chrt.sort(function(x, y) {
-                    return d3.descending(x.fed_funding, y.fed_funding);
-                  });
-
-
-                  function filter_cocNum(bar_chrt) {
-                    return bar_chrt.coc_number == "CA-600";
+                  function filter_cocNum(x) {
+                    return x.coc_number == "CA-600";
                   }
 
                   function filter_cfdaAmount(x) {
                     return x.fed_funding > 0;
                   }
 
-                  var initial = bar_chrt.filter(filter_cocNum);
-                  var initial_bar = initial.filter(filter_cfdaAmount);
-
-                  //console.log("initial_bar: ", initial)
-
-                  var formatNumber = d3.format("$,");
-
-                  var axisMargin = 5,
-                    x_width = 470,
-                    barHeight = 18,
-                    barPadding = 5,
-                    bar, scale, p2_xAxis, labelWidth = 0;
-
-                  max = d3.max(initial_bar, function(d) {
-                    return d.fed_funding;
-                  });
-
-                  bar = p2_matrix_svg.selectAll("g")
-                    .data(initial_bar)
-                    .enter()
-                    .append("g");
-
-                  bar.attr("class", "bar")
-                    .attr("cx", 0)
-                    .style("fill", function(d) {
-                      if (d.category == "Housing") {
-                        return "#7B4C66"
-                      } else if (d.category == "Housing/Education") {
-                        return "#C98845"
-                      } else if (d.category == "Services") {
-                        return "#CC5500"
-                      } else if (d.category == "Health") {
-                        return "#297B84"
-                      } else if (d.category == "Support Services") {
-                        return "#4A8D5B"
-                      } else if (d.category == "Housing/Services") {
-                        return "#759043"
-                      } else if (d.category == "Health/Housing") {
-                        return "#A08E39"
-                      } else if (d.category == "Education/Servicess") {
-                        return "#4A6C87"
-                      } else if (d.category == "Housing/Research") {
-                        return "#A9B2C3"
-                      }
-                    })
-                    .attr("transform", function(d, i) {
-                      return "translate(0," + (i * (barHeight + barPadding)) + ")";
-                    });
-
-                  bar.append("text")
-                    .attr("class", "label")
-                    .attr("x", 15)
-                    .attr("y", barHeight / 2)
-                    .attr("dy", ".35em") //vertical align middle
-                    .text(function(d) {
-                      return d.cfda_number;
-                    }).each(function() {
-                      labelWidth = 50;
-                    });
-
-                  scale = d3.scale.linear()
-                    .domain([0, max])
-                    .range([0, x_width - labelWidth]);
-
-                  p2_xAxis = d3.svg.axis()
-                    //.orient("bottom")
-                    .scale(scale)
-                    .tickSize(-p2_matrix_svg[0][0].attributes[1].nodeValue + axisMargin)
-                    .tickFormat(function(d) {
-                      return formatNumber(d);
-                    });
-
-                  yAxis = d3.svg.axis()
-                    .orient("left");
-
-                  bar.append("rect")
-                    .attr("transform", "translate(" + (labelWidth) + ",0)")
-                    .attr("margin-left", 5)
-                    //.attr("rx","30")
-                    .attr("height", barHeight)
-                    .attr("width", function(d) {
-                      return scale(d.fed_funding);
-                    });
-
-                  p2_matrix_svg.insert("g", ":first-child")
-                    .attr("class", "axisHorizontal")
-                    .attr("transform", "translate(" + labelWidth + "," + 255 + ")")
-                    .call(p2_xAxis)
-                    .selectAll("text")
-                    .attr("y", 10)
-                    .attr("x", 0)
-                    .attr("dy", ".35em")
-                    .attr("transform", "rotate(-35)")
-                    .style("font-size", "12")
-                    .style("text-anchor", "end");
-
-                  p2_matrix_svg.insert("g", ":first-child")
-                    .classed("y axis", true)
-                    .call(yAxis)
-                    .append("text")
-                    .classed("label", true)
-                    .attr("transform", "rotate(-90)")
-                    .attr("x", -80)
-                    .attr("y", 0)
-                    .attr("dy", ".71em")
-                    .style("text-anchor", "end")
-                    .text("Homeless CFDA Programs");
+									for(var y=0; y < us.features.length; y++){
+										if(us.features[y].properties.coc_number == "CA-600"){
+											var la = us.features[y];
+											console.log("us[y]: ", la)
+											BarChart(la);
+											createCFDATableHover(la);
+											createCoCTable(la);
+										}
+									}
 
                   //MAP
                   var projection = d3.geo.albersUsa()
@@ -1035,8 +938,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   createCoCTable(initial_coc);
 
-                  console.log("initial_bar: ", initial_bar);
-                  console.log("bar_chart: ", bar_chrt);
+                  //console.log("initial_bar: ", initial_bar);
+                  //console.log("bar_chart: ", bar_chrt);
 
                   info_panel.append("div")
                     .attr("id", "cfda_info_header")
@@ -1045,24 +948,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .html("<table class ='icon'>" + "<th class='head_val'>CFDA</th>" +
                       "<th class='head_name'>Program Title</th>" + "</table>")
 
-                  function createCFDATable(d) {
-                    //$("#panel_info").empty();
-
-                    info_panel.append("div")
-                      .attr("id", "cfda_info")
-                      .attr("height", info_height + margin.top + margin.bottom)
-                      .attr("width", info_width + margin.left + margin.right + 60)
-                      .style("margin-bottom", "2px")
-                      .html("<table class ='icon'>" + "<td class='val'>" + d.cfda_number + "</td>" +
-                        "<td class='name'>" + "<a href=" + d.program_website + ">" +
-                        d.program_title + "</a>" + "</td>" + "</tr>" + "</table>")
-                  }
-
-                  for (var i = 0; i < initial_bar.length; i++) {
-                    createCFDATable(initial_bar[i]);
-                  }
-
                   function createCFDATableHover(d) {
+										console.log("cfdaTable d: ",d)
                     $("#panel_info").empty();
 
                     var coc = d.properties.coc_number;
@@ -1217,7 +1104,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     var p2_matrix_svg = d3.select("#panel_matrix").append("svg")
                       /*.attr("width", matrix_width + margin.left + margin.right)
                       .attr("height", matrix_height + margin.top + margin.bottom)*/
-                      .attr("width", map_width + margin.left + margin.right)
+                      .attr("width", map_width + margin.left + margin.right+50)
                       .attr("height", map_height + margin.top + margin.bottom + 40)
                       .style("margin-left", -margin.left / 2.5 + "px")
                       .attr("transform", "translate(" + 40 + "," + 10 + ")");
