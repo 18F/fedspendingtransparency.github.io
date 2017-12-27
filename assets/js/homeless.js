@@ -1090,35 +1090,39 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                           x = centroid[0]
                           y = centroid[1]
 
-                          if (n.properties.NAME === 'Florida') {
-                            k = 5.0
-                          } else if (n.properties.NAME === 'Michigan') {
-                            k = 5.5
-                          } else if (n.properties.NAME === 'Idaho') {
-                            k = 3.25
-                          } else if (n.properties.NAME === 'Alaska') {
-                            k = 5.0
-                          } else if (n.properties.NAME === 'Hawaii') {
-                            k = 7.0
-                          } else if (n.properties.CENSUSAREA <= 15000) {
-                            k = 11.0
-                          } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
-                            k = 9.0
-                          } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
-                            k = 8.0
-                          } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
-                            k = 6.5
-                          } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                            k = 6.0
-                          } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-                            k = 5.0
-                          } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
-                            k = 4.0
-                          } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
-                            k = 3.5
-                          } else {
-                            k = 2.75
-                          };
+													if (n.properties.NAME === 'Florida') {
+														k = 4.0
+													} else if (n.properties.NAME === 'Michigan') {
+														k = 5
+													} else if (n.properties.NAME === 'Idaho') {
+														k = 3.25
+													} else if (n.properties.NAME === 'Alaska') {
+														k = 5.0
+													} else if (n.properties.NAME === 'Hawaii') {
+														k = 6.5
+													} else if (n.properties.NAME === 'New Jersey') {
+														k = 12
+													} else if (n.properties.NAME === 'Illinois') {
+														k = 5
+													} else if (n.properties.CENSUSAREA <= 15000) {
+														k = 17.0
+													} else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
+														k = 9.0
+													} else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
+														k = 6.6
+													} else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
+														k = 6.05
+													} else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
+														k = 5.5
+													} else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
+														k = 5
+													} else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
+														k = 3.0
+													} else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
+														k = 2.75
+													} else {
+														k = 2.55
+													};
                           centered = n;
 
                           m.selectAll('p2_path')
