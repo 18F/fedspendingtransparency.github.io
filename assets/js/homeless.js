@@ -15,9 +15,9 @@ var opts = {
   className: 'spinner' // The CSS class to assign to the spinner
 }
 
-var target_panel1 = document.getElementById("container");
-var target_panel2 = document.getElementById("container2");
-//var target_panel3 = document.getElementById("container3");
+var target_panel1 = document.getElementById('container');
+var target_panel2 = document.getElementById('container2');
+//var target_panel3 = document.getElementById('container3');
 
 var spinner_panel1 = new Spinner(opts).spin(target_panel1);
 var spinner_panel2 = new Spinner(opts).spin(target_panel2);
@@ -37,91 +37,91 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-								console.log("bar_chrt: ",bar_chrt);
+                console.log('bar_chrt: ', bar_chrt);
 
-								d3.select("#container2").append("div").attr("id", "p2_left")
-								d3.select("#container2").append("div").attr("id", "p2_right")
-								d3.select("#p2_left").append("div").attr("id", "panel_map")
-								d3.select("#p2_left").append("div").attr("id", "panel_matrix")
-								d3.select("#p2_right").append("div").attr("id", "panel_coc")
-								d3.select("#p2_right").append("div").attr("id", "panel_info")
-								d3.select("#container2").append("div").attr("id", "p2_legend_title")
-								d3.select("#container2").append("div").attr("id", "p2_legend")
+                d3.select('#container2').append('div').attr('id', 'p2_left')
+                d3.select('#container2').append('div').attr('id', 'p2_right')
+                d3.select('#p2_left').append('div').attr('id', 'panel_map')
+                d3.select('#p2_left').append('div').attr('id', 'panel_matrix')
+                d3.select('#p2_right').append('div').attr('id', 'panel_coc')
+                d3.select('#p2_right').append('div').attr('id', 'panel_info')
+                d3.select('#container2').append('div').attr('id', 'p2_legend_title')
+                d3.select('#container2').append('div').attr('id', 'p2_legend')
 
-								var abs_width = 1024,
-									abs_height = 575,
-									margin = {
-										top: 100,
-										right: 50,
-										bottom: 15,
-										left: 100
-									},
-									panel_2_width = abs_width - margin.left - margin.right,
-									panel_2_height = abs_height - margin.top - margin.bottom,
-									matrix_width = abs_width / 1.85 - margin.left - margin.right,
-									matrix_height = abs_height - margin.top - margin.bottom,
-									map_width = panel_2_width - matrix_width - margin.left - margin.right,
-									map_height = panel_2_height / 3,
-									info_width = panel_2_width - matrix_width - margin.left - margin.right,
-									info_height = panel_2_height / 3,
-									centered = null;
+                var abs_width = 1024,
+                  abs_height = 575,
+                  margin = {
+                    top: 100,
+                    right: 50,
+                    bottom: 15,
+                    left: 100
+                  },
+                  panel_2_width = abs_width - margin.left - margin.right,
+                  panel_2_height = abs_height - margin.top - margin.bottom,
+                  matrix_width = abs_width / 1.85 - margin.left - margin.right,
+                  matrix_height = abs_height - margin.top - margin.bottom,
+                  map_width = panel_2_width - matrix_width - margin.left - margin.right,
+                  map_height = panel_2_height / 3,
+                  info_width = panel_2_width - matrix_width - margin.left - margin.right,
+                  info_height = panel_2_height / 3,
+                  centered = null;
 
-								var p2_map_svg = d3.select("#panel_map")
-									.append("svg")
-									.attr("id","p2_map")
-									.attr("width", map_width + margin.left + margin.right + 40)
-									.attr("height", map_height + margin.top + margin.bottom + 15);
+                var p2_map_svg = d3.select('#panel_map')
+                  .append('svg')
+                  .attr('id', 'p2_map')
+                  .attr('width', map_width + margin.left + margin.right + 40)
+                  .attr('height', map_height + margin.top + margin.bottom + 15);
 
-								var info_panel = d3.select("#panel_info")
-									.attr("width", info_width + margin.left + margin.right)
-									.attr("height", info_height + margin.top + margin.bottom);
+                var info_panel = d3.select('#panel_info')
+                  .attr('width', info_width + margin.left + margin.right)
+                  .attr('height', info_height + margin.top + margin.bottom);
 
-								var coc_panel = d3.select("#panel_coc")
-									.attr("width", info_width + margin.left + margin.right)
-									.attr("height", info_height + margin.top + margin.bottom);
+                var coc_panel = d3.select('#panel_coc')
+                  .attr('width', info_width + margin.left + margin.right)
+                  .attr('height', info_height + margin.top + margin.bottom);
 
-								var p2_matrix_svg = d3.select("#panel_matrix").append("svg")
-									/*.attr("width", matrix_width + margin.left + margin.right)
-									.attr("height", matrix_height + margin.top + margin.bottom)*/
-									.attr("width", map_width + margin.left + margin.right+50)
-									.attr("height", map_height + margin.top + margin.bottom + 40)
-									.style("margin-left", -margin.left / 2.5 + "px")
-									.attr("transform", "translate(" + 40 + "," + 10 + ")");
+                var p2_matrix_svg = d3.select('#panel_matrix').append('svg')
+                  /*.attr('width', matrix_width + margin.left + margin.right)
+                  .attr('height', matrix_height + margin.top + margin.bottom)*/
+                  .attr('width', map_width + margin.left + margin.right + 50)
+                  .attr('height', map_height + margin.top + margin.bottom + 40)
+                  .style('margin-left', -margin.left / 2.5 + 'px')
+                  .attr('transform', 'translate(' + 40 + ',' + 10 + ')');
 
-								var p2_tip = d3.tip()
-									.attr("class", "homeless-analysis d3-tip")
-									.offset([-10, 0])
-									.html(function(d) {
-										return d.properties.COCNAME + "<br>" + "Continuum of Care Number: " +
-										d.properties.coc_number + "<br />" + "Federal Funding: " +
-										getDollarValue(d);
-									});
+                var p2_tip = d3.tip()
+                  .attr('class', 'homeless-analysis d3-tip')
+                  .offset([-10, 0])
+                  .html(function(d) {
+                    return d.properties.COCNAME + '<br>' + 'Continuum of Care Number: ' +
+                      d.properties.coc_number + '<br />' + 'Federal Funding: ' +
+                      getDollarValue(d);
+                  });
 
-								var p2_bar_tip = d3.tip()
-									.attr("class", "homeless-analysis d3-tip")
-									.offset([-10, 0])
-									.html(function(d) {
-										return getCFDA_value(d);
-									});
+                var p2_bar_tip = d3.tip()
+                  .attr('class', 'homeless-analysis d3-tip')
+                  .offset([-10, 0])
+                  .html(function(d) {
+                    return getCFDA_value(d);
+                  });
 
-								data.forEach(function(d) {
-									d.total_homeless= +d.total_homeless
-									d.unsheltered= +d.unsheltered_homeless
-									d.sheltered= +d.sheltered_homeless
-									d.vets= +d.homeless_veterans
-								});
+                data.forEach(function(d) {
+                  d.total_homeless = +d.total_homeless
+                  d.unsheltered = +d.unsheltered_homeless
+                  d.sheltered = +d.sheltered_homeless
+                  d.vets = +d.homeless_veterans
+                });
 
-								bar_chrt.forEach(function(d) {
-									d.fed_funding = +d.fed_funding;
-								});
+                bar_chrt.forEach(function(d) {
+                  d.fed_funding = +d.fed_funding;
+                });
 
-								map_data.forEach(function(d) {
-									d.fed_funding = +d.fed_funding;
-								});
+                map_data.forEach(function(d) {
+                  d.fed_funding = +d.fed_funding;
+                });
 
-								bar_chrt = bar_chrt.sort(function(x, y) {
-									return d3.descending(x.fed_funding, y.fed_funding);
-								});
+                bar_chrt = bar_chrt.sort(function(x, y) {
+                  return d3.descending(x.fed_funding, y.fed_funding);
+                });
 
                 // Initialize visualization
                 GenMap()
@@ -130,8 +130,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 // Radio button control Panel 1
                 $(document).ready(function() {
-                  $("input[type='radio']").on('change', function() {
-                    var selectedValue = $("input[name='radio']:checked").val();
+                  $('input[type="radio"]').on('change', function() {
+                    var selectedValue = $('input[name="radio"]:checked').val();
 
                     if (selectedValue === 'Map') {
                       d3.selectAll('#viz_container').remove()
@@ -156,48 +156,48 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 // **************************************************************
 
-								var formatNumber = d3.format("$,.2f");
-								var OtherformatNumber = d3.format(",");
+                var formatNumber = d3.format('$,.2f');
+                var OtherformatNumber = d3.format(',');
 
                 function getColor(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
                       if (data[i].total_homeless <= 100) {
-                        return ("#E6F4EC");
+                        return ('#E6F4EC');
                       } else if (data[i].total_homeless <= 200) {
-                        return ("#C2F2DF");
+                        return ('#C2F2DF');
                       } else if (data[i].total_homeless <= 300) {
-                        return ("#8FEFCA");
+                        return ('#8FEFCA');
                       } else if (data[i].total_homeless <= 500) {
-                        return ("#80DCC9");
+                        return ('#80DCC9');
                       } else if (data[i].total_homeless <= 700) {
-                        return ("#84D1B9");
+                        return ('#84D1B9');
                       } else if (data[i].total_homeless <= 1000) {
-                        return ("#78CEC2");
+                        return ('#78CEC2');
                       } else if (data[i].total_homeless <= 1500) {
-                        return ("#6DB5B4");
+                        return ('#6DB5B4');
                       } else if (data[i].total_homeless <= 2000) {
-                        return ("#59B2AA");
+                        return ('#59B2AA');
                       } else if (data[i].total_homeless <= 2500) {
-                        return ("#2F8E8E");
+                        return ('#2F8E8E');
                       } else if (data[i].total_homeless <= 3000) {
-                        return ("#226B6B");
+                        return ('#226B6B');
                       } else if (data[i].total_homeless <= 3500) {
-                        return ("#175F6B");
+                        return ('#175F6B');
                       } else if (data[i].total_homeless <= 4000) {
-                        return ("#0E4B59");
+                        return ('#0E4B59');
                       } else if (data[i].total_homeless <= 5000) {
-                        return ("#375A5E");
+                        return ('#375A5E');
                       } else if (data[i].total_homeless <= 6000) {
-                        return ("#2D4E51");
+                        return ('#2D4E51');
                       } else if (data[i].total_homeless <= 7000) {
-                        return ("#0F3F4C");
+                        return ('#0F3F4C');
                       } else if (data[i].total_homeless <= 8000) {
-                        return ("#274349");
+                        return ('#274349');
                       } else if (data[i].total_homeless <= 12000) {
-                        return ("#21323D");
+                        return ('#21323D');
                       } else {
-                        return ("#141D23")
+                        return ('#141D23')
                       }
                     }
                   }
@@ -219,25 +219,25 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   }
                 }
 
-								function getDollarValue(d){
-									for (var i = 0; i < map_data.length; i++) {
-										if (d.properties.coc_number === map_data[i].COC_Number) {
-											return formatNumber(map_data[i].amount);
-										}
-									}
-								}
+                function getDollarValue(d) {
+                  for (var i = 0; i < map_data.length; i++) {
+                    if (d.properties.coc_number === map_data[i].COC_Number) {
+                      return formatNumber(map_data[i].amount);
+                    }
+                  }
+                }
 
-								function getCFDA_value(d){
-									console.log("CFDA value: ",d);
-									return "Funding Amount: " + formatNumber(d.fed_funding);
-								}
+                function getCFDA_value(d) {
+                  //console.log('CFDA value: ',d);
+                  return 'Funding Amount: ' + formatNumber(d.fed_funding);
+                }
 
                 function GenMap() {
                   spinner_panel1.stop();
 
-                  d3.select("#container").append('div').attr("id", "legend_title");
-                  d3.select("#container").append('div').attr("id", "legend");
-                  d3.select("#container").append('div').attr("id", "viz_container");
+                  d3.select('#container').append('div').attr('id', 'legend_title');
+                  d3.select('#container').append('div').attr('id', 'legend');
+                  d3.select('#container').append('div').attr('id', 'viz_container');
 
                   var width = 1000,
                     height = 600,
@@ -252,132 +252,132 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var path = d3.geo.path() // path generator that will convert GeoJSON to SVG paths
                     .projection(projection); // tell path generator to use albersUsa projection
 
-                  var div = d3.select("#viz_container")
-                    .append("div")
-                    .attr("id", "map_container")
-                    .attr("width", width)
-                    .attr("height", height);
+                  var div = d3.select('#viz_container')
+                    .append('div')
+                    .attr('id', 'map_container')
+                    .attr('width', width)
+                    .attr('height', height);
 
-                  var map_svg = d3.select("#map_container")
-                    .append("svg")
-                    .attr("id", "svg")
-                    .attr("width", '950px')
-                    .attr("height", '575px');
+                  var map_svg = d3.select('#map_container')
+                    .append('svg')
+                    .attr('id', 'svg')
+                    .attr('width', '950px')
+                    .attr('height', '575px');
 
                   var tip = d3.tip()
-                    .attr("class", "homeless-analysis d3-tip")
+                    .attr('class', 'homeless-analysis d3-tip')
                     .offset([-10, -10])
                     .html(function(d) {
-                      return "<b>" + d.properties.COCNAME + "</b>" + "<br>" +
-                        "Continuum of Care Number: " + d.properties.coc_number + "<br>" +
-                        "Total Homeless: " + data[i].total_homeless;
+                      return '<b>' + d.properties.COCNAME + '</b>' + '<br>' +
+                        'Continuum of Care Number: ' + d.properties.coc_number + '<br>' +
+                        'Total Homeless: ' + data[i].total_homeless;
                     });
 
                   map_svg.call(tip)
 
-                  var legend_title = d3.select("#legend_title")
-                    .append("div")
-                    .attr("class", "legend_title")
-                    .attr("height", "15px")
-                    .attr("width", "950px")
-                    .html("<h5>Contiuum of Care Area Homeless Population</h5>")
-                    .style("text-anchor", "middle");
+                  var legend_title = d3.select('#legend_title')
+                    .append('div')
+                    .attr('class', 'legend_title')
+                    .attr('height', '15px')
+                    .attr('width', '950px')
+                    .html('<h5>Contiuum of Care Area Homeless Population</h5>')
+                    .style('text-anchor', 'middle');
 
-                  var legend = d3.select("#legend")
-                    .append("div")
-                    .attr("width", "950px")
-                    .attr("height", "100px")
-                    .attr("padding", "50px 0 0 50px");
+                  var legend = d3.select('#legend')
+                    .append('div')
+                    .attr('width', '950px')
+                    .attr('height', '100px')
+                    .attr('padding', '50px 0 0 50px');
 
 
-                  var color = ["#E6F4EC", "#C2F2DF", "#8FEFCA", "#80DCC9", "#84D1B9",
-                    "#78CEC2", "#59B2AA", "#6DB5B4", "#5DA098", "#62959D", "#597A87",
-                    "#546D7B", "#4F606F", "#495462", "#414553", "#383C49", "#35333D", "#2C2730"
+                  var color = ['#E6F4EC', '#C2F2DF', '#8FEFCA', '#80DCC9', '#84D1B9',
+                    '#78CEC2', '#59B2AA', '#6DB5B4', '#5DA098', '#62959D', '#597A87',
+                    '#546D7B', '#4F606F', '#495462', '#414553', '#383C49', '#35333D', '#2C2730'
                   ]
 
-                  var legend_key_values = ["< 100", "100-200", "200-300", "300-500", "500-700", "700-1k", "1k-1.5k",
-                    "1.5k-2k", "2k-2.5k", "2.5k-3k", "3k-3.5k", "3.5k-4k", "4k-5k",
-                    "5k-6k", "6k-7k", "7k-8k", "8k-12k", "> 12k"
+                  var legend_key_values = ['< 100', '100-200', '200-300', '300-500', '500-700', '700-1k', '1k-1.5k',
+                    '1.5k-2k', '2k-2.5k', '2.5k-3k', '3k-3.5k', '3.5k-4k', '4k-5k',
+                    '5k-6k', '6k-7k', '7k-8k', '8k-12k', '> 12k'
                   ];
 
                   for (var i = 0; i < 18; i++) {
 
-                    var z = legend.append("div")
-                      .attr("id", "legend_key");
+                    var z = legend.append('div')
+                      .attr('id', 'legend_key');
 
-                    var key = z.append("div")
-                      .attr("id", "key")
-                      .style("position", "relative")
-                      .append("svg")
-                      .attr("height", "40px")
-                      .attr("width", "53px")
-                      .append("rect")
-                      .attr("x", 10)
-                      .attr("y", 10)
-                      .attr("height", 30)
-                      .attr("width", 30)
-                      .style("fill", function(d) {
+                    var key = z.append('div')
+                      .attr('id', 'key')
+                      .style('position', 'relative')
+                      .append('svg')
+                      .attr('height', '40px')
+                      .attr('width', '53px')
+                      .append('rect')
+                      .attr('x', 10)
+                      .attr('y', 10)
+                      .attr('height', 30)
+                      .attr('width', 30)
+                      .style('fill', function(d) {
                         return color[i];
                       });
 
 
-                    z.append("div")
-                      .attr("id", "key_value")
-                      .style("position", "relative")
-                      .style("color", "blue")
-                      .html("<p>" + legend_key_values[i] + "</p>");
+                    z.append('div')
+                      .attr('id', 'key_value')
+                      .style('position', 'relative')
+                      .style('color', 'blue')
+                      .html('<p>' + legend_key_values[i] + '</p>');
                   }
 
-                  var g = map_svg.append("g")
-                    .attr("class", "counties")
-                    .selectAll("path")
+                  var g = map_svg.append('g')
+                    .attr('class', 'counties')
+                    .selectAll('path')
                     .data(us.features)
-                    .enter().append("path")
-                    .attr("class", "coc")
-                    .attr("data-coc", function(d) {
+                    .enter().append('path')
+                    .attr('class', 'coc')
+                    .attr('data-coc', function(d) {
                       return d.properties.coc_number;
                     })
-                    .attr("data-state", function(d) {
+                    .attr('data-state', function(d) {
                       return d.properties.state;
                     })
-                    .attr("data-name", function(d) {
+                    .attr('data-name', function(d) {
                       return d.properties.name;
                     })
-                    .attr("d", path)
-                    .on("mouseover", tip.show)
-                    .on("mouseout", tip.hide)
-                    /*.call(d3.behavior.zoom().on("zoom", function () {
-									    map_svg.attr("transform", "translate(" + d3.event.translate + ")" + " scale(" + d3.event.scale + ")")
+                    .attr('d', path)
+                    .on('mouseover', tip.show)
+                    .on('mouseout', tip.hide)
+                    /*.call(d3.behavior.zoom().on('zoom', function () {
+									    map_svg.attr('transform', 'translate(' + d3.event.translate + ')' + ' scale(' + d3.event.scale + ')')
 									  }))*/
-                    .on("click", clicked)
-                    .style("fill", getColor);
+                    .on('click', clicked)
+                    .style('fill', getColor);
 
                   function clicked(d) {
                     var x, y, k;
 
-                    ////console.log("Panel 1 clicked, d: ",d);
+                    ////console.log('Panel 1 clicked, d: ',d);
 
                     for (var i = 0; i < states.length; i++) {
                       if (d.properties.STUSAB == states[i].Abbrv) {
                         for (var h = 0; h < json.features.length; h++) {
                           if (states[i].State == json.features[h].properties.NAME) {
                             var n = json.features[h]
-                            ////console.log("clicked n: ",n);
+                            ////console.log('clicked n: ',n);
                             if (n && centered !== n) {
                               var centroid = path.centroid(n)
                               x = centroid[0]
                               y = centroid[1]
 
-                              ////console.log("d: ",d.properties.NAME);
-                              if (n.properties.NAME === "Florida") {
+                              ////console.log('d: ',d.properties.NAME);
+                              if (n.properties.NAME === 'Florida') {
                                 k = 5.0
-                              } else if (n.properties.NAME === "Michigan") {
+                              } else if (n.properties.NAME === 'Michigan') {
                                 k = 5.5
-                              } else if (n.properties.NAME === "Idaho") {
+                              } else if (n.properties.NAME === 'Idaho') {
                                 k = 3.25
-                              } else if (n.properties.NAME === "Alaska") {
+                              } else if (n.properties.NAME === 'Alaska') {
                                 k = 5.0
-                              } else if (n.properties.NAME === "Hawaii") {
+                              } else if (n.properties.NAME === 'Hawaii') {
                                 k = 7.0
                               } else if (n.properties.CENSUSAREA <= 15000) {
                                 k = 11.0
@@ -408,15 +408,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                             }
 
-                            g.selectAll("path")
-                              .classed("active", centered && function(d) {
+                            g.selectAll('path')
+                              .classed('active', centered && function(d) {
                                 return d === centered;
                               });
 
                             g.transition()
                               .duration(750)
-                              .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-                              .style("stroke-width", .25 / k + "px");
+                              .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+                              .style('stroke-width', .25 / k + 'px');
                           }
                         }
                       }
@@ -426,7 +426,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function GenTable() {
 
-                  ////console.log("table data: ", table_data)
+                  ////console.log('table data: ', table_data)
 
                   table_data.forEach(function(d) {
                     d.total_homeless = +d.total_homeless
@@ -439,7 +439,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     d.homeless_unaccompanied_youth = +d.homeless_unaccompanied_youth
                   });
 
-                  var column_names = ["CoC Number", "CoC Name", "Total Homeless", "Sheltered Homeless", "Unsheltered Homeless", "Chronically Homeless", "Homeless Veterans", "Homeless Individuals", "Homeless People in Families", "Homeless Unaccompanied Youth (Under 25)"];
+                  var column_names = ['CoC Number', 'CoC Name', 'Total Homeless', 'Sheltered Homeless', 'Unsheltered Homeless', 'Chronically Homeless', 'Homeless Veterans', 'Homeless Individuals', 'Homeless People in Families', 'Homeless Unaccompanied Youth (Under 25)'];
 
                   var clicks = {
                     coc_number: 0,
@@ -454,47 +454,47 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     homeless_unaccompanied_youth: 0
                   };
 
-                  d3.select("#container")
-                    .attr("height", "700px")
-                    .attr("width", "1024px");
+                  d3.select('#container')
+                    .attr('height', '700px')
+                    .attr('width', '1024px');
 
-                  d3.select("#container").append('div')
-                    .attr("id", "viz_container")
-                    .attr("height", "700px")
-                    .attr("width", "1000px");
+                  d3.select('#container').append('div')
+                    .attr('id', 'viz_container')
+                    .attr('height', '700px')
+                    .attr('width', '1000px');
 
-                  d3.select("#viz_container").append("h3")
-                    .attr("id", "title")
-                    .style("text-align", "center")
-                    .text("Continuum of Care 2016 Homeless Population")
+                  d3.select('#viz_container').append('h3')
+                    .attr('id', 'title')
+                    .style('text-align', 'center')
+                    .text('Continuum of Care 2016 Homeless Population')
 
-                  d3.select("#viz_container").append("div")
-                    .attr("class", "SearchBar")
-                    .append("p")
-                    .attr("class", "SearchBar")
-                    .text("Search By CoC Name:");
+                  d3.select('#viz_container').append('div')
+                    .attr('class', 'SearchBar')
+                    .append('p')
+                    .attr('class', 'SearchBar')
+                    .text('Search By CoC Name:');
 
-                  d3.select(".SearchBar")
-                    .append("input")
-                    .attr("class", "SearchBar")
-                    .attr("id", "search")
-                    .attr("type", "text")
-                    .attr("placeholder", "Search...")
-                    .style("font-family", "inherit")
-                    .style("font-size", "16");
+                  d3.select('.SearchBar')
+                    .append('input')
+                    .attr('class', 'SearchBar')
+                    .attr('id', 'search')
+                    .attr('type', 'text')
+                    .attr('placeholder', 'Search...')
+                    .style('font-family', 'inherit')
+                    .style('font-size', '16');
 
-                  d3.select("#viz_container").append("div")
-                    .attr("id", "table_container")
-                    .attr("width", '950px')
-                    .attr("height", '575px');
+                  d3.select('#viz_container').append('div')
+                    .attr('id', 'table_container')
+                    .attr('width', '950px')
+                    .attr('height', '575px');
 
-                  var table = d3.select("#table_container").append("table").attr("id", "tab");
-                  table.append("thead").append("tr");
+                  var table = d3.select('#table_container').append('table').attr('id', 'tab');
+                  table.append('thead').append('tr');
 
-                  var headers = table.select("tr").selectAll("th")
+                  var headers = table.select('tr').selectAll('th')
                     .data(column_names)
                     .enter()
-                    .append("th")
+                    .append('th')
                     .text(function(d) {
                       return d;
                     });
@@ -502,20 +502,20 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var rows, row_entries, row_entries_no_anchor, row_entries_with_anchor;
 
                   // draw table body with rows
-                  table.append("tbody")
+                  table.append('tbody')
 
                   // data bind
-                  rows = table.select("tbody").selectAll("tr")
+                  rows = table.select('tbody').selectAll('tr')
                     .data(table_data, function(d) {
                       return d.coc_number;
                     });
 
                   // enter the rows
                   rows.enter()
-                    .append("tr")
+                    .append('tr')
 
                   // enter td's in each row
-                  row_entries = rows.selectAll("td")
+                  row_entries = rows.selectAll('td')
                     .data(function(d) {
                       var arr = [];
                       for (var k in d) {
@@ -526,7 +526,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       return [arr[0], arr[1], arr[2], arr[3], arr[4], arr[7], arr[8], arr[5], arr[6], arr[9]];
                     })
                     .enter()
-                    .append("td")
+                    .append('td')
 
                   // draw row entries with no anchor
                   row_entries_no_anchor = row_entries.filter(function(d) {
@@ -541,23 +541,23 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     return (/https?:\/\//.test(d) == true)
                   })
                   row_entries_with_anchor
-                    .append("a")
-                    .attr("href", function(d) {
+                    .append('a')
+                    .attr('href', function(d) {
                       return d;
                     })
-                    .attr("target", "_blank")
+                    .attr('target', '_blank')
                     .text(function(d) {
                       return d;
                     })
 
                   /**  search functionality **/
-                  d3.select("#search")
-                    .on("keyup", function() { // filter according to key pressed
+                  d3.select('#search')
+                    .on('keyup', function() { // filter according to key pressed
                       var searched_data = table_data,
                         text = this.value.trim();
 
                       var searchResults = searched_data.map(function(r) {
-                        var regex = new RegExp("^" + text, "i");
+                        var regex = new RegExp('^' + text, 'i');
                         if (regex.test(r.coc_name)) { // if there are any results
                           return regex.exec(r.coc_name)[0]; // return them to searchResults
                         }
@@ -579,18 +579,18 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       searched_data = [].concat.apply([], searched_data)
 
                       // data bind with new data
-                      rows = table.select("tbody").selectAll("tr")
+                      rows = table.select('tbody').selectAll('tr')
                         .data(searched_data, function(d) {
                           return d.coc_number;
                         })
-                        .attr("class", "panel_1_table");
+                        .attr('class', 'panel_1_table');
 
                       // enter the rows
                       rows.enter()
-                        .append("tr");
+                        .append('tr');
 
                       // enter td's in each row
-                      row_entries = rows.selectAll("td")
+                      row_entries = rows.selectAll('td')
                         .data(function(d) {
                           var arr = [];
                           for (var k in d) {
@@ -601,7 +601,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                           return [arr[0], arr[1], arr[2], arr[3], arr[4], arr[7], arr[8], arr[5], arr[6], arr[9]];
                         })
                         .enter()
-                        .append("td")
+                        .append('td')
 
                       // draw row entries with no anchor
                       row_entries_no_anchor = row_entries.filter(function(d) {
@@ -616,11 +616,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         return (/https?:\/\//.test(d) == true)
                       })
                       row_entries_with_anchor
-                        .append("a")
-                        .attr("href", function(d) {
+                        .append('a')
+                        .attr('href', function(d) {
                           return d;
                         })
-                        .attr("target", "_blank")
+                        .attr('target', '_blank')
                         .text(function(d) {
                           return d;
                         })
@@ -630,8 +630,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     })
 
                   /**  sort functionality **/
-                  headers.on("click", function(d) {
-                    if (d == "CoC Number") {
+                  headers.on('click', function(d) {
+                    if (d == 'CoC Number') {
                       clicks.coc_number++
                         if (clicks.coc_number % 2 == 0) {
                           rows.sort(function(a, b) {
@@ -645,7 +645,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       }
                     }
 
-                    if (d == "CoC Name") {
+                    if (d == 'CoC Name') {
                       clicks.coc_name++
                         if (clicks.coc_name % 2 == 0) {
                           rows.sort(function(a, b) {
@@ -659,9 +659,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       }
                     }
 
-                    if (d == "Total Homeless") {
+                    if (d == 'Total Homeless') {
                       clicks.total_homeless++;
-                      //console.log("rows.total_homeless: ", rows.total_homeless)
+                      //console.log('rows.total_homeless: ', rows.total_homeless)
                       if (clicks.total_homeless % 2 == 0) {
                         // sort ascending: numerically
                         rows.sort(function(a, b) {
@@ -688,7 +688,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       }
                     }
 
-                    if (d == "Chronically Homeless") {
+                    if (d == 'Chronically Homeless') {
                       clicks.chronically_homeless++;
                       // even number of clicks
                       if (clicks.chronically_homeless % 2 == 0) {
@@ -712,7 +712,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         });
                       }
                     }
-                    if (d == "Sheltered Homeless") {
+                    if (d == 'Sheltered Homeless') {
                       clicks.sheltered_homeless++;
                       // even number of clicks
                       if (clicks.sheltered_homeless % 2 == 0) {
@@ -736,7 +736,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         });
                       }
                     }
-                    if (d == "Unsheltered Homeless") {
+                    if (d == 'Unsheltered Homeless') {
                       clicks.unsheltered_homeless++;
                       // even number of clicks
                       if (clicks.unsheltered_homeless % 2 == 0) {
@@ -760,7 +760,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         });
                       }
                     }
-                    if (d == "Homeless Veterans") {
+                    if (d == 'Homeless Veterans') {
                       clicks.homeless_veterans++;
                       // even number of clicks
                       if (clicks.homeless_veterans % 2 == 0) {
@@ -784,7 +784,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         });
                       }
                     }
-                    if (d == "Homeless Individuals") {
+                    if (d == 'Homeless Individuals') {
                       clicks.homeless_individuals++;
                       // even number of clicks
                       if (clicks.homeless_individuals % 2 == 0) {
@@ -808,7 +808,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         });
                       }
                     }
-                    if (d == "Homeless People in Families") {
+                    if (d == 'Homeless People in Families') {
                       clicks.homeless_people_in_families++;
                       // even number of clicks
                       if (clicks.homeless_people_in_families % 2 == 0) {
@@ -832,7 +832,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         });
                       }
                     }
-                    if (d == "Homeless Unaccompanied Youth (Under 25)") {
+                    if (d == 'Homeless Unaccompanied Youth (Under 25)') {
                       clicks.homeless_unaccompanied_youth++;
                       // even number of clicks
                       if (clicks.homeless_unaccompanied_youth % 2 == 0) {
@@ -859,9 +859,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   }) // end of click listeners
 
                   //Scrollable body, frozen headers
-                  document.getElementById("table_container").addEventListener("scroll", function() {
-                    var translate = "translate(0," + this.scrollTop + "px)";
-                    this.querySelector("thead").style.transform = translate;
+                  document.getElementById('table_container').addEventListener('scroll', function() {
+                    var translate = 'translate(0,' + this.scrollTop + 'px)';
+                    this.querySelector('thead').style.transform = translate;
                   });
                 } // end of GenTable()
 
@@ -876,14 +876,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     return x.fed_funding > 0;
                   }
 
-									for(var y=0; y < us.features.length; y++){
-										if(us.features[y].properties.coc_number == "CA-600"){
-											var la = us.features[y];
-											BarChart(la);
-											createCFDATableHover(la);
-											createCoCTable(la);
-										}
-									}
+                  // Initialize Panel 2 info
+                  for (var y = 0; y < us.features.length; y++) {
+                    if (us.features[y].properties.coc_number == 'CA-600') {
+                      var la = us.features[y];
+                      BarChart(la);
+                      createCFDATableHover(la);
+                      createCoCTable(la);
+                    }
+                  }
 
                   //MAP
                   var projection = d3.geo.albersUsa()
@@ -896,108 +897,108 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   var centered = null;
 
-                  var m = p2_map_svg.append("g");
+                  var m = p2_map_svg.append('g');
 
-                  //var OnMouseOver = "BarChart; tip.show"
+                  //var OnMouseOver = 'BarChart; tip.show'
 
-                  m.selectAll("p2_path")
+                  m.selectAll('p2_path')
                     .data(us.features)
-                    .enter().append("path")
-                    .attr("d", p2_path)
-                    .attr("id", "counties_mini")
-                    .attr("data-coc", function(d) {
+                    .enter().append('path')
+                    .attr('d', p2_path)
+                    .attr('id', 'counties_mini')
+                    .attr('data-coc', function(d) {
                       return d.properties.coc_number;
                     })
-                    .attr("data-state", function(d) {
+                    .attr('data-state', function(d) {
                       return d.properties.state;
                     })
-                    .attr("data-name", function(d) {
+                    .attr('data-name', function(d) {
                       return d.properties.name;
                     })
-                    .attr("d", p2_path)
-                    .on("click", function(d){
-											BarChart(d);
+                    .attr('d', p2_path)
+                    .on('click', function(d) {
+                      BarChart(d);
                       createCoCTable(d);
                       createCFDATableHover(d);
-										})
-                    .style("fill", p2_getColor)
-										.on("dblclick",p2_clicked)
-                    .on("mouseover",p2_tip.show)
-                    .on("mouseout", p2_tip.hide);
+                    })
+                    .style('fill', p2_getColor)
+                    .on('dblclick', p2_clicked)
+                    .on('mouseover', p2_tip.show)
+                    .on('mouseout', p2_tip.hide);
 
                   function createCoCTable(d) {
-                    $("#panel_coc").empty();
-                    coc_panel.append("div")
-                      .attr("id", "coc_info")
-                      .attr("height", info_height + margin.top + margin.bottom)
-                      .attr("width", info_width + margin.left + margin.right)
-                      .html("<h1 class='panel_title'>" + d.properties.COCNAME + "</h1>" +
-                        "<h3 class='panel_desc'>" + d.properties.CONTACT_TY +
-                        "<br />" + "</h3>" + "<p class='panel_text'>" + d.properties.FIRST_NAME + " " +
-                        d.properties.LAST_NAME + "<br />" + d.properties.TITLE + "<br /><br />" + "Email: " +
-                        d.properties.EMAIL_ADDR + "<br />" + "Phone: " + d.properties.PRIMARY_PH + "</p>");
+                    $('#panel_coc').empty();
+                    coc_panel.append('div')
+                      .attr('id', 'coc_info')
+                      .attr('height', info_height + margin.top + margin.bottom)
+                      .attr('width', info_width + margin.left + margin.right)
+                      .html('<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
+                        '<h3 class="panel_desc">' + d.properties.CONTACT_TY +
+                        '<br />' + '</h3>' + '<p class="panel_text">' + d.properties.FIRST_NAME + ' ' +
+                        d.properties.LAST_NAME + '<br />' + d.properties.TITLE + '<br /><br />' + 'Email: ' +
+                        d.properties.EMAIL_ADDR + '<br />' + 'Phone: ' + d.properties.PRIMARY_PH + '</p>');
                   }
 
                   function createCFDATableHover(d) {
-										console.log("cfdaTable d: ",d)
-                    $("#panel_info").empty();
+                    console.log('cfdaTable d: ', d)
+                    $('#panel_info').empty();
 
                     var coc = d.properties.coc_number;
-                    //console.log("coc: ",coc)
+                    //console.log('coc: ',coc)
                     function filter_cocNum_cfda(bar_chrt) {
                       return bar_chrt.coc_number == coc;
                     }
 
                     var initial = bar_chrt.filter(filter_cocNum_cfda);
                     var initial_coc_poss = initial.filter(filter_cfdaAmount)
-                    //console.log("initial: ",initial);
+                    //console.log('initial: ',initial);
 
-                    info_panel.append("div")
-                      .attr("id", "cfda_info_header")
-                      .attr("height", info_height + margin.top + margin.bottom)
-                      .attr("width", info_width + margin.left + margin.right + 60)
-                      .html("<table class ='icon'>" + "<th class='head_val'>CFDA</th>" +
-                        "<th class='head_name'>Program Title</th>" + "</table>")
+                    info_panel.append('div')
+                      .attr('id', 'cfda_info_header')
+                      .attr('height', info_height + margin.top + margin.bottom)
+                      .attr('width', info_width + margin.left + margin.right + 60)
+                      .html('<table class ="icon">' + '<th class="head_val">CFDA</th>' +
+                        '<th class="head_name">Program Title</th>' + '</table>')
 
                     for (var i = 0; i < initial_coc_poss.length; i++) {
-                      info_panel.append("div")
-                        .attr("id", "cfda_info")
-                        //.attr("height", info_height + margin.top + margin.bottom)
-                        //.attr("width", info_width + margin.left + margin.right+60)
-                        .style("margin-bottom", "2px")
-                        .html("<table class ='icon'>" +
-                          "<tr>" + "<td class='val'>" + initial_coc_poss[i].cfda_number + "</td>" +
-                          "<td class='name'>" + "<a href=" + initial_coc_poss[i].program_website + ">" +
-                          initial_coc_poss[i].program_title + "</a>" + "</td>" + "</tr>" + "</table>")
+                      info_panel.append('div')
+                        .attr('id', 'cfda_info')
+                        //.attr('height', info_height + margin.top + margin.bottom)
+                        //.attr('width', info_width + margin.left + margin.right+60)
+                        .style('margin-bottom', '2px')
+                        .html('<table class ="icon">' +
+                          '<tr>' + '<td class="val">' + initial_coc_poss[i].cfda_number + '</td>' +
+                          '<td class="name">' + '<a href=' + initial_coc_poss[i].program_website + '>' +
+                          initial_coc_poss[i].program_title + '</a>' + '</td>' + '</tr>' + '</table>')
                     }
                   }
 
                   function p2_clicked(d) {
                     var x, y, k;
 
-                    //console.log("Panel 2 clicked, d: ",d);
+                    //console.log('Panel 2 clicked, d: ',d);
 
                     for (var i = 0; i < states.length; i++) {
                       if (d.properties.STUSAB == states[i].Abbrv) {
                         for (var h = 0; h < json.features.length; h++) {
                           if (states[i].State == json.features[h].properties.NAME) {
                             var n = json.features[h]
-                            //console.log("clicked n: ",n);
+                            //console.log('clicked n: ',n);
                             if (n && centered !== n) {
                               var centroid = p2_path.centroid(n)
                               x = centroid[0]
                               y = centroid[1]
 
-                              //console.log("d: ",n.properties.NAME);
-                              if (n.properties.NAME === "Florida") {
+                              //console.log('d: ',n.properties.NAME);
+                              if (n.properties.NAME === 'Florida') {
                                 k = 5.0
-                              } else if (n.properties.NAME === "Michigan") {
+                              } else if (n.properties.NAME === 'Michigan') {
                                 k = 5.5
-                              } else if (n.properties.NAME === "Idaho") {
+                              } else if (n.properties.NAME === 'Idaho') {
                                 k = 3.25
-                              } else if (n.properties.NAME === "Alaska") {
+                              } else if (n.properties.NAME === 'Alaska') {
                                 k = 5.0
-                              } else if (n.properties.NAME === "Hawaii") {
+                              } else if (n.properties.NAME === 'Hawaii') {
                                 k = 7.0
                               } else if (n.properties.CENSUSAREA <= 15000) {
                                 k = 11.0
@@ -1028,15 +1029,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                             }
 
-                            m.selectAll("p2_path")
-                              .classed("active", centered && function(d) {
+                            m.selectAll('p2_path')
+                              .classed('active', centered && function(d) {
                                 return d === centered;
                               });
 
                             m.transition()
                               .duration(750)
-                              .attr("transform", "translate(" + map_width / 1.35 + "," + map_height / 1.1 + ")scale(" + k + ")translate(" + -x + "," + -y + ")")
-                              .style("stroke-width", .15 / k + "px");
+                              .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+                              .style('stroke-width', .15 / k + 'px');
                           }
                         }
                       }
@@ -1047,41 +1048,41 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     for (var i = 0; i < map_data.length; i++) {
                       if (d.properties.coc_number === map_data[i].COC_Number) {
                         if (map_data[i].amount <= 500000) {
-                          return ("#281F2C");
+                          return ('#281F2C');
                         } else if (map_data[i].amount <= 1000000) {
-                          return ("#324154");
+                          return ('#324154');
                         } else if (map_data[i].amount <= 2000000) {
-                          return ("#2C616F");
+                          return ('#2C616F');
                         } else if (map_data[i].amount <= 3000000) {
-                          return ("#26797C");
+                          return ('#26797C');
                         } else if (map_data[i].amount <= 4000000) {
-                          return ("#288A81");
+                          return ('#288A81');
                         } else if (map_data[i].amount <= 5000000) {
-                          return ("#349A83");
+                          return ('#349A83');
                         } else if (map_data[i].amount <= 7500000) {
-                          return ("#48AA82");
+                          return ('#48AA82');
                         } else if (map_data[i].amount <= 10000000) {
-                          return ("#61BA7E");
+                          return ('#61BA7E');
                         } else if (map_data[i].amount <= 20000000) {
-                          return ("#7DC878");
+                          return ('#7DC878');
                         } else if (map_data[i].amount <= 30000000) {
-                          return ("#26797C");
+                          return ('#26797C');
                         } else if (map_data[i].amount <= 40000000) {
-                          return ("#288A81");
+                          return ('#288A81');
                         } else if (map_data[i].amount <= 50000000) {
-                          return ("#349A83");
+                          return ('#349A83');
                         } else if (map_data[i].amount <= 60000000) {
-                          return ("#48AA82");
+                          return ('#48AA82');
                         } else if (map_data[i].amount <= 70000000) {
-                          return ("#61BA7E");
+                          return ('#61BA7E');
                         } else if (map_data[i].amount <= 80000000) {
-                          return ("#7DC878");
+                          return ('#7DC878');
                         } else if (map_data[i].amount <= 90000000) {
-                          return ("#8DCF75");
+                          return ('#8DCF75');
                         } else if (map_data[i].amount <= 100000000) {
-                          return ("#E7ED69");
+                          return ('#E7ED69');
                         } else {
-                          return ("#ecf187")
+                          return ('#ecf187')
                         }
                       }
                     }
@@ -1091,15 +1092,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                     d3.select('#panel_matrix > svg').remove()
 
-                    var p2_matrix_svg = d3.select("#panel_matrix").append("svg")
-                      /*.attr("width", matrix_width + margin.left + margin.right)
-                      .attr("height", matrix_height + margin.top + margin.bottom)*/
-                      .attr("width", map_width + margin.left + margin.right+50)
-                      .attr("height", map_height + margin.top + margin.bottom + 40)
-                      .style("margin-left", -margin.left / 2.5 + "px")
-                      .attr("transform", "translate(" + 40 + "," + 10 + ")");
+                    var p2_matrix_svg = d3.select('#panel_matrix').append('svg')
+                      /*.attr('width', matrix_width + margin.left + margin.right)
+                      .attr('height', matrix_height + margin.top + margin.bottom)*/
+                      .attr('width', map_width + margin.left + margin.right + 50)
+                      .attr('height', map_height + margin.top + margin.bottom + 40)
+                      .style('margin-left', -margin.left / 2.5 + 'px')
+                      .attr('transform', 'translate(' + 40 + ',' + 10 + ')');
 
-										p2_matrix_svg.call(p2_bar_tip);
+                    p2_matrix_svg.call(p2_bar_tip);
 
                     function filter_cocNum_barChart(bar_chrt) {
                       return bar_chrt.coc_number == d.properties.coc_number;
@@ -1107,7 +1108,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                     var initial = bar_chrt.filter(filter_cocNum_barChart);
                     var initial_bar = initial.filter(filter_cfdaAmount);
-                    var formatNumber = d3.format("$,");
+                    var formatNumber = d3.format('$,');
 
                     var axisMargin = 5,
                       x_width = 470,
@@ -1119,45 +1120,45 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       return d.fed_funding;
                     });
 
-                    bar = p2_matrix_svg.selectAll("g")
+                    bar = p2_matrix_svg.selectAll('g')
                       .data(initial_bar)
                       .enter()
-                      .append("g");
+                      .append('g');
 
-                    bar.attr("class", "bar")
-                      .attr("cx", 0)
-                      .style("fill", function(d) {
-                        if (d.category == "Housing") {
-                          return "#7B4C66"
-                        } else if (d.category == "Housing/Education") {
-                          return "#C98845"
-                        } else if (d.category == "Services") {
-                          return "#CC5500"
-                        } else if (d.category == "Health") {
-                          return "#297B84"
-                        } else if (d.category == "Support Services") {
-                          return "#4A8D5B"
-                        } else if (d.category == "Housing/Services") {
-                          return "#759043"
-                        } else if (d.category == "Health/Housing") {
-                          return "#A08E39"
-                        } else if (d.category == "Education/Servicess") {
-                          return "#4A6C87"
-                        } else if (d.category == "Housing/Research") {
-                          return "#A9B2C3"
+                    bar.attr('class', 'bar')
+                      .attr('cx', 0)
+                      .style('fill', function(d) {
+                        if (d.category == 'Housing') {
+                          return '#7B4C66'
+                        } else if (d.category == 'Housing/Education') {
+                          return '#C98845'
+                        } else if (d.category == 'Services') {
+                          return '#CC5500'
+                        } else if (d.category == 'Health') {
+                          return '#297B84'
+                        } else if (d.category == 'Support Services') {
+                          return '#4A8D5B'
+                        } else if (d.category == 'Housing/Services') {
+                          return '#759043'
+                        } else if (d.category == 'Health/Housing') {
+                          return '#A08E39'
+                        } else if (d.category == 'Education/Servicess') {
+                          return '#4A6C87'
+                        } else if (d.category == 'Housing/Research') {
+                          return '#A9B2C3'
                         }
                       })
-                      .attr("transform", function(d, i) {
-                        return "translate(0," + (i * (barHeight + barPadding)) + ")";
+                      .attr('transform', function(d, i) {
+                        return 'translate(0,' + (i * (barHeight + barPadding)) + ')';
                       })
-											.on("mouseover",p2_bar_tip.show)
-											.on("mouseout",p2_bar_tip.hide);
+                      .on('mouseover', p2_bar_tip.show)
+                      .on('mouseout', p2_bar_tip.hide);
 
-                    bar.append("text")
-                      .attr("class", "label")
-                      .attr("x", 15)
-                      .attr("y", barHeight / 2)
-                      .attr("dy", ".35em") //vertical align middle
+                    bar.append('text')
+                      .attr('class', 'label')
+                      .attr('x', 15)
+                      .attr('y', barHeight / 2)
+                      .attr('dy', '.35em') //vertical align middle
                       .text(function(d) {
                         return d.cfda_number;
                       }).each(function() {
@@ -1169,7 +1170,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .range([0, x_width - labelWidth]);
 
                     p2_xAxis = d3.svg.axis()
-                      //.orient("bottom")
+                      //.orient('bottom')
                       .scale(scale)
                       .tickSize(-p2_matrix_svg[0][0].attributes[1].nodeValue + axisMargin)
                       .tickFormat(function(d) {
@@ -1177,90 +1178,90 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       });
 
                     yAxis = d3.svg.axis()
-                      .orient("left");
+                      .orient('left');
 
-                    bar.append("rect")
-                      .attr("transform", "translate(" + (labelWidth) + ",0)")
-                      .attr("margin-left", 5)
-                      //.attr("rx","30")
-                      .attr("height", barHeight)
-                      .attr("width", function(d) {
+                    bar.append('rect')
+                      .attr('transform', 'translate(' + labelWidth + ',0)')
+                      .attr('margin-left', 5)
+                      //.attr('rx','30')
+                      .attr('height', barHeight)
+                      .attr('width', function(d) {
                         return scale(d.fed_funding);
                       });
 
-                    p2_matrix_svg.insert("g", ":first-child")
-                      .attr("class", "axisHorizontal")
-                      .attr("transform", "translate(" + labelWidth + "," + 255 + ")")
+                    p2_matrix_svg.insert('g', ':first-child')
+                      .attr('class', 'axisHorizontal')
+                      .attr('transform', 'translate(' + labelWidth + ',' + 255 + ')')
                       .call(p2_xAxis)
-                      .selectAll("text")
-                      .attr("y", 10)
-                      .attr("x", 0)
-                      .attr("dy", ".35em")
-                      .attr("transform", "rotate(-35)")
-                      .style("font-size", "12")
-                      .style("text-anchor", "end");
+                      .selectAll('text')
+                      .attr('y', 10)
+                      .attr('x', 0)
+                      .attr('dy', '.35em')
+                      .attr('transform', 'rotate(-35)')
+                      .style('font-size', '12')
+                      .style('text-anchor', 'end');
 
-                    p2_matrix_svg.insert("g", ":first-child")
-                      .classed("y axis", true)
+                    p2_matrix_svg.insert('g', ':first-child')
+                      .classed('y axis', true)
                       .call(yAxis)
-                      .append("text")
-                      .classed("label", true)
-                      .attr("transform", "rotate(-90)")
-                      .attr("x", -80)
-                      .attr("y", 0)
-                      .attr("dy", ".71em")
-                      .style("text-anchor", "end")
-                      .text("Federal Programs Covering Homelessness");
+                      .append('text')
+                      .classed('label', true)
+                      .attr('transform', 'rotate(-90)')
+                      .attr('x', -80)
+                      .attr('y', 0)
+                      .attr('dy', '.71em')
+                      .style('text-anchor', 'end')
+                      .text('Federal Programs Covering Homelessness');
                   }
                 } // end of GenPanelTwo
-								var cfda_legend_title = d3.select("#p2_legend_title")
-									.append("div")
-									.attr("class", "p2_legend_title")
-									.attr("width", map_width + margin.left + margin.right)
-									.html("<h5>CFDA Program Category</h5>")
-									.style("text-anchor", "center");
+                var cfda_legend_title = d3.select('#p2_legend_title')
+                  .append('div')
+                  .attr('class', 'p2_legend_title')
+                  .attr('width', map_width + margin.left + margin.right)
+                  .html('<h5>CFDA Program Category</h5>')
+                  .style('text-anchor', 'center');
 
-								var cfda_legend = d3.select("#p2_legend")
-									.append("div")
-									.attr("width", map_width + margin.left + margin.right)
-									.attr("padding", "50px 0 0 50px");
+                var cfda_legend = d3.select('#p2_legend')
+                  .append('div')
+                  .attr('width', map_width + margin.left + margin.right)
+                  .attr('padding', '50px 0 0 50px');
 
-								var cfda_color = ["#7B4C66", "#C98845", "#CC5500", "#297B84", "#4A8D5B", "#759043",
-									"#A08E39", "#4A6C87", "#A9B2C3", "#006A4E"
-								]
+                var cfda_color = ['#7B4C66', '#C98845', '#CC5500', '#297B84', '#4A8D5B', '#759043',
+                  '#A08E39', '#4A6C87', '#A9B2C3', '#006A4E'
+                ]
 
-								var cfda_legend_key_values = ["Housing", "Housing & Education", "Services", "Health",
-									"Support Services", "Housing & Services", "Health & Housing", "Education & Services",
-									"Housing & Research", "Employment"
-								];
+                var cfda_legend_key_values = ['Housing', 'Housing & Education', 'Services', 'Health',
+                  'Support Services', 'Housing & Services', 'Health & Housing', 'Education & Services',
+                  'Housing & Research', 'Employment'
+                ];
 
-								for (var i = 0; i < 10; i++) {
+                for (var i = 0; i < 10; i++) {
 
-									var l = cfda_legend.append("div")
-										.attr("id", "p2_legend_key");
+                  var l = cfda_legend.append('div')
+                    .attr('id', 'p2_legend_key');
 
-									var cfda_key = l.append("div")
-										.attr("id", "p2_key")
-										.style("position", "relative")
-										.append("svg")
-										.attr("height", "40px")
-										.attr("width", "53px")
-										.append("rect")
-										.attr("x", 10)
-										.attr("y", 10)
-										.attr("height", 30)
-										.attr("width", 30)
-										.style("fill", function(d) {
-											return cfda_color[i];
-										});
+                  var cfda_key = l.append('div')
+                    .attr('id', 'p2_key')
+                    .style('position', 'relative')
+                    .append('svg')
+                    .attr('height', '40px')
+                    .attr('width', '53px')
+                    .append('rect')
+                    .attr('x', 10)
+                    .attr('y', 10)
+                    .attr('height', 30)
+                    .attr('width', 30)
+                    .style('fill', function(d) {
+                      return cfda_color[i];
+                    });
 
 
-									l.append("div")
-										.attr("id", "p2_key_value")
-										.style("position", "relative")
-										.style("color", "blue")
-										.html("<p>" + cfda_legend_key_values[i] + "</p>");
-								}
+                  l.append('div')
+                    .attr('id', 'p2_key_value')
+                    .style('position', 'relative')
+                    .style('color', 'blue')
+                    .html('<p>' + cfda_legend_key_values[i] + '</p>');
+                }
               })
             })
           })
