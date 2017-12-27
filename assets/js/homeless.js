@@ -1308,10 +1308,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .classed('y axis', true)
                     .call(yAxis)
                     .append('text')
-                    .classed('label', true)
+                    .classed('p2_label', true)
                     .attr('transform', 'rotate(-90)')
-                    .attr('x', -30)
-                    .attr('y', 0)
+                    .attr('x', -8)
+                    .attr('y', -1.05)
                     .attr('dy', '.71em')
                     .style('text-anchor', 'end')
                     .text('Federal Programs Covering Homelessness');

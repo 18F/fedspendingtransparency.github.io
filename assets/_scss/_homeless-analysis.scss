@@ -592,7 +592,7 @@
   .p2_legend_title{
     position: relative;
     top:20px;
-    left: 20px;
+    left: 13px;
     height:1px;
   }
 
@@ -602,5 +602,18 @@
 
   #p2_legend_title > div > h5{
     height:1px;
+  }
+
+  .homeless-analysis > .p2_label{
+    display: inline;
+    padding: .2em .6em .3em;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    font-size: 90%;
   }
 }
