@@ -1042,7 +1042,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                             } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
                               k = 6.05
                             } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                              k = 5.5
+                              k = 5
                             } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
                               k = 5
                             } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
@@ -1113,7 +1113,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 													} else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
 														k = 6.05
 													} else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-														k = 5.5
+														k = 5
 													} else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
 														k = 5
 													} else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
