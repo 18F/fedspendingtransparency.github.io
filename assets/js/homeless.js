@@ -26,6 +26,9 @@ var spinner_panel2 = new Spinner(opts).spin(target_panel2);
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.json('/data-lab-data/us-states.json', function(json) {
     d3.json('/data-lab-data/coc-pop-type.json', function(data) {
+      /**return{
+        total_homeless: +data.total_homeless
+      }**/
       d3.csv('/data-lab-data/State_crosswalk.csv', function(states) {
         d3.csv('/data-lab-data/CFDACOCAward.csv', function(bar_chrt) {
           d3.csv('/data-lab-data/pop-award.csv', function(d) {
@@ -92,9 +95,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .attr('class', 'homeless-analysis d3-tip')
                   .offset([-10, 0])
                   .html(function(d) {
-                    return d.properties.COCNAME + '<br>' + 'Continuum of Care Number: ' +
-                      d.properties.coc_number + '<br />' + 'Federal Funding: ' +
-                      getDollarValue(d);
+                    return '<b>'+d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
+                    'Federal Funding: ' +  getDollarValue(d) + '<br>' +
+                    'Total Homeless: ' + '<br>' +
+                    'Sheltered Homeless: ' + '<br>' +
+                    'Unsheltered Homeless: ' + '<br>' +
+                    'Homeless Veterans: ';
                   });
 
                 var p2_bar_tip = d3.tip()
@@ -280,9 +286,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('class', 'homeless-analysis d3-tip')
                     .offset([-10, -10])
                     .html(function(d) {
-                      return '<b>' + d.properties.COCNAME + '</b>' + '<br>' +
-                        'Continuum of Care Number: ' + d.properties.coc_number + '<br>' +
-                        'Total Homeless: ' + data[i].total_homeless;
+                      return '<b>' + d.properties.coc_number+ ': '  + d.properties.COCNAME + '</b>' + '<br>' +
+                      'Federal Funding: ' +  getDollarValue(d) + '<br>' +
+                      'Total Homeless: ' + '<br>' +
+                      'Sheltered Homeless: ' + '<br>' +
+                      'Unsheltered Homeless: ' + '<br>' +
+                      'Homeless Veterans: ';
                     });
 
                   map_svg.call(tip)
