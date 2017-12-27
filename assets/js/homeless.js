@@ -26,6 +26,9 @@ var spinner_panel2 = new Spinner(opts).spin(target_panel2);
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.json('/data-lab-data/us-states.json', function(json) {
     d3.json('/data-lab-data/coc-pop-type.json', function(data) {
+      /**return{
+        total_homeless: +data.total_homeless
+      }**/
       d3.csv('/data-lab-data/State_crosswalk.csv', function(states) {
         d3.csv('/data-lab-data/CFDACOCAward.csv', function(bar_chrt) {
           d3.csv('/data-lab-data/pop-award.csv', function(d) {
@@ -92,9 +95,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .attr('class', 'homeless-analysis d3-tip')
                   .offset([-10, 0])
                   .html(function(d) {
-                    return d.properties.COCNAME + '<br>' + 'Continuum of Care Number: ' +
-                      d.properties.coc_number + '<br />' + 'Federal Funding: ' +
-                      getDollarValue(d);
+                    return '<b>'+d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
+                    'Federal Funding: ' +  getDollarValue(d) + '<br>' +
+                    'Total Homeless: ' + getValue(d) +'<br>' +
+                    'Sheltered Homeless: ' + getSheltered(d) +'<br>' +
+                    'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
+                    'Homeless Veterans: ' + getVets(d);
                   });
 
                 var p2_bar_tip = d3.tip()
@@ -216,10 +222,33 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function getValue(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
-                      return Otherformat2(data[i].total_homeless);
+                      return OtherformatNumber(data[i].total_homeless);
                     }
                   }
                 }
+
+                function getSheltered(d){for (var i = 0; i < data.length; i++) {
+                  if (d.properties.coc_number === data[i].coc_number) {
+                    return OtherformatNumber(data[i].sheltered_homeless);
+                  }
+                }
+              }
+
+              function getUnsheltered(d) {
+                for (var i = 0; i < data.length; i++) {
+                if (d.properties.coc_number === data[i].coc_number) {
+                  return OtherformatNumber(data[i].unsheltered_homeless);
+                }
+              }
+            }
+
+            function getVets(d) {
+              for (var i = 0; i < data.length; i++) {
+                if (d.properties.coc_number === data[i].coc_number) {
+                  return OtherformatNumber(data[i].homeless_veterans);
+                }
+              }
+            }
 
                 function getState(d) {
                   for (var i = 0; i < states.length; i++) {
@@ -280,9 +309,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('class', 'homeless-analysis d3-tip')
                     .offset([-10, -10])
                     .html(function(d) {
-                      return '<b>' + d.properties.COCNAME + '</b>' + '<br>' +
-                        'Continuum of Care Number: ' + d.properties.coc_number + '<br>' +
-                        'Total Homeless: ' + data[i].total_homeless;
+                      return '<b>' + d.properties.coc_number+ ': '  + d.properties.COCNAME + '</b>' + '<br>' +
+                      'Federal Funding: ' +  getDollarValue(d) + '<br>' +
+                      'Total Homeless: ' + getValue(d) +'<br>' +
+                      'Sheltered Homeless: ' + getSheltered(d) +'<br>' +
+                      'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
+                      'Homeless Veterans: ' + getVets(d);
                     });
 
                   map_svg.call(tip)
