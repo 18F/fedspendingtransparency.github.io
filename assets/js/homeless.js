@@ -1182,7 +1182,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .style('margin-bottom', '2px')
                       .html('<table class ="icon">' +
                         '<tr>' + '<td class="val">' + initial_coc_poss[i].cfda_number + '</td>' +
-                        '<td class="name">' + '<a href=' + initial_coc_poss[i].program_website + '>' +
+                        '<td class="name" title="Click to visit program website">' + '<a href=' + initial_coc_poss[i].program_website + '>' +
                         initial_coc_poss[i].program_title + '</a>' + '</td>' + '</tr>' + '</table>')
                   }
                 }
