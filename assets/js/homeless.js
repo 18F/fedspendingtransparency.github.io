@@ -856,10 +856,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   p2_map_svg.call(p2_tip)
 
-                  function filter_cocNum(x) {
-                    return x.coc_number == "CA-600";
-                  }
-
                   function filter_cfdaAmount(x) {
                     return x.fed_funding > 0;
                   }
@@ -954,11 +950,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                     var coc = d.properties.coc_number;
                     //console.log("coc: ",coc)
-                    function filter_cocNum(bar_chrt) {
+                    function filter_cocNum_cfda(bar_chrt) {
                       return bar_chrt.coc_number == coc;
                     }
 
-                    var initial = bar_chrt.filter(filter_cocNum);
+                    var initial = bar_chrt.filter(filter_cocNum_cfda);
                     var initial_coc_poss = initial.filter(filter_cfdaAmount)
                     //console.log("initial: ",initial);
 
@@ -1109,15 +1105,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .style("margin-left", -margin.left / 2.5 + "px")
                       .attr("transform", "translate(" + 40 + "," + 10 + ")");
 
-                    function filter_cocNum(bar_chrt) {
+                    function filter_cocNum_barChart(bar_chrt) {
                       return bar_chrt.coc_number == d.properties.coc_number;
                     }
 
-                    function filter_cfdaAmount(x) {
-                      return x.fed_funding > 0;
-                    }
-
-                    var initial = bar_chrt.filter(filter_cocNum);
+                    var initial = bar_chrt.filter(filter_cocNum_barChart);
                     var initial_bar = initial.filter(filter_cfdaAmount);
                     var formatNumber = d3.format("$,");
 
