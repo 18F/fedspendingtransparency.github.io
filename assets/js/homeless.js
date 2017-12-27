@@ -37,7 +37,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-                console.log('bar_chrt: ', bar_chrt);
+                //console.log('bar_chrt: ', bar_chrt);
 
                 d3.select('#container2').append('div').attr('id', 'p2_left')
                 d3.select('#container2').append('div').attr('id', 'p2_right')
@@ -70,7 +70,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .append('svg')
                   .attr('id', 'p2_map')
                   .attr('width', map_width + margin.left + margin.right + 40)
-                  .attr('height', map_height + margin.top + margin.bottom + 15);
+                  .attr('height', map_height + margin.top + margin.bottom + 25);
 
                 var info_panel = d3.select('#panel_info')
                   .attr('width', info_width + margin.left + margin.right)
@@ -986,35 +986,39 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                             x = centroid[0]
                             y = centroid[1]
 
-                            //console.log('d: ',n.properties.NAME);
+                            console.log('area: ',n.properties);
                             if (n.properties.NAME === 'Florida') {
-                              k = 5.0
+                              k = 4.0
                             } else if (n.properties.NAME === 'Michigan') {
-                              k = 5.5
+                              k = 5
                             } else if (n.properties.NAME === 'Idaho') {
                               k = 3.25
                             } else if (n.properties.NAME === 'Alaska') {
                               k = 5.0
                             } else if (n.properties.NAME === 'Hawaii') {
-                              k = 7.0
+                              k = 6.5
+                            } else if (n.properties.NAME === 'New Jersey') {
+                              k = 12
+                            } else if (n.properties.NAME === 'Illinois') {
+                              k = 5
                             } else if (n.properties.CENSUSAREA <= 15000) {
-                              k = 11.0
+                              k = 17.0
                             } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
                               k = 9.0
                             } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
-                              k = 8.0
+                              k = 6.6
                             } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
-                              k = 6.5
+                              k = 6.05
                             } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                              k = 6.0
+                              k = 5.5
                             } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-                              k = 5.0
+                              k = 5
                             } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
-                              k = 4.0
+                              k = 3.0
                             } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
-                              k = 3.5
-                            } else {
                               k = 2.75
+                            } else {
+                              k = 2.55
                             };
                             centered = n;
 
@@ -1043,8 +1047,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function p2_clicked_p1(d) {
                   var x, y, k;
-
-                  //console.log('Panel 2 clicked, d: ',d);
+									//console.log('Panel 2 clicked, d: ',d);
 
                   for (var i = 0; i < states.length; i++) {
                     if (d.properties.STUSAB == states[i].Abbrv) {
@@ -1055,7 +1058,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                           x = centroid[0]
                           y = centroid[1]
 
-                          //console.log('d: ',n.properties.NAME);
                           if (n.properties.NAME === 'Florida') {
                             k = 5.0
                           } else if (n.properties.NAME === 'Michigan') {
@@ -1116,7 +1118,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function createCFDATableHover(d) {
-                  console.log('cfdaTable d: ', d)
+                  //console.log('cfdaTable d: ', d)
                   $('#panel_info').empty();
 
                   var coc = d.properties.coc_number;
