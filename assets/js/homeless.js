@@ -90,7 +90,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 									.attr("class", "homeless-analysis d3-tip")
 									.offset([-10, 0])
 									.html(function(d) {
-										return d.properties.COCNAME + "<br>" + "Continuum of Care Number: " + d.properties.coc_number;
+										return d.properties.COCNAME + "<br>" + "Continuum of Care Number: " +
+										d.properties.coc_number + "<br />" + "Federal Funding: " +
+										getDollarValue(d);
 									});
 
 
@@ -145,6 +147,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 })
 
                 // **************************************************************
+
+								var formatNumber = d3.format("$,.2f");
+								var OtherformatNumber = d3.format(",");
 
                 function getColor(d) {
                   for (var i = 0; i < data.length; i++) {
@@ -206,6 +211,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   }
                 }
 
+								function getDollarValue(d){
+									for (var i = 0; i < map_data.length; i++) {
+										if (d.properties.coc_number === map_data[i].COC_Number) {
+											return formatNumber(map_data[i].amount);
+										}
+									}
+								}
+
                 function GenMap() {
                   spinner_panel1.stop();
 
@@ -216,9 +229,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var width = 1000,
                     height = 600,
                     centered = null;
-
-                  var formatNumber = d3.format("$,");
-                  var OtherformatNumber = d3.format(",");
 
                   // D3 Projection
                   var projection = d3.geo.albersUsa()
