@@ -37,8 +37,62 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-                console.log("us: ", us);
-								console.log("us-states: ",json);
+								d3.select("#container2").append("div").attr("id", "p2_left")
+								d3.select("#container2").append("div").attr("id", "p2_right")
+								d3.select("#p2_left").append("div").attr("id", "panel_map")
+								d3.select("#p2_left").append("div").attr("id", "panel_matrix")
+								d3.select("#p2_right").append("div").attr("id", "panel_coc")
+								d3.select("#p2_right").append("div").attr("id", "panel_info")
+								d3.select("#container2").append("div").attr("id", "p2_legend_title")
+								d3.select("#container2").append("div").attr("id", "p2_legend")
+
+								var abs_width = 1024,
+									abs_height = 575,
+									margin = {
+										top: 100,
+										right: 50,
+										bottom: 15,
+										left: 100
+									},
+									panel_2_width = abs_width - margin.left - margin.right,
+									panel_2_height = abs_height - margin.top - margin.bottom,
+									matrix_width = abs_width / 1.85 - margin.left - margin.right,
+									matrix_height = abs_height - margin.top - margin.bottom,
+									map_width = panel_2_width - matrix_width - margin.left - margin.right,
+									map_height = panel_2_height / 3,
+									info_width = panel_2_width - matrix_width - margin.left - margin.right,
+									info_height = panel_2_height / 3,
+									centered = null;
+
+								var p2_map_svg = d3.select("#panel_map")
+									.append("svg")
+									.attr("id","p2_map")
+									.attr("width", map_width + margin.left + margin.right + 40)
+									.attr("height", map_height + margin.top + margin.bottom + 15);
+
+								var info_panel = d3.select("#panel_info")
+									.attr("width", info_width + margin.left + margin.right)
+									.attr("height", info_height + margin.top + margin.bottom);
+
+								var coc_panel = d3.select("#panel_coc")
+									.attr("width", info_width + margin.left + margin.right)
+									.attr("height", info_height + margin.top + margin.bottom);
+
+								var p2_matrix_svg = d3.select("#panel_matrix").append("svg")
+									/*.attr("width", matrix_width + margin.left + margin.right)
+									.attr("height", matrix_height + margin.top + margin.bottom)*/
+									.attr("width", map_width + margin.left + margin.right+50)
+									.attr("height", map_height + margin.top + margin.bottom + 40)
+									.style("margin-left", -margin.left / 2.5 + "px")
+									.attr("transform", "translate(" + 40 + "," + 10 + ")");
+
+								var p2_tip = d3.tip()
+									.attr("class", "homeless-analysis d3-tip")
+									.offset([-10, 0])
+									.html(function(d) {
+										return d.properties.COCNAME + "<br>" + "Continuum of Care Number: " + d.properties.coc_number;
+									});
+
 
 								data.forEach(function(d) {
 									d.total_homeless= +d.total_homeless
@@ -71,12 +125,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                     if (selectedValue === 'Map') {
                       d3.selectAll('#viz_container').remove()
-                      d3.selectAll('svg').remove()
-                      d3.select('p2_map_svg').remove()
-                      d3.select('#p2_right').remove()
-                      d3.select('#p2_left').remove()
-                      d3.select('#p2_legend').remove()
-                      d3.select('#p2_legend_title').remove()
+                      d3.selectAll('#counties_mini').remove()
+                      //d3.select('#p2_legend').remove()
+
                       GenMap()
                       GenPanelTwo()
                       //GenScatter();
@@ -85,12 +136,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       d3.selectAll('#viz_container').remove()
                       d3.selectAll('#legend').remove()
                       d3.selectAll('#legend_title').remove()
-                      d3.selectAll('svg').remove()
-                      d3.select('p2_map_svg').remove()
-                      d3.select('#p2_right').remove()
-                      d3.select('#p2_left').remove()
-                      d3.select('#p2_legend').remove()
-                      d3.select('#p2_legend_title').remove()
+                      d3.selectAll('#counties_mini').remove()
                       GenTable()
                       GenPanelTwo()
                       //GenScatter()
@@ -99,7 +145,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 })
 
                 // **************************************************************
-                var zoom = d3.behavior.zoom();
 
                 function getColor(d) {
                   for (var i = 0; i < data.length; i++) {
@@ -801,58 +846,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   spinner_panel2.stop();
 
-                  d3.select("#container2").append("div").attr("id", "p2_left")
-                  d3.select("#container2").append("div").attr("id", "p2_right")
-                  d3.select("#p2_left").append("div").attr("id", "panel_map")
-                  d3.select("#p2_left").append("div").attr("id", "panel_matrix")
-                  d3.select("#p2_right").append("div").attr("id", "panel_coc")
-                  d3.select("#p2_right").append("div").attr("id", "panel_info")
-
-                  var abs_width = 1024,
-                    abs_height = 575,
-                    margin = {
-                      top: 100,
-                      right: 50,
-                      bottom: 15,
-                      left: 100
-                    },
-                    panel_2_width = abs_width - margin.left - margin.right,
-                    panel_2_height = abs_height - margin.top - margin.bottom,
-                    matrix_width = abs_width / 1.85 - margin.left - margin.right,
-                    matrix_height = abs_height - margin.top - margin.bottom,
-                    map_width = panel_2_width - matrix_width - margin.left - margin.right,
-                    map_height = panel_2_height / 3,
-                    info_width = panel_2_width - matrix_width - margin.left - margin.right,
-                    info_height = panel_2_height / 3,
-                    centered = null;
-
-                  var p2_map_svg = d3.select("#panel_map")
-                    .append("svg")
-                    .attr("width", map_width + margin.left + margin.right)
-                    .attr("height", map_height + margin.top + margin.bottom);
-
-                  var info_panel = d3.select("#panel_info")
-                    .attr("width", info_width + margin.left + margin.right)
-                    .attr("height", info_height + margin.top + margin.bottom);
-
-                  var coc_panel = d3.select("#panel_coc")
-                    .attr("width", info_width + margin.left + margin.right)
-                    .attr("height", info_height + margin.top + margin.bottom);
-
-                  var p2_matrix_svg = d3.select("#panel_matrix").append("svg")
-                    /*.attr("width", matrix_width + margin.left + margin.right)
-                    .attr("height", matrix_height + margin.top + margin.bottom)*/
-                    .attr("width", map_width + margin.left + margin.right+50)
-                    .attr("height", map_height + margin.top + margin.bottom + 40)
-                    .style("margin-left", -margin.left / 2.5 + "px")
-                    .attr("transform", "translate(" + 40 + "," + 10 + ")");
-
-                  var p2_tip = d3.tip()
-                    .attr("class", "homeless-analysis d3-tip")
-                    .offset([-10, 0])
-                    .html(function(d) {
-                      return d.properties.COCNAME + "<br>" + "Continuum of Care Number: " + d.properties.coc_number;
-                    });
 
                   p2_map_svg.call(p2_tip)
 
@@ -863,7 +856,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 									for(var y=0; y < us.features.length; y++){
 										if(us.features[y].properties.coc_number == "CA-600"){
 											var la = us.features[y];
-											console.log("us[y]: ", la)
 											BarChart(la);
 											createCFDATableHover(la);
 											createCoCTable(la);
@@ -872,16 +864,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   //MAP
                   var projection = d3.geo.albersUsa()
-                    .translate([map_width / 1.35, map_height / 1.1]) // translate to center of screen
-                    .scale([575]); // scale things down so see entire US ---1455
+                    .translate([map_width / 1.2, map_height / 1.1]) // translate to center of screen
+                    .scale([575]); // scale things down so see entire US
 
                   // Define path generator
                   var p2_path = d3.geo.path() // path generator that will convert GeoJSON to SVG paths
                     .projection(projection); // tell path generator to use albersUsa projection
 
                   var centered = null;
-
-                  ////console.log("Map_Data: ",map_data)
 
                   var m = p2_map_svg.append("g");
 
@@ -891,7 +881,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .data(us.features)
                     .enter().append("path")
                     .attr("d", p2_path)
-                    .attr("class", "counties_mini")
+                    .attr("id", "counties_mini")
                     .attr("data-coc", function(d) {
                       return d.properties.coc_number;
                     })
@@ -924,25 +914,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         d.properties.LAST_NAME + "<br />" + d.properties.TITLE + "<br /><br />" + "Email: " +
                         d.properties.EMAIL_ADDR + "<br />" + "Phone: " + d.properties.PRIMARY_PH + "</p>");
                   }
-
-
-                  for (var i = 0; i < us.features.length; i++) {
-                    if (us.features[i].properties.coc_number == "CA-600") {
-                      var initial_coc = us.features[i];
-                    }
-                  }
-
-                  createCoCTable(initial_coc);
-
-                  //console.log("initial_bar: ", initial_bar);
-                  //console.log("bar_chart: ", bar_chrt);
-
-                  info_panel.append("div")
-                    .attr("id", "cfda_info_header")
-                    .attr("height", info_height + margin.top + margin.bottom)
-                    .attr("width", info_width + margin.left + margin.right + 60)
-                    .html("<table class ='icon'>" + "<th class='head_val'>CFDA</th>" +
-                      "<th class='head_name'>Program Title</th>" + "</table>")
 
                   function createCFDATableHover(d) {
 										console.log("cfdaTable d: ",d)
@@ -1212,62 +1183,57 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .attr("y", 0)
                       .attr("dy", ".71em")
                       .style("text-anchor", "end")
-                      .text("Homeless CFDA Programs");
+                      .text("Federal Programs Covering Homelessness");
                   }
-
-                  d3.select("#container2").append("div").attr("id", "p2_legend_title")
-                  d3.select("#container2").append("div").attr("id", "p2_legend")
-
-                  var cfda_legend_title = d3.select("#p2_legend_title")
-                    .append("div")
-                    .attr("class", "p2_legend_title")
-                    .attr("width", map_width + margin.left + margin.right)
-                    .html("<h5>CFDA Program Category</h5>")
-                    .style("text-anchor", "center");
-
-                  var cfda_legend = d3.select("#p2_legend")
-                    .append("div")
-                    .attr("width", map_width + margin.left + margin.right)
-                    .attr("padding", "50px 0 0 50px");
-
-                  var cfda_color = ["#7B4C66", "#C98845", "#CC5500", "#297B84", "#4A8D5B", "#759043",
-                    "#A08E39", "#4A6C87", "#A9B2C3", "#006A4E"
-                  ]
-
-                  var cfda_legend_key_values = ["Housing", "Housing & Education", "Services", "Health",
-                    "Support Services", "Housing & Services", "Health & Housing", "Education & Services",
-                    "Housing & Research", "Employment"
-                  ];
-
-                  for (var i = 0; i < 10; i++) {
-
-                    var l = cfda_legend.append("div")
-                      .attr("id", "p2_legend_key");
-
-                    var cfda_key = l.append("div")
-                      .attr("id", "p2_key")
-                      .style("position", "relative")
-                      .append("svg")
-                      .attr("height", "40px")
-                      .attr("width", "53px")
-                      .append("rect")
-                      .attr("x", 10)
-                      .attr("y", 10)
-                      .attr("height", 30)
-                      .attr("width", 30)
-                      .style("fill", function(d) {
-                        return cfda_color[i];
-                      });
-
-
-                    l.append("div")
-                      .attr("id", "p2_key_value")
-                      .style("position", "relative")
-                      .style("color", "blue")
-                      .html("<p>" + cfda_legend_key_values[i] + "</p>");
-                  }
-
                 } // end of GenPanelTwo
+								var cfda_legend_title = d3.select("#p2_legend_title")
+									.append("div")
+									.attr("class", "p2_legend_title")
+									.attr("width", map_width + margin.left + margin.right)
+									.html("<h5>CFDA Program Category</h5>")
+									.style("text-anchor", "center");
+
+								var cfda_legend = d3.select("#p2_legend")
+									.append("div")
+									.attr("width", map_width + margin.left + margin.right)
+									.attr("padding", "50px 0 0 50px");
+
+								var cfda_color = ["#7B4C66", "#C98845", "#CC5500", "#297B84", "#4A8D5B", "#759043",
+									"#A08E39", "#4A6C87", "#A9B2C3", "#006A4E"
+								]
+
+								var cfda_legend_key_values = ["Housing", "Housing & Education", "Services", "Health",
+									"Support Services", "Housing & Services", "Health & Housing", "Education & Services",
+									"Housing & Research", "Employment"
+								];
+
+								for (var i = 0; i < 10; i++) {
+
+									var l = cfda_legend.append("div")
+										.attr("id", "p2_legend_key");
+
+									var cfda_key = l.append("div")
+										.attr("id", "p2_key")
+										.style("position", "relative")
+										.append("svg")
+										.attr("height", "40px")
+										.attr("width", "53px")
+										.append("rect")
+										.attr("x", 10)
+										.attr("y", 10)
+										.attr("height", 30)
+										.attr("width", 30)
+										.style("fill", function(d) {
+											return cfda_color[i];
+										});
+
+
+									l.append("div")
+										.attr("id", "p2_key_value")
+										.style("position", "relative")
+										.style("color", "blue")
+										.html("<p>" + cfda_legend_key_values[i] + "</p>");
+								}
               })
             })
           })

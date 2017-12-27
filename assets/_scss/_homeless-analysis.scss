@@ -67,7 +67,7 @@
     stroke-width: 0.25px;
   }
 
-  .counties_mini {
+  #counties_mini {
     stroke: #FFF;
     stroke-width: 0.15px;
   }
@@ -568,7 +568,7 @@
     float:left;
     height: 50px;
     width: 53px;
-    margin: 20px -7px 0 3px;
+    margin: 25px -7px 0 3px;
   }
 
   #p2_key{
@@ -591,6 +591,7 @@
 
   .p2_legend_title{
     position: relative;
+    top:10px;
     left: 20px;
     height:1px;
   }
