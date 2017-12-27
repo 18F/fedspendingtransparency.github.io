@@ -37,6 +37,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
+								console.log("bar_chrt: ",bar_chrt);
+
 								d3.select("#container2").append("div").attr("id", "p2_left")
 								d3.select("#container2").append("div").attr("id", "p2_right")
 								d3.select("#p2_left").append("div").attr("id", "panel_map")
@@ -95,6 +97,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 										getDollarValue(d);
 									});
 
+								var p2_bar_tip = d3.tip()
+									.attr("class", "homeless-analysis d3-tip")
+									.offset([-10, 0])
+									.html(function(d) {
+										return getCFDA_value(d);
+									});
 
 								data.forEach(function(d) {
 									d.total_homeless= +d.total_homeless
@@ -217,6 +225,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 											return formatNumber(map_data[i].amount);
 										}
 									}
+								}
+
+								function getCFDA_value(d){
+									console.log("CFDA value: ",d);
+									return "Funding Amount: " + formatNumber(d.fed_funding);
 								}
 
                 function GenMap() {
@@ -1086,6 +1099,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .style("margin-left", -margin.left / 2.5 + "px")
                       .attr("transform", "translate(" + 40 + "," + 10 + ")");
 
+										p2_matrix_svg.call(p2_bar_tip);
+
                     function filter_cocNum_barChart(bar_chrt) {
                       return bar_chrt.coc_number == d.properties.coc_number;
                     }
@@ -1134,7 +1149,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       })
                       .attr("transform", function(d, i) {
                         return "translate(0," + (i * (barHeight + barPadding)) + ")";
-                      });
+                      })
+											.on("mouseover",p2_bar_tip.show)
+											.on("mouseout",p2_bar_tip.hide);
 
                     bar.append("text")
                       .attr("class", "label")
