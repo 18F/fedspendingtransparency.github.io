@@ -19,6 +19,8 @@ var y = d3.scale.sqrt().range([0, radius]);
 
 var partition = d3.layout.partition().value(d => d.size);
 
+var legend = d3.select("#sunburst-panel");
+
 var arc = d3.svg
   .arc()
   .startAngle(d => Math.max(0, Math.min(2 * Math.PI, x(d.x))))
@@ -32,10 +34,7 @@ var svg = d3
   .attr("width", width)
   .attr("height", height)
   .append("g")
-  .attr(
-    "transform",
-    "translate(" + (width / 2 - 20) + "," + (height / 2 - 100) + ")"
-  );
+  .attr("transform", `translate(${width / 2 - 20},${height / 2 - 100})`);
 
 var spinnerOpts = {
   lines: 9, // The number of lines to draw
@@ -58,13 +57,13 @@ function createTableTitle(legend, d) {
     .attr("height", 169)
     .attr("width", 422)
     .html(
-      "<h1 class='panel_title'>" +
-        d.name +
-        "</h1>" +
-        "<h3 class='panel_desc'>" +
-        formatNumber(d.value) +
-        "<br />" +
-        "</h3>"
+      `<h1 class='panel_title'>
+        ${d.name}
+        </h1>
+        <h3 class='panel_desc'>
+        ${formatNumber(d.value)}
+        <br />
+        </h3>`
     );
 }
 
@@ -82,16 +81,16 @@ function createFillTableRow(legend, child, amt, k) {
     .attr("width", 422)
     .style("margin-bottom", "2px")
     .html(
-      "<table class ='icon'>" +
-        "<tr>" +
-        "<td class='val'>" +
-        formatNumber(child[k][amt]) +
-        "</td>" +
-        "<td class='name'>" +
-        child[k].name +
-        "</td>" +
-        "</tr>" +
-        "</table>"
+      `<table class ='icon'>
+        <tr>
+        <td class='val'>
+        ${formatNumber(child[k][amt])}
+        </td>
+        <td class='name'>
+        ${child[k].name}
+        </td>
+        </tr>
+        </table>`
     );
 }
 
@@ -139,7 +138,7 @@ function formatData(data) {
 function createSunburst(newData, recip, details, other, colors) {
   spinner.stop();
 
-  newData = newData.filter(e => e.Obligation > 10000000);
+  // newData = newData.filter(e => e.Obligation > 10000000);
 
   const root = formatData(newData);
 
@@ -182,7 +181,7 @@ function createSunburst(newData, recip, details, other, colors) {
     .append("title")
     .text(
       d =>
-        d.depth === 0 ? d.name + "\n" + formatNumber(d.value) : "Click to zoom"
+        d.depth === 0 ? `${d.name}\n${formatNumber(d.value)}` : "Click to zoom"
     );
 
   function click(d) {
@@ -206,8 +205,6 @@ function createSunburst(newData, recip, details, other, colors) {
       });
   }
 
-  var legend = d3.select("#sunburst-panel");
-
   createTableTitle(legend, root);
   createFillTable(legend, root);
 
@@ -219,14 +216,14 @@ function createSunburst(newData, recip, details, other, colors) {
       .attr("height", 169)
       .attr("width", 465)
       .html(
-        "<h2 class='title'>" +
-          d.name +
-          "</h2><h1>" +
-          formatNumber(d.value) +
-          "</h1>" +
-          "<h4>" +
-          title +
-          "</h4>"
+        `<h2 class='title'>
+          ${d.name} 
+          </h2><h1> 
+          ${formatNumber(d.value)} 
+          </h1> 
+          <h4> 
+          ${title} 
+          </h4>`
       );
   }
 
@@ -246,20 +243,19 @@ function createSunburst(newData, recip, details, other, colors) {
             .attr("height", 169) //new
             .attr("width", 422) //new
             .html(
-              "<h2 class='title'>" +
-                d.name.toLowerCase() +
-                "</h2>" +
-                "<h1>" +
-                formatNumber(d.value) +
-                "</h1>" +
-                "<p>" +
-                details[i].city.toLowerCase() +
-                ", " +
-                details[i].state.toLowerCase() +
-                "</p>" +
-                "<h3> has been awarded a net total of " +
-                formatNumber(details[i].size) +
-                " in contracts in Q3 2017</h3>"
+              `<h2 class='title'>
+                ${d.name.toLowerCase()}
+              </h2>
+              <h1>
+                ${formatNumber(d.value)}
+              </h1>
+              <p>
+                ${details[i].city.toLowerCase()},
+                ${details[i].state.toLowerCase()}
+              </p>
+              <h3> has been awarded a net total of
+                ${formatNumber(details[i].size)}
+              in contracts in Q3 2017</h3>`
             );
 
           for (var q = 0; q < recip.length; q++) {
@@ -277,7 +273,7 @@ function createSunburst(newData, recip, details, other, colors) {
               g
                 .append("img")
                 .attr("src", function() {
-                  return "/data-lab-data/Sunburst_Icons_SVGs/" + recip[q].icon;
+                  return `/data-lab-data/Sunburst_Icons_SVGs/${recip[q].icon}`;
                 })
                 .attr("class", "icon_svg");
 
@@ -287,13 +283,11 @@ function createSunburst(newData, recip, details, other, colors) {
                 .attr("height", 10)
                 .attr("width", 50)
                 .html(
-                  "<table class ='icon_x'>" +
-                    "<tr>" +
-                    "<td class='name'>" +
-                    recip[q].PSC +
-                    "</td>" +
-                    "</tr>" +
-                    "</table>"
+                  `<table class ='icon_x'>
+                    <tr>
+                      <td class='name'>${recip[q].PSC}</td> 
+                    </tr>
+                  </table>`
                 );
 
               if (recip[q].Obligation >= 0) {
@@ -303,13 +297,13 @@ function createSunburst(newData, recip, details, other, colors) {
                   .attr("height", 10)
                   .attr("width", 50)
                   .html(
-                    "<table class ='icon_x'>" +
-                      "<tr>" +
-                      "<td class='val'>" +
-                      formatNumber(recip[q].Obligation) +
-                      "</td>" +
-                      "</tr>" +
-                      "</table>"
+                    `<table class ='icon_x'>
+                      <tr>
+                        <td class='val'>
+                          ${formatNumber(recip[q].Obligation)}
+                        </td>
+                      </tr>
+                      </table>`
                   );
               } else {
                 g
@@ -318,13 +312,13 @@ function createSunburst(newData, recip, details, other, colors) {
                   .attr("height", 10)
                   .attr("width", 50)
                   .html(
-                    "<table class ='icon_x'>" +
-                      "<tr>" +
-                      "<td class='neg_val'>" +
-                      formatNumber(recip[q].Obligation) +
-                      "</td>" +
-                      "</tr>" +
-                      "</table>"
+                    `<table class ='icon_x'>
+                      <tr>
+                        <td class='neg_val'>
+                          ${formatNumber(recip[q].Obligation)}
+                        </td>
+                      </tr>
+                    </table>`
                   );
               }
             }
@@ -340,13 +334,15 @@ function createSunburst(newData, recip, details, other, colors) {
         .attr("height", 169)
         .attr("width", 465)
         .html(
-          "<h3>Other Contractors Supporting the </h3><h3>" +
-            d.parent.name +
-            "</h3><h3>with Contract Values Less Than $1,000,000</h3>" +
-            "<h4>These Contracts are Worth a Total Value of " +
-            formatNumber(d.value) +
-            "</h4>" +
-            "<h4>Top Contactors</h4>"
+          `<h3>Other Contractors Supporting the
+            ${d.parent.name}
+            with Contract Values Less Than $1,000,000
+          </h3>
+          <h4>
+            These Contracts are Worth a Total Value of 
+            ${formatNumber(d.value)}
+          </h4>
+          <h4>Top Contractors</h4>`
         );
 
       for (var l = 0; l < other.length; l++) {
