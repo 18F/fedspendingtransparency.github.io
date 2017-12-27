@@ -97,10 +97,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .html(function(d) {
                     return '<b>'+d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
                     'Federal Funding: ' +  getDollarValue(d) + '<br>' +
-                    'Total Homeless: ' + '<br>' +
-                    'Sheltered Homeless: ' + '<br>' +
-                    'Unsheltered Homeless: ' + '<br>' +
-                    'Homeless Veterans: ';
+                    'Total Homeless: ' + getValue(d) +'<br>' +
+                    'Sheltered Homeless: ' + getSheltered(d) +'<br>' +
+                    'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
+                    'Homeless Veterans: ' + getVets(d);
                   });
 
                 var p2_bar_tip = d3.tip()
@@ -222,10 +222,33 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function getValue(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
-                      return Otherformat2(data[i].total_homeless);
+                      return OtherformatNumber(data[i].total_homeless);
                     }
                   }
                 }
+
+                function getSheltered(d){for (var i = 0; i < data.length; i++) {
+                  if (d.properties.coc_number === data[i].coc_number) {
+                    return OtherformatNumber(data[i].sheltered_homeless);
+                  }
+                }
+              }
+
+              function getUnsheltered(d) {
+                for (var i = 0; i < data.length; i++) {
+                if (d.properties.coc_number === data[i].coc_number) {
+                  return OtherformatNumber(data[i].unsheltered_homeless);
+                }
+              }
+            }
+
+            function getVets(d) {
+              for (var i = 0; i < data.length; i++) {
+                if (d.properties.coc_number === data[i].coc_number) {
+                  return OtherformatNumber(data[i].homeless_veterans);
+                }
+              }
+            }
 
                 function getState(d) {
                   for (var i = 0; i < states.length; i++) {
@@ -288,10 +311,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .html(function(d) {
                       return '<b>' + d.properties.coc_number+ ': '  + d.properties.COCNAME + '</b>' + '<br>' +
                       'Federal Funding: ' +  getDollarValue(d) + '<br>' +
-                      'Total Homeless: ' + '<br>' +
-                      'Sheltered Homeless: ' + '<br>' +
-                      'Unsheltered Homeless: ' + '<br>' +
-                      'Homeless Veterans: ';
+                      'Total Homeless: ' + getValue(d) +'<br>' +
+                      'Sheltered Homeless: ' + getSheltered(d) +'<br>' +
+                      'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
+                      'Homeless Veterans: ' + getVets(d);
                     });
 
                   map_svg.call(tip)
