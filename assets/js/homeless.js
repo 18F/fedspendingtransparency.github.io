@@ -358,9 +358,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('d', path)
                     .on('mouseover', tip.show)
                     .on('mouseout', tip.hide)
-                    /*.call(d3.behavior.zoom().on('zoom', function () {
-									    map_svg.attr('transform', 'translate(' + d3.event.translate + ')' + ' scale(' + d3.event.scale + ')')
-									  }))*/
                     .on('dblclick', clicked)
                     .on("click", function(d) {
                       BarChart(d);
@@ -1275,7 +1272,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .append('text')
                     .classed('label', true)
                     .attr('transform', 'rotate(-90)')
-                    .attr('x', -80)
+                    .attr('x', -30)
                     .attr('y', 0)
                     .attr('dy', '.71em')
                     .style('text-anchor', 'end')
