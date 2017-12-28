@@ -1,4 +1,5 @@
 COC_Number,COC_Name,amount
+,,1908722.05
 AK-500,Anchorage CoC,19788262.93
 AK-501,Alaska Balance of State CoC,51713526.57
 AL-500,"Birmingham/Jefferson, St. Clair, Shelby Counties CoC",19039543.38
@@ -218,12 +219,13 @@ MN-506,Northwest Minnesota CoC,1930340.08
 MN-508,Moorhead/West Central Minnesota CoC,4601684.69
 MN-509,Duluth/St.Louis County CoC,8486326.21
 MN-511,Southwest Minnesota CoC,644159.9
-MO-500,St. Louis County CoC,31830144.86
+MO-500,St. Louis County CoC,1092285.11
 MO-501,St.Louis City CoC,32598503.59
 MO-503,"St. Charles, Lincoln, Warren Counties CoC",480422
 MO-600,"Springfield/Greene, Christian, Webster Counties CoC",6817197.09
 MO-602,"Joplin/Jasper, Newton Counties CoC",5366743
 MO-603,"St. Joseph/Andrew, Buchanan, DeKalb Counties CoC",557748.58
+MO-604,"Kansas City, Independence, Lees Summit/Jackson, Wyandotte Counties CoC",30737859.75
 MO-606,Missouri Balance of State CoC,61482800.84
 MS-500,"Jackson/Rankin, Madison Counties CoC",28254686.04
 MS-501,Mississippi Balance of State CoC,42597843
@@ -400,3 +402,4 @@ WV-501,"Huntington/Cabell, Wayne Counties CoC",9974235.46
 WV-503,"Charleston/Kanawha, Putnam, Boone, Clay Counties CoC",4836397.54
 WV-508,West Virginia Balance of State CoC,46259004.18
 WY-500,Wyoming Statewide CoC,9063786
+NA,NA,830975310.2
