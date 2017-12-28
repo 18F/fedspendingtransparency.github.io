@@ -128,7 +128,7 @@ function createFillTableRow(legend, child, amt, k) {
 var spinner = new Spinner(spinnerOpts).spin(target);
 
 function formatData(data) {
-  const root = {
+  const hierarchy = {
       name: "FY17 Q3 Contract Awards",
       children: []
     },
@@ -137,11 +137,11 @@ function formatData(data) {
       return c;
     });
 
-  let parent = root.children;
+  let parent = hierarchy.children;
   const pathLength = data2[0].path.length;
 
   data2.forEach(c => {
-    parentContainer = root.children;
+    parentContainer = hierarchy.children;
     c.path.forEach((level, i) => {
       if (i === pathLength - 1) {
         // outermost ring
@@ -159,7 +159,7 @@ function formatData(data) {
       }
     });
   });
-  return root;
+  return hierarchy;
 }
 
 function createAgencyTitle(legend, d, title) {
@@ -345,6 +345,7 @@ function drawSunburst(data) {
   const hierarchy = formatData(data);
   const root = partition.nodes(hierarchy);
 
+  state.hierarchy = hierarchy;
   state.root = root;
 
   const paths = svg.selectAll("path").data(root);
@@ -440,9 +441,9 @@ function createSunburst(newData, recip, details, other, colors) {
 
   drawSunburst(state.newData);
 
-  createTableTitle(legend, state.root);
+  createTableTitle(legend, state.hierarchy);
 
-  createFillTable(legend, state.root);
+  createFillTable(legend, state.hierarchy);
 }
 
 d3.csv("/data-lab-data/awards_contracts.csv", function(error, newData) {
