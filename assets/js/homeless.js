@@ -111,7 +111,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   });
 
                 var p2_projection = d3.geo.albersUsa()
-                  .translate([map_width / 1.2, map_height / 1.1]) // translate to center of screen
+                  .translate([map_width / 1.2, map_height / 1]) // translate to center of screen
                   .scale([575]); // scale things down so see entire US
 
                 // Define path generator
@@ -1033,6 +1033,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                               k = 12
                             } else if (n.properties.NAME === 'Illinois') {
                               k = 5
+                            } else if (n.properties.NAME === 'Nevada') {
+                              k = 3.5
                             } else if (n.properties.CENSUSAREA <= 15000) {
                               k = 17.0
                             } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
@@ -1042,9 +1044,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                             } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
                               k = 6.05
                             } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                              k = 5
+                              k = 5.5
                             } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-                              k = 5
+                              k = 5.25
                             } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
                               k = 3.0
                             } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
@@ -1104,6 +1106,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 														k = 12
 													} else if (n.properties.NAME === 'Illinois') {
 														k = 5
+													} else if (n.properties.NAME === 'Nevada') {
+														k = 3.5
 													} else if (n.properties.CENSUSAREA <= 15000) {
 														k = 17.0
 													} else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
@@ -1113,9 +1117,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 													} else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
 														k = 6.05
 													} else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-														k = 5
+														k = 5.5
 													} else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-														k = 5
+														k = 5.25
 													} else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
 														k = 3.0
 													} else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
