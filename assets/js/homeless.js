@@ -1024,7 +1024,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                             } else if (n.properties.NAME === 'Michigan') {
                               k = 5
                             } else if (n.properties.NAME === 'Idaho') {
-                              k = 3.25
+                              k = 3
                             } else if (n.properties.NAME === 'Alaska') {
                               k = 5.0
                             } else if (n.properties.NAME === 'Hawaii') {
@@ -1095,7 +1095,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 													} else if (n.properties.NAME === 'Michigan') {
 														k = 5
 													} else if (n.properties.NAME === 'Idaho') {
-														k = 3.25
+														k = 3
 													} else if (n.properties.NAME === 'Alaska') {
 														k = 5.0
 													} else if (n.properties.NAME === 'Hawaii') {
