@@ -1035,8 +1035,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                               k = 5
                             } else if (n.properties.NAME === 'Nevada') {
                               k = 3.5
-                            } else if (n.properties.CENSUSAREA <= 15000) {
+                            } else if (n.properties.NAME === 'Maryland') {
+                              k = 14
+                            } else if (n.properties.CENSUSAREA <= 8000) {
                               k = 17.0
+                            } else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
+                              k = 11.25
+                            } else if (n.properties.CENSUSAREA > 10000 && n.properties.CENSUSAREA <= 15000) {
+                              k = 11.0
                             } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
                               k = 9.0
                             } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
@@ -1108,8 +1114,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 														k = 5
 													} else if (n.properties.NAME === 'Nevada') {
 														k = 3.5
-													} else if (n.properties.CENSUSAREA <= 15000) {
+													} else if (n.properties.NAME === 'Maryland') {
+														k = 14
+													} else if (n.properties.CENSUSAREA <= 8000) {
 														k = 17.0
+													} else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
+														k = 11.25
+													} else if (n.properties.CENSUSAREA > 10000 && n.properties.CENSUSAREA <= 15000) {
+														k = 11.0
 													} else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
 														k = 9.0
 													} else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
