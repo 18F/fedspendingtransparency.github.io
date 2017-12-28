@@ -175,50 +175,50 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 var formatNumber = d3.format('$,.0f');
                 var OtherformatNumber = d3.format(',');
 
-                  function getColor(d) {
-                  for (var i = 0; i < data.length; i++) {
-                    if (d.properties.coc_number === data[i].coc_number) {
-                      if (data[i].total_homeless <= 100) {
-                        return ('#2A1B27');
-                      } else if (data[i].total_homeless <= 200) {
-                        return ('#2F212F');
-                      } else if (data[i].total_homeless <= 300) {
-                        return ('#332838');
-                      } else if (data[i].total_homeless <= 500) {
-                        return ('#362E40');
-                      } else if (data[i].total_homeless <= 700) {
-                        return ('#362E40');
-                      } else if (data[i].total_homeless <= 1000) {
-                        return ('#393549');
-                      } else if (data[i].total_homeless <= 1500) {
-                        return ('#3A3D51');
-                      } else if (data[i].total_homeless <= 2000) {
-                        return ('#3B455A');
-                      } else if (data[i].total_homeless <= 2500) {
-                        return ('#3B4C62');
-                      } else if (data[i].total_homeless <= 3000) {
-                        return ('#3A556A');
-                      } else if (data[i].total_homeless <= 3500) {
-                        return ('#395D71');
-                      } else if (data[i].total_homeless <= 4000) {
-                        return ('#346E7E');
-                      } else if (data[i].total_homeless <= 5000) {
-                        return ('#2E7F87');
-                      } else if (data[i].total_homeless <= 6000) {
-                        return ('#2C908E');
-                      } else if (data[i].total_homeless <= 7000) {
-                        return ('#32A191');
-                      } else if (data[i].total_homeless <= 8000) {
-                        return ('#43B291');
-                      } else if (data[i].total_homeless <= 12000) {
-                        return ('#68CA8B');
-                      } else {
-                        return ('#CCF477')
-                      }
-                    }
-                  }
-                }
-
+                function getColor(d) {
+		  for (var i = 0; i < data.length; i++) {
+		    if (d.properties.coc_number === data[i].coc_number) {
+		      if (data[i].total_homeless <= 100) {
+			return ('#CCF477');
+		      } else if (data[i].total_homeless <= 200) {
+			return ('#BAEE7A');
+		      } else if (data[i].total_homeless <= 300) {
+			return ('#A8E87E');
+		      } else if (data[i].total_homeless <= 500) {
+			return ('#96E181');
+		      } else if (data[i].total_homeless <= 700) {
+			return ('#86D985');
+		      } else if (data[i].total_homeless <= 1000) {
+			return ('#76D288');
+		      } else if (data[i].total_homeless <= 1500) {
+			return ('#68CA8B');
+		      } else if (data[i].total_homeless <= 2000) {
+			return ('#5AC28E');
+		      } else if (data[i].total_homeless <= 2500) {
+			return ('#43B291');
+		      } else if (data[i].total_homeless <= 3000) {
+			return ('#39AA91');
+		      } else if (data[i].total_homeless <= 3500) {
+			return ('#32A191');
+		      } else if (data[i].total_homeless <= 4000) {
+			return ('#2E9990');
+		      } else if (data[i].total_homeless <= 5000) {
+			return ('#2C888B');
+		      } else if (data[i].total_homeless <= 6000) {
+			return ('#317683');
+		      } else if (data[i].total_homeless <= 7000) {
+			return ('#366578');
+		      } else if (data[i].total_homeless <= 8000) {
+			return ('#3A556A');
+		      } else if (data[i].total_homeless <= 12000) {
+			return ('#3A3D51');
+		      } else {
+			return ('#2A1B27')
+		      }
+		    }
+		  }
+		}
+		      
                 function getValue(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
@@ -1037,8 +1037,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                               k = 3.5
                             } else if (n.properties.NAME === 'Maryland') {
                               k = 14
-                            } else if (n.properties.NAME === 'Maine') {
-                              k = 5.5
                             } else if (n.properties.CENSUSAREA <= 8000) {
                               k = 17.0
                             } else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
@@ -1118,8 +1116,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 														k = 3.5
 													} else if (n.properties.NAME === 'Maryland') {
 														k = 14
-													} else if (n.properties.NAME === 'Maine') {
-														k = 5.5
 													} else if (n.properties.CENSUSAREA <= 8000) {
 														k = 17.0
 													} else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
