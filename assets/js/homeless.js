@@ -179,46 +179,46 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
                       if (data[i].total_homeless <= 100) {
-                        return ('#CCF477');
+                        return ('#BEF399');
                       } else if (data[i].total_homeless <= 200) {
-                        return ('#BAEE7A');
+                        return ('#B0EC9A');
                       } else if (data[i].total_homeless <= 300) {
-                        return ('#A8E87E');
+                        return ('#A3E59B');
                       } else if (data[i].total_homeless <= 500) {
-                        return ('#96E181');
+                        return ('#96DD9B');
                       } else if (data[i].total_homeless <= 700) {
-                        return ('#86D985');
+                        return ('#8AD59C');
                       } else if (data[i].total_homeless <= 1000) {
-                        return ('#76D288');
+                        return ('#80CE9C');
                       } else if (data[i].total_homeless <= 1500) {
-                        return ('#68CA8B');
+                        return ('#76C69C');
                       } else if (data[i].total_homeless <= 2000) {
-                        return ('#5AC28E');
+                        return ('#6DBD9B');
                       } else if (data[i].total_homeless <= 2500) {
-                        return ('#43B291');
+                        return ('#66B59A');
                       } else if (data[i].total_homeless <= 3000) {
-                        return ('#39AA91');
+                        return ('#5FAD98');
                       } else if (data[i].total_homeless <= 3500) {
-                        return ('#32A191');
+                        return ('#5AA496');
                       } else if (data[i].total_homeless <= 4000) {
-                        return ('#2E9990');
+                        return ('#569C93');
                       } else if (data[i].total_homeless <= 5000) {
-                        return ('#2C888B');
+                        return ('#529490');
                       } else if (data[i].total_homeless <= 6000) {
-                        return ('#317683');
+                        return ('#508B8C');
                       } else if (data[i].total_homeless <= 7000) {
-                        return ('#366578');
+                        return ('#4E8387');
                       } else if (data[i].total_homeless <= 8000) {
-                        return ('#3A556A');
+                        return ('#465261');
                       } else if (data[i].total_homeless <= 12000) {
-                        return ('#3A3D51');
+                        return ('#3E3C4A');
                       } else {
-                        return ('#2A1B27')
+                        return ('#291C24')
                       }
                     }
                   }
                 }
-
+                
                 function getValue(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
