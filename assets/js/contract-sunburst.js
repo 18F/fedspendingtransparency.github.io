@@ -97,7 +97,7 @@ function createTableTitle(legend, d) {
 }
 
 function createFillTable(legend, d) {
-  for (let k = 0; k < 5; k++) {
+  for (let k = 0; k < 5 && k < d.children.length; k++) {
     createFillTableRow(legend, d.children, "value", k);
   }
 }
@@ -182,6 +182,8 @@ function createAgencyTitle(legend, d, title) {
 }
 
 function update_legend(d) {
+  console.log({ d });
+
   const { details, recip } = state;
   // Create central node panel --- Top 10 Agencies
   if (d.depth === 0) {
@@ -354,6 +356,9 @@ function drawSunburst(data) {
     .enter()
     .append("path")
     .attr("d", arc)
+    .each(function(d) {
+      this._current = d;
+    })
     .on("mouseover", update_legend)
     .on("mouseout", remove_legend)
     .style("cursor", "pointer")
@@ -368,72 +373,89 @@ function drawSunburst(data) {
   paths.exit().remove();
 }
 
+function arcTween(a) {
+  const oldDims = {
+    x: this._current.x,
+    y: this._current.y,
+    dx: this._current.dx,
+    dy: this._current.dy
+  };
+
+  const newDims = {
+    x: a.x,
+    y: a.y,
+    dx: a.dx,
+    dy: a.dy
+  };
+
+  var i = d3.interpolate(oldDims, newDims);
+  this._current = i(0);
+  return function(t) {
+    const transDims = i(t);
+    // const newD = { ...this._current, ...transDims };
+    return arc(transDims);
+  };
+}
+
 function click(selected) {
-  console.log({ selected });
   let filteredData;
 
   switch (selected.depth) {
     case 0: // root
-      filteredData = [...newData];
+      filteredData = [...state.newData];
       break;
     case 1: // agency
-      filteredData = newData.filter(d => d.Agency === selected.name);
+      filteredData = state.newData.filter(d => d.Agency === selected.name);
       break;
     case 2: // subagency
-      filteredData = newData.filter(d => d.Subagency === selected.name);
+      filteredData = state.newData.filter(d => d.Subagency === selected.name);
       break;
     case 3: // contractor
-      filteredData = newData.filter(d => d.Recipient === selected.name);
+      filteredData = state.newData.filter(d => d.Recipient === selected.name);
       break;
   }
 
-  // const hierarchy = formatData(filteredData);
-  // const root = partition.nodes(hierarchy);
+  const hierarchy = formatData(filteredData);
+  const root = partition.nodes(hierarchy);
 
-  // svg
-  //   .selectAll("path")
-  //   .data(root)
-  //   .enter()
-  //   .append("path")
-  //   .attr("d", arc)
-  //   .on("mouseover", update_legend)
-  //   .on("mouseout", remove_legend)
-  //   .style("cursor", "pointer")
-  //   .style("fill", d => findColor(d, colors))
-  //   .on("click", click)
-  //   .append("title")
-  //   .text(
-  //     d =>
-  //       d.depth === 0
-  //         ? `${d.name}\n${formatNumber(d.value)}`
-  //         : "Click to zoom"
-  //   );
+  console.log({ selected, hierarchy, root });
 
-  /*
-  svg
+  state.hierarchy = hierarchy;
+  state.root = root;
+
+  const paths = svg.selectAll("path").data(root);
+
+  paths
+    .enter()
+    .append("path")
+    .attr("d", arc)
+    .each(function(d) {
+      this._current = d;
+    })
+    .on("mouseover", update_legend)
+    .on("mouseout", remove_legend)
+    .style("cursor", "pointer")
+    .style("fill", d => {
+      const color = findColor(d);
+      return color;
+    })
+    .on("click", click)
+    .append("title")
+    .text(
+      d =>
+        d.depth === 0 ? `${d.name}\n${formatNumber(d.value)}` : "Click to zoom"
+    );
+
+  paths.exit().remove();
+
+  paths
     .transition()
     .duration(750)
-    .tween("scale", function() {
-      var xd = d3.interpolate(x.domain(), [
-          selected.x,
-          selected.x + selected.dx
-        ]),
-        yd = d3.interpolate(y.domain(), [selected.y, 1]),
-        yr = d3.interpolate(y.range(), [selected.y ? 20 : 0, radius]);
-      return function(t) {
-        x.domain(xd(t));
-        y.domain(yd(t)).range(yr(t));
-      };
-    })
-    .selectAll("path")
-    // .data(root)
-    .attrTween("d", function(d) {
-      // console.log({ d });
-      return function() {
-        return arc(d);
-      };
+    .attrTween("d", arcTween)
+    .style("fill", d => {
+      const color = findColor(d);
+      return color;
     });
-    */
 }
 
 function createSunburst(newData, recip, details, other, colors) {
@@ -451,6 +473,7 @@ d3.csv("/data-lab-data/awards_contracts.csv", function(error, newData) {
     d3.csv("/data-lab-data/Recip_Details.csv", function(error, details) {
       d3.csv("/data-lab-data/others.csv", function(error, other) {
         d3.csv("/data-lab-data/colors.csv", function(error, colors) {
+          newData = newData.filter(d => d.Recipient !== "Other");
           state = { newData, recip, details, other, colors };
           createSunburst(newData, recip, details, other, colors);
         });
