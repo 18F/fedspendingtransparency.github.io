@@ -335,9 +335,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('padding', '50px 0 0 50px');
 
 
-                  var color = ['#E6F4EC', '#C2F2DF', '#8FEFCA', '#80DCC9', '#84D1B9',
-                    '#78CEC2', '#59B2AA', '#6DB5B4', '#5DA098', '#62959D', '#597A87',
-                    '#546D7B', '#4F606F', '#495462', '#414553', '#383C49', '#35333D', '#2C2730'
+                  var color = ['#BEF399', '#B0EC9A', '#A3E59B', '#96DD9B', '#8AD59C',
+                    '#80CE9C', '#76C69C', '#6DBD9B', '#66B59A', '#5FAD98', '#5AA496',
+                    '#569C93', '#529490', '#508B8C', '#4E8387', '#465261', '#3E3C4A', '#291C24'
                   ]
 
                   var legend_key_values = ['< 100', '100-200', '200-300', '300-500', '500-700', '700-1k', '1k-1.5k',
@@ -963,41 +963,41 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     for (var i = 0; i < map_data.length; i++) {
                       if (d.properties.coc_number === map_data[i].COC_Number) {
                         if (map_data[i].amount <= 500000) {
-                          return ('#281F2C');
-                        } else if (map_data[i].amount <= 1000000) {
-                          return ('#324154');
-                        } else if (map_data[i].amount <= 2000000) {
-                          return ('#2C616F');
-                        } else if (map_data[i].amount <= 3000000) {
-                          return ('#26797C');
-                        } else if (map_data[i].amount <= 4000000) {
-                          return ('#288A81');
+                          return ('#BEF399');
+                        } else if (map_data[i].amount <= 1500000) {
+                          return ('#B0EC9A');
+                        } else if (map_data[i].amount <= 2500000) {
+                          return ('#A3E59B');
                         } else if (map_data[i].amount <= 5000000) {
-                          return ('#349A83');
+                          return ('#96DD9B');
                         } else if (map_data[i].amount <= 7500000) {
-                          return ('#48AA82');
+                          return ('#8AD59C');
                         } else if (map_data[i].amount <= 10000000) {
-                          return ('#61BA7E');
+                          return ('#80CE9C');
                         } else if (map_data[i].amount <= 20000000) {
-                          return ('#7DC878');
+                          return ('#76C69C');
                         } else if (map_data[i].amount <= 30000000) {
-                          return ('#26797C');
+                          return ('#6DBD9B');
                         } else if (map_data[i].amount <= 40000000) {
-                          return ('#288A81');
+                          return ('#66B59A');
                         } else if (map_data[i].amount <= 50000000) {
-                          return ('#349A83');
+                          return ('#5FAD98');
                         } else if (map_data[i].amount <= 60000000) {
-                          return ('#48AA82');
+                          return ('#5AA496');
                         } else if (map_data[i].amount <= 70000000) {
-                          return ('#61BA7E');
+                          return ('#569C93');
                         } else if (map_data[i].amount <= 80000000) {
-                          return ('#7DC878');
+                          return ('#529490');
                         } else if (map_data[i].amount <= 90000000) {
-                          return ('#8DCF75');
+                          return ('#508B8C');
                         } else if (map_data[i].amount <= 100000000) {
-                          return ('#E7ED69');
+                          return ('#4E8387');
+                        } else if (map_data[i].amount <= 150000000) {
+                          return ('#465261');
+                        } else if (map_data[i].amount <= 200000000) {
+                          return ('#3E3C4A');
                         } else {
-                          return ('#ecf187')
+                          return ('#291C24')
                         }
                       }
                     }
