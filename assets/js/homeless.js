@@ -218,7 +218,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     }
                   }
                 }
-		      
+
                 function getValue(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
@@ -1037,6 +1037,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                               k = 3.5
                             } else if (n.properties.NAME === 'Maryland') {
                               k = 14
+                            } else if (n.properties.NAME === 'Maine') {
+                              k = 5.5
                             } else if (n.properties.CENSUSAREA <= 8000) {
                               k = 17.0
                             } else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
@@ -1116,6 +1118,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 														k = 3.5
 													} else if (n.properties.NAME === 'Maryland') {
 														k = 14
+													} else if (n.properties.NAME === 'Maine') {
+														k = 5.5
 													} else if (n.properties.CENSUSAREA <= 8000) {
 														k = 17.0
 													} else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
