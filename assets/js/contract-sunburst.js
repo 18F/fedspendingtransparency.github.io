@@ -15,14 +15,10 @@ var width = 550,
   radius = Math.max(width, height) / 2.5 - 30; //change 2.5 to a larger number to make burst smaller
 
 var formatNumber = d3.format("$,f");
-
 var x = d3.scale.linear().range([0, 2 * Math.PI]);
 var y = d3.scale.sqrt().range([0, radius]);
-
 var partition = d3.layout.partition().value(d => d.size);
-
 var legend = d3.select("#sunburst-panel");
-
 var arc = d3.svg
   .arc()
   .startAngle(d => Math.max(0, Math.min(2 * Math.PI, x(d.x))))
@@ -103,7 +99,6 @@ function createFillTable(legend, d) {
 }
 
 function createFillTableRow(legend, child, amt, k) {
-  console.log({ legend, child, amt, k });
   legend
     .append("div")
     .attr("id", "tab_2")
@@ -182,8 +177,6 @@ function createAgencyTitle(legend, d, title) {
 }
 
 function update_legend(d) {
-  console.log({ d });
-
   const { details, recip } = state;
   // Create central node panel --- Top 10 Agencies
   if (d.depth === 0) {
@@ -392,7 +385,6 @@ function arcTween(a) {
   this._current = i(0);
   return function(t) {
     const transDims = i(t);
-    // const newD = { ...this._current, ...transDims };
     return arc(transDims);
   };
 }
@@ -417,8 +409,6 @@ function click(selected) {
 
   const hierarchy = formatData(filteredData);
   const root = partition.nodes(hierarchy);
-
-  console.log({ selected, hierarchy, root });
 
   state.hierarchy = hierarchy;
   state.root = root;
