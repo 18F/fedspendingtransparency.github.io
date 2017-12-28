@@ -1,3 +1,5 @@
+const state = {};
+
 for (let i = 0; i < 4; i++) {
   d3
     .select("#legend_scaleKey")
@@ -35,6 +37,33 @@ var svg = d3
   .attr("height", height)
   .append("g")
   .attr("transform", `translate(${width / 2 - 20},${height / 2 - 100})`);
+
+function findColor(d, colors) {
+  switch (d.depth) {
+    case 0: // root
+      return "#FFFFFF";
+    case 1: // agency
+      return colors.find(function(color) {
+        return color.name === d.name;
+      }).color;
+    case 2: // subagency
+      return d3
+        .rgb(
+          colors.find(function(color) {
+            return color.name === d.parent.name;
+          }).color
+        )
+        .darker(-0.75);
+    case 3: // contractor
+      return d3
+        .rgb(
+          colors.find(function(color) {
+            return color.name === d.parent.parent.name;
+          }).color
+        )
+        .darker(-1.25);
+  }
+}
 
 var spinnerOpts = {
   lines: 9, // The number of lines to draw
@@ -103,10 +132,7 @@ function formatData(data) {
       children: []
     },
     data2 = data.map(c => {
-      c.level1 = c.Agency;
-      c.level2 = c.Subagency;
-      c.level3 = c.Recipient;
-      c.path = [c.level1, c.level2, c.level3];
+      c.path = [c.Agency, c.Subagency, c.Recipient];
       return c;
     });
 
@@ -138,71 +164,100 @@ function formatData(data) {
 function createSunburst(newData, recip, details, other, colors) {
   spinner.stop();
 
-  // newData = newData.filter(e => e.Obligation > 10000000);
+  function drawSunburst(data) {
+    const hierarchy = formatData(data);
+    const root = partition.nodes(hierarchy);
 
-  const root = formatData(newData);
+    const paths = svg.selectAll("path").data(root);
 
-  svg
-    .selectAll("path")
-    .data(partition.nodes(root))
-    .enter()
-    .append("path")
-    .attr("d", arc)
-    .on("mouseover", update_legend)
-    .on("mouseout", remove_legend)
-    .style("cursor", "pointer")
-    .style("fill", function(d) {
-      switch (d.depth) {
-        case 0: // root
-          return "#FFFFFF";
-        case 1: // agency
-          return colors.find(function(color) {
-            return color.name === d.name;
-          }).color;
-        case 2: // subagency
-          return d3
-            .rgb(
-              colors.find(function(color) {
-                return color.name === d.parent.name;
-              }).color
-            )
-            .darker(-0.75);
-        case 3: // contractor
-          return d3
-            .rgb(
-              colors.find(function(color) {
-                return color.name === d.parent.parent.name;
-              }).color
-            )
-            .darker(-1.25);
-      }
-    })
-    .on("click", click)
-    .append("title")
-    .text(
-      d =>
-        d.depth === 0 ? `${d.name}\n${formatNumber(d.value)}` : "Click to zoom"
-    );
+    paths
+      .enter()
+      .append("path")
+      .attr("d", arc)
+      .on("mouseover", update_legend)
+      .on("mouseout", remove_legend)
+      .style("cursor", "pointer")
+      .style("fill", d => findColor(d, colors))
+      .on("click", click)
+      .append("title")
+      .text(
+        d =>
+          d.depth === 0
+            ? `${d.name}\n${formatNumber(d.value)}`
+            : "Click to zoom"
+      );
 
-  function click(d) {
+    paths.exit().remove();
+  }
+
+  drawSunburst(newData);
+
+  function click(selected) {
+    console.log({ selected });
+    let filteredData;
+
+    switch (selected.depth) {
+      case 0: // root
+        filteredData = [...newData];
+        break;
+      case 1: // agency
+        filteredData = newData.filter(d => d.Agency === selected.name);
+        break;
+      case 2: // subagency
+        filteredData = newData.filter(d => d.Subagency === selected.name);
+        break;
+      case 3: // contractor
+        filteredData = newData.filter(d => d.Recipient === selected.name);
+        break;
+    }
+
+    // const hierarchy = formatData(filteredData);
+    // const root = partition.nodes(hierarchy);
+
+    // svg
+    //   .selectAll("path")
+    //   .data(root)
+    //   .enter()
+    //   .append("path")
+    //   .attr("d", arc)
+    //   .on("mouseover", update_legend)
+    //   .on("mouseout", remove_legend)
+    //   .style("cursor", "pointer")
+    //   .style("fill", d => findColor(d, colors))
+    //   .on("click", click)
+    //   .append("title")
+    //   .text(
+    //     d =>
+    //       d.depth === 0
+    //         ? `${d.name}\n${formatNumber(d.value)}`
+    //         : "Click to zoom"
+    //   );
+
+    /*
     svg
       .transition()
       .duration(750)
       .tween("scale", function() {
-        var xd = d3.interpolate(x.domain(), [d.x, d.x + d.dx]),
-          yd = d3.interpolate(y.domain(), [d.y, 1]),
-          yr = d3.interpolate(y.range(), [d.y ? 20 : 0, radius]);
+        var xd = d3.interpolate(x.domain(), [
+            selected.x,
+            selected.x + selected.dx
+          ]),
+          yd = d3.interpolate(y.domain(), [selected.y, 1]),
+          yr = d3.interpolate(y.range(), [selected.y ? 20 : 0, radius]);
         return function(t) {
           x.domain(xd(t));
           y.domain(yd(t)).range(yr(t));
         };
       })
       .selectAll("path")
+      // .data(root)
       .attrTween("d", function(d) {
+        // console.log({ d });
         return function() {
           return arc(d);
         };
       });
+      */
   }
 
   createTableTitle(legend, root);
@@ -392,6 +447,7 @@ d3.csv("/data-lab-data/awards_contracts.csv", function(error, newData) {
     d3.csv("/data-lab-data/Recip_Details.csv", function(error, details) {
       d3.csv("/data-lab-data/others.csv", function(error, other) {
         d3.csv("/data-lab-data/colors.csv", function(error, colors) {
+          const state = { newData, recip, details, other, colors };
           createSunburst(newData, recip, details, other, colors);
         });
       });
