@@ -218,7 +218,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     }
                   }
                 }
-                
+
                 function getValue(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
@@ -410,7 +410,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         for (var h = 0; h < json.features.length; h++) {
                           if (states[i].State == json.features[h].properties.NAME) {
                             var n = json.features[h]
-                            ////console.log('clicked n: ',n);
+                            console.log('clicked n: ',n);
                             if (n && centered !== n) {
                               var centroid = path.centroid(n)
                               x = centroid[0]
@@ -418,33 +418,45 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                               ////console.log('d: ',d.properties.NAME);
                               if (n.properties.NAME === 'Florida') {
-                                k = 5.0
+                                k = 4.0
                               } else if (n.properties.NAME === 'Michigan') {
-                                k = 5.5
+                                k = 4.5
                               } else if (n.properties.NAME === 'Idaho') {
-                                k = 3.25
+                                k = 3
                               } else if (n.properties.NAME === 'Alaska') {
-                                k = 5.0
+                                k = 4.0
                               } else if (n.properties.NAME === 'Hawaii') {
-                                k = 7.0
-                              } else if (n.properties.CENSUSAREA <= 15000) {
+                                k = 6.5
+                              } else if (n.properties.NAME === 'New Jersey') {
+                                k = 12
+                              } else if (n.properties.NAME === 'Illinois') {
+                                k = 4.75
+                              } else if (n.properties.NAME === 'Nevada') {
+                                k = 3
+                              } else if (n.properties.NAME === 'Maryland') {
+                                k = 14
+                              } else if (n.properties.CENSUSAREA <= 8000) {
+                                k = 17.0
+                              } else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
+                                k = 11.25
+                              } else if (n.properties.CENSUSAREA > 10000 && n.properties.CENSUSAREA <= 15000) {
                                 k = 11.0
                               } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
                                 k = 9.0
                               } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
-                                k = 8.0
+                                k = 6.6
                               } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
-                                k = 6.5
+                                k = 6.05
                               } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                                k = 6.0
+                                k = 4.75
                               } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-                                k = 5.0
+                                k = 5.25
                               } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
-                                k = 4.0
+                                k = 3.0
                               } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
-                                k = 3.5
-                              } else {
                                 k = 2.75
+                              } else {
+                                k = 2.2
                               };
                               centered = n;
 
