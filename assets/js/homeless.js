@@ -1,6 +1,6 @@
-// GenMap begins on line 247
-// GenTable begins on line 445
-// GenPanelTwo begins on line 886
+// GenMap begins on line 277
+// GenTable begins on line 488
+// GenPanelTwo begins on line 929
 //
 //
 // Spinner loading controls
@@ -179,41 +179,41 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
                       if (data[i].total_homeless <= 100) {
-                        return ('#BEF399');
+                        return ('#F3E0C4');
                       } else if (data[i].total_homeless <= 200) {
-                        return ('#B0EC9A');
+                        return ('#EAD8BD');
                       } else if (data[i].total_homeless <= 300) {
-                        return ('#A3E59B');
+                        return ('#E2D0B6');
                       } else if (data[i].total_homeless <= 500) {
-                        return ('#96DD9B');
+                        return ('#DAC8AF');
                       } else if (data[i].total_homeless <= 700) {
-                        return ('#8AD59C');
+                        return ('#D1C0A8');
                       } else if (data[i].total_homeless <= 1000) {
-                        return ('#80CE9C');
+                        return ('#C9B9A1');
                       } else if (data[i].total_homeless <= 1500) {
-                        return ('#76C69C');
+                        return ('#C1B19B');
                       } else if (data[i].total_homeless <= 2000) {
-                        return ('#6DBD9B');
+                        return ('#B9AA94');
                       } else if (data[i].total_homeless <= 2500) {
-                        return ('#66B59A');
+                        return ('#B1A28E');
                       } else if (data[i].total_homeless <= 3000) {
-                        return ('#5FAD98');
+                        return ('#A99B87');
                       } else if (data[i].total_homeless <= 3500) {
-                        return ('#5AA496');
+                        return ('#998C7A');
                       } else if (data[i].total_homeless <= 4000) {
-                        return ('#569C93');
+                        return ('#897E6D');
                       } else if (data[i].total_homeless <= 5000) {
-                        return ('#529490');
+                        return ('#827767');
                       } else if (data[i].total_homeless <= 6000) {
-                        return ('#508B8C');
+                        return ('#73695B');
                       } else if (data[i].total_homeless <= 7000) {
-                        return ('#4E8387');
+                        return ('#645C4F');
                       } else if (data[i].total_homeless <= 8000) {
-                        return ('#465261');
+                        return ('#564E43');
                       } else if (data[i].total_homeless <= 12000) {
-                        return ('#3E3C4A');
+                        return ('#413B33');
                       } else {
-                        return ('#291C24')
+                        return ('#211D18')
                       }
                     }
                   }
@@ -335,17 +335,18 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('padding', '50px 0 0 50px');
 
 
-                  var color = ['#BEF399', '#B0EC9A', '#A3E59B', '#96DD9B', '#8AD59C',
-                    '#80CE9C', '#76C69C', '#6DBD9B', '#66B59A', '#5FAD98', '#5AA496',
-                    '#569C93', '#529490', '#508B8C', '#4E8387', '#465261', '#3E3C4A', '#291C24'
+                  var color = ['#F3E0C4', '#EAD8BD', '#E2D0B6', '#DAC8AF', '#D1C0A8',
+                    '#C9B9A1', '#C1B19B', '#B9AA94', '#B1A28E', '#A99B87', '#998C7A',
+                    '#897E6D', '#827767', '#73695B', '#645C4F', '#564E43', '#413B33',
+                    '#342F28', '#211D18'
                   ]
 
                   var legend_key_values = ['< 100', '100-200', '200-300', '300-500', '500-700', '700-1k', '1k-1.5k',
                     '1.5k-2k', '2k-2.5k', '2.5k-3k', '3k-3.5k', '3.5k-4k', '4k-5k',
-                    '5k-6k', '6k-7k', '7k-8k', '8k-12k', '> 12k'
+                    '5k-6k', '6k-7k', '7k-8k', '8k-15k', '16k-30k', '> 30k'
                   ];
 
-                  for (var i = 0; i < 18; i++) {
+                  for (var i = 0; i < 19; i++) {
 
                     var z = legend.append('div')
                       .attr('id', 'legend_key');
@@ -975,41 +976,41 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     for (var i = 0; i < map_data.length; i++) {
                       if (d.properties.coc_number === map_data[i].COC_Number) {
                         if (map_data[i].amount <= 500000) {
-                          return ('#BEF399');
+                          return ('#F2DFC3');
                         } else if (map_data[i].amount <= 1500000) {
-                          return ('#B0EC9A');
+                          return ('#EAD8B6');
                         } else if (map_data[i].amount <= 2500000) {
-                          return ('#A3E59B');
+                          return ('#E2D1A9');
                         } else if (map_data[i].amount <= 5000000) {
-                          return ('#96DD9B');
+                          return ('#DACA9D');
                         } else if (map_data[i].amount <= 7500000) {
-                          return ('#8AD59C');
+                          return ('#D1C490');
                         } else if (map_data[i].amount <= 10000000) {
-                          return ('#80CE9C');
+                          return ('#C9BE85');
                         } else if (map_data[i].amount <= 20000000) {
-                          return ('#76C69C');
+                          return ('#C1B97A');
                         } else if (map_data[i].amount <= 30000000) {
-                          return ('#6DBD9B');
+                          return ('#B0B46F');
                         } else if (map_data[i].amount <= 40000000) {
-                          return ('#66B59A');
+                          return ('#989F52');
                         } else if (map_data[i].amount <= 50000000) {
-                          return ('#5FAD98');
+                          return ('#7F8F41');
                         } else if (map_data[i].amount <= 60000000) {
-                          return ('#5AA496');
+                          return ('#73863A');
                         } else if (map_data[i].amount <= 70000000) {
-                          return ('#569C93');
+                          return ('#5C762C');
                         } else if (map_data[i].amount <= 80000000) {
-                          return ('#529490');
+                          return ('#466520');
                         } else if (map_data[i].amount <= 90000000) {
-                          return ('#508B8C');
+                          return ('#325416');
                         } else if (map_data[i].amount <= 100000000) {
-                          return ('#4E8387');
+                          return ('#20440D');
                         } else if (map_data[i].amount <= 150000000) {
-                          return ('#465261');
+                          return ('#0C2B04');
                         } else if (map_data[i].amount <= 200000000) {
-                          return ('#3E3C4A');
+                          return ('#041A01');
                         } else {
-                          return ('#291C24')
+                          return ('#000A000')
                         }
                       }
                     }
@@ -1212,7 +1213,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .html('<table class ="icon">' +
                         '<tr>' + '<td class="val">' + initial_coc_poss[i].cfda_number + '</td>' +
                         '<td class="name" title="Click to visit program website">' + '<a href=' +
-                        initial_coc_poss[i].program_website + '>' + initial_coc_poss[i].program_title +
+                        initial_coc_poss[i].CFDA_website + '>' + initial_coc_poss[i].program_title +
                         '</a>' + '</td>' + '</tr>' + '</table>')
                   }
                 }
@@ -1263,22 +1264,18 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('fill', function(d) {
                       if (d.category == 'Housing') {
                         return '#7B4C66'
-                      } else if (d.category == 'Housing/Education') {
-                        return '#C98845'
-                      } else if (d.category == 'Services') {
+                      } else if (d.category == 'Food') {
                         return '#CC5500'
                       } else if (d.category == 'Health') {
                         return '#297B84'
-                      } else if (d.category == 'Support Services') {
-                        return '#4A8D5B'
-                      } else if (d.category == 'Housing/Services') {
-                        return '#759043'
-                      } else if (d.category == 'Health/Housing') {
+                      } else if (d.category == 'Research') {
                         return '#A08E39'
-                      } else if (d.category == 'Education/Servicess') {
-                        return '#4A6C87'
-                      } else if (d.category == 'Housing/Research') {
+                      } else if (d.category == 'Education') {
+                        return '#A08E39'
+                      } else if (d.category == 'Support Services') {
                         return '#A9B2C3'
+                      } else if (d.category == 'Employment') {
+                        return '#006A4E'
                       }
                     })
                     .attr('transform', function(d, i) {
@@ -1358,16 +1355,23 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .attr('width', map_width + margin.left + margin.right)
                   .attr('padding', '50px 0 0 50px');
 
-                var cfda_color = ['#7B4C66', '#C98845', '#CC5500', '#297B84', '#4A8D5B', '#759043',
+                /*var cfda_color = ['#7B4C66', '#C98845', '#CC5500', '#297B84', '#4A8D5B', '#759043',
                   '#A08E39', '#4A6C87', '#A9B2C3', '#006A4E'
                 ]
 
                 var cfda_legend_key_values = ['Housing', 'Housing & Education', 'Services', 'Health',
                   'Support Services', 'Housing & Services', 'Health & Housing', 'Education & Services',
                   'Housing & Research', 'Employment'
+                ];*/
+                var cfda_color = ['#7B4C66', '#CC5500', '#297B84', '#4A6C87', '#006A4E',
+                   '#A9B2C3', '#A08E39'
+                ]
+
+                var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education',
+                  'Employment', 'Support Services', 'Research'
                 ];
 
-                for (var i = 0; i < 10; i++) {
+                for (var i = 0; i < 7; i++) {
 
                   var l = cfda_legend.append('div')
                     .attr('id', 'p2_legend_key');
@@ -1379,8 +1383,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('height', '40px')
                     .attr('width', '53px')
                     .append('rect')
-                    .attr('x', 10)
-                    .attr('y', 10)
+                    .attr('x', 7)
+                    .attr('y', 7)
                     .attr('height', 30)
                     .attr('width', 30)
                     .style('fill', function(d) {
