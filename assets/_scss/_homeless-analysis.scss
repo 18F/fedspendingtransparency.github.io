@@ -95,14 +95,36 @@
     margin-top: 65px;
   }
 
-  #container2{
+  #container2_1{
     position: relative;
     background-color: inherit;
     font-family: inherit;
-    width: 1024px;
-    height: 760px;
+    width: 512px;
     overflow: visible;
-    margin-top:65px;
+  }
+
+  #container2_2{
+    position: relative;
+    background-color: inherit;
+    font-family: inherit;
+    height: 300px;
+    overflow: visible;
+  }
+
+  #container2_3{
+    position: relative;
+    background-color: inherit;
+    font-family: inherit;
+    height: 415px;
+    overflow: visible;
+  }
+
+  #container2_4{
+    position: relative;
+    background-color: inherit;
+    font-family: inherit;
+    height: 415px;
+    overflow: visible;
   }
 
   #viz_container {
@@ -385,6 +407,7 @@
 
   #panel_coc {
     position: relative;
+    padding-top:10px;
     margin-top: 5px;
     overflow: visible;
     background-color: inherit;
@@ -458,6 +481,7 @@
 
   #cfda_info_header{
     margin-bottom: 13px;
+    margin-top:20px;
   }
 
   .background {
@@ -627,17 +651,18 @@
     stroke: rgba(0, 0, 0, 0.2);
   }
 
-  #p2_legend{
+  #p2_3_legend{
+    position: relative;
+    min-width: 470.48648648648657px;
+    margin-top: 10px;
+  }
+
+  #p2_3_legend_title{
     position: relative;
     min-width: 470.48648648648657px;
   }
 
-  #p2_legend_title{
-    position: relative;
-    min-width: 470.48648648648657px;
-  }
-
-  #p2_legend_key{
+  #p2_3_legend_key{
     position: relative;
     float:left;
     height: 50px;
@@ -645,11 +670,11 @@
     margin: 25px -7px 0 3px;
   }
 
-  #p2_key{
+  #p2_3_key{
     position: relative;
   }
 
-  #p2_key_value{
+  #p2_3_key_value{
     position: relative;
     height: 10px;
     width: 150px;
@@ -663,18 +688,18 @@
     transform: rotate(-45deg);
   }
 
-  .p2_legend_title{
+  .p2_3_legend_title{
     position: relative;
     top:10px;
     left: 20px;
     height:1px;
   }
 
-  #p2_key_value > p{
+  #p2_3_key_value p{
     font-size: 1.2rem;
   }
 
-  #p2_legend_title > div > h5{
+  #p2_3_legend_title > div > h5{
     height:1px;
   }
 }
