@@ -7,10 +7,79 @@
     color: #525252;
     font-style: italic;
   }
+  & ul{
+    margin-bottom:25px;
 
+    &.li {
+      margin-bottom: 5px;
+      margin-top: 5px
+    }
+  }
+
+  .button {
+    background-color: #0071BC;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0;
+    cursor: pointer;
+}
+  .tab {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #inherit;
+      margin-top: 10px;
+  }
+
+  /* Style the buttons inside the tab */
+  .tab button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+      background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab button.active {
+      background-color: inherit;
+      border-bottom: solid 2px #0071BC;
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+  }
   & div.row {
     margin-left: 0;
     margin-right: 0;
+    margin-top:65px;
+  }
+
+  & hr {
+      display: block;
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      margin-left: auto;
+      margin-right: auto;
+      border-style: inset;
+      border-color: #ccc;
+      border-width: 0.5px;
   }
 
   #funding-map {
@@ -23,6 +92,7 @@
     font-family: inherit;
     width: 1024px;
     height: 800px;
+    margin-top: 65px;
   }
 
   #container2{
@@ -32,6 +102,7 @@
     width: 1024px;
     height: 760px;
     overflow: visible;
+    margin-top:65px;
   }
 
   #viz_container {
