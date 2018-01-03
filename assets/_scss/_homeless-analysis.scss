@@ -45,7 +45,7 @@
   #map_container {
     position: relative;
     overflow: visible;
-    background-color: #ddd;
+    background-color: inherit;
   }
 
   #table_container {
@@ -294,13 +294,12 @@
   #panel_map {
     margin-top: 5px;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     background-color: inherit;
-    border-style: solid;
+    /*border-style: solid;
     border-width: 0.5px;
-    border-color: #414b57;
-    background-color: #ddd;
-    max-height: 600px;
+    border-color: #414b57;*/
+    background-color: inherit;
   }
 
   #panel_info {
@@ -310,7 +309,7 @@
     background-color: inherit;
     min-height: 255px;
     margin-left: 10px;
-    margin-top: 0px;
+    margin-top: -10px;
   }
 
   #panel_coc {
@@ -446,15 +445,18 @@
     line-height: 1;
     font-weight: bold;
     padding: 12px;
-    background: rgba(0, 0, 0, 0.8);
-    color: #FFF;
+    margin: 10px;
+    background: #f0f3f5;
+    color: #FFFF;
     border-radius: 2px;
-    border-color: black;
-    border-width: 2px;
+    border: 2px solid black;
     pointer-events: none;
   }
   .d3-tip b{
     font-weight: bolder;
+    background: #2e3941;
+    border:2px solid black;
+    color: #f0f3f5;
     font-size: 1em;
   }
   /* Creates a small triangle extender for the tooltip */
@@ -569,7 +571,7 @@
     float:left;
     height: 50px;
     width: 53px;
-    margin: 40px -7px 0 3px;
+    margin: 25px -7px 0 3px;
   }
 
   #p2_key{
@@ -592,8 +594,8 @@
 
   .p2_legend_title{
     position: relative;
-    top:20px;
-    left: 13px;
+    top:10px;
+    left: 20px;
     height:1px;
   }
 
@@ -603,18 +605,5 @@
 
   #p2_legend_title > div > h5{
     height:1px;
-  }
-
-  .homeless-analysis > .p2_label{
-    display: inline;
-    padding: .2em .6em .3em;
-    font-weight: bold;
-    line-height: 1;
-    color: #fff;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: baseline;
-    border-radius: .25em;
-    font-size: 90%;
   }
 }
