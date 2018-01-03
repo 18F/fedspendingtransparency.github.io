@@ -1,9 +1,38 @@
-// GenMap begins on line 277
-// GenTable begins on line 488
-// GenPanelTwo begins on line 929
+// GenMap begins on line 247
+// GenTable begins on line 445
+// GenPanelTwo begins on line 886
 //
 //
 // Spinner loading controls
+function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+
+function openTab2(evt, tab2Name) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(tab2Name).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen2").click();
 var opts = {
   lines: 9, // The number of lines to draw
   length: 16, // The length of each line
