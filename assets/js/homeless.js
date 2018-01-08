@@ -54,6 +54,9 @@ var target_panel5 = document.getElementById('container2_4');
 
 var spinner_panel1 = new Spinner(opts).spin(target_panel1);
 var spinner_panel2 = new Spinner(opts).spin(target_panel2);
+var spinner_panel3 = new Spinner(opts).spin(target_panel3);
+var spinner_panel4 = new Spinner(opts).spin(target_panel4);
+var spinner_panel5 = new Spinner(opts).spin(target_panel5);
 //var spinner_panel3 = new Spinner(opts).spin(target_panel3);
 
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
@@ -940,6 +943,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function GenPanelTwo() {
 
                   spinner_panel2.stop();
+                  spinner_panel3.stop();
+                  spinner_panel4.stop();
+                  spinner_panel5.stop();
 
                   p2_1_map_svg.call(p2_tip)
 

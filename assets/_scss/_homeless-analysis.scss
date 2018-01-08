@@ -100,6 +100,7 @@
     background-color: inherit;
     font-family: inherit;
     width: 512px;
+    min-height: 300px;
     overflow: visible;
   }
 
@@ -115,7 +116,7 @@
     position: relative;
     background-color: inherit;
     font-family: inherit;
-    height: 415px;
+    min-height: 415px;
     overflow: visible;
   }
 
