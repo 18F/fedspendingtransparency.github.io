@@ -210,6 +210,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 var formatNumber = d3.format('$,.0f');
                 var OtherformatNumber = d3.format(',');
 
+                function bar_click(d){
+                  console.log("bar_click d: ",d);
+                  window.open(d.CFDA_website)
+                }
+
                 function getColor(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
@@ -305,7 +310,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function getCFDA_value(d) {
                   //console.log('CFDA value: ',d);
                   return 'Program Title: ' + d.program_title + '<br/>' +
-                  'Funding Amount: ' + formatNumber(d.fed_funding);
+                  'Funding Amount: ' + formatNumber(d.fed_funding) +
+                  '<br/>' + 'Click to visit the program website';
                 }
 
                 //*************************************************************
@@ -442,83 +448,51 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     var x, y, k;
 
                     //console.log('Panel 1 clicked, d: ',d);
+                    if (d && centered !== d) {
+                      var centroid = path.centroid(d)
+                      x = centroid[0]
+                      y = centroid[1]
+                      console.log('clicked d: ',d);
+                      console.log('clicked centroid: ',centroid);
+                      console.log('clicked area: ',d.properties.Shape__Are);
+                      if (d.properties.COCNAME == 'Hawaii Balance of State CoC'){
+                        k = 6.0
+                      }else if (d.properties.COCNAME == 'Alaska Balance of State CoC'){
+                        k = 4.0
+                      }else if (d.properties.COCNAME == 'Maine Balance of State CoC'){
+                        k = 5.0
+                      }else if (d.properties.Shape__Are <= .4) {
+                        k = 17.0
+                      }else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1){
+                        k = 14.0
+                      }else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5){
+                        k = 12.0
+                      }else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17){
+                        k = 6.0
+                      }else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55){
+                        k = 3.0
+                      }else{
+                        k = 2.0
+                      };
+                      centered = d;
 
-                    for (var i = 0; i < states.length; i++) {
-                      if (d.properties.STUSAB == states[i].Abbrv) {
-                        for (var h = 0; h < json.features.length; h++) {
-                          if (states[i].State == json.features[h].properties.NAME) {
-                            var n = json.features[h]
-                            console.log('clicked n: ',n);
-                            if (n && centered !== n) {
-                              var centroid = path.centroid(n)
-                              x = centroid[0]
-                              y = centroid[1]
+                    } else {
+                      x = width / 2;
+                      y = height / 2;
+                      k = 1;
+                      centered = null;
 
-                              ////console.log('d: ',d.properties.NAME);
-                              if (n.properties.NAME === 'Florida') {
-                                k = 4.0
-                              } else if (n.properties.NAME === 'Michigan') {
-                                k = 4.5
-                              } else if (n.properties.NAME === 'Idaho') {
-                                k = 3
-                              } else if (n.properties.NAME === 'Alaska') {
-                                k = 4.0
-                              } else if (n.properties.NAME === 'Hawaii') {
-                                k = 6.5
-                              } else if (n.properties.NAME === 'New Jersey') {
-                                k = 12
-                              } else if (n.properties.NAME === 'Illinois') {
-                                k = 4.75
-                              } else if (n.properties.NAME === 'Nevada') {
-                                k = 3
-                              } else if (n.properties.NAME === 'Maryland') {
-                                k = 14
-                              } else if (n.properties.CENSUSAREA <= 8000) {
-                                k = 17.0
-                              } else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
-                                k = 11.25
-                              } else if (n.properties.CENSUSAREA > 10000 && n.properties.CENSUSAREA <= 15000) {
-                                k = 11.0
-                              } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
-                                k = 9.0
-                              } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
-                                k = 6.6
-                              } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
-                                k = 6.05
-                              } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                                k = 4.75
-                              } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-                                k = 5.25
-                              } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
-                                k = 3.0
-                              } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
-                                k = 2.75
-                              } else {
-                                k = 2.2
-                              };
-                              centered = n;
-
-                            } else {
-                              x = width / 2;
-                              y = height / 2;
-                              k = 1;
-                              centered = null;
-
-                            }
-
-                            g.selectAll('path')
-                              .classed('active', centered && function(d) {
-                                return d === centered;
-                              });
-
-                            g.transition()
-                              .duration(750)
-                              .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
-                              .style('stroke-width', .25 / k + 'px');
-                          }
-                        }
-                      }
                     }
+
+                    g.selectAll('path')
+                      .classed('active', centered && function(d) {
+                        return d === centered;
+                      });
+
+                    g.transition()
+                      .duration(750)
+                      .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+                      .style('stroke-width', .25 / k + 'px');
                   }
                 } //end of GenMap()
 
@@ -1060,154 +1034,93 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   //console.log('Panel 2 clicked, d: ',d);
 
-                  for (var i = 0; i < states.length; i++) {
-                    if (d.properties.STUSAB == states[i].Abbrv) {
-                      for (var h = 0; h < json.features.length; h++) {
-                        if (states[i].State == json.features[h].properties.NAME) {
-                          var n = json.features[h]
-                          //console.log('clicked n: ',n);
-                          if (n && centered !== n) {
-                            var centroid = p2_1_path.centroid(n)
-                            x = centroid[0]
-                            y = centroid[1]
+                  if (d && centered !== d) {
+                    var centroid = p2_1_path.centroid(d)
+                    x = centroid[0]
+                    y = centroid[1]
+                    console.log('clicked d: ',d);
+                    console.log('clicked centroid: ',centroid);
+                    console.log('clicked area: ',d.properties.Shape__Are);
+                    if (d.properties.COCNAME == 'Hawaii Balance of State CoC'){
+                      k = 6.0
+                    }else if (d.properties.COCNAME == 'Alaska Balance of State CoC'){
+                      k = 4.0
+                    }else if (d.properties.COCNAME == 'Maine Balance of State CoC'){
+                      k = 5.0
+                    }else if (d.properties.Shape__Are <= .4) {
+                      k = 17.0
+                    }else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1){
+                      k = 14.0
+                    }else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5){
+                      k = 12.0
+                    }else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17){
+                      k = 6.0
+                    }else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55){
+                      k = 3.0
+                    }else{
+                      k = 2.0
+                    };
+                      centered = d;
 
-                            console.log('area: ', n.properties);
-                            if (n.properties.NAME === 'Florida') {
-                              k = 4.0
-                            } else if (n.properties.NAME === 'Michigan') {
-                              k = 5
-                            } else if (n.properties.NAME === 'Idaho') {
-                              k = 3
-                            } else if (n.properties.NAME === 'Alaska') {
-                              k = 5.0
-                            } else if (n.properties.NAME === 'Hawaii') {
-                              k = 6.5
-                            } else if (n.properties.NAME === 'New Jersey') {
-                              k = 12
-                            } else if (n.properties.NAME === 'Illinois') {
-                              k = 5
-                            } else if (n.properties.NAME === 'Nevada') {
-                              k = 3.5
-                            } else if (n.properties.NAME === 'Maryland') {
-                              k = 14
-                            } else if (n.properties.CENSUSAREA <= 8000) {
-                              k = 17.0
-                            } else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
-                              k = 11.25
-                            } else if (n.properties.CENSUSAREA > 10000 && n.properties.CENSUSAREA <= 15000) {
-                              k = 11.0
-                            } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
-                              k = 9.0
-                            } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
-                              k = 6.6
-                            } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
-                              k = 6.05
-                            } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                              k = 5.5
-                            } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-                              k = 5.25
-                            } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
-                              k = 3.0
-                            } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
-                              k = 2.75
-                            } else {
-                              k = 2.55
-                            };
-                            centered = n;
+                    } else {
+                      x = map_width / 1.35;
+                      y = map_height / 1.1;
+                      k = 1;
+                      centered = null;
 
-                          } else {
-                            x = map_width / 1.35;
-                            y = map_height / 1.1;
-                            k = 1;
-                            centered = null;
-
-                          }
-
-                          m.selectAll('p2_1_path')
-                            .classed('active', centered && function(d) {
-                              return d === centered;
-                            });
-
-                          m.transition()
-                            .duration(750)
-                            .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
-                            .style('stroke-width', .15 / k + 'px');
-                        }
-                      }
                     }
+
+                    m.selectAll('p2_1_path')
+                      .classed('active', centered && function(d) {
+                        return d === centered;
+                      });
+
+                    m.transition()
+                      .duration(750)
+                      .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+                      .style('stroke-width', .15 / k + 'px');
                   }
-                }
 
                 function p2_1_clicked_p1(d) {
                   var x, y, k;
                   //console.log('Panel 2 clicked, d: ',d);
 
-                  for (var i = 0; i < states.length; i++) {
-                    if (d.properties.STUSAB == states[i].Abbrv) {
-                      for (var h = 0; h < json.features.length; h++) {
-                        if (states[i].State == json.features[h].properties.NAME) {
-                          var n = json.features[h]
-                          var centroid = p2_1_path.centroid(n)
-                          x = centroid[0]
-                          y = centroid[1]
+                  var centroid = p2_1_path.centroid(d)
+                  x = centroid[0]
+                  y = centroid[1]
+                  console.log('clicked d: ',d);
+                  console.log('clicked centroid: ',centroid);
+                  console.log('clicked area: ',d.properties.Shape__Are);
+                  if (d.properties.COCNAME == 'Hawaii Balance of State CoC'){
+                    k = 6.0
+                  }else if (d.properties.COCNAME == 'Alaska Balance of State CoC'){
+                    k = 4.0
+                  }else if (d.properties.COCNAME == 'Maine Balance of State CoC'){
+                    k = 5.0
+                  }else if (d.properties.Shape__Are <= .4) {
+                    k = 17.0
+                  }else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1){
+                    k = 14.0
+                  }else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5){
+                    k = 12.0
+                  }else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17){
+                    k = 6.0
+                  }else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55){
+                    k = 3.0
+                  }else{
+                    k = 2.0
+                  };
 
-                          if (n.properties.NAME === 'Florida') {
-                            k = 4.0
-                          } else if (n.properties.NAME === 'Michigan') {
-                            k = 5
-                          } else if (n.properties.NAME === 'Idaho') {
-                            k = 3
-                          } else if (n.properties.NAME === 'Alaska') {
-                            k = 5.0
-                          } else if (n.properties.NAME === 'Hawaii') {
-                            k = 6.5
-                          } else if (n.properties.NAME === 'New Jersey') {
-                            k = 12
-                          } else if (n.properties.NAME === 'Illinois') {
-                            k = 5
-                          } else if (n.properties.NAME === 'Nevada') {
-                            k = 3.5
-                          } else if (n.properties.NAME === 'Maryland') {
-                            k = 14
-                          } else if (n.properties.CENSUSAREA <= 8000) {
-                            k = 17.0
-                          } else if (n.properties.CENSUSAREA > 8000 && n.properties.CENSUSAREA <= 10000) {
-                            k = 11.25
-                          } else if (n.properties.CENSUSAREA > 10000 && n.properties.CENSUSAREA <= 15000) {
-                            k = 11.0
-                          } else if (n.properties.CENSUSAREA > 15000 && n.properties.CENSUSAREA <= 30000) {
-                            k = 9.0
-                          } else if (n.properties.CENSUSAREA > 30000 && n.properties.CENSUSAREA <= 50000) {
-                            k = 6.6
-                          } else if (n.properties.CENSUSAREA > 50000 && n.properties.CENSUSAREA <= 70000) {
-                            k = 6.05
-                          } else if (n.properties.CENSUSAREA > 70000 && n.properties.CENSUSAREA <= 90000) {
-                            k = 5.5
-                          } else if (n.properties.CENSUSAREA > 90000 && n.properties.CENSUSAREA <= 110000) {
-                            k = 5.25
-                          } else if (n.properties.CENSUSAREA > 110000 && n.properties.CENSUSAREA <= 130000) {
-                            k = 3.0
-                          } else if (n.properties.CENSUSAREA > 130000 && n.properties.CENSUSAREA <= 150000) {
-                            k = 2.75
-                          } else {
-                            k = 2.55
-                          };
-                          centered = n;
+                  m.selectAll('p2_1_path')
+                    .classed('active', centered && function(d) {
+                      return d === centered;
+                    });
 
-                          m.selectAll('p2_1_path')
-                            .classed('active', centered && function(d) {
-                              return d === centered;
-                            });
-
-                          m.transition()
-                            .duration(750)
-                            .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
-                            .style('stroke-width', .15 / k + 'px');
-                        }
-                      }
-                    }
+                  m.transition()
+                    .duration(750)
+                    .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+                    .style('stroke-width', .15 / k + 'px');
                   }
-                }
 
                 function createCoCTable(d) {
                   $('#panel_coc').empty();
@@ -1322,7 +1235,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       return 'translate(0,' + (i * (barHeight + barPadding)) + ')';
                     })
                     .on('mouseover', p2_3_bar_tip.show)
-                    .on('mouseout', p2_3_bar_tip.hide);
+                    .on('mouseout', p2_3_bar_tip.hide)
+                    .on('click', bar_click);
 
                   bar.append('text')
                     .attr('class', 'label')
@@ -1498,7 +1412,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       return 'translate(0,' + (i * (barHeight + barPadding)) + ')';
                     })
                     .on('mouseover', p2_3_bar_tip.show)
-                    .on('mouseout', p2_3_bar_tip.hide);
+                    .on('mouseout', p2_3_bar_tip.hide)
+                    .on('click', bar_click);
 
                   bar.append('text')
                     .attr('class', 'label')
