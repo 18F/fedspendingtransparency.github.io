@@ -76,7 +76,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-                console.log('CoC: ', us);
+                console.log('CoC pop type: ', table_data);
+                console.log('CoC US: ', us);
 
                 d3.select('#container2_1').append('div').attr('id', 'p2_1')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2')
@@ -1091,6 +1092,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var x, y, k;
                   //console.log('Panel 2 clicked, d: ',d);
 
+
                   var centroid = p2_1_path.centroid(d)
                   x = centroid[0]
                   y = centroid[1]
@@ -1116,6 +1118,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   }else{
                     k = 2.0
                   };
+                  centered = d;
+
+
 
                   m.selectAll('p2_1_path')
                     .classed('active', centered && function(d) {
