@@ -304,7 +304,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function getCFDA_value(d) {
                   //console.log('CFDA value: ',d);
-                  return 'Funding Amount: ' + formatNumber(d.fed_funding);
+                  return 'Program Title: ' + d.program_title + '<br/>' +
+                  'Funding Amount: ' + formatNumber(d.fed_funding);
                 }
 
                 //*************************************************************
@@ -440,7 +441,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   function clicked(d) {
                     var x, y, k;
 
-                    ////console.log('Panel 1 clicked, d: ',d);
+                    //console.log('Panel 1 clicked, d: ',d);
 
                     for (var i = 0; i < states.length; i++) {
                       if (d.properties.STUSAB == states[i].Abbrv) {
