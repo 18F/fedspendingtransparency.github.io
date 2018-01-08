@@ -73,15 +73,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-                //console.log('bar_chrt: ', bar_chrt);
+                console.log('CoC: ', us);
 
                 d3.select('#container2_1').append('div').attr('id', 'p2_1')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3')
                 d3.select('#container2_4').append('div').attr('id', 'p2_4')
                 d3.select('#p2_1').append('div').attr('id', 'panel_map')
-                d3.select('#p2_3').append('div').attr('id', 'panel_matrix')
-                d3.select('#p2_2').append('div').attr('id', 'panel_coc')
+                d3.select('#p2_2').append('div').attr('id', 'panel_matrix')
+                d3.select('#p2_3').append('div').attr('id', 'panel_coc')
                 d3.select('#p2_4').append('div').attr('id', 'panel_info')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3_legend_title')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3_legend')
@@ -431,7 +431,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .on("click", function(d) {
                       BarChart(d);
                       createCoCTable(d);
-                      createCFDATableHover(d);
+                      StateBarChart(d);
+                      //createCFDATableHover(d);
                       p2_1_clicked_p1(d);
                     })
                     .style('fill', getColor);
@@ -972,7 +973,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     if (us.features[y].properties.coc_number == 'CA-600') {
                       var la = us.features[y];
                       BarChart(la);
-                      createCFDATableHover(la);
+                      StateBarChart(la);
+                      //createCFDATableHover(la);
                       createCoCTable(la);
                     }
                   }
@@ -999,8 +1001,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('d', p2_1_path)
                     .on('click', function(d) {
                       BarChart(d);
+                      StateBarChart(d);
                       createCoCTable(d);
-                      createCFDATableHover(d);
+                      //createCFDATableHover(d);
                     })
                     .style('fill', p2_getColor)
                     .on('dblclick', p2_1_clicked)
@@ -1218,7 +1221,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       d.properties.EMAIL_ADDR + '<br />' + 'Phone: ' + d.properties.PRIMARY_PH + '</p>');
                 }
 
-                function createCFDATableHover(d) {
+                /*function createCFDATableHover(d) {
                   //console.log('cfdaTable d: ', d)
                   $('#panel_info').empty();
 
@@ -1251,7 +1254,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         initial_coc_poss[i].CFDA_website + '>' + initial_coc_poss[i].program_title +
                         '</a>' + '</td>' + '</tr>' + '</table>')
                   }
-                }
+                }*/
 
                 function filter_cfdaAmount(x) {
                   return x.fed_funding > 0;
@@ -1259,6 +1262,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function BarChart(d) {
 
+                  $('#panel_info').empty();
                   d3.select('#panel_matrix > svg').remove()
 
                   var p2_3_matrix_svg = d3.select('#panel_matrix').append('svg')
@@ -1431,6 +1435,128 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('position', 'relative')
                     .style('color', 'blue')
                     .html('<p>' + cfda_legend_key_values[i] + '</p>');
+                }
+
+                function StateBarChart(d) {
+
+                  d3.select('#panel_info > svg').remove()
+
+                  var p2_4_matrix_svg = d3.select('#panel_info').append('svg')
+                    /*.attr('width', matrix_width + margin.left + margin.right)
+                    .attr('height', matrix_height + margin.top + margin.bottom)*/
+                    .attr('width', map_width + margin.left + margin.right + 50)
+                    .attr('height', map_height + margin.top + margin.bottom + 40)
+                    .style('margin-left', -margin.left / 2.5 + 'px')
+                    .attr('transform', 'translate(' + 40 + ',' + 10 + ')');
+
+                  p2_4_matrix_svg.call(p2_3_bar_tip);
+
+                  function filter_cocNum_barChart(bar_chrt) {
+                    return bar_chrt.coc_number == d.properties.coc_number;
+                  }
+
+                  var initial = bar_chrt.filter(filter_cocNum_barChart);
+                  var initial_bar = initial.filter(filter_cfdaAmount);
+                  var formatNumber = d3.format('$,');
+
+                  var axisMargin = 5,
+                    x_width = 470,
+                    barHeight = 18,
+                    barPadding = 5,
+                    bar, scale, p2_xAxis, labelWidth = 0;
+
+                  max = d3.max(initial_bar, function(d) {
+                    return d.fed_funding;
+                  });
+
+                  bar = p2_4_matrix_svg.selectAll('g')
+                    .data(initial_bar)
+                    .enter()
+                    .append('g');
+
+                  bar.attr('class', 'bar')
+                    .attr('cx', 0)
+                    .style('fill', function(d) {
+                      if (d.category == 'Housing') {
+                        return '#7B4C66'
+                      } else if (d.category == 'Food') {
+                        return '#CC5500'
+                      } else if (d.category == 'Health') {
+                        return '#297B84'
+                      } /*else if (d.category == 'Research') {
+                        return '#A08E39'
+                      }*/ else if (d.category == 'Education') {
+                        return '#A08E39'
+                      } else if (d.category == 'Support Services') {
+                        return '#A9B2C3'
+                      } else if (d.category == 'Employment') {
+                        return '#006A4E'
+                      }
+                    })
+                    .attr('transform', function(d, i) {
+                      return 'translate(0,' + (i * (barHeight + barPadding)) + ')';
+                    })
+                    .on('mouseover', p2_3_bar_tip.show)
+                    .on('mouseout', p2_3_bar_tip.hide);
+
+                  bar.append('text')
+                    .attr('class', 'label')
+                    .attr('x', 15)
+                    .attr('y', barHeight / 2)
+                    .attr('dy', '.35em') //vertical align middle
+                    .text(function(d) {
+                      return d.cfda_number;
+                    }).each(function() {
+                      labelWidth = 50;
+                    });
+
+                  scale = d3.scale.linear()
+                    .domain([0, max])
+                    .range([0, x_width - labelWidth]);
+
+                  p2_xAxis = d3.svg.axis()
+                    //.orient('bottom')
+                    .scale(scale)
+                    .tickSize(-p2_matrix_svg[0][0].attributes[1].nodeValue + axisMargin)
+                    .tickFormat(function(d) {
+                      return formatNumber(d);
+                    });
+
+                  yAxis = d3.svg.axis()
+                    .orient('left');
+
+                  bar.append('rect')
+                    .attr('transform', 'translate(' + labelWidth + ',0)')
+                    .attr('margin-left', 5)
+                    //.attr('rx','30')
+                    .attr('height', barHeight)
+                    .attr('width', function(d) {
+                      return scale(d.fed_funding);
+                    });
+
+                  p2_4_matrix_svg.insert('g', ':first-child')
+                    .attr('class', 'axisHorizontal')
+                    .attr('transform', 'translate(' + labelWidth + ',' + 255 + ')')
+                    .call(p2_xAxis)
+                    .selectAll('text')
+                    .attr('y', 10)
+                    .attr('x', 0)
+                    .attr('dy', '.35em')
+                    .attr('transform', 'rotate(-35)')
+                    .style('font-size', '12')
+                    .style('text-anchor', 'end');
+
+                  p2_4_matrix_svg.insert('g', ':first-child')
+                    .classed('y axis', true)
+                    .call(yAxis)
+                    .append('text')
+                    .classed('p2_label', true)
+                    .attr('transform', 'rotate(-90)')
+                    .attr('x', -8)
+                    .attr('y', -1.05)
+                    .attr('dy', '.71em')
+                    .style('text-anchor', 'end')
+                    .text('Federal Programs Covering Homelessness');
                 }
               })
             })
