@@ -313,8 +313,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   spinner_panel1.stop();
 
                   d3.select('#container').append('div').attr('id', 'legend_title');
-                  d3.select('#container').append('div').attr('id', 'legend');
                   d3.select('#container').append('div').attr('id', 'viz_container');
+                  d3.select('#container').append('div').attr('id', 'legend');
 
                   var width = 1000,
                     height = 600,
