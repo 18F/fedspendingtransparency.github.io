@@ -1,4 +1,4 @@
-coc_number,coc_name,fed_funding
+coc_number,coc_name,amount
 AK-500,Anchorage CoC,19788262.93
 AK-501,Alaska Balance of State CoC,53431971.57
 AL-500,"Birmingham/Jefferson, St. Clair, Shelby Counties CoC",19039543.38
@@ -231,7 +231,7 @@ MO-600,"Springfield/Greene, Christian, Webster Counties CoC",6817197.09
 MO-602,"Joplin/Jasper, Newton Counties CoC",5366743
 MO-603,"St. Joseph/Andrew, Buchanan, DeKalb Counties CoC",557748.58
 MO-604,"Kansas City, Independence, Lees Summit/Jackson, Wyandotte Counties CoC",30737859.75
-MO-604,"Kansas City, Independence, Lee’s Summit/Jackson, Wyandotte Counties, MO & KS",0
+MO-604,"Kansas City, Independence, LeeÂ’s Summit/Jackson, Wyandotte Counties, MO & KS",0
 MO-606,Missouri Balance of State CoC,61482800.84
 MP-500,Northern Mariana Islands CoC,0
 MS-500,"Jackson/Rankin, Madison Counties CoC",28254686.04
