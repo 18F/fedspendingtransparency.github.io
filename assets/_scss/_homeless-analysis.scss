@@ -117,6 +117,7 @@
     background-color: inherit;
     font-family: inherit;
     min-height: 415px;
+    //max-width: 250px;
     overflow: visible;
   }
 
@@ -412,8 +413,10 @@
     margin-top: 5px;
     overflow: visible;
     background-color: inherit;
+    max-width: 350px;
     min-height: 255px;
     margin-left: 10px;
+    float:left;
   }
 
   .panel_title {
@@ -654,8 +657,10 @@
 
   #p2_3_legend{
     position: relative;
-    min-width: 470.48648648648657px;
-    margin-top: 10px;
+    //min-width: 470.48648648648657px;
+    max-width: 40px;
+    margin-top: 40px;
+    float:right;
   }
 
   #p2_3_legend_title{
@@ -665,11 +670,10 @@
 
   #p2_3_legend_key{
     position: relative;
-    float:left;
     height: 50px;
     width: 53px;
     left:10px;
-    margin: 30px 8px 30px 3px;
+    margin: 0px 0px 0px 0px;
   }
 
   #p2_3_key{
@@ -680,14 +684,8 @@
     position: relative;
     height: 10px;
     width: 150px;
-    margin: 45px 3px 3px -107px;
+    margin: -35px 0px 0px -150px;
     text-align: right;
-    -ms-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -sand-transform: rotate(-45deg);
-    transform: rotate(-45deg);
   }
 
   .p2_3_legend_title{

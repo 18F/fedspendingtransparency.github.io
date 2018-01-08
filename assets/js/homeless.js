@@ -81,13 +81,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 d3.select('#container2_1').append('div').attr('id', 'p2_1')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3')
+                d3.select('#container2_3').append('div').attr('id', 'p2_3_legend')
                 d3.select('#container2_4').append('div').attr('id', 'p2_4')
                 d3.select('#p2_1').append('div').attr('id', 'panel_map')
                 d3.select('#p2_2').append('div').attr('id', 'panel_matrix')
                 d3.select('#p2_3').append('div').attr('id', 'panel_coc')
+                //d3.select('#container2_3').append('div').attr('id', 'p2_3_legend_title')
                 d3.select('#p2_4').append('div').attr('id', 'panel_info')
-                d3.select('#container2_3').append('div').attr('id', 'p2_3_legend_title')
-                d3.select('#container2_3').append('div').attr('id', 'p2_3_legend')
+
 
                 var abs_width = 1024,
                   abs_height = 575,
@@ -118,7 +119,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .attr('height', info_height + margin.top + margin.bottom);
 
                 var coc_panel = d3.select('#panel_coc')
-                  .attr('width', info_width + margin.left + margin.right)
                   .attr('height', info_height + margin.top + margin.bottom);
 
                 var p2_matrix_svg = d3.select('#panel_matrix').append('svg')
@@ -1133,7 +1133,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   coc_panel.append('div')
                     .attr('id', 'coc_info')
                     .attr('height', info_height + margin.top + margin.bottom)
-                    .attr('width', info_width + margin.left + margin.right)
                     .html('<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
                       '<h3 class="panel_desc">' + d.properties.CONTACT_TY +
                       '<br />' + '</h3>' + '<p class="panel_text">' + d.properties.FIRST_NAME + ' ' +
@@ -1303,35 +1302,22 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('text-anchor', 'end')
                     .text('Federal Programs Covering Homelessness');
                 }
-                var cfda_legend_title = d3.select('#p2_3_legend_title')
+                /*var cfda_legend_title = d3.select('#p2_3_legend_title')
                   .append('div')
                   .attr('class', 'p2_3_legend_title')
                   .attr('width', map_width + margin.left + margin.right)
                   .html('<h5>CFDA Program Category</h5>')
-                  .style('text-anchor', 'center');
+                  .style('text-anchor', 'center');*/
 
                 var cfda_legend = d3.select('#p2_3_legend')
                   .append('div')
-                  .attr('width', map_width + margin.left + margin.right)
-                  .attr('padding', '50px 0 0 50px');
+                  .attr('id','p2_cfda_legend');
 
-                /*var cfda_color = ['#7B4C66', '#C98845', '#CC5500', '#297B84', '#4A8D5B', '#759043',
-                  '#A08E39', '#4A6C87', '#A9B2C3', '#006A4E'
-                ]
+                var cfda_color = ['#7B4C66', '#CC5500', '#297B84', '#4A6C87', '#006A4E','#A9B2C3'];
 
-                var cfda_legend_key_values = ['Housing', 'Housing & Education', 'Services', 'Health',
-                  'Support Services', 'Housing & Services', 'Health & Housing', 'Education & Services',
-                  'Housing & Research', 'Employment'
-                ];*/
-                var cfda_color = ['#7B4C66', '#CC5500', '#297B84', '#4A6C87', '#006A4E',
-                   '#A9B2C3', /*'#A08E39'*/
-                ]
+                var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education','Employment', 'Support Services'];
 
-                var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education',
-                  'Employment', 'Support Services', /*'Research'*/
-                ];
-
-                for (var i = 0; i < 7; i++) {
+                for (var i = 0; i < 6; i++) {
 
                   var l = cfda_legend.append('div')
                     .attr('id', 'p2_3_legend_key');
