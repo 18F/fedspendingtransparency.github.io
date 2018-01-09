@@ -28,7 +28,7 @@ function openTab2(evt, tab2Name) {
 }
 document.getElementById("defaultOpen2").click();
 
-var modal = document.getElementById('myModal');
+var modal = document.getElementById('myModal1');
 
 // Get the button that opens the modal
 var btn = document.getElementById("myBtn1");
