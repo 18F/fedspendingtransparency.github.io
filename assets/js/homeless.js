@@ -1377,7 +1377,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('height', matrix_height + margin.top + margin.bottom)*/
                     .attr('width', map_width + margin.left + margin.right + 50)
                     .attr('height', map_height + margin.top + margin.bottom + 140)
-                    .style('margin-left', -margin.left / 2.5 + 'px')
+                    .style('margin-left', -margin.left / 2.5 - 10 + 'px')
                     .attr('transform', 'translate(' + 40 + ',' + 10 + ')');
 
                   p2_4_matrix_svg.call(p2_3_bar_tip);
