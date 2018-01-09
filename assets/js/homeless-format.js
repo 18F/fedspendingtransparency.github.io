@@ -59,7 +59,7 @@ var modal2 = document.getElementById('myModal2');
 var btn2 = document.getElementById("myBtn2");
 
 // Get the <span> element that closes the modal
-var span2 = document.getElementsByClassName("close")[0];
+var span2 = document.getElementsByClassName("close2")[0];
 
 // When the user clicks the button, open the modal
 btn2.onclick = function() {
