@@ -1163,52 +1163,34 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   coc_panel.append('div')
                     .attr('id', 'coc_info')
                     .attr('height', info_height + margin.top + margin.bottom)
-                    .html('<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
-                      '<h3 class="panel_desc">' + d.properties.CONTACT_TY +
-                      '<br />' + '</h3>' + '<p class="panel_text">' + d.properties.FIRST_NAME + ' ' +
-                      d.properties.LAST_NAME + '<br />' + d.properties.TITLE + '<br /><br />' + 'Email: ' +
-                      d.properties.EMAIL_ADDR + '<br />' + 'Phone: ' + d.properties.PRIMARY_PH + '</p>');
-                }
-
-                /*function createCFDATableHover(d) {
-                  //console.log('cfdaTable d: ', d)
-                  $('#panel_info').empty();
-
-                  var coc = d.properties.coc_number;
-                  //console.log('coc: ',coc)
-                  function filter_cocNum_cfda(bar_chrt) {
-                    return bar_chrt.coc_number == coc;
+                    .html(Make_CoC_Table(d))
                   }
-
-                  var initial = bar_chrt.filter(filter_cocNum_cfda);
-                  var initial_coc_poss = initial.filter(filter_cfdaAmount)
-                  //console.log('initial: ',initial);
-
-                  info_panel.append('div')
-                    .attr('id', 'cfda_info_header')
-                    .attr('height', info_height + margin.top + margin.bottom)
-                    .attr('width', info_width + margin.left + margin.right + 60)
-                    .html('<table class ="icon">' + '<th class="head_val">CFDA</th>' +
-                      '<th class="head_name">Program Title</th>' + '</table>')
-
-                  for (var i = 0; i < initial_coc_poss.length; i++) {
-                    info_panel.append('div')
-                      .attr('id', 'cfda_info')
-                      //.attr('height', info_height + margin.top + margin.bottom)
-                      //.attr('width', info_width + margin.left + margin.right+60)
-                      .style('margin-bottom', '2px')
-                      .html('<table class ="icon">' +
-                        '<tr>' + '<td class="val">' + initial_coc_poss[i].cfda_number + '</td>' +
-                        '<td class="name" title="Click to visit program website">' + '<a href=' +
-                        initial_coc_poss[i].CFDA_website + '>' + initial_coc_poss[i].program_title +
-                        '</a>' + '</td>' + '</tr>' + '</table>')
-                  }
-                }*/
 
                 function filter_cfdaAmount(x) {
                   return x.fed_funding > 0;
                 }
 
+                function Make_CoC_Table(d){
+                  var OtherformatNumber = d3.format(',');
+                  console.log('Make CoC Table d: ',d);
+                  console.log("table_data: ",table_data);
+                  for(var i = 0; i < table_data.length; i++){
+                    if(table_data[i].coc_number === d.properties.coc_number){
+                      var tab_dat = table_data[i];
+                      console.log('tab_dat: ',tab_dat);
+                      return '<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
+                      '<h3 class="panel_desc">Total Homeless Population: ' + OtherformatNumber(tab_dat.total_homeless) +'<br/></h3>' +
+                      '<table><tr><td class="panel_text">'+'Veterans '+'</td><td class="panel_text2">'+ OtherformatNumber(tab_dat.homeless_veterans) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Unaccompanied Youth '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_unaccompanied_youth) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Families '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_people_in_families) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Shletered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.sheltered_homeless) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Unshletered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.unsheltered_homeless) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Chronically Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Homeless Individuals '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) +'</td></tr>'+'</table>'
+
+                    }
+                  }
+                }
                 function BarChart(d) {
 
                   $('#panel_info').empty();
@@ -1231,6 +1213,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var initial = bar_chrt.filter(filter_cocNum_barChart);
                   var initial_bar = initial.filter(filter_cfdaAmount);
                   var formatNumber = d3.format('$,');
+                  var OtherformatNumber = d3.format(',');
 
                   var axisMargin = 5,
                     x_width = 470,
@@ -1251,19 +1234,19 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('cx', 0)
                     .style('fill', function(d) {
                       if (d.category == 'Housing') {
-                        return '#7B4C66'
+                        return '#263237'
                       } else if (d.category == 'Food') {
-                        return '#CC5500'
+                        return '#E08E79'
                       } else if (d.category == 'Health') {
-                        return '#297B84'
+                        return '#744A78'
                       } /*else if (d.category == 'Research') {
                         return '#A08E39'
                       }*/ else if (d.category == 'Education') {
-                        return '#A08E39'
+                        return '#FF8900'
                       } else if (d.category == 'Support Services') {
-                        return '#A9B2C3'
+                        return '#AFB7B3'
                       } else if (d.category == 'Employment') {
-                        return '#006A4E'
+                        return '#3B8686'
                       }
                     })
                     .attr('transform', function(d, i) {
@@ -1343,7 +1326,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .append('div')
                   .attr('id','p2_cfda_legend');
 
-                var cfda_color = ['#7B4C66', '#CC5500', '#297B84', '#4A6C87', '#006A4E','#A9B2C3'];
+                var cfda_color = ['#263237', '#E08E79', '#744A78', '#FF8900', '#3B8686','#AFB7B3'];
 
                 var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education','Employment', 'Support Services'];
 
@@ -1415,19 +1398,19 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('cx', 0)
                     .style('fill', function(d) {
                       if (d.category == 'Housing') {
-                        return '#7B4C66'
+                        return '#263237'
                       } else if (d.category == 'Food') {
-                        return '#CC5500'
+                        return '#E08E79'
                       } else if (d.category == 'Health') {
-                        return '#297B84'
+                        return '#744A78'
                       } /*else if (d.category == 'Research') {
                         return '#A08E39'
                       }*/ else if (d.category == 'Education') {
-                        return '#A08E39'
+                        return '#FF8900'
                       } else if (d.category == 'Support Services') {
-                        return '#A9B2C3'
+                        return '#AFB7B3'
                       } else if (d.category == 'Employment') {
-                        return '#006A4E'
+                        return '#3B8686'
                       }
                     })
                     .attr('transform', function(d, i) {
