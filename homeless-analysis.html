@@ -29,7 +29,37 @@ page: homeless-analysis
 		<h5>Where are homeless people located?</h5>
 		<p>Offal brooklyn master cleanse chia polaroid retro fanny pack. Vaporware echo park lumbersexual, skateboard enamel pin meditation artisan
 			kombucha. Put a bird on it forage humblebrag vaporware 90's cronut taxidermy pinterest meggings hashtag YOLO chambray poke kitsch.</p>
-			<button class="button">Read More</button>
+			<button class="button" id="myBtn1">Read More</button>
+	</div>
+
+	<div id="myModal1" class="modal">
+
+	  <!-- Modal content -->
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="close">&times;</span>
+	      <h2>Where are homeless people located?</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Offal brooklyn master cleanse chia polaroid retro fanny pack. Vaporware echo park lumbersexual, skateboard enamel pin meditation artisan
+					kombucha. Put a bird on it forage humblebrag vaporware 90's cronut taxidermy pinterest meggings hashtag YOLO chambray poke kitsch.
+					Asymmetrical hot chicken farm-to-table crucifix pug brooklyn leggings polaroid authentic tilde retro banjo activated charcoal sartorial.
+					8-bit forage bicycle rights schlitz, salvia small batch copper mug +1 marfa chambray. Bushwick edison bulb succulents, blue bottle put a bird
+					on it poke helvetica tacos bicycle rights tattooed bitters mumblecore. Pickled locavore iceland, viral salvia aesthetic cred wolf food truck
+					bicycle rights flexitarian gluten-free normcore selfies.</p>
+
+				<p>Actually hell of lumbersexual hammock fam, vaporware gastropub subway tile PBR. Roof party cliche poutine master cleanse, four dollar toast
+					pitchfork gentrify shabby chic. Drinking vinegar heirloom meditation, put a bird on it tattooed shoreditch swag. Humblebrag chambray bushwick
+					live-edge, kale chips wolf neutra. Occupy street art ramps, you probably haven't heard of them lumbersexual letterpress mustache tacos 90's
+					schlitz ethical. Cornhole lo-fi humblebrag hexagon 8-bit unicorn ennui air plant cold-pressed af kombucha.</p>
+
+				<p>Tacos bicycle rights marfa, heirloom shabby chic poutine glossier. 8-bit asymmetrical meggings, authentic squid bicycle rights small batch 3
+					wolf moon retro poutine. Intelligentsia typewriter biodiesel master cleanse, marfa next level church-key pour-over subway tile twee irony
+					sustainable. Activated charcoal kinfolk wolf tacos, sartorial squid cliche vape. Chartreuse squid coloring book swag artisan PBR unicorn migas
+				  forage pork belly, brooklyn activated charcoal food truck intelligentsia scenester.</p>
+	    </div>
+	  </div>
+
 	</div>
 
 	<div class="col-md-6">
@@ -39,7 +69,8 @@ page: homeless-analysis
 		</div>
 
 		<div id="HowTo" class="tabcontent">
-  		<p>Asymmetrical hot chicken farm-to-table crucifix pug brooklyn leggings polaroid authentic tilde retro banjo activated charcoal sartorial. 8-bit forage bicycle rights schlitz, salvia small batch copper mug +1 marfa chambray.</p>
+  		<p>Asymmetrical hot chicken farm-to-table crucifix pug brooklyn leggings polaroid authentic tilde retro banjo activated charcoal sartorial.
+				8-bit forage bicycle rights schlitz, salvia small batch copper mug +1 marfa chambray.</p>
 		</div>
 
 		<div id="Sources" class="tabcontent">
@@ -76,8 +107,27 @@ page: homeless-analysis
 				<h5>What does the federal government do to address homelessness?</h5>
 				<p>Offal brooklyn master cleanse chia polaroid retro fanny pack. Vaporware echo park lumbersexual, skateboard enamel pin meditation artisan
 					kombucha. Put a bird on it forage humblebrag vaporware 90's cronut taxidermy pinterest meggings hashtag YOLO chambray poke kitsch.</p>
-					<button class="button">Read More</button>
+					<button class="button" id="myBtn2">Read More</button>
 			</div>
+			<div id="myModal2" class="modal">
+
+				<div class="modal-content">
+					<p>Bushwick edison bulb succulents, blue bottle put a bird on it poke helvetica tacos bicycle rights tattooed bitters mumblecore. Pickled
+						locavore iceland, viral salvia aesthetic cred wolf food truck bicycle rights flexitarian gluten-free normcore selfies.</p>
+
+						<p>Actually hell of lumbersexual hammock fam, vaporware gastropub subway tile PBR B. Roof party cliche poutine master cleanse, four dollar
+						toast pitchfork gentrify shabby chic. Drinking vinegar heirloom meditation, put a bird on it tattooed shoreditch swag. Humblebrag chambray
+						bushwick live-edge, kale chips wolf neutra. Occupy street art ramps, you probably haven't heard of them lumbersexual letterpress mustache tacos
+						90's schlitz ethical. Cornhole lo-fi humblebrag hexagon 8-bit unicorn ennui air plant cold-pressed af kombucha.</p>
+
+						<p>Tacos bicycle rights marfa, heirloom shabby chic poutine glossier. 8-bit asymmetrical meggings, authentic squid bicycle rights small batch 3
+							wolf moon retro poutine. Intelligentsia typewriter biodiesel master cleanse, marfa next level church-key pour-over subway tile twee irony
+							sustainable. Activated charcoal kinfolk wolf tacos, sartorial squid cliche vape. Chartreuse squid coloring book swag artisan PBRB unicorn migas
+						 forage pork belly, brooklyn activated charcoal food truck intelligentsia scenester.</p>
+			</div>
+
+		</div>
+
 
 			<div class="col-md-6">
 				<div class="tab">
@@ -154,4 +204,5 @@ page: homeless-analysis
 <script src="{{site.baseurl}}/assets/js/bootstrap.min.js"></script>
 <script src="{{site.baseurl}}/assets/js/d3.tip.v0.6.3.js"></script>
 <script src="{{site.baseurl}}/assets/js/topojson.v1.min.js"></script>
+<script src="{{site.baseurl}}/assets/js/homeless-format.js"></script>
 <script src="{{site.baseurl}}/assets/js/homeless.js"></script>
