@@ -1226,19 +1226,19 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('cx', 0)
                     .style('fill', function(d) {
                       if (d.category == 'Housing') {
-                        return '#7B4C66'
+                        return '#263237'
                       } else if (d.category == 'Food') {
-                        return '#CC5500'
+                        return '#E08E79'
                       } else if (d.category == 'Health') {
-                        return '#297B84'
+                        return '#744A78'
                       } /*else if (d.category == 'Research') {
                         return '#A08E39'
                       }*/ else if (d.category == 'Education') {
-                        return '#A08E39'
+                        return '#FF8900'
                       } else if (d.category == 'Support Services') {
-                        return '#A9B2C3'
+                        return '#AFB7B3'
                       } else if (d.category == 'Employment') {
-                        return '#006A4E'
+                        return '#3B8686'
                       }
                     })
                     .attr('transform', function(d, i) {
@@ -1390,19 +1390,19 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('cx', 0)
                     .style('fill', function(d) {
                       if (d.category == 'Housing') {
-                        return '#7B4C66'
+                        return '#263237'
                       } else if (d.category == 'Food') {
-                        return '#CC5500'
+                        return '#E08E79'
                       } else if (d.category == 'Health') {
-                        return '#297B84'
+                        return '#744A78'
                       } /*else if (d.category == 'Research') {
                         return '#A08E39'
                       }*/ else if (d.category == 'Education') {
-                        return '#A08E39'
+                        return '#FF8900'
                       } else if (d.category == 'Support Services') {
-                        return '#A9B2C3'
+                        return '#AFB7B3'
                       } else if (d.category == 'Employment') {
-                        return '#006A4E'
+                        return '#3B8686'
                       }
                     })
                     .attr('transform', function(d, i) {
