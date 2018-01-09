@@ -1318,7 +1318,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .append('div')
                   .attr('id','p2_cfda_legend');
 
-                var cfda_color = ['#7B4C66', '#CC5500', '#297B84', '#4A6C87', '#006A4E','#A9B2C3'];
+                var cfda_color = ['#263237', '#E08E79', '#744A78', '#FF8900', '#3B8686','#AFB7B3'];
 
                 var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education','Employment', 'Support Services'];
 
