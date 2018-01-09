@@ -993,6 +993,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       StateBarChart(la);
                       //createCFDATableHover(la);
                       createCoCTable(la);
+                      p2_1_clicked_p1(la)
                     }
                   }
 
