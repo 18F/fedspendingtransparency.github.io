@@ -1,7 +1,6 @@
 COC_Number,COC_Name,amount
-,,1908722.05
 AK-500,Anchorage CoC,19788262.93
-AK-501,Alaska Balance of State CoC,51713526.57
+AK-501,Alaska Balance of State CoC,53431971.57
 AL-500,"Birmingham/Jefferson, St. Clair, Shelby Counties CoC",19039543.38
 AL-501,Mobile City & County/Baldwin County CoC,24731768.91
 AL-502,Florence/Northwest Alabama CoC,753249
@@ -16,6 +15,7 @@ AR-503,Arkansas  Balance of State  CoC,5184572
 AR-504,Delta Hills CoC,25091524.2
 AR-505,Southeast Arkansas,13629575.42
 AR-508,Old Fort Homeless Coalition,5589759
+AR-512,"Boone, Baxter, Marion, Newton Counties CoC",0
 AZ-500,Arizona Balance of State CoC,34175270.5
 AZ-501,Tucson/Pima County CoC,26437103.42
 AZ-502,Phoenix/Mesa/Maricopa County Regional CoC,66191417.41
@@ -49,12 +49,14 @@ CA-526,"Amador, Calaveras, Tuolumne and Mariposa Counties CoC",410907.48
 CA-527,Tehama County CoC,664143
 CA-529,Lake County CoC,350000
 CA-530,"Alpine, Inyo, Mono Counties CoC",785420
+CA-530,"Inyo, Mono, Alpine Counties CoC",0
 CA-600,Los Angeles City & County CoC,274529846.8
 CA-601,San Diego City and County CoC,82839814.92
 CA-602,Santa Ana/Anaheim/Orange County CoC,36147791.43
 CA-603,Santa Maria/Santa Barbara County CoC,6851536.92
 CA-604,Bakersfield/Kern County CoC,38913563.29
 CA-606,Long Beach CoC,19991837.92
+CA-607,Pasadena CoC,0
 CA-608,Riverside City & County CoC,20889729.14
 CA-609,San Bernardino City & County CoC,15580968.84
 CA-611,Oxnard/San Buenaventura/Ventura County CoC,3917033.16
@@ -100,10 +102,13 @@ GA-501,Georgia Balance of State CoC,69261247.01
 GA-502,Fulton County Continuum of Care,502995.38
 GA-503,Athens/Clarke County CoC,1359354.63
 GA-504,Augusta-Richmond County CoC,5366582.89
+GA-504,Augusta CoC,0
 GA-505,Columbus-Muscogee/Russell County CoC,4552091
 GA-506,Marietta/Cobb County CoC,6458291.3
 GA-507,Savannah/Chatham County CoC,10014626.97
 GA-508,DeKalb County CoC,10412561.38
+GA-508,DeKalb County Continuum of Care,0
+GU-500,Guam CoC,1612986.88
 HI-500,Hawaii Balance of State CoC,11981582
 HI-501,Honolulu CoC,32371362.94
 IA-500,"Sioux City/Dakota, Woodbury Counties CoC",4369386.25
@@ -132,8 +137,7 @@ IL-517,Aurora/Elgin/Kane County CoC,16215995.79
 IL-518,Rock Island/Moline/Northwestern Illinois CoC,4479260.26
 IL-519,West Central Illinois CoC,3722038
 IL-520,Southern Illinois CoC,16519094.63
-IN-500,South Bend/Mishawaka/St. Joseph County CoC,2523932
-IN-502,Indiana Balance of State CoC,49349853.92
+IN-502,Indiana Balance of State CoC,51873785.92
 IN-503,Indianapolis CoC,39411704.66
 KS-502,Wichita/Sedgwick County CoC,13395450.63
 KS-503,Topeka/Shawnee County CoC,4532090.62
@@ -145,29 +149,31 @@ KY-502,Lexington/Fayette County CoC,6119010
 LA-500,Lafayette/Acadiana CoC,11241996
 LA-502,Shreveport/Bossier/Northwest CoC,10330439.91
 LA-503,New Orleans/Jefferson Parish CoC,46476348.8
-LA-504,Baton Rouge CoC,32622434.34
 LA-505,Monroe/Northeast Louisiana CoC,12162837
 LA-506,Slidell/Southeast Louisiana CoC,7438718.93
 LA-507,Alexandria/Central Louisiana CoC,8443885.31
 LA-508,Houma-Terrebonne/Thibodaux CoC,7733981.97
 LA-509,Louisiana Balance of State,8627347
+LA-509,Louisiana Balance of State (BoS),0
+LA-509,Louisiana Balance of State CoC,32622434.34
 MA-500,Boston CoC,81928741.67
 MA-502,Lynn CoC,6540242.93
 MA-503,Cape Cod/Islands CoC,6393994.05
+MA-504,Springfield CoC,0
 MA-504,Springfield/Hampden County CoC,15546879.8
 MA-505,New Bedford CoC,6438373
 MA-506,Worcester City & County CoC,26059760.06
+MA-507,Pittsfield/Berkshire County CoC,0
 MA-507,"Pittsfield/Berkshire, Franklin, Hampshire County CoC",8468690
 MA-508,Lowell CoC,6378089
 MA-509,Cambridge CoC,5196275.69
 MA-510,"Gloucester, Haverhill, Salem/Essex County CoC",7051508.28
-MA-510,Gloucester/Haverhill/Salem/Essex County CoC,4481369
-MA-511,Quincy/Brockton/Weymouth/Plymouth City and County CoC,6466675.33
+MA-510,Gloucester/Haverhill/Salem/Essex County CoC,0
+MA-511,Quincy/Brockton/Weymouth/Plymouth City and County CoC,10978945.33
 MA-515,Fall River CoC,4447864
-MA-516,Massachusetts Balance of State,719647
-MA-516,Massachusetts Balance of State CoC,4512270
+MA-516,Massachusetts Balance of State,5368095
+MA-516,Massachusetts Balance of State CoC,1908722.05
 MA-517,Somerville CoC,1405609.9
-MA-518,"Brookline, Newton CoC",167079
 MA-519,Attleboro/Taunton/Bristol County CoC,619653
 MA-599,"MA-510, MA-516 & MA-518 Shared Jurisdiction",1027853
 MD-500,Cumberland/Allegany County CoC,517660.05
@@ -186,8 +192,7 @@ MD-512,Hagerstown/Washington County CoC,6418063
 MD-513,Wicomico/Somerset/Worcester County CoC,4360142.86
 MD-600,Prince George`s County/Maryland CoC,8931208.86
 MD-601,Montgomery County CoC,20769226.33
-ME-500,Maine Balance of State CoC,52443349.02
-ME-502,Portland CoC,7238183
+ME-500,Maine Balance of State CoC,59681532.02
 MI-500,Michigan Balance of State CoC,34442315.22
 MI-501,Detroit CoC,51511844.97
 MI-502,Dearborn/Dearborn Heights/Westland/Wayne County CoC,4899755
@@ -226,7 +231,9 @@ MO-600,"Springfield/Greene, Christian, Webster Counties CoC",6817197.09
 MO-602,"Joplin/Jasper, Newton Counties CoC",5366743
 MO-603,"St. Joseph/Andrew, Buchanan, DeKalb Counties CoC",557748.58
 MO-604,"Kansas City, Independence, Lees Summit/Jackson, Wyandotte Counties CoC",30737859.75
+MO-604,"Kansas City, Independence, Lees Summit/Jackson, Wyandotte Counties, MO & KS",0
 MO-606,Missouri Balance of State CoC,61482800.84
+MP-500,Northern Mariana Islands CoC,0
 MS-500,"Jackson/Rankin, Madison Counties CoC",28254686.04
 MS-501,Mississippi Balance of State CoC,42597843
 MS-503,Gulf Port/Gulf Coast Regional CoC,10481103.46
@@ -248,7 +255,8 @@ NE-500,Nebraska Balance of State CoC,10337572.42
 NE-501,Omaha/Council Bluffs CoC,18034909.33
 NE-502,Lincoln CoC,6498218.08
 NH-500,New Hampshire Balance of State CoC,23785597.41
-NH-502,Nashua/Hillsborough County CoC,12650228
+NH-501,Manchester CoC,6937539
+NH-502,Nashua/Hillsborough County CoC,5712689
 NJ-500,Atlantic City & County CoC,8147154.19
 NJ-501,Bergen County CoC,905099
 NJ-502,Burlington County CoC,440487
@@ -267,7 +275,7 @@ NJ-515,Elizabeth/Union County CoC,9179547.55
 NJ-516,"Warren, Sussex, Hunterdon Counties CoC",741006.87
 NM-500,Albuquerque CoC,26028853.64
 NM-501,New Mexico Balance of State CoC,62674434.46
-No CoC,NA,532371
+No CoC,No CoC,532371
 NV-500,Las Vegas/Clark County CoC,21309858.46
 NV-501,Reno/Sparks/Washoe County CoC,10592556.76
 NV-502,Nevada Balance of State CoC,769990.98
@@ -295,6 +303,7 @@ NY-602,Newburgh/Middletown/Orange County CoC,10182257.34
 NY-603,"Nassau, Suffolk Counties/Babylon/Islip/ Huntington CoC",10994404.38
 NY-604,Yonkers/Mount Vernon/New Rochelle/Westchester CoC,46446687.03
 NY-606,Rockland County CoC,9245729.42
+NY-607,Sullivan County CoC,0
 NY-608,Kingston/Ulster County CoC,1962243.46
 OH-500,Cincinnati/Hamilton County CoC,36290535.23
 OH-501,Toledo/Lucas County CoC,10156957.55
@@ -338,6 +347,7 @@ PA-603,Beaver County CoC,1137507.58
 PA-605,Erie City & County CoC,4859025
 PR-502,Puerto Rico Balance of Commonwealth CoC,47550275.73
 PR-503,South-Southeast Puerto Rico CoC,47971697.58
+PR-503,South/Southeast Puerto Rico CoC,0
 RI-500,Rhode Island Statewide CoC,36370184.99
 SC-500,Charleston/Low Country CoC,16880296.93
 SC-501,Greenville/Anderson/Spartanburg Upstate CoC,19146170.06
@@ -361,6 +371,7 @@ TX-601,Fort Worth/Arlington/Tarrant County CoC,21127176.46
 TX-603,El Paso City & County CoC,19714700.86
 TX-604,Waco/McLennan County CoC,4514492.9
 TX-607,Texas Balance of State (BoS) CoC,146681677.4
+TX-611,Amarillo CoC,0
 TX-624,"Wichita Falls/Wise, Palo Pinto, Wichita, Archer Counties CoC",2694333
 TX-700,"Houston, Pasadena, Conroe/Harris, Ft. Bend, Montgomery, Counties CoC",71320199.97
 TX-701,Bryan/College Station/Brazos Valley CoC,5004901.43
@@ -402,4 +413,4 @@ WV-501,"Huntington/Cabell, Wayne Counties CoC",9974235.46
 WV-503,"Charleston/Kanawha, Putnam, Boone, Clay Counties CoC",4836397.54
 WV-508,West Virginia Balance of State CoC,46259004.18
 WY-500,Wyoming Statewide CoC,9063786
-NA,NA,830975310.2
+NA,NA,827643878.3
