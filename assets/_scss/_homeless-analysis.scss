@@ -65,7 +65,43 @@
       border: 1px solid #ccc;
       border-top: none;
   }
+  .tab2 {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      background-color: #inherit;
+      margin-top: 10px;
+  }
 
+  /* Style the buttons inside the tab */
+  .tab2 button {
+      background-color: inherit;
+      float: left;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab2 button:hover {
+      background-color: #ddd;
+  }
+
+  /* Create an active/current tablink class */
+  .tab2 button.active {
+      background-color: inherit;
+      border-bottom: solid 2px #0071BC;
+  }
+
+  /* Style the tab content */
+  .tabcontent2 {
+      display: none;
+      padding: 6px 12px;
+      border: 1px solid #ccc;
+      border-top: none;
+  }
   & div.row {
     margin-left: 0;
     margin-right: 0;
