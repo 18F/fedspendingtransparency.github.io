@@ -65,6 +65,7 @@
       border: 1px solid #ccc;
       border-top: none;
   }
+
   & div.row {
     margin-left: 0;
     margin-right: 0;
@@ -662,6 +663,15 @@
     stroke: rgba(0, 0, 0, 0.2);
   }
 
+  .axisHorizontal2 path {
+    fill: none;
+  }
+
+  .axisHorizontal2 .tick line {
+    stroke-width: 1;
+    stroke: rgba(0, 0, 0, 0.2);
+  }
+
   #p2_3_legend{
     position: relative;
     //min-width: 470.48648648648657px;
@@ -680,6 +690,7 @@
     height: 50px;
     width: 53px;
     left:10px;
+    top:40px;
     margin: 0px 0px 0px 0px;
   }
 

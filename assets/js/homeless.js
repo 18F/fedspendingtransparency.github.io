@@ -85,7 +85,7 @@ var spinner_panel5 = new Spinner(opts).spin(target_panel5);
 //var spinner_panel3 = new Spinner(opts).spin(target_panel3);
 
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
-  d3.json('/data-lab-data/us-states.json', function(json) {
+  d3.csv('/data-lab-data/2017statecfdafunding.csv', function(cfda_state) {
     d3.json('/data-lab-data/coc-pop-type.json', function(data) {
       /**return{
         total_homeless: +data.total_homeless
@@ -101,7 +101,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-                console.log('CoC pop type: ', table_data);
+                console.log('CFDA State: ', cfda_state);
                 console.log('CoC US: ', us);
 
                 d3.select('#container2_1').append('div').attr('id', 'p2_1')
@@ -184,6 +184,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var m = p2_1_map_svg.append('g');
 
+
+
                 data.forEach(function(d) {
                   d.total_homeless = +d.total_homeless
                   d.unsheltered = +d.unsheltered_homeless
@@ -194,6 +196,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 bar_chrt.forEach(function(d) {
                   d.fed_funding = +d.fed_funding;
                 });
+
+                cfda_state.forEach(function(d) {
+                  d.fed_funding = +d.fed_funding;
+                });
+
+                cfda_state.sort(function(a,b){
+                  return b.fed_funding - a.fed_funding
+                })
 
                 map_data.forEach(function(d) {
                   d.fed_funding = +d.fed_funding;
@@ -1358,27 +1368,28 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function StateBarChart(d) {
-
+                  console.log('State bar chart d: ',d);
                   d3.select('#panel_info > svg').remove()
 
                   var p2_4_matrix_svg = d3.select('#panel_info').append('svg')
                     /*.attr('width', matrix_width + margin.left + margin.right)
                     .attr('height', matrix_height + margin.top + margin.bottom)*/
                     .attr('width', map_width + margin.left + margin.right + 50)
-                    .attr('height', map_height + margin.top + margin.bottom + 40)
+                    .attr('height', map_height + margin.top + margin.bottom + 140)
                     .style('margin-left', -margin.left / 2.5 + 'px')
                     .attr('transform', 'translate(' + 40 + ',' + 10 + ')');
 
                   p2_4_matrix_svg.call(p2_3_bar_tip);
 
-                  function filter_cocNum_barChart(bar_chrt) {
-                    return bar_chrt.coc_number == d.properties.coc_number;
+                  function filter_state_barChart(cfda_state) {
+                    return cfda_state.State_code == d.properties.STUSAB;
                   }
 
-                  var initial = bar_chrt.filter(filter_cocNum_barChart);
+                  var initial = cfda_state.filter(filter_state_barChart);
                   var initial_bar = initial.filter(filter_cfdaAmount);
                   var formatNumber = d3.format('$,');
 
+                  console.log('state bar initial_bar: ',initial)
                   var axisMargin = 5,
                     x_width = 470,
                     barHeight = 18,
@@ -1438,13 +1449,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   p2_xAxis = d3.svg.axis()
                     //.orient('bottom')
                     .scale(scale)
-                    .tickSize(-p2_matrix_svg[0][0].attributes[1].nodeValue + axisMargin)
+                    .tickSize(-p2_matrix_svg[0][0].attributes[1].nodeValue + axisMargin - 50)
                     .tickFormat(function(d) {
                       return formatNumber(d);
                     });
 
                   yAxis = d3.svg.axis()
-                    .orient('left');
+                    .orient('left')
+                    .tickSize(0,400);
 
                   bar.append('rect')
                     .attr('transform', 'translate(' + labelWidth + ',0)')
@@ -1456,8 +1468,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     });
 
                   p2_4_matrix_svg.insert('g', ':first-child')
-                    .attr('class', 'axisHorizontal')
-                    .attr('transform', 'translate(' + labelWidth + ',' + 255 + ')')
+                    .attr('class', 'axisHorizontal2')
+                    .attr('transform', 'translate(' + labelWidth + ',' + 345 + ')')
                     .call(p2_xAxis)
                     .selectAll('text')
                     .attr('y', 10)
@@ -1473,11 +1485,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .append('text')
                     .classed('p2_label', true)
                     .attr('transform', 'rotate(-90)')
-                    .attr('x', -8)
+                    .attr('x', -58)
                     .attr('y', -1.05)
                     .attr('dy', '.71em')
                     .style('text-anchor', 'end')
-                    .text('Federal Programs Covering Homelessness');
+                    .text('State Level Funding From Federal Programs');
                 }
               })
             })
