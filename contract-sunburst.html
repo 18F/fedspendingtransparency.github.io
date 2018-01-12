@@ -6,6 +6,9 @@ filename: Contract-Sunburst.md
 title: Contract Sunburst
 page: contract-sunburst
 ---
+
+<link href="/assets/js/contract-sunburst/static/css/main.0f248c4b.css" rel="stylesheet">
+
 <div id="burst_container";style="height:100%; padding:0; margin:0">
   <div class="row mt-0">
     <div class="col-md-8" style="margin-top:0">
@@ -23,33 +26,27 @@ page: contract-sunburst
           <div style="left:65px;top:25px;" class="legend_circleKeyLabel"><span style="left:75px;">Funding Subagency</span></div>
           <div style="left:65px;top:36px;" class="legend_circleKeyLabel"><span style="left:75px;">Funding Agency</span></div>
           <div style="left:65px;top:65px;" class="legend_circleKeyLabel"><span style="left:75px;">2017 Q3 Total Contracts</span></div>
-          <svg id="legend_scaleKey"></svg>
+          <svg id="legend_scaleKey">
+              <circle r="25" class="legend_scaleKeyCircle" cx="60" cy="65" />
+              <circle r="35" class="legend_scaleKeyCircle" cx="60" cy="65" />
+              <circle r="45" class="legend_scaleKeyCircle" cx="60" cy="65" />
+              <circle r="55" class="legend_scaleKeyCircle" cx="60" cy="65" />
+          </svg>
         </div>
       </div>
     </div>
   </div>
   <div class="row mt-0">
-    <div id="disclaim" class="col-md-6" style="padding: 0px">
+    <div id="root"></div>
+    <!-- <div id="disclaim" class="col-md-6" style="padding: 0px">
       <div id="sunburst-panel"></div>
     </div>
 
     <div class="col-md-6" style="padding: 0px; height:100%">
       <div id="sunburst">
         <div id="circ"></div>
-      </div>
-      <!--<div style="min-height:135px">
-        <div class="col-md-6" style="padding-left:0; padding-right:0">
-          <div id="legend_colorKey">
-            <div style="left:65px;top:14px;width:70px;" class="legend_circleKeyLabel"><span style="left:75px;">Contractor</span></div>
-            <div style="left:65px;top:25px;" class="legend_circleKeyLabel"><span style="left:75px;">Funding Subagency</span></div>
-            <div style="left:65px;top:36px;" class="legend_circleKeyLabel"><span style="left:75px;">Funding Agency</span></div>
-            <div style="left:65px;top:65px;" class="legend_circleKeyLabel"><span style="left:75px;">2017 Q3 Total Contracts</span></div>
-            <svg id="legend_scaleKey"></svg>
-          </div>
-        </div>
-        <div class="col-md-6" style="padding:0"></div>
-      </div>
-    </div>-->
+      </div> -->
+
     </div>
     <footer>
     <div class="row mt-0">
@@ -68,4 +65,4 @@ page: contract-sunburst
 <!-- d3 -->
 <script src="{{site.baseurl}}/assets/js/vendor/d3.v3.min.js"></script>
 <script src="{{site.baseurl}}/assets/js/vendor/spin.min.js"></script>
-<script src="{{site.baseurl}}/assets/js/contract-sunburst.js"></script>
+<script src="{{site.baseurl}}/assets/js/contract-sunburst/static/js/main.106ae71d.js"></script>
