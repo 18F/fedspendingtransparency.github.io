@@ -77,3 +77,23 @@ window.onclick = function(event) {
         modal2.style.display = "none";
     }
 }
+
+var modalContact = document.getElementById('myModalContact');
+
+var btnContact = document.getElementById("myBtnContact");
+
+var spanContact = document.getElementsByClassName("closeContact")[0];
+
+btnContact.onclick = function() {
+    modalContact.style.display = "block";
+}
+
+spanContact.onclick = function() {
+    modalContact.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modalContact.style.display = "none";
+    }
+}
