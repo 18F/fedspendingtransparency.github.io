@@ -4,7 +4,7 @@
 //
 //
 // Spinner loading controls
-
+var zoomLevel = 1;
 var opts = {
   lines: 9, // The number of lines to draw
   length: 16, // The length of each line
@@ -343,7 +343,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   var tip = d3.tip()
                     .attr('class', 'homeless-analysis d3-tip')
-                    .offset([-10, -10])
                     .html(function(d) {
                       return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
                         'Federal Funding: ' + getDollarValue(d) + '<br>' +
@@ -411,6 +410,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   var g = map_svg.append('g')
                     .attr('class', 'counties')
+                    .attr('id','county')
                     .selectAll('path')
                     .data(us.features)
                     .enter().append('path')
@@ -476,6 +476,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       centered = null;
 
                     }
+                    zoomLevel = k;
 
                     g.selectAll('path')
                       .classed('active', centered && function(d) {
