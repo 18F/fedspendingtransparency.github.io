@@ -64,7 +64,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 d3.select('#p2_5').append('div').attr('id', 'panel_contact')
 
 
-                var abs_width = 1024,
+                var abs_width = 900,
                   abs_height = 575,
                   margin = {
                     top: 100,
@@ -1313,8 +1313,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .append('rect')
                     .attr('x', 7)
                     .attr('y', 7)
-                    .attr('height', 30)
-                    .attr('width', 30)
+                    .attr('height', 20)
+                    .attr('width', 20)
                     .style('fill', function(d) {
                       return cfda_color[i];
                     });
