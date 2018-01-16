@@ -92,7 +92,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .attr('width', info_width + margin.left + margin.right)
                   .attr('height', info_height + margin.top + margin.bottom);
 
-                var contact_panel = d3.select ('#panel_contact')
+                var contact_panel = d3.select('#panel_contact')
                   .attr('width', info_width + margin.left + margin.right)
                   .attr('height', info_height + margin.top + margin.bottom);
 
@@ -153,7 +153,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   d.fed_funding = +d.fed_funding;
                 });
 
-                cfda_state.sort(function(a,b){
+                cfda_state.sort(function(a, b) {
                   return b.fed_funding - a.fed_funding
                 })
 
@@ -201,17 +201,17 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 var formatNumber = d3.format('$,.0f');
                 var OtherformatNumber = d3.format(',');
 
-                function bar_click(d){
-                  console.log("bar_click d: ",d);
+                function bar_click(d) {
+                  console.log("bar_click d: ", d);
                   window.open(d.CFDA_website)
                 }
 
                 function getColor(d) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
-                      if (data[i].total_homeless <= 0){
-                      return ('#C9CBC8')
-                      } else if(data[i].total_homeless <= 100) {
+                      if (data[i].total_homeless <= 0) {
+                        return ('#C9CBC8')
+                      } else if (data[i].total_homeless <= 100) {
                         return ('#F1F3F2');
                       } else if (data[i].total_homeless <= 200) {
                         return ('#E9ECEA');
@@ -303,8 +303,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function getCFDA_value(d) {
                   //console.log('CFDA value: ',d);
                   return 'Program Title: ' + d.program_title + '<br/>' +
-                  'Funding Amount: ' + formatNumber(d.fed_funding) +
-                  '<br/>' + 'Click to visit the program website';
+                    'Funding Amount: ' + formatNumber(d.fed_funding) +
+                    '<br/>' + 'Click to visit the program website';
                 }
 
                 //*************************************************************
@@ -445,26 +445,26 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       var centroid = path.centroid(d)
                       x = centroid[0]
                       y = centroid[1]
-                      console.log('clicked d: ',d);
-                      console.log('clicked centroid: ',centroid);
-                      console.log('clicked area: ',d.properties.Shape__Are);
-                      if (d.properties.COCNAME == 'Hawaii Balance of State CoC'){
+                      console.log('clicked d: ', d);
+                      console.log('clicked centroid: ', centroid);
+                      console.log('clicked area: ', d.properties.Shape__Are);
+                      if (d.properties.COCNAME == 'Hawaii Balance of State CoC') {
                         k = 6.0
-                      }else if (d.properties.COCNAME == 'Alaska Balance of State CoC'){
+                      } else if (d.properties.COCNAME == 'Alaska Balance of State CoC') {
                         k = 4.0
-                      }else if (d.properties.COCNAME == 'Maine Balance of State CoC'){
+                      } else if (d.properties.COCNAME == 'Maine Balance of State CoC') {
                         k = 5.0
-                      }else if (d.properties.Shape__Are <= .4) {
+                      } else if (d.properties.Shape__Are <= .4) {
                         k = 17.0
-                      }else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1){
+                      } else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1) {
                         k = 14.0
-                      }else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5){
+                      } else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5) {
                         k = 12.0
-                      }else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17){
+                      } else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17) {
                         k = 6.0
-                      }else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55){
+                      } else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55) {
                         k = 3.0
-                      }else{
+                      } else {
                         k = 2.0
                       };
                       centered = d;
@@ -945,7 +945,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       var la = us.features[y];
                       BarChart(la);
                       StateBarChart(la);
-                      //createCFDATableHover(la);
+                      createContact(la);
                       createCoCTable(la);
                       p2_1_clicked_p1(la)
                     }
@@ -975,57 +975,57 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       BarChart(d);
                       StateBarChart(d);
                       createCoCTable(d);
-                      //createCFDATableHover(d);
+                      createContact(d);
                     })
                     .style('fill', p2_getColor)
                     .on('dblclick', p2_1_clicked)
                     .on('mouseover', p2_tip.show)
                     .on('mouseout', p2_tip.hide);
 
-                    function p2_getColor(d) {
-                      for (var i = 0; i < map_data.length; i++) {
-                        if (d.properties.coc_number === map_data[i].COC_Number) {
-                          if (map_data[i].amount <= 500000) {
-                            return ('#BEF399');
-                          } else if (map_data[i].amount <= 1500000) {
-                            return ('#B0EC9A');
-                          } else if (map_data[i].amount <= 2500000) {
-                            return ('#A3E59B');
-                          } else if (map_data[i].amount <= 5000000) {
-                            return ('#96DD9B');
-                          } else if (map_data[i].amount <= 7500000) {
-                            return ('#8AD59C');
-                          } else if (map_data[i].amount <= 10000000) {
-                            return ('#80CE9C');
-                          } else if (map_data[i].amount <= 20000000) {
-                            return ('#76C69C');
-                          } else if (map_data[i].amount <= 30000000) {
-                            return ('#6DBD9B');
-                          } else if (map_data[i].amount <= 40000000) {
-                            return ('#66B59A');
-                          } else if (map_data[i].amount <= 50000000) {
-                            return ('#5FAD98');
-                          } else if (map_data[i].amount <= 60000000) {
-                            return ('#5AA496');
-                          } else if (map_data[i].amount <= 70000000) {
-                            return ('#569C93');
-                          } else if (map_data[i].amount <= 80000000) {
-                            return ('#529490');
-                          } else if (map_data[i].amount <= 90000000) {
-                            return ('#508B8C');
-                          } else if (map_data[i].amount <= 100000000) {
-                            return ('#4E8387');
-                          } else if (map_data[i].amount <= 150000000) {
-                            return ('#465261');
-                          } else if (map_data[i].amount <= 200000000) {
-                            return ('#3E3C4A');
-                          } else {
-                            return ('#291C24')
-                          }
+                  function p2_getColor(d) {
+                    for (var i = 0; i < map_data.length; i++) {
+                      if (d.properties.coc_number === map_data[i].COC_Number) {
+                        if (map_data[i].amount <= 500000) {
+                          return ('#BEF399');
+                        } else if (map_data[i].amount <= 1500000) {
+                          return ('#B0EC9A');
+                        } else if (map_data[i].amount <= 2500000) {
+                          return ('#A3E59B');
+                        } else if (map_data[i].amount <= 5000000) {
+                          return ('#96DD9B');
+                        } else if (map_data[i].amount <= 7500000) {
+                          return ('#8AD59C');
+                        } else if (map_data[i].amount <= 10000000) {
+                          return ('#80CE9C');
+                        } else if (map_data[i].amount <= 20000000) {
+                          return ('#76C69C');
+                        } else if (map_data[i].amount <= 30000000) {
+                          return ('#6DBD9B');
+                        } else if (map_data[i].amount <= 40000000) {
+                          return ('#66B59A');
+                        } else if (map_data[i].amount <= 50000000) {
+                          return ('#5FAD98');
+                        } else if (map_data[i].amount <= 60000000) {
+                          return ('#5AA496');
+                        } else if (map_data[i].amount <= 70000000) {
+                          return ('#569C93');
+                        } else if (map_data[i].amount <= 80000000) {
+                          return ('#529490');
+                        } else if (map_data[i].amount <= 90000000) {
+                          return ('#508B8C');
+                        } else if (map_data[i].amount <= 100000000) {
+                          return ('#4E8387');
+                        } else if (map_data[i].amount <= 150000000) {
+                          return ('#465261');
+                        } else if (map_data[i].amount <= 200000000) {
+                          return ('#3E3C4A');
+                        } else {
+                          return ('#291C24')
                         }
                       }
                     }
-                  } // end of GenPanelTwo
+                  }
+                } // end of GenPanelTwo
                 function p2_1_clicked(d) {
                   var x, y, k;
 
@@ -1035,48 +1035,48 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     var centroid = p2_1_path.centroid(d)
                     x = centroid[0]
                     y = centroid[1]
-                    console.log('clicked d: ',d);
-                    console.log('clicked centroid: ',centroid);
-                    console.log('clicked area: ',d.properties.Shape__Are);
-                    if (d.properties.COCNAME == 'Hawaii Balance of State CoC'){
+                    console.log('clicked d: ', d);
+                    console.log('clicked centroid: ', centroid);
+                    console.log('clicked area: ', d.properties.Shape__Are);
+                    if (d.properties.COCNAME == 'Hawaii Balance of State CoC') {
                       k = 6.0
-                    }else if (d.properties.COCNAME == 'Alaska Balance of State CoC'){
+                    } else if (d.properties.COCNAME == 'Alaska Balance of State CoC') {
                       k = 4.0
-                    }else if (d.properties.COCNAME == 'Maine Balance of State CoC'){
+                    } else if (d.properties.COCNAME == 'Maine Balance of State CoC') {
                       k = 5.0
-                    }else if (d.properties.Shape__Are <= .4) {
+                    } else if (d.properties.Shape__Are <= .4) {
                       k = 17.0
-                    }else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1){
+                    } else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1) {
                       k = 14.0
-                    }else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5){
+                    } else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5) {
                       k = 12.0
-                    }else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17){
+                    } else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17) {
                       k = 6.0
-                    }else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55){
+                    } else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55) {
                       k = 3.0
-                    }else{
+                    } else {
                       k = 2.0
                     };
-                      centered = d;
+                    centered = d;
 
-                    } else {
-                      x = map_width / 1.35;
-                      y = map_height / 1.1;
-                      k = 1;
-                      centered = null;
+                  } else {
+                    x = map_width / 1.35;
+                    y = map_height / 1.1;
+                    k = 1;
+                    centered = null;
 
-                    }
-
-                    m.selectAll('p2_1_path')
-                      .classed('active', centered && function(d) {
-                        return d === centered;
-                      });
-
-                    m.transition()
-                      .duration(750)
-                      .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
-                      .style('stroke-width', .15 / k + 'px');
                   }
+
+                  m.selectAll('p2_1_path')
+                    .classed('active', centered && function(d) {
+                      return d === centered;
+                    });
+
+                  m.transition()
+                    .duration(750)
+                    .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
+                    .style('stroke-width', .15 / k + 'px');
+                }
 
                 function p2_1_clicked_p1(d) {
                   var x, y, k;
@@ -1086,26 +1086,26 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var centroid = p2_1_path.centroid(d)
                   x = centroid[0]
                   y = centroid[1]
-                  console.log('clicked d: ',d);
-                  console.log('clicked centroid: ',centroid);
-                  console.log('clicked area: ',d.properties.Shape__Are);
-                  if (d.properties.COCNAME == 'Hawaii Balance of State CoC'){
+                  console.log('clicked d: ', d);
+                  console.log('clicked centroid: ', centroid);
+                  console.log('clicked area: ', d.properties.Shape__Are);
+                  if (d.properties.COCNAME == 'Hawaii Balance of State CoC') {
                     k = 6.0
-                  }else if (d.properties.COCNAME == 'Alaska Balance of State CoC'){
+                  } else if (d.properties.COCNAME == 'Alaska Balance of State CoC') {
                     k = 4.0
-                  }else if (d.properties.COCNAME == 'Maine Balance of State CoC'){
+                  } else if (d.properties.COCNAME == 'Maine Balance of State CoC') {
                     k = 5.0
-                  }else if (d.properties.Shape__Are <= .4) {
+                  } else if (d.properties.Shape__Are <= .4) {
                     k = 17.0
-                  }else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1){
+                  } else if (d.properties.Shape__Are > .4 && d.properties.Shape__Are <= 1) {
                     k = 14.0
-                  }else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5){
+                  } else if (d.properties.Shape__Are > 1 && d.properties.Shape__Are <= 5) {
                     k = 12.0
-                  }else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17){
+                  } else if (d.properties.Shape__Are > 5 && d.properties.Shape__Are <= 17) {
                     k = 6.0
-                  }else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55){
+                  } else if (d.properties.Shape__Are > 17 && d.properties.Shape__Are <= 55) {
                     k = 3.0
-                  }else{
+                  } else {
                     k = 2.0
                   };
                   centered = d;
@@ -1121,7 +1121,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .duration(750)
                     .attr('transform', 'translate(' + map_width / 1.35 + ',' + map_height / 1.1 + ')scale(' + k + ')translate(' + -x + ',' + -y + ')')
                     .style('stroke-width', .15 / k + 'px');
-                  }
+                }
 
                 function createCoCTable(d) {
                   $('#panel_coc').empty();
@@ -1129,29 +1129,29 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('id', 'coc_info')
                     .attr('height', info_height + margin.top + margin.bottom)
                     .html(Make_CoC_Table(d))
-                  }
+                }
 
                 function filter_cfdaAmount(x) {
                   return x.fed_funding > 0;
                 }
 
-                function Make_CoC_Table(d){
+                function Make_CoC_Table(d) {
                   var OtherformatNumber = d3.format(',');
-                  console.log('Make CoC Table d: ',d);
-                  console.log("table_data: ",table_data);
-                  for(var i = 0; i < table_data.length; i++){
-                    if(table_data[i].coc_number === d.properties.coc_number){
+                  console.log('Make CoC Table d: ', d);
+                  console.log("table_data: ", table_data);
+                  for (var i = 0; i < table_data.length; i++) {
+                    if (table_data[i].coc_number === d.properties.coc_number) {
                       var tab_dat = table_data[i];
-                      console.log('tab_dat: ',tab_dat);
+                      console.log('tab_dat: ', tab_dat);
                       return '<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
-                      '<h3 class="panel_desc">Total Homeless Population: ' + OtherformatNumber(tab_dat.total_homeless) +'<br/></h3>' +
-                      '<table><tr><td class="panel_text">'+'Veterans '+'</td><td class="panel_text2">'+ OtherformatNumber(tab_dat.homeless_veterans) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Unaccompanied Youth '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_unaccompanied_youth) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Families '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_people_in_families) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Sheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.sheltered_homeless) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Unsheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.unsheltered_homeless) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Chronically Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Homeless Individuals '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) +'</td></tr>'+'</table>'
+                        '<h3 class="panel_desc">Total Homeless Population: ' + OtherformatNumber(tab_dat.total_homeless) + '<br/></h3>' +
+                        '<table><tr><td class="panel_text">' + 'Veterans ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_veterans) + '</td></tr>' +
+                        '<tr><td class="panel_text">' + 'Unaccompanied Youth ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_unaccompanied_youth) + '</td></tr>' +
+                        '<tr><td class="panel_text">' + 'Families ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_people_in_families) + '</td></tr>' +
+                        '<tr><td class="panel_text">' + 'Sheltered Homeless ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.sheltered_homeless) + '</td></tr>' +
+                        '<tr><td class="panel_text">' + 'Unsheltered Homeless ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.unsheltered_homeless) + '</td></tr>' +
+                        '<tr><td class="panel_text">' + 'Chronically Homeless ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) + '</td></tr>' +
+                        '<tr><td class="panel_text">' + 'Homeless Individuals ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) + '</td></tr>' + '</table>'
 
                     }
                   }
@@ -1206,9 +1206,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         return '#A5636E'
                       } else if (d.category == 'Health') {
                         return '#846E8A'
-                      } /*else if (d.category == 'Research') {
-                        return '#A08E39'
-                      }*/ else if (d.category == 'Education') {
+                      }
+                      /*else if (d.category == 'Research') {
+                                             return '#A08E39'
+                                           }*/
+                      else if (d.category == 'Education') {
                         return '#A3664A'
                       } else if (d.category == 'Support Services') {
                         return '#42816F'
@@ -1291,11 +1293,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var cfda_legend = d3.select('#p2_3_legend')
                   .append('div')
-                  .attr('id','p2_cfda_legend');
+                  .attr('id', 'p2_cfda_legend');
 
-                var cfda_color = ['#547B8B', '#A5636E','#846E8A', '#A3664A', '#877339','#42816F'];
+                var cfda_color = ['#547B8B', '#A5636E', '#846E8A', '#A3664A', '#877339', '#42816F'];
 
-                var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education','Employment', 'Support Services'];
+                var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education', 'Employment', 'Support Services'];
 
                 for (var i = 0; i < 6; i++) {
 
@@ -1325,7 +1327,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function StateBarChart(d) {
-                  console.log('State bar chart d: ',d);
+                  console.log('State bar chart d: ', d);
                   d3.select('#panel_info > svg').remove()
 
                   var p2_4_matrix_svg = d3.select('#panel_info').append('svg')
@@ -1346,7 +1348,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   var initial_bar = initial.filter(filter_cfdaAmount);
                   var formatNumber = d3.format('$,');
 
-                  console.log('state bar initial_bar: ',initial)
+                  console.log('state bar initial_bar: ', initial)
                   var axisMargin = 5,
                     x_width = 470,
                     barHeight = 18,
@@ -1371,9 +1373,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         return '#A5636E'
                       } else if (d.category == 'Health') {
                         return '#846E8A'
-                      } /*else if (d.category == 'Research') {
-                        return '#A08E39'
-                      }*/ else if (d.category == 'Education') {
+                      }
+                      /*else if (d.category == 'Research') {
+                                             return '#A08E39'
+                                           }*/
+                      else if (d.category == 'Education') {
                         return '#A3664A'
                       } else if (d.category == 'Support Services') {
                         return '#42816F'
@@ -1413,7 +1417,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   yAxis = d3.svg.axis()
                     .orient('left')
-                    .tickSize(0,400);
+                    .tickSize(0, 400);
 
                   bar.append('rect')
                     .attr('transform', 'translate(' + labelWidth + ',0)')
@@ -1449,55 +1453,59 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .text('State Level Funding From Federal Programs');
                 }
 
-                var panel_contact = d3.select ()
+                //var contact_panel_button = d3.select("myBtnContact")
 
-                function createContact(d){
-                    $('#panel_contact').empty();
-                    contact_panel.append('div')
-                      .attr('id', 'contact_info')
-                      .attr("height", info_height + margin.top + margin.bottom)
-                      .attr("width", info_width + margin.left + margin.right)
-                      .html(Make_Contact_Table(d))
-                    }
-                function Make_Contact_Table(d){
-                  console.log ('Make_Contact_Table d: ',d);
-                  return d.properties.COCNAME + '<br>'
-                  '<p>' + d.properties.CONTACT_TY + '</h6>' + '<br>'
-                  +'Name:'+d.properties.FIRST_NAME +' '+d.properties.LAST_NAME + '<br>'
-                  +'Email: ' +d.properties.EMAIL_ADDR+ '<br>'
-                  +'Phone: '+d.properties.PRIMARY_PH + '</p>';
+                //contact_panel_button.on("click", createContact)
+
+                function createContact(d) {
+                  console.log('Create_Contact d: ', d);
+                  $('#panel_contact').empty();
+                  contact_panel.append('div')
+                    .attr('id', 'contact_info')
+                    .attr("height", info_height + margin.top + margin.bottom)
+                    .attr("width", info_width + margin.left + margin.right)
+                    .html(Make_Contact_Table(d))
+                }
+
+                function Make_Contact_Table(d) {
+                  console.log('Make_Contact_Table d: ', d);
+                  return '<h6>' + d.properties.COCNAME + '</h6>' + '<br>' +
+                    '<p>' + d.properties.CONTACT_TY + '<br>' +
+                    'Name: ' + d.properties.FIRST_NAME + ' ' + d.properties.LAST_NAME + '<br>' +
+                    'Email: ' + d.properties.EMAIL_ADDR + '<br>' +
+                    'Phone: ' + d.properties.PRIMARY_PH + '</p>';
+                }
+
+                /*
+                function createCoCTable(d) {
+                  $('#panel_coc').empty();
+                  coc_panel.append('div')
+                    .attr('id', 'coc_info')
+                    .attr('height', info_height + margin.top + margin.bottom)
+                    .html(Make_CoC_Table(d))
                   }
+                  function Make_CoC_Table(d){
+                  for(var i = 0; i < table_data.length; i++){
+                    if(table_data[i].coc_number === d.properties.coc_number){
+                      var tab_dat = table_data[i];
+                      console.log('tab_dat: ',tab_dat);
+                      return '<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
+                      '<h3 class="panel_desc">Total Homeless Population: ' + OtherformatNumber(tab_dat.total_homeless) +'<br/></h3>' +
+                      '<table><tr><td class="panel_text">'+'Veterans '+'</td><td class="panel_text2">'+ OtherformatNumber(tab_dat.homeless_veterans) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Unaccompanied Youth '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_unaccompanied_youth) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Families '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_people_in_families) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Sheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.sheltered_homeless) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Unsheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.unsheltered_homeless) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Chronically Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) +'</td></tr>'+
+                      '<tr><td class="panel_text">'+'Homeless Individuals '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) +'</td></tr>'+'</table>'
 
-/*
-function createCoCTable(d) {
-  $('#panel_coc').empty();
-  coc_panel.append('div')
-    .attr('id', 'coc_info')
-    .attr('height', info_height + margin.top + margin.bottom)
-    .html(Make_CoC_Table(d))
-  }
-  function Make_CoC_Table(d){
-  for(var i = 0; i < table_data.length; i++){
-    if(table_data[i].coc_number === d.properties.coc_number){
-      var tab_dat = table_data[i];
-      console.log('tab_dat: ',tab_dat);
-      return '<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
-      '<h3 class="panel_desc">Total Homeless Population: ' + OtherformatNumber(tab_dat.total_homeless) +'<br/></h3>' +
-      '<table><tr><td class="panel_text">'+'Veterans '+'</td><td class="panel_text2">'+ OtherformatNumber(tab_dat.homeless_veterans) +'</td></tr>'+
-      '<tr><td class="panel_text">'+'Unaccompanied Youth '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_unaccompanied_youth) +'</td></tr>'+
-      '<tr><td class="panel_text">'+'Families '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_people_in_families) +'</td></tr>'+
-      '<tr><td class="panel_text">'+'Sheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.sheltered_homeless) +'</td></tr>'+
-      '<tr><td class="panel_text">'+'Unsheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.unsheltered_homeless) +'</td></tr>'+
-      '<tr><td class="panel_text">'+'Chronically Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) +'</td></tr>'+
-      '<tr><td class="panel_text">'+'Homeless Individuals '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) +'</td></tr>'+'</table>'
-
-    }
-  }
-}
-                        var p2_tip = d3.tip()
-                          .attr('class', 'homeless-analysis d3-tip')
-                          .offset([-10, 0])
-                          .html(function(d) {*/
+                    }
+                  }
+                }
+                                        var p2_tip = d3.tip()
+                                          .attr('class', 'homeless-analysis d3-tip')
+                                          .offset([-10, 0])
+                                          .html(function(d) {*/
               })
             })
           })
