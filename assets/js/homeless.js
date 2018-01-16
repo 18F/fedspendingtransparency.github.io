@@ -370,10 +370,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('padding', '50px 0 0 50px');
 
 
-                  var color = ['#F3E0C4', '#EAD8BD', '#E2D0B6', '#DAC8AF', '#D1C0A8',
-                    '#C9B9A1', '#C1B19B', '#B9AA94', '#B1A28E', '#A99B87', '#998C7A',
-                    '#897E6D', '#827767', '#73695B', '#645C4F', '#564E43', '#413B33',
-                    '#342F28', '#211D18'
+                  var color = ['#F1F3F2', '#E9ECEA', '#E1E5E3', '#D9DEDB', '#D1D7D4',
+                    '#C9D0CD', '#C1C9C5', '#B9C2BE', '#A8B4AF', '#98A6A0', '#889892',
+                    '#778A83', '#677C74', '#576E65', '#476057', '#365248', '#1E3D32',
+                    '#0E2F23', '#06281C'
                   ]
 
                   var legend_key_values = ['< 100', '100-200', '200-300', '300-500', '500-700', '700-1k', '1k-1.5k',
@@ -1451,14 +1451,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var panel_contact = d3.select ()
 
-                function createContact(d){
-                    $('#panel_contact').empty();
-                    contact_panel.append('div')
-                      .attr('id', 'contact_info')
-                      .attr("height", info_height + margin.top + margin.bottom)
-                      .attr("width", info_width + margin.left + margin.right)
-                      .html(Make_Contact_Table(d))
-                    }
+              function createContact(d){
+                  $('#panel_contact').empty();
+                  contact_panel.append('div')
+                    .attr('id', 'contact_info')
+                    .attr("height", info_height + margin.top + margin.bottom)
+                    .attr("width", info_width + margin.left + margin.right)
+                    .html(Make_Contact_Table(d))
+                  }
+
                 function Make_Contact_Table(d){
                   console.log ('Make_Contact_Table d: ',d);
                   return d.properties.COCNAME + '<br>'
