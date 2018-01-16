@@ -439,7 +439,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       BarChart(d);
                       createCoCTable(d);
                       StateBarChart(d);
-                      //createCFDATableHover(d);
+                      createContact(d);
                       p2_1_clicked_p1(d);
                     })
                     .style('fill', getColor);
