@@ -105,6 +105,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var p2_tip = d3.tip()
                   .attr('class', 'homeless-analysis d3-tip')
+                  .style('background','rgba(0,0,0,.8)')
+                  .style('color','#FFFFFF')
                   .offset([-10, 0])
                   .html(function(d) {
                     return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
@@ -117,6 +119,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var p2_3_bar_tip = d3.tip()
                   .attr('class', 'homeless-analysis d3-tip')
+                  .style('background','rgba(0,0,0,.8)')
+                  .style('color','#FFFFFF')
                   .offset([-10, 0])
                   .html(function(d) {
                     return getCFDA_value(d);
@@ -331,6 +335,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   var tip = d3.tip()
                     .attr('class', 'homeless-analysis d3-tip')
+                    .style('background','rgba(0,0,0,.8)')
+                    .style('color','#FFFFFF')
                     .offset([-10, -10])
                     .html(function(d) {
                       return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
@@ -1068,9 +1074,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function p2_1_clicked_p1(d) {
                   var x, y, k;
-                  //console.log('Panel 2 clicked, d: ',d);
-
-
                   var centroid = p2_1_path.centroid(d)
                   x = centroid[0]
                   y = centroid[1]
@@ -1272,12 +1275,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('text-anchor', 'end')
                     .text('Federal Programs Covering Homelessness');
                 }
-                /*var cfda_legend_title = d3.select('#p2_2_legend_title')
-                  .append('div')
-                  .attr('class', 'p2_2_legend_title')
-                  .attr('width', map_width + margin.left + margin.right)
-                  .html('<h5>CFDA Program Category</h5>')
-                  .style('text-anchor', 'center');*/
 
                 var cfda_legend = d3.select('#p2_2_legend')
                   .append('div')
@@ -1361,11 +1358,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         return '#A5636E'
                       } else if (d.category == 'Health') {
                         return '#846E8A'
-                      }
-                      /*else if (d.category == 'Research') {
-                                             return '#A08E39'
-                                           }*/
-                      else if (d.category == 'Education') {
+                      } else if (d.category == 'Education') {
                         return '#A3664A'
                       } else if (d.category == 'Support Services') {
                         return '#42816F'
