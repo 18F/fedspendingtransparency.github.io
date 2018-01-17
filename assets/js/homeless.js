@@ -109,6 +109,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var p2_tip = d3.tip()
                   .attr('class', 'homeless-analysis d3-tip')
+                  .style('background','rgba(0,0,0,.8)')
+                  .style('color','#FFFFFF')
+                  .style('min-width','300px')
                   .offset([-10, 0])
                   .html(function(d) {
                     return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
@@ -121,6 +124,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var p2_3_bar_tip = d3.tip()
                   .attr('class', 'homeless-analysis d3-tip')
+                  .style('background','rgba(0,0,0,.8)')
+                  .style('color','#FFFFFF')
                   .offset([-10, 0])
                   .html(function(d) {
                     return getCFDA_value(d);
@@ -343,6 +348,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   var tip = d3.tip()
                     .attr('class', 'homeless-analysis d3-tip')
+                    .style('background','rgba(0,0,0,.8)')
+                    .style('color','#FFFFFF')
                     .html(function(d) {
                       return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
                         'Federal Funding: ' + getDollarValue(d) + '<br>' +
@@ -432,7 +439,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       BarChart(d);
                       createCoCTable(d);
                       StateBarChart(d);
-                      //createCFDATableHover(d);
+                      createContact(d);
                       p2_1_clicked_p1(d);
                     })
                     .style('fill', getColor);
