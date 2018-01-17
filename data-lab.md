@@ -77,7 +77,7 @@ page: data-lab
   <div class="row">
 
     <div class="col-md-6">
-      <div class="panel panel-default tall-col">
+      <div class="panel panel-default tall-col" style="margin-bottom:0">
         <div class="panel-body" style= "min-height: 286.86px">
           <a href="{{site.baseurl}}/data-lab/contract-sunburst/"><img src="{{ site.baseurl }}/assets/img/BFS_DataLab_Image_budget-sankey.png" class="img-responsive">
           <h5 style="padding-bottom:10px; padding-top:10px; margin-bottom:0; text-align:center; color: #525252">Government Contractors</h5></a>
@@ -87,7 +87,7 @@ page: data-lab
     </div>
 
     <div class="col-md-6">
-      <div class="panel panel-default short-col" style="min-height: 286.86px">
+      <div class="panel panel-default short-col" style="height: 286.86px; margin-bottom:0">
         <div class="panel-body">
             <h5 style="padding-bottom:10px; padding-top:70px; margin-bottom:0; text-align:center; color: #525252">Please continue to check back, as new analyses are coming soon!</h5>
         </div>
