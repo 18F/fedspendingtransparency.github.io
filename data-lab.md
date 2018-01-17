@@ -87,8 +87,8 @@ page: data-lab
     </div>
 
     <div class="col-md-6">
-      <div class="panel panel-default short-col">
-        <div class="panel-body" style= "min-height: 286.86px;">
+      <div class="panel panel-default short-col" style="min-height: 286.86px">
+        <div class="panel-body">
             <h5 style="padding-bottom:10px; padding-top:70px; margin-bottom:0; text-align:center; color: #525252">Please continue to check back, as new analyses are coming soon!</h5>
         </div>
       </div>
