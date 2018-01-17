@@ -1293,6 +1293,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var cfda_legend = d3.select('#p2_2_legend')
                   .append('div')
+                  .attr('width', '500px')
+                  .attr('height', '75px')
+                  .attr('padding', '50px 0 0 50px')
                   .attr('id', 'p2_cfda_legend');
 
                 var cfda_color = ['#547B8B', '#A5636E', '#846E8A', '#A3664A', '#877339', '#42816F'];
@@ -1305,7 +1308,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('id', 'p2_2_legend_key');
 
                   var cfda_key = l.append('div')
-                    .attr('id', 'p2_3_key')
+                    .attr('id', 'p2_2_key')
                     .style('position', 'relative')
                     .append('svg')
                     .attr('height', '40px')
@@ -1320,7 +1323,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     });
 
                   l.append('div')
-                    .attr('id', 'p2_3_key_value')
+                    .attr('id', 'p2_2_key_value')
                     .style('position', 'relative')
                     .style('color', 'blue')
                     .html('<p>' + cfda_legend_key_values[i] + '</p>');

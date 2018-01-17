@@ -203,7 +203,7 @@
     position: relative;
     background-color: inherit;
     font-family: inherit;
-    width: 512px;
+    width: 500px;
     min-height: 300px;
     overflow: visible;
   }
@@ -752,52 +752,57 @@
     stroke: rgba(0, 0, 0, 0.2);
   }
 
-  #p2_3_legend{
+  #p2_2_legend{
     position: relative;
     //min-width: 470.48648648648657px;
-    max-width: 40px;
-    margin-top: 40px;
-    float:right;
+    height: 75px;
+    width: 500px;
   }
 
-  #p2_3_legend_title{
+  #p2_2_legend_title{
     position: relative;
-    min-width: 470.48648648648657px;
+    /*min-width: 470.48648648648657px;*/
   }
 
-  #p2_3_legend_key{
+  #p2_2_legend_key{
     position: relative;
     height: 50px;
     width: 53px;
-    left:10px;
-    top:40px;
-    margin: 0px 0px 0px 0px;
+    margin: -15px -7px 0 0;
+    float: left;
   }
 
-  #p2_3_key{
-    position: relative;
+  #p2_2_key{
+    height: 30px;
+    width: 53px;
+    margin: 15px 3px 0 0;
   }
 
-  #p2_3_key_value{
-    position: relative;
+  #p2_2_key_value{
     height: 10px;
-    width: 150px;
-    margin: -35px 0px 0px -150px;
+    width: 50px;
+    margin: 20px 3px 3px 14px;
     text-align: right;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -sand-transform: rotate(-45deg);
+    transform: rotate(-45deg);
   }
 
-  .p2_3_legend_title{
+  .p2_2_legend_title{
     position: relative;
     top:10px;
     left: 20px;
     height:1px;
   }
 
-  #p2_3_key_value p{
+  #p2_2_key_value p{
     font-size: 1.2rem;
   }
 
-  #p2_3_legend_title > div > h5{
+  #p2_2_legend_title > div > h5{
     height:1px;
   }
 }
