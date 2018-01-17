@@ -508,7 +508,7 @@
     background-color: inherit;
     min-height: 255px;
     margin-left: 10px;
-    margin-top: 45px;
+    margin-top: 30px;
   }
 
   #panel_coc {
@@ -517,7 +517,7 @@
     margin-top: 5px;
     overflow: visible;
     background-color: inherit;
-    max-width: 350px;
+    max-width: 450px;
     min-height: 255px;
     margin-left: 10px;
     float:left;
@@ -549,7 +549,7 @@
     //text-transform: capitalize;
     /*font-variant:small-caps;*/
     color: #555555;
-    width:300px;
+    width:400px;
   }
 
   .panel_text2{
@@ -557,6 +557,7 @@
     font-size: 1.5em;
     color:#0071bc;
     text-align: right;
+    width: 200px;
   }
 
   #cfda_info > table{
@@ -759,8 +760,8 @@
   #p2_2_legend{
     position: relative;
     height: 75px;
-    width: 500px;
-    margin-left: 40px;
+    width: 750px;
+    margin-left: 10px;
   }
 
   #p2_2_legend_title{
@@ -770,27 +771,27 @@
   #p2_2_legend_key{
     height: 50px;
     width: 53px;
-    margin: -15px 0 -7px 0;
+    margin: -15px 10px -7px 10px;
     float: left;
   }
 
   #p2_2_key{
     height: 30px;
     width: 53px;
-    margin: 0 0 3px 10px;
+    margin: 0 20px 3px 20px;
   }
 
   #p2_2_key_value{
     height: 10px;
     width: 50px;
-    margin: 20px 3px 3px -20px;
+    margin: 0 3px 3px 0;
     text-align: right;
-    -ms-transform: rotate(-45deg);
+    /*-ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     -sand-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+    transform: rotate(-45deg);*/
   }
 
   .p2_2_legend_title{
