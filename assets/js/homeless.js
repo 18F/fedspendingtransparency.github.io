@@ -33,10 +33,6 @@ var spinner_panel5 = new Spinner(opts).spin(target_panel5);
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.csv('/data-lab-data/2017statecfdafunding.csv', function(cfda_state) {
     d3.json('/data-lab-data/coc-pop-type.json', function(data) {
-      /**return{
-        total_homeless: +data.total_homeless
-      }**/
-      d3.csv('/data-lab-data/State_crosswalk.csv', function(states) {
         d3.csv('/data-lab-data/CFDACOCAward.csv', function(bar_chrt) {
           d3.csv('/data-lab-data/pop-award.csv', function(d) {
             return {
@@ -280,14 +276,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   for (var i = 0; i < data.length; i++) {
                     if (d.properties.coc_number === data[i].coc_number) {
                       return OtherformatNumber(data[i].homeless_veterans);
-                    }
-                  }
-                }
-
-                function getState(d) {
-                  for (var i = 0; i < states.length; i++) {
-                    if (d.properties.stusab === states[i].Abbrv) {
-                      return states[i].State;
                     }
                   }
                 }
@@ -1475,38 +1463,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     'Email: ' + d.properties.EMAIL_ADDR + '<br>' +
                     'Phone: ' + d.properties.PRIMARY_PH + '</p>';
                 }
-
-                /*
-                function createCoCTable(d) {
-                  $('#panel_coc').empty();
-                  coc_panel.append('div')
-                    .attr('id', 'coc_info')
-                    .attr('height', info_height + margin.top + margin.bottom)
-                    .html(Make_CoC_Table(d))
-                  }
-                  function Make_CoC_Table(d){
-                  for(var i = 0; i < table_data.length; i++){
-                    if(table_data[i].coc_number === d.properties.coc_number){
-                      var tab_dat = table_data[i];
-                      console.log('tab_dat: ',tab_dat);
-                      return '<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
-                      '<h3 class="panel_desc">Total Homeless Population: ' + OtherformatNumber(tab_dat.total_homeless) +'<br/></h3>' +
-                      '<table><tr><td class="panel_text">'+'Veterans '+'</td><td class="panel_text2">'+ OtherformatNumber(tab_dat.homeless_veterans) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Unaccompanied Youth '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_unaccompanied_youth) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Families '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_people_in_families) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Sheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.sheltered_homeless) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Unsheltered Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.unsheltered_homeless) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Chronically Homeless '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) +'</td></tr>'+
-                      '<tr><td class="panel_text">'+'Homeless Individuals '+ '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) +'</td></tr>'+'</table>'
-
-                    }
-                  }
-                }
-                                        var p2_tip = d3.tip()
-                                          .attr('class', 'homeless-analysis d3-tip')
-                                          .offset([-10, 0])
-                                          .html(function(d) {*/
-              })
             })
           })
         })
