@@ -395,7 +395,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         return color[i];
                       });
 
-
                     z.append('div')
                       .attr('id', 'key_value')
                       .style('position', 'relative')
@@ -525,7 +524,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   d3.select('#viz_container').append('h3')
                     .attr('id', 'title')
                     .style('text-align', 'center')
-                    .text('Continuum of Care 2016 Homeless Population')
+                    .text('Continuum of Care Homeless Population')
 
                   d3.select('#viz_container').append('div')
                     .attr('class', 'SearchBar')
@@ -1022,8 +1021,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 } // end of GenPanelTwo
                 function p2_1_clicked(d) {
                   var x, y, k;
-
-                  //console.log('Panel 2 clicked, d: ',d);
 
                   if (d && centered !== d) {
                     var centroid = p2_1_path.centroid(d)
