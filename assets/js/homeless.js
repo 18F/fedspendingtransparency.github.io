@@ -72,7 +72,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   panel_2_height = abs_height - margin.top - margin.bottom,
                   matrix_width = abs_width / 1.85 - margin.left - margin.right,
                   matrix_height = abs_height - margin.top - margin.bottom,
-                  map_width = panel_2_width - matrix_width - margin.left - margin.right,
+                  map_width = panel_2_width - matrix_width - margin.left - margin.right - 45,
                   map_height = panel_2_height / 3,
                   info_width = panel_2_width - matrix_width - margin.left - margin.right,
                   info_height = panel_2_height / 3,

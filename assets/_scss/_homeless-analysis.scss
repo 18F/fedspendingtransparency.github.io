@@ -527,7 +527,7 @@
     font-size: 2em;
     font-style: inherit;
     font-weight: lighter;
-    margin: 30px 0 20px;
+    margin: 80px 0 20px;
     padding: 0;
     color: #0071BC;
     line-height: 30px;
@@ -751,37 +751,39 @@
     stroke-width: 1;
     stroke: rgba(0, 0, 0, 0.2);
   }
+  #p2_2{
+    height: 330px;
+    margin-bottom:30px;
+  }
 
   #p2_2_legend{
     position: relative;
-    //min-width: 470.48648648648657px;
     height: 75px;
     width: 500px;
+    margin-left: 40px;
   }
 
   #p2_2_legend_title{
     position: relative;
-    /*min-width: 470.48648648648657px;*/
   }
 
   #p2_2_legend_key{
-    position: relative;
     height: 50px;
     width: 53px;
-    margin: -15px -7px 0 0;
+    margin: -15px 0 -7px 0;
     float: left;
   }
 
   #p2_2_key{
     height: 30px;
     width: 53px;
-    margin: 15px 3px 0 0;
+    margin: 0 0 3px 10px;
   }
 
   #p2_2_key_value{
     height: 10px;
     width: 50px;
-    margin: 20px 3px 3px 14px;
+    margin: 20px 3px 3px -20px;
     text-align: right;
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
