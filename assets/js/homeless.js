@@ -116,8 +116,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var p2_tip = d3.tip()
                   .attr('class', 'homeless-analysis d3-tip')
-                  .style('background','rgba(0,0,0,.8)')
-                  .style('color','#FFFFFF')
+                  .style('background','#ffffff')
+                  .style('color','#333')
+                  .style('border', 'solid 1px navy')
+                  .style('padding', '10px')
                   .offset([-10, 0])
                   .html(function(d) {
                     return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
@@ -130,8 +132,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var p2_3_bar_tip = d3.tip()
                   .attr('class', 'homeless-analysis d3-tip')
-                  .style('background','rgba(0,0,0,.8)')
-                  .style('color','#FFFFFF')
+                  .style('background','#ffffff')
+                  .style('color','#333')
+                  .style('border', 'solid 1px navy')
+                  .style('padding', '10px')
                   .offset([-10, 0])
                   .html(function(d) {
                     return getCFDA_value(d);
@@ -349,7 +353,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('background','#ffffff')
                     .style('color','#333')
                     .style('border', 'solid 1px navy')
-                    .style('padding', '4px')
+                    .style('padding', '10px')
                     .offset([-10, -10])
                     .html(function(d) {
                       return '<b style="border-bottom:1pt solid navy; padding: 2px 2px 0 2px">' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
