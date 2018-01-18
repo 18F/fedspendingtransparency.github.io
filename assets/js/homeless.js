@@ -47,7 +47,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 console.log('CoC US: ', us);
 
                 d3.select('#container2_1').append('div').attr('id', 'p2_1_title')
-                d3.select('#container2_1').append('div').attr('id', 'p2_1')
+                d3.select('#container2_1').append('div').attr('id', 'p2_1').style('top','150px')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2_legend_title')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2_legend')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2')
@@ -84,8 +84,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var map_title = d3.select('#p2_1_title')
                   .append('div')
-                  .attr('max-width', '465.48')
-                  .attr('height', '150px')
                   .attr('padding', '50px 0 0 0')
                   .attr('class', 'p2_1_title')
                   .style('text-align','center');

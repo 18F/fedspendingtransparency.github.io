@@ -491,7 +491,6 @@
   }
 
   #panel_map {
-    top:80px;
     margin-top: 5px;
     position: relative;
     overflow: visible;
@@ -514,7 +513,7 @@
 
   #panel_coc {
     position: relative;
-    top:85px;
+    top:50px;
     padding-top:10px;
     margin-top: 5px;
     overflow: visible;
@@ -815,6 +814,7 @@
     position: relative;
     text-align: center;
     max-width: 465.48px;
+    min-height: 125px;
   }
 
   #myModalContact{
