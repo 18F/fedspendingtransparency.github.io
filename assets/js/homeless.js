@@ -46,6 +46,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 console.log('CFDA State: ', cfda_state);
                 console.log('CoC US: ', us);
 
+                d3.select('#container2_1').append('div').attr('id', 'p2_1_title')
                 d3.select('#container2_1').append('div').attr('id', 'p2_1')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2_legend_title')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2_legend')
@@ -80,6 +81,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   info_width = panel_2_width - matrix_width - margin.left - margin.right,
                   info_height = panel_2_height / 3,
                   centered = null;
+
+                var map_title = d3.select('#p2_1_title')
+                  .append('div')
+                  .attr('width', '500px')
+                  .attr('height', '75px')
+                  .attr('padding', '50px 0 0 50px')
+                  .attr('class', 'p2_1_title')
+                  .style('text-align','center');
+
 
                 var p2_1_map_svg = d3.select('#panel_map')
                   .append('svg')
@@ -427,6 +437,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .on("click", function(d) {
                       BarChart(d);
                       createCoCTable(d);
+                      Make_Map_Title(d)
                       StateBarChart(d);
                       //createCFDATableHover(d);
                       p2_1_clicked_p1(d);
@@ -944,6 +955,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       StateBarChart(la);
                       createContact(la);
                       createCoCTable(la);
+                      Make_Map_Title(la)
                       p2_1_clicked_p1(la)
                     }
                   }
@@ -972,6 +984,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       BarChart(d);
                       StateBarChart(d);
                       createCoCTable(d);
+                      Make_Map_Title(d)
                       createContact(d);
                     })
                     .style('fill', p2_getColor)
@@ -1135,8 +1148,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     if (table_data[i].coc_number === d.properties.coc_number) {
                       var tab_dat = table_data[i];
                       console.log('tab_dat: ', tab_dat);
-                      return '<h1 class="panel_title">' + d.properties.COCNAME + '</h1>' +
-                        '<table><tr><td class="panel_text">' + 'Homeless Individuals ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) + '</td></tr>' +
+                      return '<table><tr><td class="panel_text">' + 'Homeless Individuals ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) + '</td></tr>' +
                         '<tr><td class="panel_text" style="border-bottom:1pt solid black">' + 'Homeless People in Families ' + '</td><td class="panel_text2"  style="border-bottom:1pt solid black">' + OtherformatNumber(tab_dat.homeless_people_in_families) + '</td></tr>' +
                         '<tr><td class="Panel_text">' + 'Total Homeless' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.total_homeless) + '</td></tr>'+
                         '<tr><td class="Panel_text">' + '       ' + '</td><td class="panel_text2">' + '     ' + '</td></tr>'+
@@ -1149,6 +1161,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                     }
                   }
+                }
+
+                function Make_Map_Title(d) {
+                      return map_title.html('<h1 class="panel_title">' + d.properties.COCNAME + '</h1>')
                 }
 
 
