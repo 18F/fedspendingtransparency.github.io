@@ -122,7 +122,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .style('padding', '10px')
                   .offset([-10, 0])
                   .html(function(d) {
-                    return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
+                    return '<b style="border-bottom:1px solid navy">' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
                       'Federal Funding: ' + getDollarValue(d) + '<br>' +
                       'Total Homeless: ' + getValue(d) + '<br>' +
                       'Sheltered Homeless: ' + getSheltered(d) + '<br>' +
@@ -309,9 +309,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function getCFDA_value(d) {
                   //console.log('CFDA value: ',d);
-                  return 'Program Title: ' + d.program_title + '<br/>' +
+                  return '<b>Program Title: ' + d.program_title + '</b><br/>' +
                     'Funding Amount: ' + formatNumber(d.fed_funding) +
-                    '<br/>' + 'Click to visit the program website';
+                    '<br/>' + '<i>Click to visit the program website</i>';
                 }
 
                 //*************************************************************
