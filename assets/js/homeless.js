@@ -346,14 +346,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   var tip = d3.tip()
                     .attr('class', 'homeless-analysis d3-tip')
-                    .style('background','rgba(0,0,0,.8)')
-                    .style('color','#FFFFFF')
-                    .style('border', 'solid 1px orange')
+                    .style('background','#ffffff')
+                    .style('color','#333')
+                    .style('border', 'solid 1px navy')
+                    .style('padding', '4px')
                     .offset([-10, -10])
                     .html(function(d) {
-                      return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
+                      return '<b style="border-bottom:1pt solid navy; padding: 2px 2px 0 2px">' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
                         'Federal Funding: ' + getDollarValue(d) + '<br>' +
-                        '<hr>'
                         'Total Homeless: ' + getValue(d) + '<br>' +
                         'Sheltered Homeless: ' + getSheltered(d) + '<br>' +
                         'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
@@ -1358,7 +1358,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('padding', '50px 0 0 50px')
                     .attr('id', 'p2_4_cfda_legend_title')
                     .style('text-align','center')
-                    .html('<h6>State Level Funding From Federal Programs</h6>');
+                    .html('<h6>' + d.properties.STUSAB + ' State Level Funding From Federal Programs</h6>');
 
                   var cfda_legend = d3.select('#p2_4_legend')
                     .append('div')
