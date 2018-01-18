@@ -1142,12 +1142,13 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function Make_CoC_Table(d) {
+                  d3.selectAll('#p2_quad3_title').remove();
                   var quad3_title = d3.select('#p2_3_title')
                     .append('div')
                     .attr('width', '500px')
                     .attr('min-height', '50px')
                     .attr('padding', '50px 0 0 50px')
-                    .attr('id', 'p2_4_cfda_legend_title')
+                    .attr('id', 'p2_quad3_title')
                     .style('text-align','center')
                     .html('<h6>Some Header Text Goes Here</h6>');
 
