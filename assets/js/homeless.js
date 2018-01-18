@@ -352,13 +352,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   map_svg.call(tip)
 
-                  var legend_title = d3.select('#legend_title')
-                    .append('div')
-                    .attr('class', 'legend_title')
-                    .attr('height', '15px')
-                    .attr('width', '950px')
-                    .html('<h5>Contiuum of Care Area Homeless Population</h5>')
-                    .style('text-anchor', 'middle');
+                  d3.select('#legend_title').append('h3')
+                    .attr('id', 'title')
+                    .style('text-align', 'center')
+                    .style('color','#476057')
+                    .text('Continuum of Care Homeless Population')
 
                   var legend = d3.select('#legend')
                     .append('div')
@@ -527,6 +525,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   d3.select('#viz_container').append('h3')
                     .attr('id', 'title')
                     .style('text-align', 'center')
+                    .style('color','#476057')
                     .text('Continuum of Care Homeless Population')
 
                   d3.select('#viz_container').append('div')
@@ -1153,6 +1152,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   $('#panel_info').empty();
                   d3.select('#panel_matrix > svg').remove()
+                  d3.select('#p2_2_legend_title').remove()
+                  d3.select('#p2_2_legend').remove()
 
                   var cfda_legend_title = d3.select('#p2_2_legend_title')
                     .append('div')
@@ -1328,6 +1329,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function StateBarChart(d) {
                   console.log('State bar chart d: ', d);
                   d3.select('#panel_info > svg').remove()
+                  d3.select('#p2_4_legend_title').remove()
+                  d3.select('#p2_4_legend').remove()
 
                   var cfda_legend_title = d3.select('#p2_4_legend_title')
                     .append('div')
