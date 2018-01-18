@@ -813,7 +813,11 @@
 
   .p2_1_title{
     position: relative;
-    //min-height: 30px;
     text-align: center;
+    max-width: 465.48px;
+  }
+
+  #myModalContact{
+    z-index: 99999;
   }
 }
