@@ -1152,8 +1152,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   $('#panel_info').empty();
                   d3.select('#panel_matrix > svg').remove()
-                  d3.select('#p2_2_legend_title').remove()
-                  d3.select('#p2_2_legend').remove()
+                  d3.select('#p2_cfda_legend_title').remove()
+                  d3.select('#p2_cfda_legend').remove()
 
                   var cfda_legend_title = d3.select('#p2_2_legend_title')
                     .append('div')
@@ -1329,15 +1329,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function StateBarChart(d) {
                   console.log('State bar chart d: ', d);
                   d3.select('#panel_info > svg').remove()
-                  d3.select('#p2_4_legend_title').remove()
-                  d3.select('#p2_4_legend').remove()
+                  d3.select('#p2_4_cfda_legend_title').remove()
+                  d3.select('#p2_4_cfda_legend').remove()
 
                   var cfda_legend_title = d3.select('#p2_4_legend_title')
                     .append('div')
                     .attr('width', '500px')
                     .attr('height', '75px')
                     .attr('padding', '50px 0 0 50px')
-                    .attr('id', 'p2_cfda_legend_title')
+                    .attr('id', 'p2_4_cfda_legend_title')
                     .style('text-align','center')
                     .html('<h6>State Level Funding From Federal Programs</h6>');
 
@@ -1346,7 +1346,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('width', '500px')
                     .attr('height', '75px')
                     .attr('padding', '50px 0 0 50px')
-                    .attr('id', 'p2_cfda_legend');
+                    .attr('id', 'p2_4_cfda_legend');
 
                   var cfda_color = ['#547B8B', '#A5636E', '#846E8A', '#A3664A', '#877339', '#42816F'];
 
