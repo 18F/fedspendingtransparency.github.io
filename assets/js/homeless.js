@@ -338,18 +338,17 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   var tip = d3.tip()
                     .attr('class', 'homeless-analysis d3-tip')
-                    .style('background','rgba(0,0,0,.8)')
-                    .style('color','#FFFFFF')
-                    .style('border', 'solid 1px orange')
+                    .style('background','#e6f6f7')
+                    .style('color','navy')
+                    .style('border', 'solid 1px navy')
                     .offset([-10, -10])
                     .html(function(d) {
-                      return '<b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
-                        'Federal Funding: ' + getDollarValue(d) + '<br>' +
-                        '<hr>'
+                      return '<b style="border-bottom:1pt solid navy; padding: 2px 2px 0 2px">' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
+                        '<p style="padding: 0 2px 0 2px; font-size: ">'+'Federal Funding: ' + getDollarValue(d) + '<br>' +
                         'Total Homeless: ' + getValue(d) + '<br>' +
                         'Sheltered Homeless: ' + getSheltered(d) + '<br>' +
                         'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
-                        'Homeless Veterans: ' + getVets(d);
+                        'Homeless Veterans: ' + getVets(d)+'</p>';
                     });
 
                   map_svg.call(tip)
