@@ -105,7 +105,7 @@
   & div.row {
     margin-left: 0;
     margin-right: 0;
-    margin-top:65px;
+    margin-top:50px;
   }
   .modal {
      display: none; /* Hidden by default */
@@ -223,6 +223,7 @@
     min-height: 415px;
     //max-width: 250px;
     overflow: visible;
+    top:-45px;
   }
 
   #container2_4{
@@ -821,4 +822,6 @@
   #myModalContact{
     z-index: 99999;
   }
+
+
 }

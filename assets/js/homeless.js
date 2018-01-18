@@ -51,6 +51,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 d3.select('#container2_2').append('div').attr('id', 'p2_2_legend_title')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2_legend')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2')
+                d3.select('#container2_3').append('div').attr('id', 'p2_3_title')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3')
                 d3.select('#container2_2').append('div').attr('id', 'p2_4_legend_title')
                 d3.select('#container2_2').append('div').attr('id', 'p2_4_legend')
@@ -59,7 +60,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 d3.select('#p2_1').append('div').attr('id', 'panel_map')
                 d3.select('#p2_2').append('div').attr('id', 'panel_matrix')
                 d3.select('#p2_3').append('div').attr('id', 'panel_coc')
-                //d3.select('#container2_3').append('div').attr('id', 'p2_3_legend_title')
                 d3.select('#p2_4').append('div').attr('id', 'panel_info')
                 d3.select('#p2_5').append('div').attr('id', 'panel_contact')
 
@@ -87,7 +87,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .attr('padding', '50px 0 0 0')
                   .attr('class', 'p2_1_title')
                   .style('text-align','center');
-
 
                 var p2_1_map_svg = d3.select('#panel_map')
                   .append('svg')
@@ -372,7 +371,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('color','#476057')
                     .text('Continuum of Care Homeless Population')
 
-                  var legend = d3.select('#legend')
+                  /*var legend = d3.select('#legend')
                     .append('div')
                     .attr('width', '950px')
                     .attr('height', '100px')
@@ -415,7 +414,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .style('position', 'relative')
                       .style('color', 'blue')
                       .html('<p>' + legend_key_values[i] + '</p>');
-                  }
+                  }*/
 
                   var g = map_svg.append('g')
                     .attr('class', 'counties')
@@ -1143,6 +1142,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function Make_CoC_Table(d) {
+                  var quad3_title = d3.select('#p2_3_title')
+                    .append('div')
+                    .attr('width', '500px')
+                    .attr('min-height', '50px')
+                    .attr('padding', '50px 0 0 50px')
+                    .attr('id', 'p2_4_cfda_legend_title')
+                    .style('text-align','center')
+                    .html('<h6>Some Header Text Goes Here</h6>');
+
                   var OtherformatNumber = d3.format(',');
                   console.log('Make CoC Table d: ', d);
                   console.log("table_data: ", table_data);
