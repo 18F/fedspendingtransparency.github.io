@@ -47,9 +47,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 console.log('CoC US: ', us);
 
                 d3.select('#container2_1').append('div').attr('id', 'p2_1')
+                d3.select('#container2_2').append('div').attr('id', 'p2_2_legend_title')
+                d3.select('#container2_2').append('div').attr('id', 'p2_2_legend')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3')
-                d3.select('#container2_2').append('div').attr('id', 'p2_2_legend')
+                d3.select('#container2_2').append('div').attr('id', 'p2_4_legend_title')
+                d3.select('#container2_2').append('div').attr('id', 'p2_4_legend')
                 d3.select('#container2_4').append('div').attr('id', 'p2_4')
                 d3.select('#CoCcontact').append('div').attr('id', 'p2_5')
                 d3.select('#p2_1').append('div').attr('id', 'panel_map')
@@ -351,13 +354,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   map_svg.call(tip)
 
-                  var legend_title = d3.select('#legend_title')
-                    .append('div')
-                    .attr('class', 'legend_title')
-                    .attr('height', '15px')
-                    .attr('width', '950px')
-                    .html('<h5>Contiuum of Care Area Homeless Population</h5>')
-                    .style('text-anchor', 'middle');
+                  d3.select('#legend_title').append('h3')
+                    .attr('id', 'title')
+                    .style('text-align', 'center')
+                    .style('color','#476057')
+                    .text('Continuum of Care Homeless Population')
 
                   var legend = d3.select('#legend')
                     .append('div')
@@ -526,6 +527,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   d3.select('#viz_container').append('h3')
                     .attr('id', 'title')
                     .style('text-align', 'center')
+                    .style('color','#476057')
                     .text('Continuum of Care Homeless Population')
 
                   d3.select('#viz_container').append('div')
@@ -1154,6 +1156,55 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                   $('#panel_info').empty();
                   d3.select('#panel_matrix > svg').remove()
+                  d3.select('#p2_2_legend_title').remove()
+                  d3.select('#p2_2_legend').remove()
+
+                  var cfda_legend_title = d3.select('#p2_2_legend_title')
+                    .append('div')
+                    .attr('width', '500px')
+                    .attr('height', '75px')
+                    .attr('padding', '50px 0 0 50px')
+                    .attr('id', 'p2_cfda_legend_title')
+                    .style('text-align','center')
+                    .html('<h6>Federal Programs Covering Homelessness</h6>');
+
+                  var cfda_legend = d3.select('#p2_2_legend')
+                    .append('div')
+                    .attr('width', '500px')
+                    .attr('height', '75px')
+                    .attr('padding', '50px 0 0 50px')
+                    .attr('id', 'p2_cfda_legend');
+
+                  var cfda_color = ['#547B8B', '#A5636E', '#846E8A', '#A3664A', '#877339', '#42816F'];
+
+                  var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education', 'Employment', 'Support Services'];
+
+                  for (var i = 0; i < 6; i++) {
+
+                    var l = cfda_legend.append('div')
+                      .attr('id', 'p2_2_legend_key');
+
+                    var cfda_key = l.append('div')
+                      .attr('id', 'p2_2_key')
+                      .style('position', 'relative')
+                      .append('svg')
+                      .attr('height', '40px')
+                      .attr('width', '53px')
+                      .append('rect')
+                      .attr('x', 7)
+                      .attr('y', 7)
+                      .attr('height', 20)
+                      .attr('width', 20)
+                      .style('fill', function(d) {
+                        return cfda_color[i];
+                      });
+
+                    l.append('div')
+                      .attr('id', 'p2_2_key_value')
+                      .style('position', 'relative')
+                      .style('color', 'blue')
+                      .html('<p>' + cfda_legend_key_values[i] + '</p>');
+                  }
 
                   var p2_3_matrix_svg = d3.select('#panel_matrix').append('svg')
                     /*.attr('width', matrix_width + margin.left + margin.right)
@@ -1264,7 +1315,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('font-size', '12')
                     .style('text-anchor', 'end');
 
-                  p2_3_matrix_svg.insert('g', ':first-child')
+                  /*p2_3_matrix_svg.insert('g', ':first-child')
                     .classed('y axis', true)
                     .call(yAxis)
                     .append('text')
@@ -1274,50 +1325,63 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('y', -1.05)
                     .attr('dy', '.71em')
                     .style('text-anchor', 'end')
-                    .text('Federal Programs Covering Homelessness');
+                    .text('Federal Programs Covering Homelessness');*/
                 }
 
-                var cfda_legend = d3.select('#p2_2_legend')
-                  .append('div')
-                  .attr('width', '500px')
-                  .attr('height', '75px')
-                  .attr('padding', '50px 0 0 50px')
-                  .attr('id', 'p2_cfda_legend');
 
-                var cfda_color = ['#547B8B', '#A5636E', '#846E8A', '#A3664A', '#877339', '#42816F'];
-
-                var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education', 'Employment', 'Support Services'];
-
-                for (var i = 0; i < 6; i++) {
-
-                  var l = cfda_legend.append('div')
-                    .attr('id', 'p2_2_legend_key');
-
-                  var cfda_key = l.append('div')
-                    .attr('id', 'p2_2_key')
-                    .style('position', 'relative')
-                    .append('svg')
-                    .attr('height', '40px')
-                    .attr('width', '53px')
-                    .append('rect')
-                    .attr('x', 7)
-                    .attr('y', 7)
-                    .attr('height', 20)
-                    .attr('width', 20)
-                    .style('fill', function(d) {
-                      return cfda_color[i];
-                    });
-
-                  l.append('div')
-                    .attr('id', 'p2_2_key_value')
-                    .style('position', 'relative')
-                    .style('color', 'blue')
-                    .html('<p>' + cfda_legend_key_values[i] + '</p>');
-                }
 
                 function StateBarChart(d) {
                   console.log('State bar chart d: ', d);
                   d3.select('#panel_info > svg').remove()
+                  d3.select('#p2_4_legend_title').remove()
+                  d3.select('#p2_4_legend').remove()
+
+                  var cfda_legend_title = d3.select('#p2_4_legend_title')
+                    .append('div')
+                    .attr('width', '500px')
+                    .attr('height', '75px')
+                    .attr('padding', '50px 0 0 50px')
+                    .attr('id', 'p2_cfda_legend_title')
+                    .style('text-align','center')
+                    .html('<h6>State Level Funding From Federal Programs</h6>');
+
+                  var cfda_legend = d3.select('#p2_4_legend')
+                    .append('div')
+                    .attr('width', '500px')
+                    .attr('height', '75px')
+                    .attr('padding', '50px 0 0 50px')
+                    .attr('id', 'p2_cfda_legend');
+
+                  var cfda_color = ['#547B8B', '#A5636E', '#846E8A', '#A3664A', '#877339', '#42816F'];
+
+                  var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education', 'Employment', 'Support Services'];
+
+                  for (var i = 0; i < 6; i++) {
+
+                    var l = cfda_legend.append('div')
+                      .attr('id', 'p2_2_legend_key');
+
+                    var cfda_key = l.append('div')
+                      .attr('id', 'p2_2_key')
+                      .style('position', 'relative')
+                      .append('svg')
+                      .attr('height', '40px')
+                      .attr('width', '53px')
+                      .append('rect')
+                      .attr('x', 7)
+                      .attr('y', 7)
+                      .attr('height', 20)
+                      .attr('width', 20)
+                      .style('fill', function(d) {
+                        return cfda_color[i];
+                      });
+
+                    l.append('div')
+                      .attr('id', 'p2_2_key_value')
+                      .style('position', 'relative')
+                      .style('color', 'blue')
+                      .html('<p>' + cfda_legend_key_values[i] + '</p>');
+                  }
 
                   var p2_4_matrix_svg = d3.select('#panel_info').append('svg')
                     /*.attr('width', matrix_width + margin.left + margin.right)
@@ -1425,7 +1489,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .style('font-size', '12')
                     .style('text-anchor', 'end');
 
-                  p2_4_matrix_svg.insert('g', ':first-child')
+                  /*p2_4_matrix_svg.insert('g', ':first-child')
                     .classed('y axis', true)
                     .call(yAxis)
                     .append('text')
@@ -1435,7 +1499,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('y', -1.05)
                     .attr('dy', '.71em')
                     .style('text-anchor', 'end')
-                    .text('State Level Funding From Federal Programs');
+                    .text('State Level Funding From Federal Programs');*/
                 }
 
                 //var contact_panel_button = d3.select("myBtnContact")
