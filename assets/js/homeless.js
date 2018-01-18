@@ -84,9 +84,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var map_title = d3.select('#p2_1_title')
                   .append('div')
-                  .attr('width', '500px')
-                  .attr('height', '75px')
-                  .attr('padding', '50px 0 0 50px')
+                  .attr('max-width', '465.48')
+                  .attr('height', '150px')
+                  .attr('padding', '50px 0 0 0')
                   .attr('class', 'p2_1_title')
                   .style('text-align','center');
 

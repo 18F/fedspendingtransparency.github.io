@@ -491,6 +491,7 @@
   }
 
   #panel_map {
+    top:40px;
     margin-top: 5px;
     position: relative;
     overflow: visible;
@@ -513,6 +514,7 @@
 
   #panel_coc {
     position: relative;
+    top:85px;
     padding-top:10px;
     margin-top: 5px;
     overflow: visible;
@@ -811,7 +813,7 @@
 
   .p2_1_title{
     position: relative;
-    min-height: 30px;
+    //min-height: 30px;
     text-align: center;
   }
 }
