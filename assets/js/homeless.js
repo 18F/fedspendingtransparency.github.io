@@ -225,8 +225,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     if (d.properties.coc_number === data[i].coc_number) {
                       if (data[i].total_homeless <= 0) {
                         return ('#C9CBC8')
-                      } else if (data[i].total_homeless <= 100) {
-                        return ('#F1F3F2');
+                      /*} else if (data[i].total_homeless <= 100) {
+                        return ('#F1F3F2');*/
                       } else if (data[i].total_homeless <= 200) {
                         return ('#E9ECEA');
                       } else if (data[i].total_homeless <= 300) {
