@@ -308,8 +308,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function getCFDA_value(d) {
                   //console.log('CFDA value: ',d);
-                  return '<b>Program Title: ' + d.program_title + '</b><br/>' +
-                    'Funding Amount: ' + formatNumber(d.fed_funding) +
+                  return '<b>' + d.program_title + '</b><br/>' +
+                    'Federal Funding: ' + formatNumber(d.fed_funding) +
                     '<br/>' + '<i>Click to visit the program website</i>';
                 }
 
@@ -356,11 +356,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .offset([-10, -10])
                     .html(function(d) {
                       return '<b style="border-bottom:1pt solid navy; padding: 2px 2px 0 2px">' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
-                        'Federal Funding: ' + getDollarValue(d) + '<br>' +
-                        'Total Homeless: ' + getValue(d) + '<br>' +
+                        '<b>Total Homeless: ' + getValue(d) + '</b><br>' +
                         'Sheltered Homeless: ' + getSheltered(d) + '<br>' +
-                        'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
-                        'Homeless Veterans: ' + getVets(d);
+                        'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>';
                     });
 
                   map_svg.call(tip)
@@ -1546,8 +1544,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function Make_Contact_Table(d) {
                   console.log('Make_Contact_Table d: ', d);
-                  return '<h6>' + d.properties.COCNAME + '</h6>' + '<br>' +
-                    '<p>' + d.properties.CONTACT_TY + '<br>' +
+                  return '<h6 style="margin-bottom:0">' + d.properties.COCNAME + '</h6>' + '<br>' +
+                    '<p>' + '<b>Contact information for the Continuum of Care program</b>' + '<br>'+
+                    d.properties.CONTACT_TY + '<br>' +
                     'Name: ' + d.properties.FIRST_NAME + ' ' + d.properties.LAST_NAME + '<br>' +
                     'Email: ' + d.properties.EMAIL_ADDR + '<br>' +
                     'Phone: ' + d.properties.PRIMARY_PH + '</p>';
