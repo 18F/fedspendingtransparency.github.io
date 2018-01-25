@@ -117,28 +117,43 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .attr('class', 'homeless-analysis d3-tip')
                   .style('background','#ffffff')
                   .style('color','#333')
-                  .style('border', 'solid 1px navy')
-                  .style('padding', '10px')
+                  .style('border', 'solid 1px #BFBCBC')
+                  .style('padding', '25px')
+                  .style('width', '300px')
                   .offset([-10, 0])
                   .html(function(d) {
-                    return '<b style="border-bottom:1px solid navy">' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
-                      'Federal Funding: ' + getDollarValue(d) + '<br>' +
-                      'Total Homeless: ' + getValue(d) + '<br>' +
-                      'Sheltered Homeless: ' + getSheltered(d) + '<br>' +
-                      'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>' +
-                      'Homeless Veterans: ' + getVets(d);
+                    return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b></p>' + '<br>' +
+                      '<p style="color: #0071BC; margin: 0; font-size: 20px">Federal Funding: ' + getDollarValue(d) + '</p><br>' +
+                      '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">'+
+                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Total Homeless: ' + getValue(d) + '</li>' +
+                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Sheltered Homeless: ' + getSheltered(d) + '</li>' +
+                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Unsheltered Homeless: ' + getUnsheltered(d) + '</li>' +
+                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Homeless Veterans: ' + getVets(d) + '</li>'+
+                      '</ul>';
                   });
 
+
+
+
+                /*  .html(function(d) {
+                    return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</p>' + '<br>' +
+                      '<p style="color: #0071BC; margin: 0; font-size: 20px">Total Homeless: ' + getValue(d) + '</p><br>' +
+                      '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">'+
+                      '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Sheltered Homeless: ' + getSheltered(d) + '</li>' +
+                      '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Unsheltered Homeless: ' + getUnsheltered(d) + '</li></ul>';
+                  })*/
                 var p2_3_bar_tip = d3.tip()
                   .attr('class', 'homeless-analysis d3-tip')
                   .style('background','#ffffff')
                   .style('color','#333')
-                  .style('border', 'solid 1px navy')
-                  .style('padding', '10px')
+                  .style('border', 'solid 1px #BFBCBC')
+                  .style('padding', '25px')
+                  .style('width', '300px')
                   .offset([-10, 0])
                   .html(function(d) {
                     return getCFDA_value(d);
                   });
+
 
                 var p2_1_projection = d3.geo.albersUsa()
                   .translate([map_width / 1.2, map_height / 1]) // translate to center of screen
@@ -308,9 +323,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function getCFDA_value(d) {
                   //console.log('CFDA value: ',d);
-                  return '<b>' + d.program_title + '</b><br/>' +
-                    'Federal Funding: ' + formatNumber(d.fed_funding) +
-                    '<br/>' + '<i>Click to visit the program website</i>';
+                  return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.program_title + '</b></p><br>' +
+                    '<p style="color: #0071BC; margin: 0; font-size: 20px; padding-bottom:0">Federal Funding: ' + formatNumber(d.fed_funding) + '</p><br>' +
+                    '<p style="font-size: 18px; margin-top:15px; padding-top:0; margin-bottom:0; font-style: italic">Click to visit the program website</p>';
                 }
 
                 //*************************************************************
@@ -351,15 +366,27 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('class', 'homeless-analysis d3-tip')
                     .style('background','#ffffff')
                     .style('color','#333')
-                    .style('border', 'solid 1px navy')
-                    .style('padding', '10px')
+                    .style('border', 'solid 1px #BFBCBC')
+                    .style('padding', '25px')
+                    .style('width', '300px')
                     .offset([-10, -10])
                     .html(function(d) {
-                      return '<b style="border-bottom:1pt solid navy; padding: 2px 2px 0 2px">' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b>' + '<br>' +
-                        '<b>Total Homeless: ' + getValue(d) + '</b><br>' +
-                        'Sheltered Homeless: ' + getSheltered(d) + '<br>' +
-                        'Unsheltered Homeless: ' + getUnsheltered(d) + '<br>';
-                    });
+                      return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</p>' + '<br>' +
+                        /*'<hr style="height: 1px; color: #BFBCBC">'*/
+                        '<p style="color: #0071BC; margin: 0; font-size: 20px; line-height: 22px">Total Homeless: ' + getValue(d) + '</p><br>' +
+                        '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">'+
+                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Sheltered Homeless: ' + getSheltered(d) + '</li>' +
+                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Unsheltered Homeless: ' + getUnsheltered(d) + '</li></ul>';
+                    })
+                    /*.attr('class','homeless-analysis d3-tip: after')
+                    .style('box-sizing', 'border-box')
+                    .style('display', 'inline')
+                    .style('line-height', '1')
+                    .style('font-size', '10px')
+                    .style('width', '100%')
+                    .style('position', 'absolute')
+                    .style('content', '\25BC')
+                    .style('pointer-events', 'none');*/
 
                   map_svg.call(tip)
 
