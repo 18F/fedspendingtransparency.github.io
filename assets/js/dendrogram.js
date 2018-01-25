@@ -464,7 +464,6 @@ function centerNode(source) {
           .on('click', click)
           .on("mouseover", tip.show)
           .on("mouseout", tip.hide);
-     console.log("nodeEnter: ",nodeEnter);
 
      function createHover(d) {
        console.log("createHover d: ",d)
@@ -541,7 +540,7 @@ function centerNode(source) {
           })
           .style("font-weight","900")
           .text(function(d) {
-              return d.children || d._children ? d.name : d.name+"  "+formatNumber(d.size);
+              return d.children || d._children ? d.name : d.name;
               //(d.name+"  "+formatNumber(d.size));
           });
 
