@@ -441,6 +441,18 @@ function centerNode(source) {
               return d.id || (d.id = ++i);
           });
 
+      var tip = d3.tip()
+                 .attr('class', 'dendro d3-tip')
+                 .style('background','#ffffff')
+                 .style('color','#333')
+                 .style('border', 'solid 1px #BFBCBC')
+                 .style('padding', '5px')
+                 .style('width', '300px')
+                 .offset([-10, -10])
+                 .html(createHover)
+
+      baseSvg.call(tip);
+
 
       // Enter any new nodes at the parent's previous position.
       var nodeEnter = node.enter().append("g")
@@ -450,11 +462,27 @@ function centerNode(source) {
               return "translate(" + source.y0 + "," + source.x0 + ")";
           })
           .on('click', click)
-          .on("mouseover", createHover)
-          .on("mouseout", removeHover);
+          .on("mouseover", tip.show)
+          .on("mouseout", tip.hide);
      console.log("nodeEnter: ",nodeEnter);
 
-      function createHover(d) {
+     function createHover(d) {
+       console.log("createHover d: ",d)
+       if(d.depth===3){
+           return '<p style="border-bottom:1px solid #898C90; font-size: 18px"><b>' + d.name +  '</p>' + '<br>' +
+             /*'<hr style="height: 1px; color: #BFBCBC">'*/
+             '<p style="color: #0071BC; margin: 0; font-size: 20px">Obligated Amount: ' + formatNumber(d.size) + '</p><br><br>' +
+             '<p>Click to visit Federal Account page</p>';
+        }else if (d.depth === 2){
+            return '<p font-size: 18px; margin:0"><b>'
+            + 'View Federal Accounts'+ '</p>' + '<br>' ;
+        }else if (d.depth===1){
+            return '<p font-size: 18px; margin:0"><b>'
+            + 'View Agencies'+ '</p>' + '<br>' ;}
+     }
+
+
+      /*function createHover(d) {
         d3.select(this).append("text")
             .attr("class", "hover")
             .attr('transform', function(d){
@@ -470,7 +498,7 @@ function centerNode(source) {
 
       function removeHover() {
         d3.select(this).select("text.hover").remove();
-      }
+      }*/
 
       nodeEnter.append("circle")
           .attr('class', 'nodeCircle')
