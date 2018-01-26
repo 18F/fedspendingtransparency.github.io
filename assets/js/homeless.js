@@ -34,11 +34,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.csv('/data-lab-data/2017statecfdafunding.csv', function(cfda_state) {
     d3.json('/data-lab-data/coc-pop-type.json', function(data) {
         d3.csv('/data-lab-data/CFDACOCAward.csv', function(bar_chrt) {
-          d3.csv('/data-lab-data/pop-award.csv', function(d) {
-            return {
-              total_homeless: +d.total_homeless,
-              value: +d.value
-            }
+          d3.csv('/data-lab-data/State_crosswalk.csv', function(state){
+            d3.csv('/data-lab-data/pop-award.csv', function(d) {
+              return {
+                total_homeless: +d.total_homeless,
+                value: +d.value
+              }
           }, function(scatter_data) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
@@ -49,12 +50,12 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 d3.select('#container2_1').append('div').attr('id', 'p2_1_title')
                 d3.select('#container2_1').append('div').attr('id', 'p2_1').style('top','150px')
                 d3.select('#container2_2').append('div').attr('id', 'p2_2_legend_title')
-                d3.select('#container2_2').append('div').attr('id', 'p2_2_legend')
+                /*d3.select('#container2_2').append('div').attr('id', 'p2_2_legend')*/
                 d3.select('#container2_2').append('div').attr('id', 'p2_2')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3_title')
                 d3.select('#container2_3').append('div').attr('id', 'p2_3')
-                d3.select('#container2_2').append('div').attr('id', 'p2_4_legend_title')
                 d3.select('#container2_2').append('div').attr('id', 'p2_4_legend')
+                d3.select('#container2_2').append('div').attr('id', 'p2_4_legend_title')
                 d3.select('#container2_4').append('div').attr('id', 'p2_4')
                 d3.select('#CoCcontact').append('div').attr('id', 'p2_5')
                 d3.select('#p2_1').append('div').attr('id', 'panel_map')
@@ -123,13 +124,13 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .offset([-10, 0])
                   .html(function(d) {
                     return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b></p>' + '<br>' +
-                      '<p style="color: #0071BC; margin: 0; font-size: 20px">Federal Funding: ' + getDollarValue(d) + '</p><br>' +
+                      '<p style="color: #0071BC; margin: 0; font-size: 20px">Federal Funding: ' + getDollarValue(d) + '</p><br>' /*+
                       '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">'+
                         '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Total Homeless: ' + getValue(d) + '</li>' +
                         '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Sheltered Homeless: ' + getSheltered(d) + '</li>' +
                         '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Unsheltered Homeless: ' + getUnsheltered(d) + '</li>' +
                         '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Homeless Veterans: ' + getVets(d) + '</li>'+
-                      '</ul>';
+                      '</ul>'*/;
                   });
 
 
@@ -217,6 +218,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       d3.selectAll('#viz_container').remove()
                       d3.selectAll('#legend').remove()
                       d3.selectAll('#legend_title').remove()
+                      d3.selectAll('#legend_subtitle').remove()
                       d3.selectAll('#counties_mini').remove()
                       GenTable()
                       GenPanelTwo()
@@ -328,6 +330,13 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic; text-align: center">Click to visit the program website</p>';
                 }
 
+                function getState(d) {
+                  for (var i = 0; i < map_data.length; i++) {
+                    if (d.properties.STUSAB === state[i].Abbrv){
+                      return state[i].State;
+                    }
+                  }
+                }
                 //*************************************************************
 
                 function GenMap() {
@@ -394,7 +403,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('id', 'title')
                     .style('text-align', 'center')
                     .style('color','#476057')
-                    .text('Continuum of Care Homeless Population')
+                    .text('Homeless Population by Region')
+
+                  d3. select('#legend_subtitle').append('h6')
+                    .attr('id', 'subtitle')
+                    .style('text-align', 'center')
+                    .style('color','#476057')
+                    .style('font-style', 'italic')
+                    .text('HUD Point in Time Count by Continuum of Care Area')
+
 
                   /*var legend = d3.select('#legend')
                     .append('div')
@@ -1175,7 +1192,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('padding', '50px 0 0 50px')
                     .attr('id', 'p2_quad3_title')
                     .style('text-align','center')
-                    .html('<h6>Some Header Text Goes Here</h6>');
+                    .html('<p style="color:#333; font-size: 18px"><b>' + d.properties.coc_number + ' Homeless Counts</b></p>');
 
                   var OtherformatNumber = d3.format(',');
                   console.log('Make CoC Table d: ', d);
@@ -1201,7 +1218,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function Make_Map_Title(d) {
-                      return map_title.html('<h1 class="panel_title">' + d.properties.COCNAME + '</h1>')
+                      return map_title.html('<h1 class="panel_title">' + d.properties.coc_number + ': ' +d.properties.COCNAME + '</h1>')
                 }
 
 
@@ -1210,7 +1227,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   $('#panel_info').empty();
                   d3.select('#panel_matrix > svg').remove()
                   d3.select('#p2_cfda_legend_title').remove()
-                  d3.select('#p2_cfda_legend').remove()
+                  /*d3.select('#p2_cfda_legend').remove()*/
 
                   var cfda_legend_title = d3.select('#p2_2_legend_title')
                     .append('div')
@@ -1219,9 +1236,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('padding', '50px 0 0 50px')
                     .attr('id', 'p2_cfda_legend_title')
                     .style('text-align','center')
-                    .html('<h6>Federal Programs Covering Homelessness</h6>');
+                    .html('<p style="color: #333; font-size: 18px; margin-top:10px"><b>Federal Programs Covering Homelessness in '+ d.properties.coc_number + '</b></p>');
 
-                  var cfda_legend = d3.select('#p2_2_legend')
+                /*  var cfda_legend = d3.select('#p2_2_legend')
                     .append('div')
                     .attr('width', '500px')
                     .attr('height', '75px')
@@ -1257,7 +1274,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .style('position', 'relative')
                       .style('color', 'blue')
                       .html('<p>' + cfda_legend_key_values[i] + '</p>');
-                  }
+                  }*/
 
                   var p2_3_matrix_svg = d3.select('#panel_matrix').append('svg')
                     /*.attr('width', matrix_width + margin.left + margin.right)
@@ -1297,21 +1314,17 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('cx', 0)
                     .style('fill', function(d) {
                       if (d.category == 'Housing') {
-                        return '#547B8B'
-                      } else if (d.category == 'Food') {
+                        return '#324D5C'
+                      } /*else if (d.category == 'Food') {
                         return '#A5636E'
-                      } else if (d.category == 'Health') {
-                        return '#846E8A'
-                      }
-                      /*else if (d.category == 'Research') {
-                                             return '#A08E39'
-                                           }*/
-                      else if (d.category == 'Education') {
-                        return '#A3664A'
+                      }*/ else if (d.category == 'Health') {
+                        return '#F0CA4D'
+                      } else if (d.category == 'Education') {
+                        return '#2A5DA8'
                       } else if (d.category == 'Support Services') {
-                        return '#42816F'
+                        return '#E37B40'
                       } else if (d.category == 'Employment') {
-                        return '#877339'
+                        return '#F53855'
                       }
                     })
                     .attr('transform', function(d, i) {
@@ -1389,14 +1402,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   d3.select('#p2_4_cfda_legend_title').remove()
                   d3.select('#p2_4_cfda_legend').remove()
 
-                  var cfda_legend_title = d3.select('#p2_4_legend_title')
-                    .append('div')
-                    .attr('width', '500px')
-                    .attr('height', '75px')
-                    .attr('padding', '50px 0 0 50px')
-                    .attr('id', 'p2_4_cfda_legend_title')
-                    .style('text-align','center')
-                    .html('<h6>' + d.properties.STUSAB + ' State Level Funding From Federal Programs</h6>');
 
                   var cfda_legend = d3.select('#p2_4_legend')
                     .append('div')
@@ -1405,11 +1410,11 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('padding', '50px 0 0 50px')
                     .attr('id', 'p2_4_cfda_legend');
 
-                  var cfda_color = ['#547B8B', '#A5636E', '#846E8A', '#A3664A', '#877339', '#42816F'];
+                  var cfda_color = ['#324D5C', '#2A5DA8', '#F53855', '#E37B40', '#F0CA4D'];
 
-                  var cfda_legend_key_values = ['Housing', 'Food', 'Health', 'Education', 'Employment', 'Support Services'];
+                  var cfda_legend_key_values = ['Housing', 'Education', 'Employment', 'Support Services', 'Health'];
 
-                  for (var i = 0; i < 6; i++) {
+                  for (var i = 0; i < 5; i++) {
 
                     var l = cfda_legend.append('div')
                       .attr('id', 'p2_2_legend_key');
@@ -1435,6 +1440,15 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                       .style('color', 'blue')
                       .html('<p>' + cfda_legend_key_values[i] + '</p>');
                   }
+
+                  var cfda_legend_title = d3.select('#p2_4_legend_title')
+                    .append('div')
+                    .attr('width', '500px')
+                    .attr('height', '75px')
+                    .attr('padding', '40px 0 0 40px')
+                    .attr('id', 'p2_4_cfda_legend_title')
+                    .style('text-align','center')
+                    .html('<p style="color:#333; font-size:18px"><b>' + getState(d) + ' State Level Funding From Federal Programs</b></p>');
 
                   var p2_4_matrix_svg = d3.select('#panel_info').append('svg')
                     /*.attr('width', matrix_width + margin.left + margin.right)
@@ -1474,17 +1488,17 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('cx', 0)
                     .style('fill', function(d) {
                       if (d.category == 'Housing') {
-                        return '#547B8B'
-                      } else if (d.category == 'Food') {
+                        return '#324D5C'
+                      } /*else if (d.category == 'Food') {
                         return '#A5636E'
-                      } else if (d.category == 'Health') {
-                        return '#846E8A'
+                      }*/ else if (d.category == 'Health') {
+                        return '#F0CA4D'
                       } else if (d.category == 'Education') {
-                        return '#A3664A'
+                        return '#2A5DA8'
                       } else if (d.category == 'Support Services') {
-                        return '#42816F'
+                        return '#E37B40'
                       } else if (d.category == 'Employment') {
-                        return '#877339'
+                        return '#F53855'
                       }
                     })
                     .attr('transform', function(d, i) {
@@ -1578,6 +1592,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     'Email: ' + d.properties.EMAIL_ADDR + '<br>' +
                     'Phone: ' + d.properties.PRIMARY_PH + '</p>';
                 }
+              })
             })
           })
         })

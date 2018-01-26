@@ -489,6 +489,7 @@
     position: relative;
     float: left;
     overflow: visible;
+    margin-top: -5px;
   }
 
   #panel_map {
@@ -502,10 +503,19 @@
     border-color: #414b57;*/
     background-color: inherit;
   }
+  #p2_4_legend{
+    height: 50px;
+    width: 100%;
+    padding-left:20px;
+  }
+  #p2_4_legend_title{
+    padding-bottom:10px;
+  }
 
   #panel_info {
     position: relative;
     margin-top: 5px;
+    padding-top: 10px;
     overflow: visible;
     background-color: inherit;
     min-height: 255px;
@@ -513,6 +523,9 @@
     margin-top: 20px;
   }
 
+  #p2_quad3_title{
+    padding-top:40px;
+  }
   #panel_coc {
     position: relative;
     //top:50px;
@@ -756,7 +769,7 @@
   }
   #p2_2{
     height: 330px;
-    margin-bottom:40px;
+    margin-bottom:15px;
   }
 
   #p2_2_legend{
@@ -768,25 +781,27 @@
 
   #p2_2_legend_title{
     position: relative;
+    height: 70px;
   }
 
   #p2_2_legend_key{
     height: 50px;
     width: 53px;
-    margin: -15px 10px -7px 10px;
+    margin: -15px 0 -7px 0;
+    padding: 0 40px 0 40px;
     float: left;
   }
 
   #p2_2_key{
     height: 30px;
     width: 53px;
-    margin: 0 20px 3px 20px;
+    margin: 0 0 3px 10px;
   }
 
   #p2_2_key_value{
     height: 10px;
     width: 50px;
-    margin: 0 3px 3px 0;
+    margin: 0 20px 3px 20;
     text-align: right;
     /*-ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
@@ -816,7 +831,7 @@
     position: relative;
     text-align: center;
     max-width: 465.48px;
-    min-height: 120px;
+    min-height: 70px;
   }
 
   #myModalContact{
