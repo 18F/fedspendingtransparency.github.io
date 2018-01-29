@@ -1227,7 +1227,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         '<tr><td class="panel_text">' + 'Total Homeless' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.total_homeless) +'</td></tr>'+'</table>'+
 
                         '<table><tr><td class="panel_text">' + 'Chronically Homeless ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) + '</td></tr>' +
-                        '<tr><td class="panel_text">' + 'Homeless Individuals ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_individuals) + '</td></tr>' + '</table>'
+                        '<tr><td class="panel_text">' + 'Homeless Veterans ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_veterans) + '</td></tr>' + '</table>'
 
                     }
                   }
