@@ -208,6 +208,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                     if (selectedValue === 'Map') {
                       d3.selectAll('#viz_container').remove()
+                      d3.selectAll('legend_subtitle').remove()
                       d3.selectAll('#counties_mini').remove()
                       //d3.select('#p2_legend').remove()
 
@@ -344,6 +345,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   spinner_panel1.stop();
 
                   d3.select('#container').append('div').attr('id', 'legend_title');
+                  d3.select('#container').append('div').attr('id', 'legend_subtitle')
                   d3.select('#container').append('div').attr('id', 'viz_container');
                   d3.select('#container').append('div').attr('id', 'legend');
 
@@ -405,6 +407,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('id', 'title')
                     .style('text-align', 'center')
                     .style('color','#476057')
+                    .style('margin-bottom', '10px')
                     .text('Homeless Population by Region')
 
                   d3. select('#legend_subtitle').append('h6')
@@ -584,12 +587,21 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('id', 'title')
                     .style('text-align', 'center')
                     .style('color','#476057')
-                    .text('Continuum of Care Homeless Population')
+                    .style('margin-bottom', '10px')
+                    .text('Homeless Population by Region')
+
+                  d3. select('#viz_container').append('h6')
+                    .attr('id', 'subtitle')
+                    .style('text-align', 'center')
+                    .style('color','#476057')
+                    .style('font-style', 'italic')
+                    .text('HUD Point in Time Count by Continuum of Care Area')
 
                   d3.select('#viz_container').append('div')
                     .attr('class', 'SearchBar')
                     .append('p')
                     .attr('class', 'SearchBar')
+                    .style('margin-bottom', '10px')
                     .text('Search By CoC Name:');
 
                   d3.select('.SearchBar')
@@ -599,12 +611,14 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('type', 'text')
                     .attr('placeholder', 'Search...')
                     .style('font-family', 'inherit')
+                    .style('margin-bottom', '10px')
                     .style('font-size', '16');
 
                   d3.select('#viz_container').append('div')
                     .attr('id', 'table_container')
                     .attr('width', '950px')
-                    .attr('height', '575px');
+                    .attr('height', '575px')
+                    .style('margin-top', '10px');
 
                   var table = d3.select('#table_container').append('table').attr('id', 'tab');
                   table.append('thead').append('tr');
