@@ -124,7 +124,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   .offset([-10, 0])
                   .html(function(d) {
                     return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b></p>' + '<br>' +
-                      '<p style="color: #0071BC; margin: 0; font-size: 20px">Federal Funding: ' + getDollarValue(d) + '</p><br>' /*+
+                      '<p style="color: #0071BC; margin: 0; font-size: 20px">Federal Funding: ' + getDollarValue(d) + '</p><br>' +
+                      '<p style="font-style-italic; font-size: 18px; text-align: center; margin-bottom: 10px"> Double click to zoom in/orient</p>'/*+
                       '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">'+
                         '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Total Homeless: ' + getValue(d) + '</li>' +
                         '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Sheltered Homeless: ' + getSheltered(d) + '</li>' +
@@ -385,7 +386,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         '<p style="color: #0071BC; margin: 0; padding-bottom:0; font-size: 20px; line-height: 22px">Total Homeless: ' + getValue(d) + '</p><br>' +
                         '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">'+
                         '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Sheltered Homeless: ' + getSheltered(d) + '</li>' +
-                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Unsheltered Homeless: ' + getUnsheltered(d) + '</li></ul>';
+                        '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Unsheltered Homeless: ' + getUnsheltered(d) + '</li></ul><br>'+
+                        '<p style="font-style-italic; font-size: 18px; text-align: center; margin-bottom: 10px"> Double click to zoom in/orient</p>';
                     })
                     /*.attr('class','homeless-analysis d3-tip: after')
                     .style('box-sizing', 'border-box')
