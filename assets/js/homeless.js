@@ -97,7 +97,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var info_panel = d3.select('#panel_info')
                   .attr('width', info_width + margin.left + margin.right)
-                  .attr('height', info_height + margin.top + margin.bottom);
+                  .attr('height', info_height + margin.top + margin.bottom - 20);
 
                 var contact_panel = d3.select('#panel_contact')
                   .attr('width', info_width + margin.left + margin.right)
@@ -1226,7 +1226,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                         '<tr><td class="panel_text" style="border-bottom:1pt solid black">' + 'Unsheltered Homeless ' + '</td><td class="panel_text2" style="border-bottom:1pt solid black">' + OtherformatNumber(tab_dat.unsheltered_homeless) + '</td></tr>' +
                         '<tr><td class="panel_text">' + 'Total Homeless' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.total_homeless) +'</td></tr>'+'</table>'+
 
-                        '<table><tr><td class="panel_text">' + 'Chronically Homeless ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) + '</td></tr>' +
+                        '<table style="margin-bottom:0"><tr><td class="panel_text">' + 'Chronically Homeless ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.chronically_homeless) + '</td></tr>' +
                         '<tr><td class="panel_text">' + 'Homeless Veterans ' + '</td><td class="panel_text2">' + OtherformatNumber(tab_dat.homeless_veterans) + '</td></tr>' + '</table>'
 
                     }
