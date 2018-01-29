@@ -327,9 +327,10 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 function getCFDA_value(d) {
                   //console.log('CFDA value: ',d);
-                  return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.program_title + '</b></p><br>' +
-                    '<p style="color: #0071BC; margin: 0; font-size: 20px; padding:0">Federal Funding: ' + formatNumber(d.fed_funding) + '</p><br>' +
-                    '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic; text-align: center">Click to visit the program website</p>';
+                  return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.program_title + '</b> [CFDA No. ' + d.cfda_number+ ']' + '</p><br>' +
+                  '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0">Agency: ' + d.agency + '</p><br>' +
+                  '<p style="color: #0071BC; margin: 0; font-size: 20px; padding:0">Federal Funding: ' + formatNumber(d.fed_funding) + '</p><br>' +
+                  '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic; text-align: center">Click to visit the program website</p>';
                 }
 
                 function getState(d) {
@@ -1356,9 +1357,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('y', barHeight / 2)
                     .attr('dy', '.35em') //vertical align middle
                     .text(function(d) {
-                      return d.cfda_number;
+                      return 'CFDA #' + d.cfda_number;
                     }).each(function() {
-                      labelWidth = 50;
+                      labelWidth = 85;
                     });
 
                   scale = d3.scale.linear()
@@ -1530,9 +1531,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .attr('y', barHeight / 2)
                     .attr('dy', '.35em') //vertical align middle
                     .text(function(d) {
-                      return d.cfda_number;
+                      return 'CFDA #' + d.cfda_number;
                     }).each(function() {
-                      labelWidth = 50;
+                      labelWidth = 85;
                     });
 
                   scale = d3.scale.linear()
