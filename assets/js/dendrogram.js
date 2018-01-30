@@ -26,7 +26,7 @@ EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.*/
 
 // Get csv data
 
-d3.csv('/data-lab-data/accounts_obligations_revised_180125.csv',function(error,newData){
+d3.csv('/data-lab-data/accounts_obligations_revised_180130.csv',function(error,newData){
 
 console.log("Hierarchy: ",newData);
 
@@ -52,7 +52,7 @@ newData.forEach(function(d){
       // Now reference the new child array as we go deeper into the tree
       depthCursor = depthCursor[index].children;
       // This is a leaf, so add the last element to the specified branch
-  if ( depth === levels.length - 1 ) depthCursor.push({ name : d.Title, size : d.Obligation, id : d.accountID });
+  if ( depth === levels.length - 1 ) depthCursor.push({ name : d.Title, size : d.Obligation, unob : d.Unobligated ,id : d.accountID });
 });
 });
 
@@ -470,7 +470,8 @@ function centerNode(source) {
        if(d.depth===3){
            return '<p style="border-bottom:1px solid #898C90; font-size: 18px"><b>' + d.name +  '</p>' + '<br>' +
              /*'<hr style="height: 1px; color: #BFBCBC">'*/
-             '<p style="color: #0071BC; margin: 0; font-size: 20px">Obligated Amount: ' + formatNumber(d.size) + '</p><br><br>' +
+             '<p style="color: #0071BC; margin: 0; font-size: 20px">Obligated Amount: ' + formatNumber(d.size) + '</p>' +
+             '<p style="color: #0071BC; margin: 0; font-size: 20px">Unobligated Amount: ' + formatNumber(d.unob) + '</p><br><br>' +
              '<p>Click to visit Federal Account page</p>';
         }else if (d.depth === 2){
             return '<p font-size: 18px; margin:0"><b>'
