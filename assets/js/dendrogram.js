@@ -447,7 +447,8 @@ function centerNode(source) {
                  .style('color','#333')
                  .style('border', 'solid 1px #BFBCBC')
                  .style('padding', '5px')
-                 .style('width', '300px')
+                 .style('min-width', '200px')
+                 .style('max-width', '325px')
                  .offset([-10, -10])
                  .html(createHover)
 
