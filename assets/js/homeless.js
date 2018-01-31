@@ -32,20 +32,19 @@ var spinner_panel5 = new Spinner(opts).spin(target_panel5);
 
 d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.csv('/data-lab-data/2017statecfdafunding.csv', function(cfda_state) {
-    d3.json('/data-lab-data/coc-pop-type.json', function(data) {
         d3.csv('/data-lab-data/CFDACOCAward.csv', function(bar_chrt) {
           d3.csv('/data-lab-data/State_crosswalk.csv', function(state){
-            d3.csv('/data-lab-data/pop-award.csv', function(d) {
-              return {
-                total_homeless: +d.total_homeless,
-                value: +d.value
-              }
-          }, function(scatter_data) {
             d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
               d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
 
-                console.log('CFDA State: ', cfda_state);
                 console.log('CoC US: ', us);
+                console.log('CFDA State: ', cfda_state);
+                //console.log('data: ', data);
+                console.log('bar_chrt: ', bar_chrt);
+                console.log('state: ', state);
+                //console.log('scatter_data: ', scatter_data);
+                console.log('table_data: ', table_data);
+                console.log('map_data: ', map_data);
 
                 d3.select('#container2_1').append('div').attr('id', 'p2_1_title')
                 d3.select('#container2_1').append('div').attr('id', 'p2_1').style('top','150px')
@@ -167,15 +166,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
 
                 var m = p2_1_map_svg.append('g');
 
-
-
-                data.forEach(function(d) {
-                  d.total_homeless = +d.total_homeless
-                  d.unsheltered = +d.unsheltered_homeless
-                  d.sheltered = +d.sheltered_homeless
-                  d.vets = +d.homeless_veterans
-                });
-
                 bar_chrt.forEach(function(d) {
                   d.fed_funding = +d.fed_funding;
                 });
@@ -240,43 +230,43 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function getColor(d) {
-                  for (var i = 0; i < data.length; i++) {
-                    if (d.properties.coc_number === data[i].coc_number) {
-                      if (data[i].total_homeless <= 0) {
+                  for (var i = 0; i < table_data.length; i++) {
+                    if (d.properties.coc_number === table_data[i].coc_number) {
+                      if (table_data[i].total_homeless <= 0) {
                         return ('#C9CBC8')
-                      /*} else if (data[i].total_homeless <= 100) {
+                      /*} else if (table_data[i].total_homeless <= 100) {
                         return ('#F1F3F2');*/
-                      } else if (data[i].total_homeless <= 200) {
+                      } else if (table_data[i].total_homeless <= 200) {
                         return ('#E9ECEA');
-                      } else if (data[i].total_homeless <= 300) {
+                      } else if (table_data[i].total_homeless <= 300) {
                         return ('#E1E5E3');
-                      } else if (data[i].total_homeless <= 500) {
+                      } else if (table_data[i].total_homeless <= 500) {
                         return ('#D9DEDB');
-                      } else if (data[i].total_homeless <= 700) {
+                      } else if (table_data[i].total_homeless <= 700) {
                         return ('#D1D7D4');
-                      } else if (data[i].total_homeless <= 1000) {
+                      } else if (table_data[i].total_homeless <= 1000) {
                         return ('#C9D0CD');
-                      } else if (data[i].total_homeless <= 1500) {
+                      } else if (table_data[i].total_homeless <= 1500) {
                         return ('#C1C9C5');
-                      } else if (data[i].total_homeless <= 2000) {
+                      } else if (table_data[i].total_homeless <= 2000) {
                         return ('#B9C2BE');
-                      } else if (data[i].total_homeless <= 2500) {
+                      } else if (table_data[i].total_homeless <= 2500) {
                         return ('#A8B4AF');
-                      } else if (data[i].total_homeless <= 3000) {
+                      } else if (table_data[i].total_homeless <= 3000) {
                         return ('#98A6A0');
-                      } else if (data[i].total_homeless <= 3500) {
+                      } else if (table_data[i].total_homeless <= 3500) {
                         return ('#889892');
-                      } else if (data[i].total_homeless <= 4000) {
+                      } else if (table_data[i].total_homeless <= 4000) {
                         return ('#778A83');
-                      } else if (data[i].total_homeless <= 5000) {
+                      } else if (table_data[i].total_homeless <= 5000) {
                         return ('#677C74');
-                      } else if (data[i].total_homeless <= 6000) {
+                      } else if (table_data[i].total_homeless <= 6000) {
                         return ('#576E65');
-                      } else if (data[i].total_homeless <= 7000) {
+                      } else if (table_data[i].total_homeless <= 7000) {
                         return ('#476057');
-                      } else if (data[i].total_homeless <= 8000) {
+                      } else if (table_data[i].total_homeless <= 8000) {
                         return ('#365248');
-                      } else if (data[i].total_homeless <= 12000) {
+                      } else if (table_data[i].total_homeless <= 12000) {
                         return ('#1E3D32');
                       } else {
                         return ('#06281C')
@@ -286,33 +276,33 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function getValue(d) {
-                  for (var i = 0; i < data.length; i++) {
-                    if (d.properties.coc_number === data[i].coc_number) {
-                      return OtherformatNumber(data[i].total_homeless);
+                  for (var i = 0; i < table_data.length; i++) {
+                    if (d.properties.coc_number === table_data[i].coc_number) {
+                      return OtherformatNumber(table_data[i].total_homeless);
                     }
                   }
                 }
 
                 function getSheltered(d) {
-                  for (var i = 0; i < data.length; i++) {
-                    if (d.properties.coc_number === data[i].coc_number) {
-                      return OtherformatNumber(data[i].sheltered_homeless);
+                  for (var i = 0; i < table_data.length; i++) {
+                    if (d.properties.coc_number === table_data[i].coc_number) {
+                      return OtherformatNumber(table_data[i].sheltered_homeless);
                     }
                   }
                 }
 
                 function getUnsheltered(d) {
-                  for (var i = 0; i < data.length; i++) {
-                    if (d.properties.coc_number === data[i].coc_number) {
-                      return OtherformatNumber(data[i].unsheltered_homeless);
+                  for (var i = 0; i < table_data.length; i++) {
+                    if (d.properties.coc_number === table_data[i].coc_number) {
+                      return OtherformatNumber(table_data[i].unsheltered_homeless);
                     }
                   }
                 }
 
                 function getVets(d) {
-                  for (var i = 0; i < data.length; i++) {
-                    if (d.properties.coc_number === data[i].coc_number) {
-                      return OtherformatNumber(data[i].homeless_veterans);
+                  for (var i = 0; i < table_data.length; i++) {
+                    if (d.properties.coc_number === table_data[i].coc_number) {
+                      return OtherformatNumber(table_data[i].homeless_veterans);
                     }
                   }
                 }
@@ -1609,8 +1599,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     'Email: ' + d.properties.EMAIL_ADDR + '<br>' +
                     'Phone: ' + d.properties.PRIMARY_PH + '</p>';
                 }
-              })
-            })
           })
         })
       })
