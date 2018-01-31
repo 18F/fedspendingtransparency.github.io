@@ -34,8 +34,8 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
   d3.csv('/data-lab-data/2017statecfdafunding.csv', function(cfda_state) {
         d3.csv('/data-lab-data/CFDACOCAward.csv', function(bar_chrt) {
           d3.csv('/data-lab-data/State_crosswalk.csv', function(state){
-            d3.json('/data-lab-data/coc-pop-type.json', function(table_data) {
-              d3.csv('/data-lab-data/coc_by_value.csv', function(map_data) {
+            d3.csv('/data-lab-data/coc_pop_value.csv', function(table_data) {
+
 
                 console.log('CoC US: ', us);
                 console.log('CFDA State: ', cfda_state);
@@ -44,7 +44,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 console.log('state: ', state);
                 //console.log('scatter_data: ', scatter_data);
                 console.log('table_data: ', table_data);
-                console.log('map_data: ', map_data);
+                console.log('table_data: ', table_data);
 
                 d3.select('#container2_1').append('div').attr('id', 'p2_1_title')
                 d3.select('#container2_1').append('div').attr('id', 'p2_1').style('top','150px')
@@ -178,8 +178,16 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   return b.fed_funding - a.fed_funding
                 })
 
-                map_data.forEach(function(d) {
-                  d.fed_funding = +d.fed_funding;
+                table_data.forEach(function(d) {
+                  d.total_homeless = +d.total_homeless
+                  d.chronically_homeless = +d.chronically_homeless
+                  d.sheltered_homeless = +d.sheltered_homeless
+                  d.unsheltered_homeless = +d.unsheltered_homeless
+                  d.homeless_individuals = +d.homeless_individuals
+                  d.homeless_veterans = +d.homeless_veterans
+                  d.homeless_people_in_families = +d.homeless_people_in_families
+                  d.homeless_unaccompanied_youth = +d.homeless_unaccompanied_youth
+                  d.amount = +d.amount
                 });
 
                 bar_chrt = bar_chrt.sort(function(x, y) {
@@ -308,9 +316,9 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function getDollarValue(d) {
-                  for (var i = 0; i < map_data.length; i++) {
-                    if (d.properties.coc_number === map_data[i].COC_Number) {
-                      return formatNumber(map_data[i].amount);
+                  for (var i = 0; i < table_data.length; i++) {
+                    if (d.properties.coc_number === table_data[i].coc_number) {
+                      return formatNumber(table_data[i].amount);
                     }
                   }
                 }
@@ -324,7 +332,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 }
 
                 function getState(d) {
-                  for (var i = 0; i < map_data.length; i++) {
+                  for (var i = 0; i < table_data.length; i++) {
                     if (d.properties.STUSAB === state[i].Abbrv){
                       return state[i].State;
                     }
@@ -538,17 +546,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                 function GenTable() {
 
                   ////console.log('table data: ', table_data)
-
-                  table_data.forEach(function(d) {
-                    d.total_homeless = +d.total_homeless
-                    d.chronically_homeless = +d.chronically_homeless
-                    d.sheltered_homeless = +d.sheltered_homeless
-                    d.unsheltered_homeless = +d.unsheltered_homeless
-                    d.homeless_individuals = +d.homeless_individuals
-                    d.homeless_veterans = +d.homeless_veterans
-                    d.homeless_people_in_families = +d.homeless_people_in_families
-                    d.homeless_unaccompanied_youth = +d.homeless_unaccompanied_youth
-                  });
 
                   var column_names = ['CoC Number', 'CoC Name', 'Total Homeless', 'Sheltered Homeless', 'Unsheltered Homeless', 'Chronically Homeless', 'Homeless Veterans', 'Homeless Individuals', 'Homeless People in Families', 'Homeless Unaccompanied Youth (Under 25)'];
 
@@ -1043,41 +1040,41 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     .on('mouseout', p2_tip.hide);
 
                   function p2_getColor(d) {
-                    for (var i = 0; i < map_data.length; i++) {
-                      if (d.properties.coc_number === map_data[i].COC_Number) {
-                        if (map_data[i].amount <= 500000) {
+                    for (var i = 0; i < table_data.length; i++) {
+                      if (d.properties.coc_number === table_data[i].coc_number) {
+                        if (table_data[i].amount <= 500000) {
                           return ('#BEF399');
-                        } else if (map_data[i].amount <= 1500000) {
+                        } else if (table_data[i].amount <= 1500000) {
                           return ('#B0EC9A');
-                        } else if (map_data[i].amount <= 2500000) {
+                        } else if (table_data[i].amount <= 2500000) {
                           return ('#A3E59B');
-                        } else if (map_data[i].amount <= 5000000) {
+                        } else if (table_data[i].amount <= 5000000) {
                           return ('#96DD9B');
-                        } else if (map_data[i].amount <= 7500000) {
+                        } else if (table_data[i].amount <= 7500000) {
                           return ('#8AD59C');
-                        } else if (map_data[i].amount <= 10000000) {
+                        } else if (table_data[i].amount <= 10000000) {
                           return ('#80CE9C');
-                        } else if (map_data[i].amount <= 20000000) {
+                        } else if (table_data[i].amount <= 20000000) {
                           return ('#76C69C');
-                        } else if (map_data[i].amount <= 30000000) {
+                        } else if (table_data[i].amount <= 30000000) {
                           return ('#6DBD9B');
-                        } else if (map_data[i].amount <= 40000000) {
+                        } else if (table_data[i].amount <= 40000000) {
                           return ('#66B59A');
-                        } else if (map_data[i].amount <= 50000000) {
+                        } else if (table_data[i].amount <= 50000000) {
                           return ('#5FAD98');
-                        } else if (map_data[i].amount <= 60000000) {
+                        } else if (table_data[i].amount <= 60000000) {
                           return ('#5AA496');
-                        } else if (map_data[i].amount <= 70000000) {
+                        } else if (table_data[i].amount <= 70000000) {
                           return ('#569C93');
-                        } else if (map_data[i].amount <= 80000000) {
+                        } else if (table_data[i].amount <= 80000000) {
                           return ('#529490');
-                        } else if (map_data[i].amount <= 90000000) {
+                        } else if (table_data[i].amount <= 90000000) {
                           return ('#508B8C');
-                        } else if (map_data[i].amount <= 100000000) {
+                        } else if (table_data[i].amount <= 100000000) {
                           return ('#4E8387');
-                        } else if (map_data[i].amount <= 150000000) {
+                        } else if (table_data[i].amount <= 150000000) {
                           return ('#465261');
-                        } else if (map_data[i].amount <= 200000000) {
+                        } else if (table_data[i].amount <= 200000000) {
                           return ('#3E3C4A');
                         } else {
                           return ('#291C24')
@@ -1599,7 +1596,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                     'Email: ' + d.properties.EMAIL_ADDR + '<br>' +
                     'Phone: ' + d.properties.PRIMARY_PH + '</p>';
                 }
-          })
         })
       })
     })
