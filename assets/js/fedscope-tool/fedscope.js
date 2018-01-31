@@ -1,5 +1,6 @@
 $(function() {
   tooltipModuleDraw = tooltipModule().draw;
+  tooltipModuleRemove = tooltipModule().remove;
   treemapModuleDraw = treemapModule().draw;
   mapModuleDraw = mapModule().draw;
   barchartModuleDraw = barchartModule().draw;
@@ -21,7 +22,8 @@ $(function() {
           states,
           agencies,
           occupationCategories,
-          tooltipModuleDraw
+          tooltipModuleDraw,
+          tooltipModuleRemove
         });
 
         loadEmployeeSalaryData([treemapModuleDraw], {

@@ -24,12 +24,7 @@ const mapModule = function() {
     }
 
     function handleMouseOut() {
-      d3
-        .select("#tooltip")
-        .transition()
-        .duration(500)
-        .style("opacity", 0);
-
+      tooltipModuleRemove();
       d3.select(this).style("fill", d => color(dataByState[d.abbreviation]));
     }
 

@@ -29,5 +29,13 @@ const tooltipModule = function() {
     }
   }
 
-  return { draw };
+  function remove() {
+    d3
+      .select("#tooltip")
+      .transition()
+      .duration(500)
+      .style("opacity", 0);
+  }
+
+  return { draw, remove };
 };
