@@ -30,12 +30,14 @@ page: fedscope-tool
 <p style="margin-bottom:2rem">In the first two quarters of fiscal year 2017 (FY17), a total of $115 million dollars in personnel compensation was obligated by the largest 24 federal agencies (referred to as CFO Act Agencies*). Figure 1 shows how government-wide personnel compensation and benefits spending is distributed across these agencies, with the largest amount of personnel spending dedicated to the Department of Defense followed by the Department of Agriculture.</p>
 <p style="margin-bottom: 0px"><i>Figure 1: Personnel Budgets Across Government</i></p>
 
+<!-- tooltip -->
+<div id="tooltip"></div>
+
 <!-- vis 1: treemap -->
 <script src="{{site.baseurl}}/assets/js/fedscope-tool/treemapModule.js"></script>
-<div>
-  <svg width="800" height="500" id="treemapSvg"></svg>
+<div class="visContainer">
+  <svg width="900" height="500" id="treemapSvg"></svg>
 </div>
-
 
 <div style="margin-bottom:0px">
   <h5 style="margin-bottom:1.3rem">Where are employees located?</h5>
@@ -45,22 +47,14 @@ page: fedscope-tool
 
 <!-- vis 2: map -->
 <script src="{{site.baseurl}}/assets/js/fedscope-tool/mapModule.js"></script>
-<div>
-  <!-- <form id="mapToolbar" class="ui form">
-    <div class="field">
-      <select class="ui fluid search dropdown" multiple="" id="agencyDropdown">
-        <option value="">Agencies</option>
-      </select>
-    </div>
-    <button class="ui button tiny" type="submit">Filter</button>
-  </form> -->
-  <form id="mapToolbar">
-    <select multiple="" id="agencyDropdown"></select>
-    <button type="submit">Filter</button>
-  </form>
 
-  <div id="tooltip"></div>
-  <svg width="480" height="300" id="mapSvg"></svg>
+<form id="mapToolbar">
+  <select multiple="" id="agencyDropdown"></select>
+  <button type="submit">Filter</button>
+</form>
+
+<div class="visContainer">
+  <svg width="900" height="562" id="mapSvg"></svg>
 </div>
 
 <div style="margin-bottom:0px">
@@ -71,21 +65,13 @@ page: fedscope-tool
 
 <!-- vis 3: barchart -->
 <script src="{{site.baseurl}}/assets/js/fedscope-tool/barchartModule.js"></script>
-<div>
-  <!-- <form id="barchartToolbar" class="ui form">
-    <div class="field">
-      <select class="ui fluid search dropdown" multiple="" id="stateDropdown">
-        <option value="">States</option>
-      </select>
-    </div>
-    <button class="ui button tiny" type="submit">Filter</button>
-  </form> -->
-  <form id="barchartToolbar">
-    <select multiple="" id="stateDropdown"></select>
-    <button type="submit">Filter</button>
-  </form>
-  
-  <svg width="1000" height="500" id="barchartSvg"></svg>
+<form id="barchartToolbar">
+  <select multiple="" id="stateDropdown"></select>
+  <button type="submit">Filter</button>
+</form>
+
+<div class="visContainer">
+  <svg width="900" height="500" id="barchartSvg"></svg>
 </div>
 
 <div style="margin-top:3.5rem; margin-bottom:0px">
@@ -96,5 +82,6 @@ page: fedscope-tool
 <p><strong>Analysis Resources:</strong> <a href="https://www.Fedscope.opm.gov">Fedscope.opm.gov</a></p>
 
 <!-- master scripts -->
+<script src="{{site.baseurl}}/assets/js/fedscope-tool/tooltipModule.js"></script>
 <script src="{{site.baseurl}}/assets/js/fedscope-tool/dataModule.js"></script>
 <script src="{{site.baseurl}}/assets/js/fedscope-tool/fedscope.js"></script>

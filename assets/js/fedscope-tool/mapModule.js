@@ -1,5 +1,5 @@
 const mapModule = function() {
-  function draw(data, { states }) {
+  function draw(data, { states, tooltipModuleDraw }) {
     let filteredData = [...data];
 
     const initialStateData = Object.keys(states).reduce((a, c) => {
@@ -18,29 +18,8 @@ const mapModule = function() {
       .range(["rgb(255, 255, 255)", "rgb(66, 134, 244)"])
       .interpolate(d3.interpolateRgb);
 
-    function toolTip(n, d) {
-      return `<h4>${n}</h4>
-        <table>
-          <tr>
-            <td>Employees</td>
-            <td>${d}</td>
-          </tr>
-        </table>`;
-    }
-
     function handleMouseOver(d) {
-      d3
-        .select("#tooltip")
-        .transition()
-        .duration(200)
-        .style("opacity", 0.9);
-
-      d3
-        .select("#tooltip")
-        .html(toolTip(d.name, dataByState[d.abbreviation]))
-        .style("left", d3.event.pageX + "px")
-        .style("top", d3.event.pageY - 28 + "px");
-
+      tooltipModuleDraw(d.name, { Employees: dataByState[d.abbreviation] });
       d3.select(this).style("fill", "brown");
     }
 
@@ -57,7 +36,7 @@ const mapModule = function() {
     d3
       .select("#mapSvg")
       .append("g")
-      .attr("transform", "scale(.5)")
+      .attr("transform", "scale(.9375)")
       .selectAll(".state")
       .data(Object.values(states))
       .enter()

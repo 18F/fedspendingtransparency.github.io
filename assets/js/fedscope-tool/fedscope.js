@@ -1,4 +1,5 @@
 $(function() {
+  tooltipModuleDraw = tooltipModule().draw;
   treemapModuleDraw = treemapModule().draw;
   mapModuleDraw = mapModule().draw;
   barchartModuleDraw = barchartModule().draw;
@@ -19,7 +20,8 @@ $(function() {
         loadEmployeeCountData([mapModuleDraw, barchartModuleDraw], {
           states,
           agencies,
-          occupationCategories
+          occupationCategories,
+          tooltipModuleDraw
         });
 
         loadEmployeeSalaryData([treemapModuleDraw], {
