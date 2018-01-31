@@ -55,7 +55,10 @@ const barchartModule = function() {
       .attr("x", d => x(d.occupationCategoryName))
       .attr("y", d => y(d.employeeCount))
       .attr("width", x.bandwidth())
-      .attr("height", d => height - y(d.employeeCount));
+      .attr("height", d => height - y(d.employeeCount))
+      .on("mouseover", handleMouseOver)
+      .on("mousemove", handleMouseMove)
+      .on("mouseout", handleMouseOut);
 
     g
       .append("g")
@@ -68,6 +71,21 @@ const barchartModule = function() {
       .attr("dy", "-.6em")
       .attr("transform", "rotate(-90)")
       .attr("pointer-events", "none");
+
+    function handleMouseOver(d) {
+      const formatNumber = d3.format(",d");
+      tooltipModuleDraw(d.occupationCategoryName, {
+        Employees: formatNumber(d.employeeCount)
+      });
+    }
+
+    function handleMouseOut() {
+      tooltipModuleRemove();
+    }
+
+    function handleMouseMove() {
+      tooltipModuleMove();
+    }
   }
 
   return { draw };

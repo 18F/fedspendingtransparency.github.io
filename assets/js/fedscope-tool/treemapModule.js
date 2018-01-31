@@ -34,6 +34,7 @@ const treemapModule = function() {
       .attr("height", d => d.y1 - d.y0)
       .attr("fill", "rgb(66, 134, 244)")
       .on("mouseover", handleMouseOver)
+      .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
 
     cell
@@ -60,6 +61,10 @@ const treemapModule = function() {
     function handleMouseOut() {
       tooltipModuleRemove();
       d3.select(this).style("fill", "rgb(66, 134, 244)");
+    }
+
+    function handleMouseMove() {
+      tooltipModuleMove();
     }
   }
 

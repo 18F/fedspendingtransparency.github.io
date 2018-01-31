@@ -9,8 +9,8 @@ const tooltipModule = function() {
     d3
       .select("#tooltip")
       .html(toolTipHtml(title, information))
-      .style("left", d3.event.pageX + "px")
-      .style("top", d3.event.pageY - 28 + "px");
+      .style("left", `${d3.event.pageX}px`)
+      .style("top", `${d3.event.pageY}px`);
 
     function toolTipHtml(title, information) {
       return `<h4>${title}</h4>
@@ -35,5 +35,12 @@ const tooltipModule = function() {
       .style("opacity", 0);
   }
 
-  return { draw, remove };
+  function move() {
+    d3
+      .select("#tooltip")
+      .style("left", `${d3.event.pageX}px`)
+      .style("top", `${d3.event.pageY}px`);
+  }
+
+  return { draw, remove, move };
 };

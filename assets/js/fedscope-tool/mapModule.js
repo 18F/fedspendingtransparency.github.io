@@ -31,6 +31,10 @@ const mapModule = function() {
       d3.select(this).style("fill", d => color(dataByState[d.abbreviation]));
     }
 
+    function handleMouseMove() {
+      tooltipModuleMove();
+    }
+
     d3
       .select("#mapSvg")
       .append("g")
@@ -43,6 +47,7 @@ const mapModule = function() {
       .attr("d", d => d.path)
       .style("fill", d => color(dataByState[d.abbreviation]))
       .on("mouseover", handleMouseOver)
+      .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);
   }
   return { draw };

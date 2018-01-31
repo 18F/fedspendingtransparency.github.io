@@ -1,6 +1,7 @@
 $(function() {
   tooltipModuleDraw = tooltipModule().draw;
   tooltipModuleRemove = tooltipModule().remove;
+  tooltipModuleMove = tooltipModule().move;
   treemapModuleDraw = treemapModule().draw;
   mapModuleDraw = mapModule().draw;
   barchartModuleDraw = barchartModule().draw;
@@ -23,11 +24,15 @@ $(function() {
           agencies,
           occupationCategories,
           tooltipModuleDraw,
-          tooltipModuleRemove
+          tooltipModuleRemove,
+          tooltipModuleMove
         });
 
         loadEmployeeSalaryData([treemapModuleDraw], {
-          agencies
+          agencies,
+          tooltipModuleDraw,
+          tooltipModuleRemove,
+          tooltipModuleMove
         });
 
         const stateDropdownOptions = Object.values(states).map(
