@@ -46,13 +46,19 @@ const treemapModule = function() {
       .append("text")
       .text(d => agencies[d.data.agencyId].abbreviation)
       .attr("dy", 12)
-      .attr("dx", 2);
+      .attr("dx", 2)
+      .attr("pointer-events", "none");
 
     function handleMouseOver(d) {
+      const formatNumber = d3.format("$,d");
+      tooltipModuleDraw(agencies[d.data.agencyId].name, {
+        "Employee Salaries": formatNumber(d.value)
+      });
       d3.select(this).style("fill", "brown");
     }
 
     function handleMouseOut() {
+      tooltipModuleRemove();
       d3.select(this).style("fill", "rgb(66, 134, 244)");
     }
   }

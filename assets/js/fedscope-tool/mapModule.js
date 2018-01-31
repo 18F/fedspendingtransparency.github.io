@@ -19,7 +19,10 @@ const mapModule = function() {
       .interpolate(d3.interpolateRgb);
 
     function handleMouseOver(d) {
-      tooltipModuleDraw(d.name, { Employees: dataByState[d.abbreviation] });
+      const formatNumber = d3.format(",d");
+      tooltipModuleDraw(d.name, {
+        Employees: formatNumber(dataByState[d.abbreviation])
+      });
       d3.select(this).style("fill", "brown");
     }
 

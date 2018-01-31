@@ -1,6 +1,4 @@
 const tooltipModule = function() {
-  const formatNumber = d3.format(",d");
-
   function draw(title, information) {
     d3
       .select("#tooltip")
@@ -21,7 +19,7 @@ const tooltipModule = function() {
             ${Object.entries(information).map(
               val => `
             <td>${val[0]}: </td>
-            <td>${formatNumber(val[1])}</td>
+            <td>${val[1]}</td>
             `
             )}
           </tr>
