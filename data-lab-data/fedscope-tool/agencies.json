@@ -1,0 +1,122 @@
+{
+  "12": {
+    "id": 12,
+    "name": "Department of Agriculture",
+    "abbreviation": "USDA"
+  },
+  "13": {
+    "id": 13,
+    "name": "Department of Commerce",
+    "abbreviation": "DOC"
+  },
+  "14": {
+    "id": 14,
+    "name": "Department of the Interior",
+    "abbreviation": "DOI"
+  },
+  "15": {
+    "id": 15,
+    "name": "Department of Justice",
+    "abbreviation": "DOJ"
+  },
+  "16": {
+    "id": 16,
+    "name": "Department of Labor",
+    "abbreviation": "DOL"
+  },
+  "19": {
+    "id": 19,
+    "name": "Department of State",
+    "abbreviation": "DOS"
+  },
+  "20": {
+    "id": 20,
+    "name": "Department of the Treasury",
+    "abbreviation": "TREAS"
+  },
+  "24": {
+    "id": 24,
+    "name": "Office of Personnel Management",
+    "abbreviation": "OPM"
+  },
+  "28": {
+    "id": 28,
+    "name": "Social Security Administration",
+    "abbreviation": "SSA"
+  },
+  "31": {
+    "id": 31,
+    "name": "Nuclear Regulatory Commission",
+    "abbreviation": "NRC"
+  },
+  "36": {
+    "id": 36,
+    "name": "Department of Veterans Affairs",
+    "abbreviation": "VA"
+  },
+  "47": {
+    "id": 47,
+    "name": "General Services Administration",
+    "abbreviation": "GSA"
+  },
+  "49": {
+    "id": 49,
+    "name": "National Science Foundation",
+    "abbreviation": "NSF"
+  },
+  "68": {
+    "id": 68,
+    "name": "Environmental Protection Agency",
+    "abbreviation": "EPA"
+  },
+  "69": {
+    "id": 69,
+    "name": "Department of Transportation",
+    "abbreviation": "DOT"
+  },
+  "70": {
+    "id": 70,
+    "name": "Department of Homeland Security",
+    "abbreviation": "DHS"
+  },
+  "72": {
+    "id": 72,
+    "name": "US Agency for International Development",
+    "abbreviation": "USAID"
+  },
+  "73": {
+    "id": 73,
+    "name": "Small Business Administration",
+    "abbreviation": "SBA"
+  },
+  "75": {
+    "id": 75,
+    "name": "Department of Health and Human Services",
+    "abbreviation": "HHS"
+  },
+  "80": {
+    "id": 80,
+    "name": "National Aeronautics and Space Administration",
+    "abbreviation": "NASA"
+  },
+  "86": {
+    "id": 86,
+    "name": "Department of Housing and Urban Development",
+    "abbreviation": "HUD"
+  },
+  "89": {
+    "id": 89,
+    "name": "Department of Energy",
+    "abbreviation": "DOE"
+  },
+  "91": {
+    "id": 91,
+    "name": "Department of Education",
+    "abbreviation": "ED"
+  },
+  "97": {
+    "id": 97,
+    "name": "Department of Defense",
+    "abbreviation": "DOD"
+  }
+}

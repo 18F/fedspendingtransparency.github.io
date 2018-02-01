@@ -1,0 +1,101 @@
+{
+  "agencyId": 0,
+  "children": [
+    {
+      "agencyId": 72,
+      "obligations": 818479860.15
+    },
+    {
+      "agencyId": 12,
+      "obligations": 33317857925.54
+    },
+    {
+      "agencyId": 13,
+      "obligations": 4906717037.6
+    },
+    {
+      "agencyId": 97,
+      "obligations": 45899363169.82
+    },
+    {
+      "agencyId": 91,
+      "obligations": 473110829.91
+    },
+    {
+      "agencyId": 89,
+      "obligations": 1718074277.57
+    },
+    {
+      "agencyId": 75,
+      "obligations": 7900248542.35
+    },
+    {
+      "agencyId": 70,
+      "obligations": 18659839936.51
+    },
+    {
+      "agencyId": 86,
+      "obligations": 815819032.5
+    },
+    {
+      "agencyId": 15,
+      "obligations": 11448417318.79
+    },
+    {
+      "agencyId": 16,
+      "obligations": 1608319646.96
+    },
+    {
+      "agencyId": 19,
+      "obligations": 4675324387.49
+    },
+    {
+      "agencyId": 14,
+      "obligations": 5206846108.93
+    },
+    {
+      "agencyId": 20,
+      "obligations": 7856331019.82
+    },
+    {
+      "agencyId": 69,
+      "obligations": 6626933705.48
+    },
+    {
+      "agencyId": 36,
+      "obligations": 30023316720.19
+    },
+    {
+      "agencyId": 68,
+      "obligations": 1733996268.72
+    },
+    {
+      "agencyId": 47,
+      "obligations": 1207235691.05
+    },
+    {
+      "agencyId": 80,
+      "obligations": 2133776968.38
+    },
+    {
+      "agencyId": 49,
+      "obligations": 185311708.66
+    },
+    {
+      "agencyId": 31,
+      "obligations": 426852850.38
+    },
+    {
+      "agencyId": 24,
+      "obligations": 480848695.56
+    },
+    {
+      "agencyId": 73,
+      "obligations": 305484172.21
+    },
+    {
+      "agencyId": 28,
+      "obligations": 5117932545.64
+    }
+  ]
+}
