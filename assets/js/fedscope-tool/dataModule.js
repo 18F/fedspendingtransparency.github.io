@@ -34,24 +34,24 @@ const dataModule = function() {
     );
   }
 
-  function loadEmployeeCountData(cbs, states) {
+  function loadEmployeeCountData(cbs, props) {
     d3.json("../../../data-lab-data/fedscope-tool/employees.json", function(
       error,
       data
     ) {
       if (error) throw error;
       mem.employeeCounts = data;
-      cbs.forEach(cb => cb(data, states));
+      cbs.forEach(cb => cb(data, props));
     });
   }
 
-  function loadEmployeeSalaryData(cbs, agencies) {
+  function loadEmployeeSalaryData(cbs, props) {
     d3.json(
       "../../../data-lab-data/fedscope-tool/employeeSalaries.json",
       function(error, data) {
         if (error) throw error;
         mem.employeeSalaries = data;
-        cbs.forEach(cb => cb(data, agencies));
+        cbs.forEach(cb => cb(data, props));
       }
     );
   }

@@ -43,7 +43,13 @@ $(function() {
         const agencyDropdownOptions = Object.values(agencies).map(
           a => `<option value="${a.id}">${a.name}</option>`
         );
-        $("#agencyDropdown").append(...agencyDropdownOptions);
+        $("#mapAgencyDropdown").append(...agencyDropdownOptions);
+        $("#barchartAgencyDropdown").append(...agencyDropdownOptions);
+
+        const occupationDropdownOptions = Object.values(
+          occupationCategories
+        ).map(o => `<option value="${o.id}">${o.name}</option>`);
+        $("#mapOccupationDropdown").append(...occupationDropdownOptions);
       });
     });
   });
@@ -51,29 +57,50 @@ $(function() {
   $("#mapToolbar").submit(e => {
     e.preventDefault();
 
-    const agencies = $("#agencyDropdown").val();
+    const filterAgencies = $("#mapAgencyDropdown").val();
+    const filterOccupations = $("#mapOccupationDropdown").val();
     const { employeeCounts, states, occupationCategories } = mem;
     let newData = [...employeeCounts];
 
-    if (agencies.length) {
-      newData = employeeCounts.filter(e =>
-        agencies.some(a => e.agencyId === +a)
+    if (filterAgencies) {
+      newData = newData.filter(e =>
+        filterAgencies.some(a => e.agencyId === +a)
       );
     }
 
-    mapModuleDraw(newData, { states, occupationCategories });
+    if (filterOccupations) {
+      newData = newData.filter(e =>
+        filterOccupations.some(o => e.occupationCategoryId === +o)
+      );
+    }
+
+    mapModuleDraw(newData, {
+      states,
+      occupationCategories,
+      tooltipModuleDraw,
+      tooltipModuleRemove,
+      tooltipModuleMove
+    });
   });
 
   $("#barchartToolbar").submit(e => {
     e.preventDefault();
 
-    const states = $("#stateDropdown").val();
+    const filterStates = $("#stateDropdown").val();
+    const filterAgencies = $("#barchartAgencyDropdown").val();
+
     const { employeeCounts, agencies, occupationCategories } = mem;
     let newData = employeeCounts;
 
-    if (states.length) {
-      newData = employeeCounts.filter(e =>
-        states.some(s => e.stateAbbreviation === s)
+    if (filterStates) {
+      newData = newData.filter(e =>
+        filterStates.some(s => e.stateAbbreviation === s)
+      );
+    }
+
+    if (filterAgencies) {
+      newData = newData.filter(e =>
+        filterAgencies.some(a => e.agencyId === +a)
       );
     }
 
