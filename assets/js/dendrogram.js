@@ -475,9 +475,11 @@ function centerNode(source) {
 
      function sumUp(object){
        total = 0
-       object._children[0]._children.forEach(function(d){
-         total = total + d.size
-      })
+       object._children.forEach(function(d){
+         d._children.forEach(function(d){
+           total = total + d.size
+        })
+       })
       return formatNumber(total);
     };
 
@@ -491,7 +493,7 @@ function centerNode(source) {
 
 
      function createHover(d) {
-       //console.log("createHover d: ",d)
+       console.log("createHover d: ",d)
        //console.log("children: ",d._children[0]._children)
        if(d.depth===3){
            return '<p style="border-bottom:1px solid #898C90; font-size: 18px"><b>' + d.name +  '</p>' + '<br>' +
