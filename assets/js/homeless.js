@@ -44,7 +44,6 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
           console.log('state: ', state);
           //console.log('scatter_data: ', scatter_data);
           console.log('table_data: ', table_data);
-          console.log('table_data: ', table_data);
 
           d3.select('#container2_1').append('div').attr('id', 'p2_1_title')
           d3.select('#container2_1').append('div').attr('id', 'p2_1').style('top', '150px')
