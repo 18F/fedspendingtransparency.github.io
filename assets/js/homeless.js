@@ -123,7 +123,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             .html(function(d) {
               return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.properties.coc_number + ': ' + d.properties.COCNAME + '</b></p>' + '<br>' +
                 '<p style="color: #0071BC; margin: 0; font-size: 20px">Federal Funding: ' + getDollarValue(d) + '</p><br>' +
-                '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic; text-align: center"> Double click to zoom in/orient</p>'
+                '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic"> Double click to zoom in/orient</p>'
               /*+
                               '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">'+
                                 '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Total Homeless: ' + getValue(d) + '</li>' +
@@ -329,7 +329,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
             return '<p style="border-bottom:1px solid #898C90; font-size: 18px; margin:0; padding-bottom:15px"><b>' + d.program_title + '</b> [CFDA No. ' + d.cfda_number + ']' + '</p><br>' +
               '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0">Agency: ' + d.agency + '</p><br>' +
               '<p style="color: #0071BC; margin: 0; font-size: 20px; padding:0">Federal Funding: ' + formatNumber(d.fed_funding) + '</p><br>' +
-              '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic; text-align: center">Click to visit the program website</p>';
+              '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic">Click to visit the program website</p>';
           }
 
           function getState(d) {
@@ -389,7 +389,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
                   '<ul style="list-style-type: circle; margin:0; padding:0 0 0 15px">' +
                   '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Sheltered Homeless: ' + getSheltered(d) + '</li>' +
                   '<li style="font-size: 14px; font-weight: normal; margin:0; line-height: 16px">Unsheltered Homeless: ' + getUnsheltered(d) + '</li></ul><br>' +
-                  '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic; text-align: center"> Double click to zoom in/orient</p>';
+                  '<p style="font-size: 16px; margin-top:0; padding-top:0; margin-bottom:0; font-style: italic"> Double click to zoom in/orient</p>';
               })
             /*.attr('class','homeless-analysis d3-tip: after')
             .style('box-sizing', 'border-box')
@@ -410,7 +410,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
               .style('margin-bottom', '10px')
               .text('Homeless Population by Region')
 
-            d3.select('#legend_subtitle').append('h6')
+            d3.select('#legend_subtitle').append('p')
               .attr('id', 'subtitle')
               .style('text-align', 'center')
               .style('color', '#476057')
@@ -1241,7 +1241,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
               .attr('padding', '50px 0 0 50px')
               .attr('id', 'p2_cfda_legend_title')
               .style('text-align', 'center')
-              .html('<p style="color: #333; font-size: 18px; margin-top:10px"><b>Federal Programs Covering Homelessness in ' + d.properties.coc_number + '</b></p>');
+              .html('<p style="color: #333; font-size: 18px; margin-top:10px"><b>Federal Programs Serving ' + d.properties.coc_number + '</b></p>');
 
             /*  var cfda_legend = d3.select('#p2_2_legend')
                 .append('div')
@@ -1454,8 +1454,7 @@ d3.json('/data-lab-data/2017_CoC_Grantee_Areas_2.json', function(us) {
               .attr('height', '75px')
               .attr('padding', '40px 0 0 40px')
               .attr('id', 'p2_4_cfda_legend_title')
-              .style('text-align', 'center')
-              .html('<p style="color:#333; font-size:18px"><b>' + getState(d) + ' State Level Funding From Federal Programs</b></p>');
+              .html('<p style="color:#333; font-size:18px; text-align: center"><b>Federal Programs Serving ' + getState(d) + '*</b></p>');
 
             var p2_4_matrix_svg = d3.select('#panel_info').append('svg')
               /*.attr('width', matrix_width + margin.left + margin.right)
