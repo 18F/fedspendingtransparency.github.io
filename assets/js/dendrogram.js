@@ -455,7 +455,7 @@ function centerNode(source) {
                  .style('border', 'solid 1px #BFBCBC')
                  .style('padding', '5px')
                  .style('min-width', '200px')
-                 .style('max-width', '325px')
+                 .style('max-width', '350px')
                  .offset([-10, -10])
                  .html(createHover)
 
@@ -491,6 +491,25 @@ function centerNode(source) {
      return formatNumber(total);
     };
 
+    function sumUp_unob(object){
+      total = 0
+      object._children.forEach(function(d){
+        d._children.forEach(function(d){
+          total = total + d.unob
+       })
+      })
+     return formatNumber(total);
+    };
+
+    function sumUp_lvl2_unob(object){
+     total = 0
+     object._children.forEach(function(d){
+       total = total + d.unob
+    })
+    return formatNumber(total);
+    };
+
+
 
      function createHover(d) {
        console.log("createHover d: ",d)
@@ -502,11 +521,13 @@ function centerNode(source) {
              '<p>' + 'Click to visit Federal Account page</p>';
         }else if (d.depth === 2){
             return '<p style="color: #0071BC; margin: 0; font-size: 20px"><b>'
-            + 'Total Obligations: ' + sumUp_lvl2(d) + '</p>'
+            + 'Total Obligations: ' + sumUp_lvl2(d) + '<br/>'
+            + 'Total Unbilagated: '+ sumUp_lvl2_unob(d) +'</p>'
             + '<p>'+ 'View Federal Accounts'+ '</b></p>';
         }else if (d.depth===1){
             return '<p style="color: #0071BC; margin: 0; font-size: 20px"><b>'
-            + 'Total Obligations: ' + sumUp(d) + '</p>'
+            + 'Total Obligations: ' + sumUp(d) + '<br/>'
+            + 'Total Unbilagated: '+ sumUp_unob(d) + '</p>'
             + '<p>' + 'View Agencies'+ '</b></p>';
         }else if (d.depth===0){
             return '<p font-size: 18px; margin:0"><b>'
