@@ -517,17 +517,17 @@ function centerNode(source) {
        if(d.depth===3){
            return '<p style="border-bottom:1px solid #898C90; font-size: 18px"><b>' + d.name +  '</p>' + '<br>' +
              '<p style="color: #0071BC; margin: 0; font-size: 20px">Obligated Amount: ' + formatNumber(d.size) + '</p>' +
-             '<p style="color: #0071BC; margin: 0; font-size: 20px">Unobligated Amount: ' + formatNumber(d.unob) + '</p><br><br>' +
+             '<p style="color: #0071BC; margin: 0; font-size: 20px">Unobligated Balance: ' + formatNumber(d.unob) + '</p><br><br>' +
              '<p>' + 'Click to visit Federal Account page</p>';
         }else if (d.depth === 2){
             return '<p style="color: #0071BC; margin: 0; font-size: 20px"><b>'
             + 'Total Obligations: ' + sumUp_lvl2(d) + '<br/>'
-            + 'Total Unbilagated: '+ sumUp_lvl2_unob(d) +'</p>'
+            + 'Unobligated Balance: '+ sumUp_lvl2_unob(d) +'</p>'
             + '<p>'+ 'View Federal Accounts'+ '</b></p>';
         }else if (d.depth===1){
             return '<p style="color: #0071BC; margin: 0; font-size: 20px"><b>'
             + 'Total Obligations: ' + sumUp(d) + '<br/>'
-            + 'Total Unbilagated: '+ sumUp_unob(d) + '</p>'
+            + 'Unobligated Balance: '+ sumUp_unob(d) + '</p>'
             + '<p>' + 'View Agencies'+ '</b></p>';
         }else if (d.depth===0){
             return '<p font-size: 18px; margin:0"><b>'
