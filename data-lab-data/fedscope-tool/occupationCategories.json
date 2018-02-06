@@ -2,301 +2,301 @@
   "0": {
     "id": 0,
     "name": "General Maintenance And Operations Work",
-    "shortenedName": ""
+    "shortenedName": "Gen Maintainence"
   },
   "1": {
     "id": 1,
     "name": "General Services And Support Work",
-    "shortenedName": ""
+    "shortenedName": "Gen Services"
   },
   "2": {
     "id": 2,
     "name": "Industrial Equipment Maintenance",
-    "shortenedName": ""
+    "shortenedName": "Indust Equip Maint"
   },
   "3": {
     "id": 3,
     "name": "Industrial Equipment Operation",
-    "shortenedName": ""
+    "shortenedName": "Equip Operation"
   },
   "4": {
     "id": 4,
     "name": "Metal Processing",
-    "shortenedName": ""
+    "shortenedName": "Metal Work"
   },
   "5": {
     "id": 5,
     "name": "Transport Mobile Equipment Maintenance",
-    "shortenedName": ""
+    "shortenedName": "Transport Maint"
   },
   "6": {
     "id": 6,
     "name": "Warehousing And Stock Handling",
-    "shortenedName": ""
+    "shortenedName": "Stocking"
   },
   "7": {
     "id": 7,
     "name": "Accounting And Budget",
-    "shortenedName": ""
+    "shortenedName": "Finance"
   },
   "8": {
     "id": 8,
     "name": "Business And Industry",
-    "shortenedName": ""
+    "shortenedName": "Business"
   },
   "9": {
     "id": 9,
     "name": "Education",
-    "shortenedName": ""
+    "shortenedName": "Education"
   },
   "10": {
     "id": 10,
     "name": "Engineering And Architecture",
-    "shortenedName": ""
+    "shortenedName": "Engineering"
   },
   "11": {
     "id": 11,
     "name": "Equipment Facilities And Services",
-    "shortenedName": ""
+    "shortenedName": "Facilities"
   },
   "12": {
     "id": 12,
     "name": "General Admin Clerical Office Svcs",
-    "shortenedName": ""
+    "shortenedName": "Administration"
   },
   "13": {
     "id": 13,
     "name": "Information And Arts",
-    "shortenedName": ""
+    "shortenedName": "Arts"
   },
   "14": {
     "id": 14,
     "name": "Information Technology",
-    "shortenedName": ""
+    "shortenedName": "Technology"
   },
   "15": {
     "id": 15,
     "name": "Investigation",
-    "shortenedName": ""
+    "shortenedName": "Investigation"
   },
   "16": {
     "id": 16,
     "name": "Legal And Kindred",
-    "shortenedName": ""
+    "shortenedName": "Legal"
   },
   "17": {
     "id": 17,
     "name": "Medical Hospital Dental Pub Health",
-    "shortenedName": ""
+    "shortenedName": "Medical/Health"
   },
   "18": {
     "id": 18,
     "name": "Miscellaneous Occupations White Collar",
-    "shortenedName": ""
+    "shortenedName": "Misc White Collar"
   },
   "19": {
     "id": 19,
     "name": "Personnel Mgmt Industrial Relations",
-    "shortenedName": ""
+    "shortenedName": "Personnel"
   },
   "20": {
     "id": 20,
     "name": "Physical Sciences",
-    "shortenedName": ""
+    "shortenedName": "Science"
   },
   "21": {
     "id": 21,
     "name": "Supply",
-    "shortenedName": ""
+    "shortenedName": "Supply"
   },
   "22": {
     "id": 22,
     "name": "Transportation",
-    "shortenedName": ""
+    "shortenedName": "Transportation"
   },
   "23": {
     "id": 23,
     "name": "Copyright Patent And Trade Mark",
-    "shortenedName": ""
+    "shortenedName": "Patent Review"
   },
   "24": {
     "id": 24,
     "name": "Natural Resources Mgmt Bio Sci Group",
-    "shortenedName": ""
+    "shortenedName": "Natural Resources"
   },
   "25": {
     "id": 25,
     "name": "Aircraft Overhaul",
-    "shortenedName": ""
+    "shortenedName": "Aircraft"
   },
   "26": {
     "id": 26,
     "name": "Ammo Explosives Toxic Materials Work",
-    "shortenedName": ""
+    "shortenedName": "Handling Toxics"
   },
   "27": {
     "id": 27,
     "name": "Armament Work",
-    "shortenedName": ""
+    "shortenedName": "Armament Work"
   },
   "28": {
     "id": 28,
     "name": "Electrical Installation And Maintenance",
-    "shortenedName": ""
+    "shortenedName": "Electrical"
   },
   "29": {
     "id": 29,
     "name": "Electronic Equip Installtn Maintnce",
-    "shortenedName": ""
+    "shortenedName": "Elect Equip Install"
   },
   "30": {
     "id": 30,
     "name": "Engine Overhaul",
-    "shortenedName": ""
+    "shortenedName": "Engine Overhaul"
   },
   "31": {
     "id": 31,
     "name": "Fabric And Leather Work",
-    "shortenedName": ""
+    "shortenedName": "Fabric Work"
   },
   "32": {
     "id": 32,
     "name": "Fluid Systems Maintenance",
-    "shortenedName": ""
+    "shortenedName": "Fluid Systems"
   },
   "33": {
     "id": 33,
     "name": "Food Preparation And Serving",
-    "shortenedName": ""
+    "shortenedName": "Food Prep"
   },
   "34": {
     "id": 34,
     "name": "General Equipment Maintenance",
-    "shortenedName": ""
+    "shortenedName": "Gen Equip Maint"
   },
   "35": {
     "id": 35,
     "name": "Instrument Work",
-    "shortenedName": ""
+    "shortenedName": "Instrument Work"
   },
   "36": {
     "id": 36,
     "name": "Machine Tool Work",
-    "shortenedName": ""
+    "shortenedName": "Machine Tool"
   },
   "37": {
     "id": 37,
     "name": "Metal Work",
-    "shortenedName": ""
+    "shortenedName": "Metal Work"
   },
   "38": {
     "id": 38,
     "name": "Miscellaneous Occupations Blue Collar",
-    "shortenedName": ""
+    "shortenedName": "Misc Blue Collar"
   },
   "39": {
     "id": 39,
     "name": "Packing And Processing",
-    "shortenedName": ""
+    "shortenedName": "Packing"
   },
   "40": {
     "id": 40,
     "name": "Painting And Paperhanging",
-    "shortenedName": ""
+    "shortenedName": "Painting"
   },
   "41": {
     "id": 41,
     "name": "Plant And Animal Work",
-    "shortenedName": ""
+    "shortenedName": "Plant/Animal Care"
   },
   "42": {
     "id": 42,
     "name": "Plumbing And Pipefitting",
-    "shortenedName": ""
+    "shortenedName": "Plumbing"
   },
   "43": {
     "id": 43,
     "name": "Transport Mobile Equipment Operation",
-    "shortenedName": ""
+    "shortenedName": "Transport Operation"
   },
   "44": {
     "id": 44,
     "name": "Wood Work",
-    "shortenedName": ""
+    "shortenedName": "Wood Work"
   },
   "45": {
     "id": 45,
     "name": "Library And Archives",
-    "shortenedName": ""
+    "shortenedName": "Library And Archives"
   },
   "46": {
     "id": 46,
     "name": "Mathematics And Statistics",
-    "shortenedName": ""
+    "shortenedName": "Math and Stats"
   },
   "47": {
     "id": 47,
     "name": "Quality Assurance Inspection Grading",
-    "shortenedName": ""
+    "shortenedName": "QA and Inspection"
   },
   "48": {
     "id": 48,
     "name": "Social Science Psychology And Welfare",
-    "shortenedName": ""
+    "shortenedName": "Social Science"
   },
   "49": {
     "id": 49,
     "name": "Laundry Dry Cleaning And Pressing",
-    "shortenedName": ""
+    "shortenedName": "Laundry"
   },
   "50": {
     "id": 50,
     "name": "Veterinary Medical Science",
-    "shortenedName": ""
+    "shortenedName": "Veterinary"
   },
   "51": {
     "id": 51,
     "name": "Unspecified",
-    "shortenedName": ""
+    "shortenedName": "Unspecified"
   },
   "52": {
     "id": 52,
     "name": "Vessel Jobs Excluded From Fed Wage Sys",
-    "shortenedName": ""
+    "shortenedName": "Vessel Work"
   },
   "53": {
     "id": 53,
     "name": "Structural And Finishing Work",
-    "shortenedName": ""
+    "shortenedName": "Structural Work"
   },
   "54": {
     "id": 54,
     "name": "Wire Comm Equip Installtn Maintnce",
-    "shortenedName": ""
+    "shortenedName": "Comm Hardware"
   },
   "55": {
     "id": 55,
     "name": "Pliable Materials Work",
-    "shortenedName": ""
+    "shortenedName": "Pliable Materials"
   },
   "56": {
     "id": 56,
     "name": "Personal Services",
-    "shortenedName": ""
+    "shortenedName": "Personal Services"
   },
   "57": {
     "id": 57,
     "name": "Printing",
-    "shortenedName": ""
+    "shortenedName": "Printing"
   },
   "58": {
     "id": 58,
     "name": "Lens And Crystal Work",
-    "shortenedName": ""
+    "shortenedName": "Lens Work"
   },
   "59": {
     "id": 59,
     "name": "Movie Radio Tv Sound Equip Operating",
-    "shortenedName": ""
+    "shortenedName": "Media Operations"
   }
 }

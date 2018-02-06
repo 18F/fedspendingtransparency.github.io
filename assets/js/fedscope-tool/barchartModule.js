@@ -1,6 +1,6 @@
 const barchartModule = function() {
   var svg = d3.select("#barchartSvg"),
-    margin = { top: 20, right: 40, bottom: 10, left: 50 },
+    margin = { top: 20, right: 80, bottom: 100, left: 50 },
     width = +svg.attr("width") - margin.left - margin.right,
     height = +svg.attr("height") - margin.top - margin.bottom;
 
@@ -23,7 +23,7 @@ const barchartModule = function() {
           a[c.occupationCategoryId] = {
             occupationCategoryId: c.occupationCategoryId,
             occupationCategoryName:
-              occupationCategories[c.occupationCategoryId].name,
+              occupationCategories[c.occupationCategoryId].shortenedName,
             employeeCount: c.employeeCount
           };
         } else {
@@ -63,13 +63,13 @@ const barchartModule = function() {
     g
       .append("g")
       .attr("class", "axis axis--x")
-      .attr("transform", `translate(0,${height})`)
+      .attr("transform", `translate(1,${height})`)
       .call(d3.axisBottom(x))
       .selectAll("text")
       .style("text-anchor", "start")
-      .attr("dx", ".8em")
-      .attr("dy", "-.6em")
-      .attr("transform", "rotate(-90)")
+      .attr("dx", ".5em")
+      .attr("dy", ".3em")
+      .attr("transform", "rotate(45)")
       .attr("pointer-events", "none");
 
     function handleMouseOver(d) {
