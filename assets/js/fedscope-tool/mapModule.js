@@ -1,7 +1,5 @@
 const mapModule = function() {
   function draw(data, { states, tooltipModuleDraw }) {
-    console.log({ data });
-
     let filteredData = [...data];
 
     const initialStateData = Object.keys(states).reduce((a, c) => {
