@@ -6,6 +6,12 @@ filename: fedscope-tool.html
 title: Fedscope Tool
 page: fedscope-tool
 ---
+
+<!-- load libraries -->
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script> -->
+
 <img src="{{site.baseurl}}/assets/img/BFS_DataLab_Alpha_icon.png" style="width: 50.5px; height: 19.5px; margin-top:3rem">
 <h2 style="margin-bottom:1.3rem; margin-top:0">Federal Staffing Snapshot</h2>
 <div class="row mt-0" style="margin-left: 0; margin-right:0">
@@ -24,9 +30,13 @@ page: fedscope-tool
 <p style="margin-bottom:2rem">In the first two quarters of fiscal year 2017 (FY17), a total of $115 million dollars in personnel compensation was obligated by the largest 24 federal agencies (referred to as CFO Act Agencies*). Figure 1 shows how government-wide personnel compensation and benefits spending is distributed across these agencies, with the largest amount of personnel spending dedicated to the Department of Defense followed by the Department of Agriculture.</p>
 <p style="margin-bottom: 0px"><i>Figure 1: Personnel Budgets Across Government</i></p>
 
-<div>
-    <a href="https://plot.ly/~usaspending/31/?share_key=BUTicuy4T7cAsK6tsNUnEK" target="_blank" title="Personnel_Spending_Visualization" style="display: block; text-align: center;"><img src="https://plot.ly/~usaspending/31.png?share_key=BUTicuy4T7cAsK6tsNUnEK" alt="Personnel_Spending_Visualization" style="max-width: 100%;width: 900px;"  width="900" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="usaspending:31" sharekey-plotly="BUTicuy4T7cAsK6tsNUnEK?showlink=false" src="https://plot.ly/embed.js" async></script>
+<!-- tooltip -->
+<div id="tooltip"></div>
+
+<!-- vis 1: treemap -->
+<script src="{{site.baseurl}}/assets/js/fedscope-tool/treemapModule.js"></script>
+<div class="visContainer">
+  <svg width="900" height="500" id="treemapSvg"></svg>
 </div>
 
 <div style="margin-bottom:0px">
@@ -35,9 +45,21 @@ page: fedscope-tool
   <p style="margin-bottom: 0px"><i>Figure 2: CFO Act Agency Employees by State</i></p>
 </div>
 
-<div>
-    <a href="https://plot.ly/~usaspending/17/?share_key=AkGIGL2zOeNaclHAZwq32l" target="_blank" title="Govwide_Choropleth" style="display: block; text-align: center;"><img src="https://plot.ly/~usaspending/17.png?share_key=AkGIGL2zOeNaclHAZwq32l" alt="Govwide_Choropleth" style="max-width: 100%;width: 750px;"  width="750" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="usaspending:17" sharekey-plotly="AkGIGL2zOeNaclHAZwq32l?showlink=false" src="https://plot.ly/embed.js" async></script>
+<!-- vis 2: map -->
+<script src="{{site.baseurl}}/assets/js/fedscope-tool/mapModule.js"></script>
+
+<form id="mapToolbar">
+  Agencies:<br>
+  <select multiple="" id="mapAgencyDropdown"></select>
+  <br>
+  Occupation Types:<br>
+  <select multiple="" id="mapOccupationDropdown"></select>
+  <br>
+  <button type="submit">Filter</button>
+</form>
+
+<div class="visContainer">
+  <svg width="900" height="562" id="mapSvg"></svg>
 </div>
 
 <div style="margin-bottom:0px">
@@ -46,9 +68,20 @@ page: fedscope-tool
   <p style="margin-bottom: 0px"><i>Figure 3: Government Employees by Occupation</i></p>
 </div>
 
-<div>
-    <a href="https://plot.ly/~usaspending/41/?share_key=Clhf2u9TdpWTOPkWhbe36Z" target="_blank" title="Employee_Occupation_Barchart" style="display: block; text-align: center;"><img src="https://plot.ly/~usaspending/41.png?share_key=Clhf2u9TdpWTOPkWhbe36Z" alt="Employee_Occupation_Barchart" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="usaspending:41" sharekey-plotly="Clhf2u9TdpWTOPkWhbe36Z?showlink=false" src="https://plot.ly/embed.js" async></script>
+<!-- vis 3: barchart -->
+<script src="{{site.baseurl}}/assets/js/fedscope-tool/barchartModule.js"></script>
+<form id="barchartToolbar">
+  Agencies:<br>
+  <select multiple="" id="barchartAgencyDropdown"></select>
+  <br>
+  States:<br>
+  <select multiple="" id="stateDropdown"></select>
+  <br>
+  <button type="submit">Filter</button>
+</form>
+
+<div class="visContainer">
+  <svg width="900" height="500" id="barchartSvg"></svg>
 </div>
 
 <div style="margin-top:3.5rem; margin-bottom:0px">
@@ -57,3 +90,8 @@ page: fedscope-tool
   <p style="margin-bottom:2rem">* Chief Financial Officers (CFO) Act of 1993 established the CFO Council and the member agencies, more information on these agencies can be found here: https://cfo.gov/about/.</p>
 </div>
 <p><strong>Analysis Resources:</strong> <a href="https://www.Fedscope.opm.gov">Fedscope.opm.gov</a></p>
+
+<!-- master scripts -->
+<script src="{{site.baseurl}}/assets/js/fedscope-tool/tooltipModule.js"></script>
+<script src="{{site.baseurl}}/assets/js/fedscope-tool/dataModule.js"></script>
+<script src="{{site.baseurl}}/assets/js/fedscope-tool/fedscope.js"></script>
