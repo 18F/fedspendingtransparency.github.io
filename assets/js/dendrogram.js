@@ -516,8 +516,8 @@ function centerNode(source) {
        //console.log("children: ",d._children[0]._children)
        if(d.depth===3){
            return '<p style="border-bottom:1px solid #898C90; font-size: 18px"><b>' + d.name +  '</p>' + '<br>' +
-             '<p style="color: #0071BC; margin: 0; font-size: 20px">'+'Total Obligations: ' + formatNumber(d.size) + '</p>' +
-             '<p style="color: #0071BC; margin: 0; font-size: 20px">'+'Unobligated Balance: ' + formatNumber(d.unob) + '</p><br><br>' +
+             '<p style="color: #0071BC; margin: 0; font-size: 20px">' + 'Total Obligations: ' + formatNumber(d.size) + '</p>' +
+             '<p style="color: #0071BC; margin: 0; font-size: 20px">' + 'Unobligated Balance: ' + formatNumber(d.unob) + '</p><br><br>' +
              '<p>' + 'Click to visit Federal Account page</p>';
         }else if (d.depth === 2){
             return '<p style="color: #0071BC; margin: 0; font-size: 20px"><b>'
