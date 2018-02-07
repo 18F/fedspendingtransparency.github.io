@@ -10,7 +10,6 @@ page: fedscope-tool
 <!-- load libraries -->
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script> -->
 
 <img src="{{site.baseurl}}/assets/img/BFS_DataLab_Alpha_icon.png" style="width: 50.5px; height: 19.5px; margin-top:3rem">
 <h2 style="margin-bottom:1.3rem; margin-top:0">Federal Staffing Snapshot</h2>
@@ -19,22 +18,14 @@ page: fedscope-tool
 		<p><i>Connecting USAspending and federal employment data to visualize how personnel obligations across the federal government's budget translate to staffing across the government.</i></p>
   </div>
   
-
-
 	<div class="col-md-6" style="padding-left:0">
-
     <div class="tab">
 		  <button class="tablinks active" id="defaultOpen">How to Use</button>
 		</div>
-
 		<div id="HowTo" class="tabcontent" style="display:block">
   		<p>Hover over each agency or state to see additional details.</p>
 		</div>
-
   </div>
-  
-  
-
 </div>
 
 <h5 style="margin-bottom:1.3rem">How does agency spending on personnel compare?</h5>
@@ -61,12 +52,13 @@ page: fedscope-tool
 
 <form id="mapToolbar">
   Agencies:<br>
-  <select multiple="" id="mapAgencyDropdown"></select>
+  <select multiple id="mapAgencyDropdown"></select>
   <br>
   Occupation Types:<br>
-  <select multiple="" id="mapOccupationDropdown"></select>
+  <select multiple id="mapOccupationDropdown"></select>
   <br>
   <button type="submit">Filter</button>
+  <button id="mapToolbarReset">Reset</button>
 </form>
 
 <div class="visContainer">
@@ -86,9 +78,10 @@ page: fedscope-tool
   <select multiple="" id="barchartAgencyDropdown"></select>
   <br>
   States:<br>
-  <select multiple="" id="stateDropdown"></select>
+  <select multiple="" id="barchartStateDropdown"></select>
   <br>
   <button type="submit">Filter</button>
+  <button id="barchartToolbarReset">Reset</button>
 </form>
 
 <div class="visContainer">

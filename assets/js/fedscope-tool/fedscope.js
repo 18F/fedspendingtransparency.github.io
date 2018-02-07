@@ -14,8 +14,6 @@ $(function() {
     mem
   } = dataModule();
 
-  $("select.dropdown").dropdown();
-
   loadStates(states => {
     loadAgencies(agencies => {
       loadOccupationCategories(occupationCategories => {
@@ -38,7 +36,7 @@ $(function() {
         const stateDropdownOptions = Object.values(states).map(
           s => `<option value="${s.abbreviation}">${s.name}</option>`
         );
-        $("#stateDropdown").append(...stateDropdownOptions);
+        $("#barchartStateDropdown").append(...stateDropdownOptions);
 
         const agencyDropdownOptions = Object.values(agencies).map(
           a => `<option value="${a.id}">${a.name}</option>`
@@ -83,10 +81,27 @@ $(function() {
     });
   });
 
+  $("#mapToolbarReset").click(e => {
+    e.preventDefault();
+
+    $("#mapAgencyDropdown > option").attr("selected", false);
+    $("#mapOccupationDropdown > option").attr("selected", false);
+
+    const { employeeCounts, states, occupationCategories } = mem;
+
+    mapModuleDraw([...employeeCounts], {
+      states,
+      occupationCategories,
+      tooltipModuleDraw,
+      tooltipModuleRemove,
+      tooltipModuleMove
+    });
+  });
+
   $("#barchartToolbar").submit(e => {
     e.preventDefault();
 
-    const filterStates = $("#stateDropdown").val();
+    const filterStates = $("#barchartStateDropdown").val();
     const filterAgencies = $("#barchartAgencyDropdown").val();
 
     const { employeeCounts, agencies, occupationCategories } = mem;
@@ -105,5 +120,22 @@ $(function() {
     }
 
     barchartModuleDraw(newData, { agencies, occupationCategories });
+  });
+
+  $("#barchartToolbarReset").click(e => {
+    e.preventDefault();
+
+    $("#barchartAgencyDropdown > option").attr("selected", false);
+    $("#barchartStateDropdown > option").attr("selected", false);
+
+    const { employeeCounts, states, occupationCategories } = mem;
+
+    barchartModuleDraw([...employeeCounts], {
+      states,
+      occupationCategories,
+      tooltipModuleDraw,
+      tooltipModuleRemove,
+      tooltipModuleMove
+    });
   });
 });
