@@ -6,7 +6,7 @@ repo_name: fedspendingtransparency.github.io
 branch: master
 encoding: utf-8
 
-
+github: [metadata]
 
 #global settings, no need to change these
 root_url: //fedspendingtransparency.github.io
