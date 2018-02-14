@@ -14,24 +14,56 @@ const barchartModule = function() {
     .append("g")
     .attr("transform", `translate(${margin.left},${margin.top})`);
 
+  function findFillCollor(type) {
+    switch (type) {
+      case "Blue Collar":
+        return "rgb(66, 134, 244)";
+      case "White Collar":
+        return "white";
+      case "Other":
+        return "green";
+    }
+  }
+
   function draw(data, { agencies, occupationCategories }) {
+    console.log({ data });
+
     g.selectAll("*").remove();
 
     const groupedData = Object.values(
-      data.reduce((a, c) => {
+      data.reduce((a, c, i) => {
         if (!a[c.occupationCategoryId]) {
           a[c.occupationCategoryId] = {
             occupationCategoryId: c.occupationCategoryId,
             occupationCategoryName:
               occupationCategories[c.occupationCategoryId].shortenedName,
-            employeeCount: c.employeeCount
+            employeeCount: c.employeeCount,
+            occupationCategoryType: c.occupationType
           };
         } else {
           a[c.occupationCategoryId].employeeCount += c.employeeCount;
         }
         return a;
       }, {})
-    ).sort((a, b) => b.employeeCount - a.employeeCount);
+    )
+      .sort((a, b) => b.employeeCount - a.employeeCount)
+      .reduce((a, c, i) => {
+        if (i < 25) {
+          a.push(c);
+        } else if (i === 25) {
+          a.push({
+            occupationCategoryId: 99,
+            occupationCategoryName: "All Other Occupations",
+            occupationCategoryType: "Other",
+            employeeCount: c.employeeCount
+          });
+        } else if (i > 25) {
+          a[25].employeeCount += c.employeeCount;
+        }
+        return a;
+      }, []);
+
+    console.log({ groupedData });
 
     x.domain(groupedData.map(d => d.occupationCategoryName));
     y.domain([0, d3.max(groupedData, d => d.employeeCount)]);
@@ -56,6 +88,9 @@ const barchartModule = function() {
       .attr("y", d => y(d.employeeCount))
       .attr("width", x.bandwidth())
       .attr("height", d => height - y(d.employeeCount))
+      .attr("fill", d => findFillCollor(d.occupationCategoryType))
+      .attr("stroke", "rgb(0,0,0)")
+      .attr("stroke-width", "1")
       .on("mouseover", handleMouseOver)
       .on("mousemove", handleMouseMove)
       .on("mouseout", handleMouseOut);

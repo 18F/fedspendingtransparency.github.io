@@ -1,84 +1,164 @@
-.visContainer {
-  display: flex;
-  justify-content: center;
-}
+.fedscope-tool {
+  font-family: "Source Sans Pro", sans-serif;
+  background-color: #ffffff;
+  
+  .tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #inherit;
+    margin-top: 10px;
+  }
 
-.ui.multiple.dropdown>.label {
-  font-size: .5em;
-}
+  /* Style the buttons inside the tab */
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
 
-/* global */
-.form {
-  width: 400px;
-  font-size: 0.8em;
-}
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: #ddd;
+  }
 
-/* treemap */
-#treemapSvg {
-  font-size: 10px
-}
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: inherit;
+    border-bottom: solid 2px #0071bc;
+  }
 
-/* map */
-.state {
-  fill: none;
-  stroke: #a9a9a9;
-  stroke-width: 1;
-}
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
+  .tab2 {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: inherit;
+    margin-top: 10px;
+  }
 
-#tooltip {
-  position: absolute;
-  text-align: center;
-  padding: 20px;
-  margin: 10px;
-  font: 12px sans-serif;
-  background: lightsteelblue;
-  border: 1px;
-  border-radius: 2px;
-  pointer-events: none;
-}
+  /* Style the buttons inside the tab */
+  .tab2 button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+  }
 
-#tooltip h4 {
-  margin: 0;
-  font-size: 14px;
-}
+  /* Change background color of buttons on hover */
+  .tab2 button:hover {
+    background-color: #ddd;
+  }
 
-#tooltip {
-  background: rgba(0, 0, 0, 0.9);
-  border: 1px solid grey;
-  border-radius: 5px;
-  font-size: 12px;
-  width: auto;
-  padding: 4px;
-  color: white;
-  opacity: 0;
-}
+  /* Create an active/current tablink class */
+  .tab2 button.active {
+    background-color: inherit;
+    border-bottom: solid 2px #0071bc;
+  }
 
-#tooltip table {
-  table-layout: fixed;
-}
+  /* Style the tab content */
+  .tabcontent2 {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+  }
 
-#tooltip tr td {
-  padding: 0;
-  margin: 0;
-}
+  .visContainer {
+    display: flex;
+    justify-content: center;
+  }
 
-#tooltip tr td:nth-child(1) {
-  width: 50px;
-}
+  .ui.multiple.dropdown > .label {
+    font-size: 0.5em;
+  }
 
-#tooltip tr td:nth-child(2) {
-  text-align: center;
-}
+  /* global */
+  .form {
+    width: 400px;
+    font-size: 0.8em;
+  }
 
-/* barchart */
-.bar {
-  fill: rgb(66, 134, 244);
-}
+  /* treemap */
+  #treemapSvg {
+    font-size: 10px;
+  }
 
-.bar:hover {
-  fill: brown;
-}
+  /* map */
+  .state {
+    fill: none;
+    stroke: #a9a9a9;
+    stroke-width: 1;
+  }
 
-.axis--x path {
-  display: none;
+  #tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 1px;
+    border-radius: 2px;
+    pointer-events: none;
+  }
+
+  #tooltip h4 {
+    margin: 0;
+    font-size: 14px;
+  }
+
+  #tooltip {
+    background: rgba(0, 0, 0, 0.9);
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 12px;
+    width: auto;
+    padding: 4px;
+    color: white;
+    opacity: 0;
+  }
+
+  #tooltip table {
+    table-layout: fixed;
+  }
+
+  #tooltip tr td {
+    padding: 0;
+    margin: 0;
+  }
+
+  #tooltip tr td:nth-child(1) {
+    width: 50px;
+  }
+
+  #tooltip tr td:nth-child(2) {
+    text-align: center;
+  }
+
+  /* barchart */
+  // .bar {
+  //   fill: rgb(66, 134, 244);
+  // }
+
+  .bar:hover {
+    fill: brown;
+  }
+
+  .axis--x path {
+    display: none;
+  }
 }
