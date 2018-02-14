@@ -9,7 +9,6 @@ repository: 18F/fedspendingtransparency.github.io
 baseurl: ""
 
 #global settings, no need to change these
-root_url: //fedspendingtransparency.github.io
 org_name: fedspendingtransparency
 
 # default build settings for running locally, no need to edit
