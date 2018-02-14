@@ -4,8 +4,7 @@ desc: "DATA Act Collaboration Space"
 url: //fedspendingtransparency.github.io/
 branch: master
 encoding: utf-8
-
-github: [metadata]
+repository: 18F/fedspendingtransparency.github.io
 
 #global settings, no need to change these
 root_url: //fedspendingtransparency.github.io
