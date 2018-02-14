@@ -2,8 +2,8 @@
 title: Test Federal Spending Transparency
 desc: "DATA Act Collaboration Space"
 url: fedspendingtransparency.18f.gov
-repo_name: fedspendingtransparency.github.io
 repository: 18F/fedspendingtransparency.github.io
+baseurl: ""
 branch: master
 encoding: utf-8
 
@@ -54,6 +54,3 @@ navigation:
 sass:
   sass_dir:          assets/_scss
   #style:            :compressed
-  
-  
-baseurl: ""
