@@ -5,7 +5,7 @@ branch: master
 encoding: utf-8
 repository: 18F/fedspendingtransparency.github.io
 
-baseurl: ""
+baseurl: fedspendingtransparency.18f.gov
 
 #global settings, no need to change these
 org_name: fedspendingtransparency
