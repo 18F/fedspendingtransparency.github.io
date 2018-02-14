@@ -1,8 +1,8 @@
 #document settings
 title: Test Federal Spending Transparency
 desc: "DATA Act Collaboration Space"
-url: fedspendingtransparency.18f.gov
-repository: 18F/fedspendingtransparency.github.io
+url: ""
+repository: fedspendingtransparency.18f.gov
 baseurl: ""
 branch: master
 encoding: utf-8
