@@ -6,6 +6,8 @@ branch: master
 encoding: utf-8
 repository: 18F/fedspendingtransparency.github.io
 
+baseurl: ""
+
 #global settings, no need to change these
 root_url: //fedspendingtransparency.github.io
 org_name: fedspendingtransparency
