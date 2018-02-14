@@ -1,5 +1,5 @@
 #document settings
-title: Federal Spending Transparency
+title: Test Federal Spending Transparency
 desc: "DATA Act Collaboration Space"
 url: fedspendingtransparency.18f.gov
 repo_name: fedspendingtransparency.github.io
@@ -8,7 +8,7 @@ branch: master
 encoding: utf-8
 
 #global settings, no need to change these
-root_url: //fedspendingtransparency.github.io
+root_url: fedspendingtransparency.18f.gov
 org_name: fedspendingtransparency
 
 # default build settings for running locally, no need to edit
