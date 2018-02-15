@@ -2,6 +2,7 @@
 title: Federal Spending Transparency
 desc: "DATA Act Collaboration Space"
 url: //fedspendingtransparency.github.io/
+repository: 18F/fedspendingtransparency.github.io
 repo_name: fedspendingtransparency.github.io
 branch: master
 encoding: utf-8
