@@ -1,15 +1,15 @@
 #document settings
-title: Test Federal Spending Transparency
+title: Federal Spending Transparency
 desc: "DATA Act Collaboration Space"
-repository: 18F/fedspendingtransparency.github.io
-baseurl: ""
+url: //fedspendingtransparency.github.io/
+repo_name: fedspendingtransparency.github.io
 branch: master
 encoding: utf-8
-host: fedspendingtransparency.18f.gov
-url: //fedspendingtransparency.18f.gov
+
+
 
 #global settings, no need to change these
-root_url: //fedspendingtransparency.18f.gov
+root_url: //fedspendingtransparency.github.io
 org_name: fedspendingtransparency
 
 # default build settings for running locally, no need to edit
@@ -19,7 +19,7 @@ markdown: kramdown
 # markdown: redcarpet
 # redcarpet:
 #   extensions: []
-relative_permalinks: true
+relative_permalinks: false
 
 gems:
  - jekyll-redirect-from
